@@ -7,12 +7,12 @@ model PropsCalc
 
   // ---------- Fluid packages -------------------------------------------------
   replaceable package MediumCathode =
-  NHES.Electrolysis.Media.Electrolysis.CathodeGas_RefStateZeroAt0K constrainedby Modelica.Media.Interfaces.PartialMedium
-                                            "Medium model for cathode gas" annotation (Dialog(group="Working fluids (Medium)"));
+  NHES.Electrolysis.Media.Electrolysis.CathodeGas_RefStateZeroAt0K constrainedby
+    Modelica.Media.Interfaces.PartialMedium "Medium model for cathode gas" annotation (Dialog(group="Working fluids (Medium)"));
 
   replaceable package MediumAnode =
-  NHES.Electrolysis.Media.Electrolysis.AnodeGas_air_RefStateZeroAt0K constrainedby Modelica.Media.Interfaces.PartialMedium
-                                            "Medium model for anode gas" annotation (Dialog(group="Working fluids (Medium)"));
+  NHES.Electrolysis.Media.Electrolysis.AnodeGas_air_RefStateZeroAt0K constrainedby
+    Modelica.Media.Interfaces.PartialMedium "Medium model for anode gas" annotation (Dialog(group="Working fluids (Medium)"));
 
   constant SI.MolarMass mwH2O = gasProperties.H2O.MM "Molecular weight of water or steam [kg/mol]";
   constant SI.MolarMass mwH2 = gasProperties.H2.MM   "Molecular weight of hydrogen [kg/mol]";

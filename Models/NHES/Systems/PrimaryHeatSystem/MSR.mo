@@ -12047,7 +12047,7 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
       connect(m_flow_pump_bypass.y, pump_bypass.in_m_flow) annotation (Line(points={{-257,
               126},{-248,126},{-248,119.3}},        color={0,0,127}));
       connect(adsorberBed.port_a, drainTank_gas.port_b[1]) annotation (Line(points={{-230,
-              -20},{-238,-20},{-238,-19.5},{-244,-19.5}},       color={0,127,255}));
+              -20},{-238,-20},{-238,-19.75},{-244,-19.75}},     color={0,127,255}));
       connect(pump_bypass.port_b, traceSeparator.port_a) annotation (Line(points={{-258,
               112},{-264,112},{-264,100}}, color={0,127,255}));
       connect(traceSeparator.port_sepFluid, drainTank_liquid.port_a) annotation (
@@ -12055,13 +12055,13 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
       connect(traceSeparator.port_b_carrier, drainTank_gas.port_a[1]) annotation (
           Line(points={{-276,80},{-276,-20},{-256,-20}}, color={0,127,255}));
       connect(pump_OffGas_bypass.port_a, drainTank_gas.port_b[2]) annotation (Line(
-            points={{-230,30},{-238,30},{-238,-20.5},{-244,-20.5}}, color={0,127,255}));
+            points={{-230,30},{-238,30},{-238,-20.25},{-244,-20.25}},
+                                                                    color={0,127,255}));
       connect(pump_OffGas_bypass.port_b, boundary_OffGas_sink.ports[1]) annotation (
-         Line(points={{-210,30},{-200,30},{-200,32},{-190,32}}, color={0,127,255}));
+         Line(points={{-210,30},{-200,30},{-200,29},{-190,29}}, color={0,127,255}));
       connect(pump_OffGas_adsorberBed.port_b, boundary_OffGas_sink.ports[2])
-        annotation (Line(points={{-180,-20},{-158,-20},{-158,16},{-198,16},{
-              -198,28},{-190,28}},
-                          color={0,127,255}));
+        annotation (Line(points={{-180,-20},{-158,-20},{-158,16},{-198,16},{-198,31},
+              {-190,31}}, color={0,127,255}));
       connect(boundary_fromPump_PFL_bypass_p.y, boundary_OffGas_sink.p_in)
         annotation (Line(points={{-163,38},{-168,38}},                     color={0,
               0,127}));
@@ -12090,9 +12090,9 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
       connect(reflRG.port_b2, reflRG_upper_bc.port)
         annotation (Line(points={{50,10},{50,20}}, color={191,0,0}));
       connect(drainTank_liquid.heatPort, DRACS.port_thimbleWall[1]) annotation (
-          Line(points={{-250,-62.4},{-250,-82},{-284,-82}}, color={191,0,0}));
+          Line(points={{-250,-62.4},{-250,-81},{-284,-81}}, color={191,0,0}));
       connect(drainTank_gas.heatPort, DRACS.port_thimbleWall[2]) annotation (Line(
-            points={{-250,-14},{-250,-8},{-260,-8},{-260,-78},{-284,-78}}, color={
+            points={{-250,-14},{-250,-8},{-260,-8},{-260,-79},{-284,-79}}, color={
               191,0,0}));
       connect(m_flow_pump_PFL.y, pump_PFL.in_m_flow)
         annotation (Line(points={{55,142},{50,142},{50,135.3}}, color={0,0,127}));
@@ -27309,6 +27309,23 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
     end thermalConductivity;
     end LinearFLiBe_12Th_05U_pT;
   end CustomSalts;
+
+  model CS_Dummy
+
+    extends
+      Templates.SubSystem_Category_Simple.SubSystem_Specific_Simple.BaseClasses.Partial_ControlSystem;
+
+  equation
+
+  annotation(defaultComponentName="PHS_CS", Icon(graphics={
+          Text(
+            extent={{-94,82},{94,74}},
+            lineColor={0,0,0},
+            lineThickness=1,
+            fillColor={255,255,237},
+            fillPattern=FillPattern.Solid,
+            textString="Change Me")}));
+  end CS_Dummy;
 annotation (
   conversion(from(version="", script=
           "modelica://TRANSFORM_Examples/Resources/ConvertFromTRANSFORM_Examples_.mos")));

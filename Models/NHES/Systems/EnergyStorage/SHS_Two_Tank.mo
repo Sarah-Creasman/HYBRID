@@ -7377,8 +7377,8 @@ package SHS_Two_Tank
             extent={{-10,10},{10,-10}},
             rotation=270,
             origin={72,20})));
-      TRANSFORM.Fluid.Volumes.SimpleVolume     volume(redeclare package Medium
-          = Storage_Medium, redeclare model Geometry =
+      TRANSFORM.Fluid.Volumes.SimpleVolume     volume(redeclare package Medium =
+            Storage_Medium, redeclare model Geometry =
             TRANSFORM.Fluid.ClosureRelations.Geometry.Models.LumpedVolume.GenericVolume
             (V=data.ctvolume_volume))
         annotation (Placement(transformation(extent={{-10,-10},{10,10}},
@@ -7532,14 +7532,14 @@ package SHS_Two_Tank
           Medium =
             Storage_Medium)
         annotation (Placement(transformation(extent={{48,34},{68,54}})));
-      TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m1(redeclare package Medium
-          = Modelica.Media.Water.StandardWater) annotation (Placement(
+      TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m1(redeclare package Medium =
+            Modelica.Media.Water.StandardWater) annotation (Placement(
             transformation(
             extent={{-10,10},{10,-10}},
             rotation=90,
             origin={-88,42})));
-      TRANSFORM.Fluid.Sensors.SpecificEnthalpy h_Inlet(redeclare package Medium
-          = Modelica.Media.Water.StandardWater) annotation (Placement(
+      TRANSFORM.Fluid.Sensors.SpecificEnthalpy h_Inlet(redeclare package Medium =
+            Modelica.Media.Water.StandardWater) annotation (Placement(
             transformation(
             extent={{-10,-10},{10,10}},
             rotation=0,

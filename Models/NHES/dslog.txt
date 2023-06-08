@@ -1,0 +1,437 @@
+Model: NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_allmodes_test
+Integration started at 0 using integration method:
+RK-method: esdirk45a
+Local extrapolation
+FSAL
+Continuous extension
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8.748266996417243
+  Tag: simulation.nonlinear[1]
+  For debugging information enable
+  Simulation/Setup/Debug/Nonlinear solver diagnostics/Detailed logging of failed nonlinear solutions.
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9.013161771795044
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 22.8948239399713
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = 3.10382, y1d = -4.89975). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 22.8948239399713
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 21.4474119699879
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[7]) ^ (0.8) = (-6.04321) ^ (0.8)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 20.18092649625243
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 20.09046324812847
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 20.01130790602
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 20.00565395301225
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 20.00282697650837
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 20.00141348825644
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 20.00070674413047
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 20.00035337206749
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 41.15158275844224
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 2245.822123868879
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[7]) ^ (0.8) = (-5219.15) ^ (0.8)
+
+Error: The following error was detected at time: 2022.91106193444
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-7675.73) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 2022.91106193444
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-7675.73) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 2022.91106193444
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-7675.73) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 2022.91106193444
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1911.45553096722
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1813.931941370902
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1801.741492671363
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1800.870746335681
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1802.874776981048
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1802.543726744588
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1802.473134350811
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1809.978986885178
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 2776.842156324544
+
+Model error - power: (thermocline_Insulation.thermocline_fluidprops_heaters_newHC_120C.Re[1]) ^ (0.7) = (-0.190989) ^ (0.7)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 3600.135008133636
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 4819.424787050679
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-150529) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 4819.424787050679
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-150529) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 4819.424787050679
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-150529) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 4819.424787050679
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 4822.979769812504
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 7222.733105291205
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 9101.383771253486
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[6]) ^ (0.8) = (-108919) ^ (0.8)
+
+Error: The following error was detected at time: 9050.691885626742
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[10]) ^ (0.8) = (-2.94397) ^ (0.8)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9025.345942813372
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 9012.672971406686
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-1.42997e+08) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 9012.672971406686
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-1.42997e+08) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9012.672971406686
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-1.42997e+08) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9012.672971406686
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 9006.336485703343
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-78.3933) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 9006.336485703343
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-78.3933) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9006.336485703343
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-78.3933) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9006.336485703343
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 9003.168242851671
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-6.95549e+06) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 9003.168242851671
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-6.95549e+06) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9003.168242851671
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-6.95549e+06) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9003.168242851671
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9700.90240514839
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9625.805718882491
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9601.266048131396
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9601.492233259751
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9601.914645283223
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9601.789849769184
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9601.898917233329
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9602.040940062456
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9602.374047963965
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9602.563313817098
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9604.255476674638
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9605.303883370452
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9606.235323628935
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9607.749450453986
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9607.968746582543
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9609.876546382109
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9611.690768306149
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9611.826110799906
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9611.632250932669
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9611.760719482674
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9611.73645638444
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 12215.14870840805
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[2]) ^ (0.8) = (-1.04662) ^ (0.8)
+
+Error: The following error was detected at time: 12107.57435420402
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[4]) ^ (0.8) = (-0.156572) ^ (0.8)
+
+Error: The following error was detected at time: 12053.78717710201
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[6]) ^ (0.8) = (-0.00516104) ^ (0.8)
+
+Error: The following error was detected at time: 12026.89358855101
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[6]) ^ (0.8) = (-856.428) ^ (0.8)
+
+Error: The following error was detected at time: 12013.4467942755
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[9]) ^ (0.8) = (-125.786) ^ (0.8)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 14403.05573361436
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 14400.3619946082
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-190739) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 14400.3619946082
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-190739) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 14400.3619946082
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-190739) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 14400.3619946082
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 14399.01512510512
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-1.66793e+06) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 14399.01512510512
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-1.66793e+06) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 14399.01512510512
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-1.66793e+06) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 14399.01512510512
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 14463.15292484241
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[4]) ^ (0.8) = (-21365.4) ^ (0.8)
+
+Error: The following error was detected at time: 14454.98093457407
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[2]) ^ (0.8) = (-3.03301) ^ (0.8)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 14450.8949394399
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 14448.85194187282
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[3]) ^ (0.8) = (-4272.36) ^ (0.8)
+
+Error: The following error was detected at time: 14447.83044308928
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[10]) ^ (0.8) = (-316.861) ^ (0.8)
+
+
+Integration terminated successfully at T = 18000
+   CPU-time for integration                  : 280.678 seconds
+   CPU-time for initialization               : 0.009 seconds
+   Number of result points                   : 1846
+   Number of grid points                     : 1800
+   Number of accepted steps                  : 722
+   Number of rejected steps                  : 420
+   Number of f-evaluations (dynamics)        : 12491
+   Number of crossing function evaluations   : 2786
+   Number of Jacobian-evaluations            : 258
+   Number of model time events               : 10
+   Number of state events                    : 14
+   Number of step events                     : 0
+
+SUCCESSFUL simulation of NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_allmodes_test

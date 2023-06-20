@@ -1,0 +1,11 @@
+model dsmodelIterationSelect
+  extends NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_allmodes_test_sec;
+  annotation(__Dymola_SimulationIterationVariables={"der(pipe3.mediums[1].T)", 
+  "der(pipe7.mediums[2].p)", "der(pipe7.mediums[2].T)", "Valve3.dp", "Valve6.dp",
+   "Glycol_HX.shell.flowModel.dps_fg[10]", "der(pipe3.mediums[2].T)", 
+  "der(pipe3.mediums[2].p)", "der(Glycol_HX.shell.mediums[1].T)", 
+  "der(pipe4.mediums[2].T)", "der(Chromolox_Heater.mediums[1].p)", 
+  "der(Chromolox_Heater.mediums[1].T)", "der(tank1.state_liquid.T)", 
+  "der(tank1.level)", "der(pipe2.mediums[1].T)", "Glycol_HX.tubeWall.port_b2[1].T",
+   "Glycol_HX.tubeWall.port_b2[2].T", "Glycol_HX.tubeWall.port_b2[3].T"});
+end dsmodelIterationSelect;

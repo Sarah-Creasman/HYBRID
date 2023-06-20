@@ -1,5 +1,5 @@
 model dsmodelIterationSelect
-  extends NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_allmodes_test_sec;
+  extends NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_ConnectHTSE_SEC;
   annotation(__Dymola_SimulationIterationVariables={"der(pipe3.mediums[1].T)", 
   "der(pipe7.mediums[2].p)", "der(pipe7.mediums[2].T)", "Valve3.dp", "Valve6.dp",
    "Glycol_HX.shell.flowModel.dps_fg[10]", "der(pipe3.mediums[2].T)", 

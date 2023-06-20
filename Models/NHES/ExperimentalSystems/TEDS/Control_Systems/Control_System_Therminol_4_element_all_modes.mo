@@ -118,9 +118,9 @@ Real Error5 "Valve 5";
 Real Error6 "Valve 6";
 Integer storage_button "0 equals discharge or stationary, 1 is charging";
 
-parameter SI.Power Q_TES_max = 228129;
-parameter SI.Power Heater_max = 260719;
-parameter SI.Temperature T_hot_design = 395;
+parameter SI.Power Q_TES_max = 175e3;
+parameter SI.Power Heater_max = 200e3;
+parameter SI.Temperature T_hot_design = 325;
 parameter SI.Temperature T_cold_design = 225;
 
 parameter SI.MassFlowRate m_tes_max = 2;//=Q_TES_max/(Cp*(T_hot_design - T_cold_design));

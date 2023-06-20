@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers;
+within NHES.ExperimentalSystems.HTSE;
 model ControlledSOEC "SOEC with its regulatory control scheme"
   import NHES.Electrolysis;
   extends Electrolysis.Icons.Electrolyzer;

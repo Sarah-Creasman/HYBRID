@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers.BaseClasses;
+within NHES.ExperimentalSystems.HTSE.BaseClasses;
 model OxEon_v1 "Solid Oxide Electrolysis Cell (SOEC) stack model"
 
   extends Electrolysis.Icons.Electrolyzer;
@@ -7,12 +7,12 @@ model OxEon_v1 "Solid Oxide Electrolysis Cell (SOEC) stack model"
 
   // ---------- Fluid packages -------------------------------------------------
   replaceable package MediumCathode =
-  Electrolysis.Media.Electrolysis.CathodeGas constrainedby Modelica.Media.Interfaces.PartialMedium
-                                            "Medium model for cathode gas" annotation (Dialog(group="Working fluids (Medium)"));
+  Electrolysis.Media.Electrolysis.CathodeGas constrainedby
+    Modelica.Media.Interfaces.PartialMedium "Medium model for cathode gas" annotation (Dialog(group="Working fluids (Medium)"));
 
   replaceable package MediumAnode =
-  Electrolysis.Media.Electrolysis.AnodeGas_air constrainedby Modelica.Media.Interfaces.PartialMedium
-                                            "Medium model for anode gas" annotation (Dialog(group="Working fluids (Medium)"));
+  Electrolysis.Media.Electrolysis.AnodeGas_air constrainedby
+    Modelica.Media.Interfaces.PartialMedium "Medium model for anode gas" annotation (Dialog(group="Working fluids (Medium)"));
 
   // ---------- Define constants -----------------------------------------------
 
@@ -94,21 +94,25 @@ model OxEon_v1 "Solid Oxide Electrolysis Cell (SOEC) stack model"
 
   // ---------- Connectors -----------------------------------------------------
   Modelica.Fluid.Interfaces.FluidPort_a
-                          cathodeFlangeIn(redeclare package Medium = MediumCathode) annotation (Placement(
+                          cathodeFlangeIn(redeclare package Medium =
+        MediumCathode)                                                              annotation (Placement(
         transformation(extent={{-84,20},{-64,40}}),  iconTransformation(extent={{-84,20},
             {-64,40}})));
 
   Modelica.Fluid.Interfaces.FluidPort_b
-                          cathodeFlangeOut(redeclare package Medium = MediumCathode) annotation (Placement(
+                          cathodeFlangeOut(redeclare package Medium =
+        MediumCathode)                                                               annotation (Placement(
         transformation(extent={{64,40},{82,58}}),  iconTransformation(extent={{64,40},
             {84,60}})));
 
   Modelica.Fluid.Interfaces.FluidPort_a
-                          anodeFlangeIn(redeclare package Medium = MediumAnode) annotation (Placement(
+                          anodeFlangeIn(redeclare package Medium = MediumAnode)
+                                                                                annotation (Placement(
         transformation(extent={{-84,-64},{-64,-44}}),  iconTransformation(
           extent={{-84,-64},{-64,-44}})));
   Modelica.Fluid.Interfaces.FluidPort_b
-                          anodeFlangeOut(redeclare package Medium = MediumAnode) annotation (Placement(
+                          anodeFlangeOut(redeclare package Medium = MediumAnode)
+                                                                                 annotation (Placement(
         transformation(extent={{64,-42},{82,-22}}),  iconTransformation(extent={{64,-44},
             {84,-24}})));
 

@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers.SOEC_Examples_AS.InitialMods;
+within NHES.ExperimentalSystems.HTSE.SOEC_Examples_AS.InitialMods;
 model Model9
   extends Modelica.Icons.Example;
 

@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers.Examples;
+within NHES.ExperimentalSystems.HTSE.Examples;
 model SOECstack_closedLoopCtrl_FY17
   "Closed-loop control for SOEC stack operation"
   import NHES.Electrolysis;

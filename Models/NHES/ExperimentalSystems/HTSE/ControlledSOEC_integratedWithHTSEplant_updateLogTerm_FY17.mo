@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers;
+within NHES.ExperimentalSystems.HTSE;
 model ControlledSOEC_integratedWithHTSEplant_updateLogTerm_FY17
   "SOEC with its regulatory control scheme"
   import      Modelica.Units.SI;

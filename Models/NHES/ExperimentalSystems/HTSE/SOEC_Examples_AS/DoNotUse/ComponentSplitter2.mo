@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers.SOEC_Examples_AS.DoNotUse;
+within NHES.ExperimentalSystems.HTSE.SOEC_Examples_AS.DoNotUse;
 model ComponentSplitter2
   extends NHES.Electrolysis.Icons.FlashDrum;
   replaceable package Medium = Electrolysis.Media.Electrolysis.CathodeGas;

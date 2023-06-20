@@ -1,11 +1,10 @@
-within NHES.Electrolysis.Electrolyzers.SOEC_Examples_AS;
+within NHES.ExperimentalSystems.HTSE.SOEC_Examples_AS;
 model HTSE_V4_Final
   //extends Modelica.Icons.Example;
 
   BaseClasses.OxEonV7_Complex SOEC(V_cathode=0.001, V_anode=0.001)
                                    annotation (Placement(transformation(extent={{194,-55},{224,-25}})));
-  Modelica.Fluid.Sensors.MassFlowRate cathodeFlowOut(redeclare package Medium
-      =
+  Modelica.Fluid.Sensors.MassFlowRate cathodeFlowOut(redeclare package Medium =
         NHES.Electrolysis.Media.Electrolysis.CathodeGas)
     annotation (Placement(transformation(extent={{292,-18},{312,2}})));
   TRANSFORM.Fluid.Volumes.SimpleVolume AirTH(redeclare package Medium =
@@ -71,8 +70,7 @@ model HTSE_V4_Final
     annotation (Placement(transformation(extent={{10,-10},{-10,10}},
         rotation=90,
         origin={-78,286})));
-  Modelica.Fluid.Sensors.MassFlowRate cathodeFlowIn2(redeclare package Medium
-      =
+  Modelica.Fluid.Sensors.MassFlowRate cathodeFlowIn2(redeclare package Medium =
         Media.Electrolysis.CathodeGas)
     annotation (Placement(transformation(extent={{20,102},{40,122}})));
   TRANSFORM.HeatExchangers.Simple_HX FuelHX(
@@ -149,8 +147,7 @@ model HTSE_V4_Final
     annotation (Placement(transformation(extent={{10,-10},{-10,10}},
         rotation=90,
         origin={-20,162})));
-  TRANSFORM.Fluid.Sensors.TemperatureTwoPort SinkTemp(redeclare package Medium
-      =
+  TRANSFORM.Fluid.Sensors.TemperatureTwoPort SinkTemp(redeclare package Medium =
         Media.Electrolysis.CathodeGas)
     annotation (Placement(transformation(extent={{-46,124},{-66,144}})));
   Modelica.Fluid.Sensors.MassFractions X_H2(redeclare package Medium =
@@ -237,12 +234,10 @@ model HTSE_V4_Final
     yMax=1000,
     yMin=0) annotation (Placement(transformation(extent={{-114,84},{-134,104}})));
   Modelica.Blocks.Sources.RealExpression realExpression2(y=0.0123)      annotation (Placement(transformation(extent={{-86,84},{-106,104}})));
-  TRANSFORM.Fluid.Sensors.TemperatureTwoPort SinkTemp1(redeclare package Medium
-      =
+  TRANSFORM.Fluid.Sensors.TemperatureTwoPort SinkTemp1(redeclare package Medium =
         Media.Electrolysis.CathodeGas)
     annotation (Placement(transformation(extent={{4,12},{24,32}})));
-  Modelica.Fluid.Sensors.MassFlowRate SteamFlowMeasure(redeclare package Medium
-      =
+  Modelica.Fluid.Sensors.MassFlowRate SteamFlowMeasure(redeclare package Medium =
         Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{-144,-12},{-124,8}})));
   Modelica.Fluid.Sensors.MassFlowRate H2_recycleMassFlowRate(redeclare package
@@ -269,8 +264,7 @@ model HTSE_V4_Final
         extent={{10,-10},{-10,10}},
         rotation=90,
         origin={-212,-198})));
-  Modelica.Fluid.Interfaces.FluidPort_a SteamIn_Port(redeclare package Medium
-      =
+  Modelica.Fluid.Interfaces.FluidPort_a SteamIn_Port(redeclare package Medium =
         Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{-332,6},{-262,80}}),   iconTransformation(extent={{-110,70},{-90,90}})));
   Modelica.Fluid.Interfaces.FluidPort_a AirIn_Port(redeclare package Medium =
@@ -281,8 +275,7 @@ model HTSE_V4_Final
   Modelica.Fluid.Interfaces.FluidPort_b AirPort_Out(redeclare package Medium =
         Media.Electrolysis.AnodeGas_air)
     annotation (Placement(transformation(extent={{4,-342},{80,-260}}),      iconTransformation(extent={{10,-108},{30,-88}})));
-  Modelica.Fluid.Interfaces.FluidPort_b WaterPort_Out(redeclare package Medium
-      =
+  Modelica.Fluid.Interfaces.FluidPort_b WaterPort_Out(redeclare package Medium =
         Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{258,186},{338,264}}),   iconTransformation(extent={{-110,30},{-90,50}})));
 equation

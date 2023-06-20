@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers.SOEC_Examples_AS.InitialMods;
+within NHES.ExperimentalSystems.HTSE.SOEC_Examples_AS.InitialMods;
 model PropsCalc
   //This is a fluid property calculator. Currently, it is only set up for the cathode (H2, H2O) and anode (N2, O2) gases. The reference state is 0 enthalpy at 0K.
 

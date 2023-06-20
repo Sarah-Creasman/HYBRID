@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers.SOEC_Examples_AS.InitialMods;
+within NHES.ExperimentalSystems.HTSE.SOEC_Examples_AS.InitialMods;
 model PropertiesCalculator
   extends TRANSFORM.Icons.Example;
   package Medium = Modelica.Media.IdealGases.SingleGases.H2O;

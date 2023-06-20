@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers.Examples;
+within NHES.ExperimentalSystems.HTSE.Examples;
 model SOECstack_openLoopControl "Open-loop control for SOEC stack operation"
   import NHES.Electrolysis;
   extends Modelica.Icons.Example;

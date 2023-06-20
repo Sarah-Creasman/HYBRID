@@ -158,8 +158,8 @@ package Obselete_Files_from_Building
           extent={{6,6},{-6,-6}},
           rotation=0,
           origin={124,-68})));
-    TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium
-        = TRANSFORM.Media.Fluids.Therminol_66.LinearTherminol66_A_250C, precision=
+    TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium =
+          TRANSFORM.Media.Fluids.Therminol_66.LinearTherminol66_A_250C, precision=
          3) annotation (Placement(transformation(
           extent={{-10,-10},{10,10}},
           rotation=-90,
@@ -658,8 +658,8 @@ package Obselete_Files_from_Building
           extent={{-6,-6},{6,6}},
           rotation=270,
           origin={104,-28})));
-    TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium
-        = TRANSFORM.Media.Fluids.Therminol_66.LinearTherminol66_A_250C, precision=
+    TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium =
+          TRANSFORM.Media.Fluids.Therminol_66.LinearTherminol66_A_250C, precision=
          3) annotation (Placement(transformation(
           extent={{-10,-10},{10,10}},
           rotation=-90,
@@ -1022,8 +1022,8 @@ package Obselete_Files_from_Building
           extent={{-6,-6},{6,6}},
           rotation=270,
           origin={124,-26})));
-    TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium
-        = TRANSFORM.Media.Fluids.Therminol_66.LinearTherminol66_A_250C, precision=
+    TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium =
+          TRANSFORM.Media.Fluids.Therminol_66.LinearTherminol66_A_250C, precision=
          3) annotation (Placement(transformation(
           extent={{-10,-10},{10,10}},
           rotation=-90,
@@ -1281,8 +1281,8 @@ package Obselete_Files_from_Building
           extent={{6,6},{-6,-6}},
           rotation=0,
           origin={124,-68})));
-    TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium
-        = TRANSFORM.Media.Fluids.Therminol_66.LinearTherminol66_A_250C, precision=
+    TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium =
+          TRANSFORM.Media.Fluids.Therminol_66.LinearTherminol66_A_250C, precision=
          3) annotation (Placement(transformation(
           extent={{-10,-10},{10,10}},
           rotation=-90,

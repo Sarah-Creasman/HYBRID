@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers;
+within NHES.ExperimentalSystems.HTSE;
 package BaseClasses "Package with partial and/or base classes for Electrolysis.Electrolyzers"
   extends Modelica.Icons.BasesPackage;
 

@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers.SOEC_Examples_AS.DoNotUse;
+within NHES.ExperimentalSystems.HTSE.SOEC_Examples_AS.DoNotUse;
 model ComponentSplitter_test
   extends Modelica.Icons.Example;
 

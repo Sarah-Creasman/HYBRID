@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers;
+within NHES.ExperimentalSystems.HTSE;
 package SOEC_Examples_AS
   extends Modelica.Icons.ExamplesPackage;
 

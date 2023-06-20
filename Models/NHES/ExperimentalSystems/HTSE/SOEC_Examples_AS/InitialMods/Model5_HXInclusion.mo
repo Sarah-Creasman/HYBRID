@@ -1,4 +1,4 @@
-within NHES.Electrolysis.Electrolyzers.SOEC_Examples_AS.InitialMods;
+within NHES.ExperimentalSystems.HTSE.SOEC_Examples_AS.InitialMods;
 model Model5_HXInclusion
   extends Modelica.Icons.Example;
 

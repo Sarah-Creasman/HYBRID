@@ -3,7 +3,7 @@ record Data_TEDS
 
   extends BaseClasses.Record_Data;
 
-parameter SI.Temperature T_hot_side = 325;
+parameter SI.Temperature T_hot_side = 395;
 parameter SI.Temperature T_cold_side = 225;
   annotation (
     defaultComponentName="data",

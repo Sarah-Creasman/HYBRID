@@ -1,4 +1,4 @@
-Model: NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_ConnectHTSE_SEC
+Model: NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_allmodes_test
 Integration started at 0 using integration method:
 RK-method: esdirk45a
 Local extrapolation
@@ -532,8 +532,8 @@ Model error - power: (Glycol_HX.tube.heatTransfer.Res[7]) ^ (0.8) = (-32094.5) ^
 
 
 Integration terminated successfully at T = 18000
-   CPU-time for integration                  : 475.905 seconds
-   CPU-time for initialization               : 0.005 seconds
+   CPU-time for integration                  : 520.384 seconds
+   CPU-time for initialization               : 0.007 seconds
    Number of result points                   : 1846
    Number of grid points                     : 1800
    Number of accepted steps                  : 894
@@ -545,4 +545,4 @@ Integration terminated successfully at T = 18000
    Number of state events                    : 14
    Number of step events                     : 0
 
-SUCCESSFUL simulation of NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_ConnectHTSE_SEC
+SUCCESSFUL simulation of NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_allmodes_test

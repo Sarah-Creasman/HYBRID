@@ -122,14 +122,12 @@ model OxEonV7_Complex
   TRANSFORM.Fluid.Interfaces.FluidPort_State CathodeOut(redeclare package
       Medium =
         MediumCathode)                                                                              annotation (Placement(transformation(extent={{90,40},{110,60}}), iconTransformation(extent={{90,40},{110,60}})));
-  TRANSFORM.Fluid.Interfaces.FluidPort_Flow CathodeIn(redeclare package Medium
-      =
+  TRANSFORM.Fluid.Interfaces.FluidPort_Flow CathodeIn(redeclare package Medium =
         MediumCathode)                                                                           annotation (Placement(transformation(extent={{-110,40},{-90,60}}), iconTransformation(extent={{-110,40},{-90,60}})));
   TRANSFORM.Fluid.Interfaces.FluidPort_Flow AnodeIn(redeclare package Medium =
         MediumAnode)                                                                         annotation (Placement(transformation(extent={{-110,-58},{-90,-38}}),
                                                                        iconTransformation(extent={{-110,-60},{-90,-40}})));
-  TRANSFORM.Fluid.Interfaces.FluidPort_State AnodeOut(redeclare package Medium
-      =
+  TRANSFORM.Fluid.Interfaces.FluidPort_State AnodeOut(redeclare package Medium =
         MediumAnode)                                                                           annotation (Placement(transformation(extent={{90,-58},{110,-38}}),
                                                                      iconTransformation(extent={{90,-60},{110,-40}})));
   Interfaces.ElectricalPowerPort_a DC_PowerIn
@@ -139,8 +137,7 @@ model OxEonV7_Complex
       Medium =
         Media.Electrolysis.CathodeGas)
     annotation (Placement(transformation(extent={{-66,40},{-46,60}})));
-  TRANSFORM.Fluid.Sensors.TemperatureTwoPort AnodeTemp(redeclare package Medium
-      =
+  TRANSFORM.Fluid.Sensors.TemperatureTwoPort AnodeTemp(redeclare package Medium =
         Media.Electrolysis.AnodeGas_air)
     annotation (Placement(transformation(extent={{-66,-58},{-46,-38}})));
 
@@ -155,7 +152,8 @@ equation
 
   deltaGibbsE = Electrolysis.Utilities.GibbsEnergy_NASA_7Term(T_stack_C + 273.15); //Gibbs Energy Calculated from NASA 7 Term Equation
   Cell_Potential = -deltaGibbsE/(2*Fa);
-  Nernst_Potential = Rg*(T_stack_C + 273.15)/(2*Fa)*log(max(0.001,pH2O/(pH2*(pO2/100000)^0.5))); //Ensuring bar to Pa conversion for pO2 for sqrt
+  Nernst_Potential = Rg*(T_stack_C + 273.15)/(2*Fa)*log(max(pH2O/(pH2*(pO2)^0.5))); //Ensuring bar to Pa conversion for pO2 for sqrt
+  // Nernst_Potential = Rg*(T_stack_C + 273.15)/(2*Fa)*log(max(((pO2)^0.5)*pH2/pH2O));
   OCV = abs(Cell_Potential + Nernst_Potential);
 
   //current_density = abs((TNV - OCV)/ASR);

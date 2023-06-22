@@ -2905,8 +2905,7 @@ DeclareParameter("Valve1.m_flow_nominal", "Nominal mass flowrate at full opening
 DeclareVariable("Valve1.k", "Hydraulic conductance at full opening [kg/(s.Pa)]",\
  0.0, 0.0,0.0,0.0,0,513)
 DeclareAlias2("Valve1.opening", "=1: completely open, =0: completely closed [1]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder.y", 1,\
- 1, 2, 0)
+ "control_System_Therminol_4_element_all_modes.firstOrder.y", 1, 1, 2, 0)
 DeclareVariable("Valve3.allowFlowReversal", "= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]",\
  true, 0.0,0.0,0.0,0,515)
 DeclareParameter("Valve3.showDesignFlowDirection", "= false to hide the flow direction arrow [:#(type=Boolean)]",\
@@ -2914,14 +2913,14 @@ DeclareParameter("Valve3.showDesignFlowDirection", "= false to hide the flow dir
 DeclareParameter("Valve3.showName", "= false to hide component name [:#(type=Boolean)]",\
  107, true, 0.0,0.0,0.0,0,562)
 DeclareAlias2("Valve3.port_a.m_flow", "Mass flow rate from the connection point into the component [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Discharge_mass_flow_sensor.y", -1,\
+ "control_System_Therminol_4_element_all_modes.Discharge_mass_flow_sensor.y", -1,\
  5, 1216, 132)
 DeclareAlias2("Valve3.port_a.p", "Thermodynamic pressure in the connection point [Pa|bar]",\
  "pipe7.mediums[1].p", 1, 1, 423, 4)
 DeclareVariable("Valve3.port_a.h_outflow", "Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]",\
  0.0, -10000000000.0,10000000000.0,1000000.0,0,520)
 DeclareAlias2("Valve3.port_b.m_flow", "Mass flow rate from the connection point into the component [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Discharge_mass_flow_sensor.y", 1,\
+ "control_System_Therminol_4_element_all_modes.Discharge_mass_flow_sensor.y", 1,\
  5, 1216, 132)
 DeclareAlias2("Valve3.port_b.p", "Thermodynamic pressure in the connection point [Pa|bar]",\
  "sensor_m_flow.port_a.p", 1, 5, 920, 4)
@@ -2938,7 +2937,7 @@ DeclareVariable("Valve3.show_T", "= true, if temperatures at port_a and port_b a
 DeclareVariable("Valve3.show_V_flow", "= true, if volume flow rate at inflowing port is computed [:#(type=Boolean)]",\
  true, 0.0,0.0,0.0,0,515)
 DeclareAlias2("Valve3.m_flow", "Mass flow rate in design flow direction [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Discharge_mass_flow_sensor.y", -1,\
+ "control_System_Therminol_4_element_all_modes.Discharge_mass_flow_sensor.y", -1,\
  5, 1216, 0)
 DeclareVariable("Valve3.dp", "Pressure difference between port_a and port_b (= port_a.p - port_b.p) [Pa|bar]",\
  0.0, 0.0,0.0,0.0,0,512)
@@ -2963,8 +2962,7 @@ DeclareParameter("Valve3.m_flow_nominal", "Nominal mass flowrate at full opening
 DeclareVariable("Valve3.k", "Hydraulic conductance at full opening [kg/(s.Pa)]",\
  0.0, 0.0,0.0,0.0,0,513)
 DeclareAlias2("Valve3.opening", "=1: completely open, =0: completely closed [1]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder2.y", 1,\
- 1, 4, 0)
+ "control_System_Therminol_4_element_all_modes.firstOrder2.y", 1, 1, 4, 0)
 DeclareVariable("Valve5.allowFlowReversal", "= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]",\
  true, 0.0,0.0,0.0,0,515)
 DeclareParameter("Valve5.showDesignFlowDirection", "= false to hide the flow direction arrow [:#(type=Boolean)]",\
@@ -3018,8 +3016,7 @@ DeclareParameter("Valve5.m_flow_nominal", "Nominal mass flowrate at full opening
 DeclareVariable("Valve5.k", "Hydraulic conductance at full opening [kg/(s.Pa)]",\
  0.0, 0.0,0.0,0.0,0,513)
 DeclareAlias2("Valve5.opening", "=1: completely open, =0: completely closed [1]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder4.y", 1,\
- 1, 6, 0)
+ "control_System_Therminol_4_element_all_modes.firstOrder4.y", 1, 1, 6, 0)
 DeclareVariable("valve4.allowFlowReversal", "= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]",\
  true, 0.0,0.0,0.0,0,515)
 DeclareParameter("valve4.showDesignFlowDirection", "= false to hide the flow direction arrow [:#(type=Boolean)]",\
@@ -3027,15 +3024,15 @@ DeclareParameter("valve4.showDesignFlowDirection", "= false to hide the flow dir
 DeclareParameter("valve4.showName", "= false to hide component name [:#(type=Boolean)]",\
  121, true, 0.0,0.0,0.0,0,562)
 DeclareAlias2("valve4.port_a.m_flow", "Mass flow rate from the connection point into the component [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Charge_mass_flow_sensor.y", 1,\
- 5, 1217, 132)
+ "control_System_Therminol_4_element_all_modes.Charge_mass_flow_sensor.y", 1, 5,\
+ 1217, 132)
 DeclareAlias2("valve4.port_a.p", "Thermodynamic pressure in the connection point [Pa|bar]",\
  "sensor_m_flow.port_a.p", 1, 5, 920, 4)
 DeclareVariable("valve4.port_a.h_outflow", "Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]",\
  0.0, -10000000000.0,10000000000.0,1000000.0,0,520)
 DeclareAlias2("valve4.port_b.m_flow", "Mass flow rate from the connection point into the component [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Charge_mass_flow_sensor.y", -1,\
- 5, 1217, 132)
+ "control_System_Therminol_4_element_all_modes.Charge_mass_flow_sensor.y", -1, 5,\
+ 1217, 132)
 DeclareAlias2("valve4.port_b.p", "Thermodynamic pressure in the connection point [Pa|bar]",\
  "pipe7.mediums[2].p", 1, 1, 425, 4)
 DeclareVariable("valve4.port_b.h_outflow", "Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]",\
@@ -3051,8 +3048,8 @@ DeclareVariable("valve4.show_T", "= true, if temperatures at port_a and port_b a
 DeclareVariable("valve4.show_V_flow", "= true, if volume flow rate at inflowing port is computed [:#(type=Boolean)]",\
  true, 0.0,0.0,0.0,0,515)
 DeclareAlias2("valve4.m_flow", "Mass flow rate in design flow direction [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Charge_mass_flow_sensor.y", 1,\
- 5, 1217, 0)
+ "control_System_Therminol_4_element_all_modes.Charge_mass_flow_sensor.y", 1, 5,\
+ 1217, 0)
 DeclareVariable("valve4.dp", "Pressure difference between port_a and port_b (= port_a.p - port_b.p) [Pa|bar]",\
  0.0, 0.0,0.0,0.0,0,512)
 DeclareVariable("valve4.V_flow", "Volume flow rate at inflowing port (positive when flow from port_a to port_b) [m3/s]",\
@@ -3076,8 +3073,7 @@ DeclareParameter("valve4.m_flow_nominal", "Nominal mass flowrate at full opening
 DeclareVariable("valve4.k", "Hydraulic conductance at full opening [kg/(s.Pa)]",\
  0.0, 0.0,0.0,0.0,0,513)
 DeclareAlias2("valve4.opening", "=1: completely open, =0: completely closed [1]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder3.y", 1,\
- 1, 5, 0)
+ "control_System_Therminol_4_element_all_modes.firstOrder3.y", 1, 1, 5, 0)
 DeclareVariable("Valve2.allowFlowReversal", "= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]",\
  false, 0.0,0.0,0.0,0,515)
 DeclareParameter("Valve2.showDesignFlowDirection", "= false to hide the flow direction arrow [:#(type=Boolean)]",\
@@ -3085,15 +3081,15 @@ DeclareParameter("Valve2.showDesignFlowDirection", "= false to hide the flow dir
 DeclareParameter("Valve2.showName", "= false to hide component name [:#(type=Boolean)]",\
  128, true, 0.0,0.0,0.0,0,562)
 DeclareAlias2("Valve2.port_a.m_flow", "Mass flow rate from the connection point into the component [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_BOP_mass_flow.y", 1,\
- 5, 1263, 132)
+ "control_System_Therminol_4_element_all_modes.Heater_BOP_mass_flow.y", 1, 5, 1263,\
+ 132)
 DeclareAlias2("Valve2.port_a.p", "Thermodynamic pressure in the connection point [Pa|bar]",\
  "pipe2.mediums[2].p", 1, 1, 418, 4)
 DeclareVariable("Valve2.port_a.h_outflow", "Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]",\
  0.0, -10000000000.0,10000000000.0,1000000.0,0,520)
 DeclareAlias2("Valve2.port_b.m_flow", "Mass flow rate from the connection point into the component [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_BOP_mass_flow.y", -1,\
- 5, 1263, 132)
+ "control_System_Therminol_4_element_all_modes.Heater_BOP_mass_flow.y", -1, 5, 1263,\
+ 132)
 DeclareAlias2("Valve2.port_b.p", "Thermodynamic pressure in the connection point [Pa|bar]",\
  "pipe7.mediums[1].p", 1, 1, 423, 4)
 DeclareVariable("Valve2.port_b.h_outflow", "Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]",\
@@ -3109,8 +3105,8 @@ DeclareVariable("Valve2.show_T", "= true, if temperatures at port_a and port_b a
 DeclareVariable("Valve2.show_V_flow", "= true, if volume flow rate at inflowing port is computed [:#(type=Boolean)]",\
  true, 0.0,0.0,0.0,0,515)
 DeclareAlias2("Valve2.m_flow", "Mass flow rate in design flow direction [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_BOP_mass_flow.y", 1,\
- 5, 1263, 0)
+ "control_System_Therminol_4_element_all_modes.Heater_BOP_mass_flow.y", 1, 5, 1263,\
+ 0)
 DeclareVariable("Valve2.dp", "Pressure difference between port_a and port_b (= port_a.p - port_b.p) [Pa|bar]",\
  0.0, 0.0,0.0,0.0,0,512)
 DeclareVariable("Valve2.V_flow", "Volume flow rate at inflowing port (positive when flow from port_a to port_b) [m3/s]",\
@@ -3134,8 +3130,7 @@ DeclareParameter("Valve2.m_flow_nominal", "Nominal mass flowrate at full opening
 DeclareVariable("Valve2.k", "Hydraulic conductance at full opening [kg/(s.Pa)]",\
  0.0, 0.0,0.0,0.0,0,513)
 DeclareAlias2("Valve2.opening", "=1: completely open, =0: completely closed [1]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder1.y", 1,\
- 1, 3, 0)
+ "control_System_Therminol_4_element_all_modes.firstOrder1.y", 1, 1, 3, 0)
 DeclareVariable("sensor_m_flow4.allowFlowReversal", "= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]",\
  true, 0.0,0.0,0.0,0,515)
 DeclareParameter("sensor_m_flow4.showName", "= false to hide component name [:#(type=Boolean)]",\
@@ -3177,15 +3172,15 @@ DeclareVariable("sensor_m_flow6.allowFlowReversal", "= true to allow flow revers
 DeclareParameter("sensor_m_flow6.showName", "= false to hide component name [:#(type=Boolean)]",\
  139, true, 0.0,0.0,0.0,0,562)
 DeclareAlias2("sensor_m_flow6.port_a.m_flow", "Mass flow rate from the connection point into the component [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Charge_mass_flow_sensor.y", 1,\
- 5, 1217, 132)
+ "control_System_Therminol_4_element_all_modes.Charge_mass_flow_sensor.y", 1, 5,\
+ 1217, 132)
 DeclareAlias2("sensor_m_flow6.port_a.p", "Thermodynamic pressure in the connection point [Pa|bar]",\
  "sensor_m_flow.port_a.p", 1, 5, 920, 4)
 DeclareAlias2("sensor_m_flow6.port_a.h_outflow", "Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]",\
  "valve4.port_a.h_outflow", 1, 5, 974, 4)
 DeclareAlias2("sensor_m_flow6.port_b.m_flow", "Mass flow rate from the connection point into the component [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Charge_mass_flow_sensor.y", -1,\
- 5, 1217, 132)
+ "control_System_Therminol_4_element_all_modes.Charge_mass_flow_sensor.y", -1, 5,\
+ 1217, 132)
 DeclareAlias2("sensor_m_flow6.port_b.p", "Thermodynamic pressure in the connection point [Pa|bar]",\
  "sensor_m_flow.port_a.p", 1, 5, 920, 4)
 DeclareAlias2("sensor_m_flow6.port_b.h_outflow", "Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]",\
@@ -3205,13 +3200,13 @@ DeclareParameter("sensor_m_flow6.X_start[1]", "Mass fraction [1]", 142, 1.0, 0.0
 DeclareParameter("sensor_m_flow6.precision", "Number of decimals displayed [:#(type=Integer)]",\
  143, 3, 0.0,1E+100,0.0,0,564)
 DeclareAlias2("sensor_m_flow6.var", "Variable to be converted [kg/s]", \
-"control_System_Therminol_4_element_all_modes_connect_htse_sec.Charge_mass_flow_sensor.y", 1,\
- 5, 1217, 0)
-DeclareAlias2("sensor_m_flow6.y", "Icon display", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Charge_mass_flow_sensor.y", 1,\
+"control_System_Therminol_4_element_all_modes.Charge_mass_flow_sensor.y", 1, 5, 1217,\
+ 0)
+DeclareAlias2("sensor_m_flow6.y", "Icon display", "control_System_Therminol_4_element_all_modes.Charge_mass_flow_sensor.y", 1,\
  5, 1217, 0)
 DeclareAlias2("sensor_m_flow6.m_flow", "Mass flow rate from port_a to port_b [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Charge_mass_flow_sensor.y", 1,\
- 5, 1217, 0)
+ "control_System_Therminol_4_element_all_modes.Charge_mass_flow_sensor.y", 1, 5,\
+ 1217, 0)
 DeclareVariable("Valve6.allowFlowReversal", "= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]",\
  true, 0.0,0.0,0.0,0,515)
 DeclareParameter("Valve6.showDesignFlowDirection", "= false to hide the flow direction arrow [:#(type=Boolean)]",\
@@ -3265,8 +3260,7 @@ DeclareParameter("Valve6.m_flow_nominal", "Nominal mass flowrate at full opening
 DeclareVariable("Valve6.k", "Hydraulic conductance at full opening [kg/(s.Pa)]",\
  0.0, 0.0,0.0,0.0,0,513)
 DeclareAlias2("Valve6.opening", "=1: completely open, =0: completely closed [1]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder5.y", 1,\
- 1, 7, 0)
+ "control_System_Therminol_4_element_all_modes.firstOrder5.y", 1, 1, 7, 0)
 DeclareVariable("sensor_m_flow5.allowFlowReversal", "= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]",\
  true, 0.0,0.0,0.0,0,515)
 DeclareParameter("sensor_m_flow5.showName", "= false to hide component name [:#(type=Boolean)]",\
@@ -3303,1783 +3297,1783 @@ DeclareAlias2("sensor_m_flow5.y", "Icon display", "actuatorSubBus.Heater_flowrat
  3, 14, 0)
 DeclareAlias2("sensor_m_flow5.m_flow", "Mass flow rate from port_a to port_b [kg/s]",\
  "actuatorSubBus.Heater_flowrate", 1, 3, 14, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.u_s",\
- "Connector of setpoint input signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error1", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.u_s", \
+"Connector of setpoint input signal [1]", "control_System_Therminol_4_element_all_modes.Error1", 1,\
  5, 1158, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.u_m",\
- "Connector of measurement input signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.u_m", \
+"Connector of measurement input signal [1]", "control_System_Therminol_4_element_all_modes.const.k", 1,\
  7, 177, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.y",\
- "Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.controlError",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.y", \
+"Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.controlError",\
  "Control error (set point - measurement) [1]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.controllerType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.controllerType",\
  "Type of controller [:#(type=Modelica.Blocks.Types.SimpleController)]", 2, 1.0,\
 4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.k",\
- "Gain of controller [1]", 156, 0.756, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.Ti",\
- "Time constant of Integrator block [s]", 157, 3.5, 1E-60,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.Td",\
- "Time constant of Derivative block [s]", 158, 0.1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.yMax",\
- "Upper limit of output", 159, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.yMin",\
- "Lower limit of output", 160, 0.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.wp",\
- "Set-point weight for Proportional block (0..1)", 161, 1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.wd",\
- "Set-point weight for Derivative block (0..1)", 162, 0, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.Ni",\
- "Ni*Ti is time constant of anti-windup compensation", 163, 0.9, 1E-13,1E+100,\
-0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.Nd",\
- "The higher Nd, the more ideal the derivative block", 164, 10, 1E-13,1E+100,0.0,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.k", \
+"Gain of controller [1]", 156, 0.756, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.Ti", \
+"Time constant of Integrator block [s]", 157, 3.5, 1E-60,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.Td", \
+"Time constant of Derivative block [s]", 158, 0.1, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.yMax", \
+"Upper limit of output", 159, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.yMin", \
+"Lower limit of output", 160, 0.0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.wp", \
+"Set-point weight for Proportional block (0..1)", 161, 1, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.wd", \
+"Set-point weight for Derivative block (0..1)", 162, 0, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.Ni", \
+"Ni*Ti is time constant of anti-windup compensation", 163, 0.9, 1E-13,1E+100,0.0,\
 0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.withFeedForward",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.Nd", \
+"The higher Nd, the more ideal the derivative block", 164, 10, 1E-13,1E+100,0.0,\
+0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.withFeedForward",\
  "Use feed-forward input? [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,515)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.kFF",\
- "Gain of feed-forward input", 165, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.initType",\
- "Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.kFF", \
+"Gain of feed-forward input", 165, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.initType", \
+"Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.xi_start",\
- "Initial or guess value for integrator output (= integrator state)", 166, 0, \
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.xi_start", \
+"Initial or guess value for integrator output (= integrator state)", 166, 0, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.xd_start",\
- "Initial or guess value for state of derivative block", 167, 0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.y_start",\
- "Initial value of output", 168, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.homotopyType",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.xd_start", \
+"Initial or guess value for state of derivative block", 167, 0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.y_start", \
+"Initial value of output", 168, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.strict",\
- "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.strict", \
+"= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.unitTime",\
- "[s]", 1, 0.0,0.0,0.0,0,1537)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addP.u1",\
- "Connector of Real input signal 1 [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error1", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.unitTime", \
+"[s]", 1, 0.0,0.0,0.0,0,1537)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.addP.u1", \
+"Connector of Real input signal 1 [1]", "control_System_Therminol_4_element_all_modes.Error1", 1,\
  5, 1158, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addP.u2",\
- "Connector of Real input signal 2 [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.addP.u2", \
+"Connector of Real input signal 2 [1]", "control_System_Therminol_4_element_all_modes.const.k", 1,\
  7, 177, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addP.y",\
- "Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addP.k1",\
- "Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addP.k2",\
- "Gain of input signal 2", 169, -1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.P.k",\
- "Gain value multiplied with input signal [1]", 170, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.P.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addP.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.addP.y", \
+"Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.addP.k1", \
+"Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.addP.k2", \
+"Gain of input signal 2", 169, -1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.P.k", \
+"Gain value multiplied with input signal [1]", 170, 1, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.P.u", \
+"Input signal connector", "control_System_Therminol_4_element_all_modes.PIDV1.addP.y", 1,\
  5, 1028, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.P.y",\
- "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.gainPID.k",\
- "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.gainPID.u",\
- "Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.gainPID.y",\
- "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addPID.k1",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.P.y", \
+"Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.gainPID.k", \
+"Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.gainPID.u", \
+"Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.gainPID.y", \
+"Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.addPID.k1",\
  "Gain of input signal 1", 171, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addPID.k2",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.addPID.k2",\
  "Gain of input signal 2", 172, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addPID.k3",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.addPID.k3",\
  "Gain of input signal 3", 173, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addPID.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.P.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.addPID.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.PIDV1.P.y", 1,\
  5, 1030, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addPID.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.Dzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.addPID.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.PIDV1.Dzero.k", 1,\
  7, 174, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addPID.u3",\
- "Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.I.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.addPID.u3", \
+"Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes.PIDV1.I.y", 1,\
  1, 430, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addPID.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.gainPID.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.addPID.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV1.gainPID.u", 1,\
  5, 1032, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.limiter.uMax",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.limiter.uMax",\
  "Upper limits of input signals", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.limiter.uMin",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.limiter.uMin",\
  "Lower limits of input signals", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.limiter.strict",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.limiter.strict",\
  "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.limiter.homotopyType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.limiter.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.limiter.u",\
- "Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.limiter.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.limiter.u", \
+"Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.limiter.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV1.y", 1,\
  5, 1020, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.limiter.simplifiedExpr",\
- "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.limiter.simplifiedExpr",\
+ "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes.PIDV1.limiter.u", 1,\
  5, 1038, 1024)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.with_I",\
- "[:#(type=Boolean)]", true, 0.0,0.0,0.0,0,1539)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.with_D",\
- "[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.Dzero.k",\
- "Constant output value", 174, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.Dzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.Dzero.k", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.with_I", \
+"[:#(type=Boolean)]", true, 0.0,0.0,0.0,0,1539)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.with_D", \
+"[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.Dzero.k", \
+"Constant output value", 174, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.Dzero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV1.Dzero.k", 1,\
  7, 174, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.FFzero.k",\
- "Constant output value", 175, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.FFzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.FFzero.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.FFzero.k", \
+"Constant output value", 175, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.FFzero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV1.FFzero.k", 1,\
  7, 175, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addFF.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.gainPID.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.addFF.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.PIDV1.gainPID.y", 1,\
  5, 1033, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addFF.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.FFzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.addFF.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.PIDV1.FFzero.k", 1,\
  7, 175, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addFF.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV1.addFF.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV1.limiter.u", 1,\
  5, 1038, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addFF.k1",\
- "Gain of input signal 1", 176, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.addFF.k2",\
- "Gain of input signal 2", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.const.k",\
- "Constant output value [1]", 177, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.const.y",\
- "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV1.addFF.k1", \
+"Gain of input signal 1", 176, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV1.addFF.k2", \
+"Gain of input signal 2", 0.0, 0.0,0.0,0.0,0,513)
+DeclareParameter("control_System_Therminol_4_element_all_modes.const.k", \
+"Constant output value [1]", 177, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.const.y", \
+"Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes.const.k", 1,\
  7, 177, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder.k",\
- "Gain [1]", 178, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder.T",\
- "Time Constant [s]", 179, 5, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder.initType",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder.k", \
+"Gain [1]", 178, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder.T", \
+"Time Constant [s]", 179, 5, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.firstOrder.initType",\
  "Type of initialization (1: no init, 2: steady state, 3/4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder.y_start",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder.y_start",\
  "Initial or guess value of output (= state) [1]", 180, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder.u",\
- "Connector of Real input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV1.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.firstOrder.u", \
+"Connector of Real input signal", "control_System_Therminol_4_element_all_modes.PIDV1.y", 1,\
  5, 1020, 0)
-DeclareState("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder.y",\
- "Connector of Real output signal [1]", 2, 0.0, 0.0,1.0,0.0,0,544)
-DeclareDerivative("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder.der(y)",\
+DeclareState("control_System_Therminol_4_element_all_modes.firstOrder.y", \
+"Connector of Real output signal [1]", 2, 0.0, 0.0,1.0,0.0,0,544)
+DeclareDerivative("control_System_Therminol_4_element_all_modes.firstOrder.der(y)",\
  "der(Connector of Real output signal) [s-1]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.u_s",\
- "Connector of setpoint input signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error2", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.u_s", \
+"Connector of setpoint input signal [1]", "control_System_Therminol_4_element_all_modes.Error2", 1,\
  5, 1159, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.u_m",\
- "Connector of measurement input signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const1.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.u_m", \
+"Connector of measurement input signal [1]", "control_System_Therminol_4_element_all_modes.const1.k", 1,\
  7, 202, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.y",\
- "Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.controlError",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.y", \
+"Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.controlError",\
  "Control error (set point - measurement) [1]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.controllerType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.controllerType",\
  "Type of controller [:#(type=Modelica.Blocks.Types.SimpleController)]", 2, 1.0,\
 4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.k",\
- "Gain of controller [1]", 181, 25.2, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.Ti",\
- "Time constant of Integrator block [s]", 182, 3.5, 1E-60,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.Td",\
- "Time constant of Derivative block [s]", 183, 0.1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.yMax",\
- "Upper limit of output", 184, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.yMin",\
- "Lower limit of output", 185, 0.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.wp",\
- "Set-point weight for Proportional block (0..1)", 186, 1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.wd",\
- "Set-point weight for Derivative block (0..1)", 187, 0, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.Ni",\
- "Ni*Ti is time constant of anti-windup compensation", 188, 0.9, 1E-13,1E+100,\
-0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.Nd",\
- "The higher Nd, the more ideal the derivative block", 189, 10, 1E-13,1E+100,0.0,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.k", \
+"Gain of controller [1]", 181, 25.2, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.Ti", \
+"Time constant of Integrator block [s]", 182, 3.5, 1E-60,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.Td", \
+"Time constant of Derivative block [s]", 183, 0.1, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.yMax", \
+"Upper limit of output", 184, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.yMin", \
+"Lower limit of output", 185, 0.0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.wp", \
+"Set-point weight for Proportional block (0..1)", 186, 1, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.wd", \
+"Set-point weight for Derivative block (0..1)", 187, 0, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.Ni", \
+"Ni*Ti is time constant of anti-windup compensation", 188, 0.9, 1E-13,1E+100,0.0,\
 0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.withFeedForward",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.Nd", \
+"The higher Nd, the more ideal the derivative block", 189, 10, 1E-13,1E+100,0.0,\
+0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.withFeedForward",\
  "Use feed-forward input? [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,515)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.kFF",\
- "Gain of feed-forward input", 190, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.initType",\
- "Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.kFF", \
+"Gain of feed-forward input", 190, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.initType", \
+"Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.xi_start",\
- "Initial or guess value for integrator output (= integrator state)", 191, 0, \
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.xi_start", \
+"Initial or guess value for integrator output (= integrator state)", 191, 0, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.xd_start",\
- "Initial or guess value for state of derivative block", 192, 0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.y_start",\
- "Initial value of output", 193, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.homotopyType",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.xd_start", \
+"Initial or guess value for state of derivative block", 192, 0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.y_start", \
+"Initial value of output", 193, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.strict",\
- "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.strict", \
+"= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.unitTime",\
- "[s]", 1, 0.0,0.0,0.0,0,1537)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addP.u1",\
- "Connector of Real input signal 1 [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error2", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.unitTime", \
+"[s]", 1, 0.0,0.0,0.0,0,1537)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.addP.u1", \
+"Connector of Real input signal 1 [1]", "control_System_Therminol_4_element_all_modes.Error2", 1,\
  5, 1159, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addP.u2",\
- "Connector of Real input signal 2 [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const1.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.addP.u2", \
+"Connector of Real input signal 2 [1]", "control_System_Therminol_4_element_all_modes.const1.k", 1,\
  7, 202, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addP.y",\
- "Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addP.k1",\
- "Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addP.k2",\
- "Gain of input signal 2", 194, -1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.P.k",\
- "Gain value multiplied with input signal [1]", 195, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.P.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addP.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.addP.y", \
+"Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.addP.k1", \
+"Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.addP.k2", \
+"Gain of input signal 2", 194, -1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.P.k", \
+"Gain value multiplied with input signal [1]", 195, 1, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.P.u", \
+"Input signal connector", "control_System_Therminol_4_element_all_modes.PIDV2.addP.y", 1,\
  5, 1051, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.P.y",\
- "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.gainPID.k",\
- "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.gainPID.u",\
- "Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.gainPID.y",\
- "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addPID.k1",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.P.y", \
+"Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.gainPID.k", \
+"Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.gainPID.u", \
+"Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.gainPID.y", \
+"Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.addPID.k1",\
  "Gain of input signal 1", 196, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addPID.k2",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.addPID.k2",\
  "Gain of input signal 2", 197, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addPID.k3",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.addPID.k3",\
  "Gain of input signal 3", 198, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addPID.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.P.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.addPID.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.PIDV2.P.y", 1,\
  5, 1053, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addPID.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.Dzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.addPID.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.PIDV2.Dzero.k", 1,\
  7, 199, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addPID.u3",\
- "Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.I.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.addPID.u3", \
+"Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes.PIDV2.I.y", 1,\
  1, 431, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addPID.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.gainPID.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.addPID.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV2.gainPID.u", 1,\
  5, 1055, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.limiter.uMax",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.limiter.uMax",\
  "Upper limits of input signals", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.limiter.uMin",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.limiter.uMin",\
  "Lower limits of input signals", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.limiter.strict",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.limiter.strict",\
  "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.limiter.homotopyType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.limiter.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.limiter.u",\
- "Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.limiter.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.limiter.u", \
+"Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.limiter.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV2.y", 1,\
  5, 1043, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.limiter.simplifiedExpr",\
- "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.limiter.simplifiedExpr",\
+ "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes.PIDV2.limiter.u", 1,\
  5, 1061, 1024)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.with_I",\
- "[:#(type=Boolean)]", true, 0.0,0.0,0.0,0,1539)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.with_D",\
- "[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.Dzero.k",\
- "Constant output value", 199, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.Dzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.Dzero.k", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.with_I", \
+"[:#(type=Boolean)]", true, 0.0,0.0,0.0,0,1539)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.with_D", \
+"[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.Dzero.k", \
+"Constant output value", 199, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.Dzero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV2.Dzero.k", 1,\
  7, 199, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.FFzero.k",\
- "Constant output value", 200, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.FFzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.FFzero.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.FFzero.k", \
+"Constant output value", 200, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.FFzero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV2.FFzero.k", 1,\
  7, 200, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addFF.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.gainPID.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.addFF.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.PIDV2.gainPID.y", 1,\
  5, 1056, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addFF.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.FFzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.addFF.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.PIDV2.FFzero.k", 1,\
  7, 200, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addFF.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV2.addFF.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV2.limiter.u", 1,\
  5, 1061, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addFF.k1",\
- "Gain of input signal 1", 201, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.addFF.k2",\
- "Gain of input signal 2", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.const1.k",\
- "Constant output value [1]", 202, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.const1.y",\
- "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const1.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV2.addFF.k1", \
+"Gain of input signal 1", 201, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV2.addFF.k2", \
+"Gain of input signal 2", 0.0, 0.0,0.0,0.0,0,513)
+DeclareParameter("control_System_Therminol_4_element_all_modes.const1.k", \
+"Constant output value [1]", 202, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.const1.y", \
+"Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes.const1.k", 1,\
  7, 202, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder1.k",\
- "Gain [1]", 203, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder1.T",\
- "Time Constant [s]", 204, 5, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder1.initType",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder1.k", \
+"Gain [1]", 203, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder1.T", \
+"Time Constant [s]", 204, 5, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.firstOrder1.initType",\
  "Type of initialization (1: no init, 2: steady state, 3/4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder1.y_start",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder1.y_start",\
  "Initial or guess value of output (= state) [1]", 205, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder1.u",\
- "Connector of Real input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV2.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.firstOrder1.u", \
+"Connector of Real input signal", "control_System_Therminol_4_element_all_modes.PIDV2.y", 1,\
  5, 1043, 0)
-DeclareState("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder1.y",\
- "Connector of Real output signal [1]", 3, 0.0, 0.0,1.0,0.0,0,544)
-DeclareDerivative("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder1.der(y)",\
+DeclareState("control_System_Therminol_4_element_all_modes.firstOrder1.y", \
+"Connector of Real output signal [1]", 3, 0.0, 0.0,1.0,0.0,0,544)
+DeclareDerivative("control_System_Therminol_4_element_all_modes.firstOrder1.der(y)",\
  "der(Connector of Real output signal) [s-1]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.u_s",\
- "Connector of setpoint input signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error3", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.u_s", \
+"Connector of setpoint input signal [1]", "control_System_Therminol_4_element_all_modes.Error3", 1,\
  5, 1160, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.u_m",\
- "Connector of measurement input signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const2.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.u_m", \
+"Connector of measurement input signal [1]", "control_System_Therminol_4_element_all_modes.const2.k", 1,\
  7, 227, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.y",\
- "Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.controlError",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.y", \
+"Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.controlError",\
  "Control error (set point - measurement) [1]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.controllerType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.controllerType",\
  "Type of controller [:#(type=Modelica.Blocks.Types.SimpleController)]", 2, 1.0,\
 4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.k",\
- "Gain of controller [1]", 206, 0.756, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.Ti",\
- "Time constant of Integrator block [s]", 207, 3.5, 1E-60,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.Td",\
- "Time constant of Derivative block [s]", 208, 0.1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.yMax",\
- "Upper limit of output", 209, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.yMin",\
- "Lower limit of output", 210, 0.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.wp",\
- "Set-point weight for Proportional block (0..1)", 211, 1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.wd",\
- "Set-point weight for Derivative block (0..1)", 212, 0, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.Ni",\
- "Ni*Ti is time constant of anti-windup compensation", 213, 0.9, 1E-13,1E+100,\
-0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.Nd",\
- "The higher Nd, the more ideal the derivative block", 214, 10, 1E-13,1E+100,0.0,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.k", \
+"Gain of controller [1]", 206, 0.756, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.Ti", \
+"Time constant of Integrator block [s]", 207, 3.5, 1E-60,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.Td", \
+"Time constant of Derivative block [s]", 208, 0.1, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.yMax", \
+"Upper limit of output", 209, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.yMin", \
+"Lower limit of output", 210, 0.0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.wp", \
+"Set-point weight for Proportional block (0..1)", 211, 1, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.wd", \
+"Set-point weight for Derivative block (0..1)", 212, 0, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.Ni", \
+"Ni*Ti is time constant of anti-windup compensation", 213, 0.9, 1E-13,1E+100,0.0,\
 0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.withFeedForward",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.Nd", \
+"The higher Nd, the more ideal the derivative block", 214, 10, 1E-13,1E+100,0.0,\
+0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.withFeedForward",\
  "Use feed-forward input? [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,515)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.kFF",\
- "Gain of feed-forward input", 215, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.initType",\
- "Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.kFF", \
+"Gain of feed-forward input", 215, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.initType", \
+"Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.xi_start",\
- "Initial or guess value for integrator output (= integrator state)", 216, 0, \
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.xi_start", \
+"Initial or guess value for integrator output (= integrator state)", 216, 0, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.xd_start",\
- "Initial or guess value for state of derivative block", 217, 0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.y_start",\
- "Initial value of output", 218, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.homotopyType",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.xd_start", \
+"Initial or guess value for state of derivative block", 217, 0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.y_start", \
+"Initial value of output", 218, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.strict",\
- "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.strict", \
+"= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.unitTime",\
- "[s]", 1, 0.0,0.0,0.0,0,1537)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addP.u1",\
- "Connector of Real input signal 1 [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error3", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.unitTime", \
+"[s]", 1, 0.0,0.0,0.0,0,1537)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.addP.u1", \
+"Connector of Real input signal 1 [1]", "control_System_Therminol_4_element_all_modes.Error3", 1,\
  5, 1160, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addP.u2",\
- "Connector of Real input signal 2 [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const2.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.addP.u2", \
+"Connector of Real input signal 2 [1]", "control_System_Therminol_4_element_all_modes.const2.k", 1,\
  7, 227, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addP.y",\
- "Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addP.k1",\
- "Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addP.k2",\
- "Gain of input signal 2", 219, -1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.P.k",\
- "Gain value multiplied with input signal [1]", 220, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.P.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addP.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.addP.y", \
+"Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.addP.k1", \
+"Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.addP.k2", \
+"Gain of input signal 2", 219, -1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.P.k", \
+"Gain value multiplied with input signal [1]", 220, 1, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.P.u", \
+"Input signal connector", "control_System_Therminol_4_element_all_modes.PIDV3.addP.y", 1,\
  5, 1074, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.P.y",\
- "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.gainPID.k",\
- "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.gainPID.u",\
- "Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.gainPID.y",\
- "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addPID.k1",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.P.y", \
+"Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.gainPID.k", \
+"Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.gainPID.u", \
+"Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.gainPID.y", \
+"Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.addPID.k1",\
  "Gain of input signal 1", 221, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addPID.k2",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.addPID.k2",\
  "Gain of input signal 2", 222, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addPID.k3",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.addPID.k3",\
  "Gain of input signal 3", 223, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addPID.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.P.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.addPID.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.PIDV3.P.y", 1,\
  5, 1076, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addPID.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.Dzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.addPID.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.PIDV3.Dzero.k", 1,\
  7, 224, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addPID.u3",\
- "Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.I.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.addPID.u3", \
+"Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes.PIDV3.I.y", 1,\
  1, 432, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addPID.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.gainPID.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.addPID.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV3.gainPID.u", 1,\
  5, 1078, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.limiter.uMax",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.limiter.uMax",\
  "Upper limits of input signals", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.limiter.uMin",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.limiter.uMin",\
  "Lower limits of input signals", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.limiter.strict",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.limiter.strict",\
  "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.limiter.homotopyType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.limiter.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.limiter.u",\
- "Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.limiter.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.limiter.u", \
+"Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.limiter.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV3.y", 1,\
  5, 1066, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.limiter.simplifiedExpr",\
- "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.limiter.simplifiedExpr",\
+ "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes.PIDV3.limiter.u", 1,\
  5, 1084, 1024)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.with_I",\
- "[:#(type=Boolean)]", true, 0.0,0.0,0.0,0,1539)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.with_D",\
- "[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.Dzero.k",\
- "Constant output value", 224, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.Dzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.Dzero.k", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.with_I", \
+"[:#(type=Boolean)]", true, 0.0,0.0,0.0,0,1539)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.with_D", \
+"[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.Dzero.k", \
+"Constant output value", 224, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.Dzero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV3.Dzero.k", 1,\
  7, 224, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.FFzero.k",\
- "Constant output value", 225, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.FFzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.FFzero.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.FFzero.k", \
+"Constant output value", 225, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.FFzero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV3.FFzero.k", 1,\
  7, 225, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addFF.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.gainPID.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.addFF.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.PIDV3.gainPID.y", 1,\
  5, 1079, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addFF.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.FFzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.addFF.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.PIDV3.FFzero.k", 1,\
  7, 225, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addFF.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV3.addFF.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV3.limiter.u", 1,\
  5, 1084, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addFF.k1",\
- "Gain of input signal 1", 226, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.addFF.k2",\
- "Gain of input signal 2", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.const2.k",\
- "Constant output value [1]", 227, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.const2.y",\
- "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const2.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV3.addFF.k1", \
+"Gain of input signal 1", 226, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV3.addFF.k2", \
+"Gain of input signal 2", 0.0, 0.0,0.0,0.0,0,513)
+DeclareParameter("control_System_Therminol_4_element_all_modes.const2.k", \
+"Constant output value [1]", 227, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.const2.y", \
+"Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes.const2.k", 1,\
  7, 227, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder2.k",\
- "Gain [1]", 228, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder2.T",\
- "Time Constant [s]", 229, 5, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder2.initType",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder2.k", \
+"Gain [1]", 228, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder2.T", \
+"Time Constant [s]", 229, 5, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.firstOrder2.initType",\
  "Type of initialization (1: no init, 2: steady state, 3/4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder2.y_start",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder2.y_start",\
  "Initial or guess value of output (= state) [1]", 230, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder2.u",\
- "Connector of Real input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV3.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.firstOrder2.u", \
+"Connector of Real input signal", "control_System_Therminol_4_element_all_modes.PIDV3.y", 1,\
  5, 1066, 0)
-DeclareState("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder2.y",\
- "Connector of Real output signal [1]", 4, 0.0, 0.0,1.0,0.0,0,544)
-DeclareDerivative("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder2.der(y)",\
+DeclareState("control_System_Therminol_4_element_all_modes.firstOrder2.y", \
+"Connector of Real output signal [1]", 4, 0.0, 0.0,1.0,0.0,0,544)
+DeclareDerivative("control_System_Therminol_4_element_all_modes.firstOrder2.der(y)",\
  "der(Connector of Real output signal) [s-1]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.u_s",\
- "Connector of setpoint input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error4", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.u_s", \
+"Connector of setpoint input signal", "control_System_Therminol_4_element_all_modes.Error4", 1,\
  5, 1161, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.u_m",\
- "Connector of measurement input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const3.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.u_m", \
+"Connector of measurement input signal", "control_System_Therminol_4_element_all_modes.const3.k", 1,\
  7, 253, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.y",\
- "Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.controlError",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.y", \
+"Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.controlError",\
  "Control error (set point - measurement)", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.controllerType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.controllerType",\
  "Type of controller [:#(type=Modelica.Blocks.Types.SimpleController)]", 1, 1.0,\
 4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.k",\
- "Gain of controller [1]", 231, 25.2, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.Ti",\
- "Time constant of Integrator block [s]", 232, 3.5, 1E-60,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.Td",\
- "Time constant of Derivative block [s]", 233, 0.1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.yMax",\
- "Upper limit of output", 234, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.yMin",\
- "Lower limit of output", 235, 0.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.wp",\
- "Set-point weight for Proportional block (0..1)", 236, 1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.wd",\
- "Set-point weight for Derivative block (0..1)", 237, 0, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.Ni",\
- "Ni*Ti is time constant of anti-windup compensation", 238, 0.9, 1E-13,1E+100,\
-0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.Nd",\
- "The higher Nd, the more ideal the derivative block", 239, 10, 1E-13,1E+100,0.0,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.k", \
+"Gain of controller [1]", 231, 25.2, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.Ti", \
+"Time constant of Integrator block [s]", 232, 3.5, 1E-60,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.Td", \
+"Time constant of Derivative block [s]", 233, 0.1, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.yMax", \
+"Upper limit of output", 234, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.yMin", \
+"Lower limit of output", 235, 0.0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.wp", \
+"Set-point weight for Proportional block (0..1)", 236, 1, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.wd", \
+"Set-point weight for Derivative block (0..1)", 237, 0, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.Ni", \
+"Ni*Ti is time constant of anti-windup compensation", 238, 0.9, 1E-13,1E+100,0.0,\
 0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.withFeedForward",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.Nd", \
+"The higher Nd, the more ideal the derivative block", 239, 10, 1E-13,1E+100,0.0,\
+0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.withFeedForward",\
  "Use feed-forward input? [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,515)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.kFF",\
- "Gain of feed-forward input", 240, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.initType",\
- "Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.kFF", \
+"Gain of feed-forward input", 240, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.initType", \
+"Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.xi_start",\
- "Initial or guess value for integrator output (= integrator state)", 241, 0, \
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.xi_start", \
+"Initial or guess value for integrator output (= integrator state)", 241, 0, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.xd_start",\
- "Initial or guess value for state of derivative block", 242, 0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.y_start",\
- "Initial value of output", 243, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.homotopyType",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.xd_start", \
+"Initial or guess value for state of derivative block", 242, 0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.y_start", \
+"Initial value of output", 243, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.strict",\
- "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.strict", \
+"= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.unitTime",\
- "[s]", 1, 0.0,0.0,0.0,0,1537)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addP.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error4", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.unitTime", \
+"[s]", 1, 0.0,0.0,0.0,0,1537)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.addP.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.Error4", 1,\
  5, 1161, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addP.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const3.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.addP.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.const3.k", 1,\
  7, 253, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addP.y",\
- "Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addP.k1",\
- "Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addP.k2",\
- "Gain of input signal 2", 244, -1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.P.k",\
- "Gain value multiplied with input signal [1]", 245, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.P.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addP.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.addP.y", \
+"Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.addP.k1", \
+"Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.addP.k2", \
+"Gain of input signal 2", 244, -1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.P.k", \
+"Gain value multiplied with input signal [1]", 245, 1, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.P.u", \
+"Input signal connector", "control_System_Therminol_4_element_all_modes.PIDV4.addP.y", 1,\
  5, 1097, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.P.y",\
- "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.gainPID.k",\
- "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.gainPID.u",\
- "Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.gainPID.y",\
- "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addPID.k1",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.P.y", \
+"Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.gainPID.k", \
+"Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.gainPID.u", \
+"Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.gainPID.y", \
+"Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.addPID.k1",\
  "Gain of input signal 1", 246, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addPID.k2",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.addPID.k2",\
  "Gain of input signal 2", 247, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addPID.k3",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.addPID.k3",\
  "Gain of input signal 3", 248, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addPID.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.P.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.addPID.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.PIDV4.P.y", 1,\
  5, 1099, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addPID.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.Dzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.addPID.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.PIDV4.Dzero.k", 1,\
  7, 249, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addPID.u3",\
- "Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.Izero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.addPID.u3", \
+"Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes.PIDV4.Izero.k", 1,\
  7, 250, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addPID.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.gainPID.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.addPID.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV4.gainPID.u", 1,\
  5, 1101, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.limiter.uMax",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.limiter.uMax",\
  "Upper limits of input signals", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.limiter.uMin",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.limiter.uMin",\
  "Lower limits of input signals", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.limiter.strict",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.limiter.strict",\
  "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.limiter.homotopyType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.limiter.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.limiter.u",\
- "Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.limiter.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.limiter.u", \
+"Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.limiter.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV4.y", 1,\
  5, 1089, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.limiter.simplifiedExpr",\
- "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.limiter.simplifiedExpr",\
+ "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes.PIDV4.limiter.u", 1,\
  5, 1107, 1024)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.with_I",\
- "[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.with_D",\
- "[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.Dzero.k",\
- "Constant output value", 249, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.Dzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.Dzero.k", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.with_I", \
+"[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.with_D", \
+"[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.Dzero.k", \
+"Constant output value", 249, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.Dzero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV4.Dzero.k", 1,\
  7, 249, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.Izero.k",\
- "Constant output value", 250, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.Izero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.Izero.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.Izero.k", \
+"Constant output value", 250, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.Izero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV4.Izero.k", 1,\
  7, 250, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.FFzero.k",\
- "Constant output value", 251, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.FFzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.FFzero.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.FFzero.k", \
+"Constant output value", 251, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.FFzero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV4.FFzero.k", 1,\
  7, 251, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addFF.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.gainPID.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.addFF.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.PIDV4.gainPID.y", 1,\
  5, 1102, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addFF.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.FFzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.addFF.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.PIDV4.FFzero.k", 1,\
  7, 251, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addFF.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV4.addFF.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV4.limiter.u", 1,\
  5, 1107, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addFF.k1",\
- "Gain of input signal 1", 252, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.addFF.k2",\
- "Gain of input signal 2", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.const3.k",\
- "Constant output value", 253, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.const3.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const3.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV4.addFF.k1", \
+"Gain of input signal 1", 252, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV4.addFF.k2", \
+"Gain of input signal 2", 0.0, 0.0,0.0,0.0,0,513)
+DeclareParameter("control_System_Therminol_4_element_all_modes.const3.k", \
+"Constant output value", 253, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.const3.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.const3.k", 1,\
  7, 253, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder3.k",\
- "Gain [1]", 254, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder3.T",\
- "Time Constant [s]", 255, 2, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder3.initType",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder3.k", \
+"Gain [1]", 254, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder3.T", \
+"Time Constant [s]", 255, 2, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.firstOrder3.initType",\
  "Type of initialization (1: no init, 2: steady state, 3/4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder3.y_start",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder3.y_start",\
  "Initial or guess value of output (= state) [1]", 256, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder3.u",\
- "Connector of Real input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV4.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.firstOrder3.u", \
+"Connector of Real input signal", "control_System_Therminol_4_element_all_modes.PIDV4.y", 1,\
  5, 1089, 0)
-DeclareState("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder3.y",\
- "Connector of Real output signal [1]", 5, 0.0, 0.0,1.0,0.0,0,544)
-DeclareDerivative("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder3.der(y)",\
+DeclareState("control_System_Therminol_4_element_all_modes.firstOrder3.y", \
+"Connector of Real output signal [1]", 5, 0.0, 0.0,1.0,0.0,0,544)
+DeclareDerivative("control_System_Therminol_4_element_all_modes.firstOrder3.der(y)",\
  "der(Connector of Real output signal) [s-1]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.u_s",\
- "Connector of setpoint input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error5", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.u_s", \
+"Connector of setpoint input signal", "control_System_Therminol_4_element_all_modes.Error5", 1,\
  5, 1162, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.u_m",\
- "Connector of measurement input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const4.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.u_m", \
+"Connector of measurement input signal", "control_System_Therminol_4_element_all_modes.const4.k", 1,\
  7, 279, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.y",\
- "Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.controlError",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.y", \
+"Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.controlError",\
  "Control error (set point - measurement)", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.controllerType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.controllerType",\
  "Type of controller [:#(type=Modelica.Blocks.Types.SimpleController)]", 1, 1.0,\
 4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.k",\
- "Gain of controller [1]", 257, 25.2, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.Ti",\
- "Time constant of Integrator block [s]", 258, 3.5, 1E-60,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.Td",\
- "Time constant of Derivative block [s]", 259, 0.1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.yMax",\
- "Upper limit of output", 260, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.yMin",\
- "Lower limit of output", 261, 0.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.wp",\
- "Set-point weight for Proportional block (0..1)", 262, 1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.wd",\
- "Set-point weight for Derivative block (0..1)", 263, 0, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.Ni",\
- "Ni*Ti is time constant of anti-windup compensation", 264, 0.9, 1E-13,1E+100,\
-0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.Nd",\
- "The higher Nd, the more ideal the derivative block", 265, 10, 1E-13,1E+100,0.0,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.k", \
+"Gain of controller [1]", 257, 25.2, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.Ti", \
+"Time constant of Integrator block [s]", 258, 3.5, 1E-60,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.Td", \
+"Time constant of Derivative block [s]", 259, 0.1, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.yMax", \
+"Upper limit of output", 260, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.yMin", \
+"Lower limit of output", 261, 0.0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.wp", \
+"Set-point weight for Proportional block (0..1)", 262, 1, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.wd", \
+"Set-point weight for Derivative block (0..1)", 263, 0, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.Ni", \
+"Ni*Ti is time constant of anti-windup compensation", 264, 0.9, 1E-13,1E+100,0.0,\
 0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.withFeedForward",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.Nd", \
+"The higher Nd, the more ideal the derivative block", 265, 10, 1E-13,1E+100,0.0,\
+0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.withFeedForward",\
  "Use feed-forward input? [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,515)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.kFF",\
- "Gain of feed-forward input", 266, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.initType",\
- "Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.kFF", \
+"Gain of feed-forward input", 266, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.initType", \
+"Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.xi_start",\
- "Initial or guess value for integrator output (= integrator state)", 267, 0, \
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.xi_start", \
+"Initial or guess value for integrator output (= integrator state)", 267, 0, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.xd_start",\
- "Initial or guess value for state of derivative block", 268, 0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.y_start",\
- "Initial value of output", 269, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.homotopyType",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.xd_start", \
+"Initial or guess value for state of derivative block", 268, 0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.y_start", \
+"Initial value of output", 269, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.strict",\
- "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.strict", \
+"= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.unitTime",\
- "[s]", 1, 0.0,0.0,0.0,0,1537)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addP.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error5", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.unitTime", \
+"[s]", 1, 0.0,0.0,0.0,0,1537)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.addP.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.Error5", 1,\
  5, 1162, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addP.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const4.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.addP.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.const4.k", 1,\
  7, 279, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addP.y",\
- "Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addP.k1",\
- "Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addP.k2",\
- "Gain of input signal 2", 270, -1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.P.k",\
- "Gain value multiplied with input signal [1]", 271, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.P.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addP.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.addP.y", \
+"Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.addP.k1", \
+"Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.addP.k2", \
+"Gain of input signal 2", 270, -1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.P.k", \
+"Gain value multiplied with input signal [1]", 271, 1, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.P.u", \
+"Input signal connector", "control_System_Therminol_4_element_all_modes.PIDV5.addP.y", 1,\
  5, 1120, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.P.y",\
- "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.gainPID.k",\
- "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.gainPID.u",\
- "Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.gainPID.y",\
- "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addPID.k1",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.P.y", \
+"Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.gainPID.k", \
+"Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.gainPID.u", \
+"Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.gainPID.y", \
+"Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.addPID.k1",\
  "Gain of input signal 1", 272, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addPID.k2",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.addPID.k2",\
  "Gain of input signal 2", 273, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addPID.k3",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.addPID.k3",\
  "Gain of input signal 3", 274, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addPID.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.P.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.addPID.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.PIDV5.P.y", 1,\
  5, 1122, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addPID.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.Dzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.addPID.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.PIDV5.Dzero.k", 1,\
  7, 275, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addPID.u3",\
- "Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.Izero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.addPID.u3", \
+"Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes.PIDV5.Izero.k", 1,\
  7, 276, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addPID.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.gainPID.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.addPID.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV5.gainPID.u", 1,\
  5, 1124, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.limiter.uMax",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.limiter.uMax",\
  "Upper limits of input signals", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.limiter.uMin",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.limiter.uMin",\
  "Lower limits of input signals", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.limiter.strict",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.limiter.strict",\
  "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.limiter.homotopyType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.limiter.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.limiter.u",\
- "Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.limiter.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.limiter.u", \
+"Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.limiter.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV5.y", 1,\
  5, 1112, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.limiter.simplifiedExpr",\
- "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.limiter.simplifiedExpr",\
+ "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes.PIDV5.limiter.u", 1,\
  5, 1130, 1024)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.with_I",\
- "[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.with_D",\
- "[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.Dzero.k",\
- "Constant output value", 275, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.Dzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.Dzero.k", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.with_I", \
+"[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.with_D", \
+"[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.Dzero.k", \
+"Constant output value", 275, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.Dzero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV5.Dzero.k", 1,\
  7, 275, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.Izero.k",\
- "Constant output value", 276, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.Izero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.Izero.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.Izero.k", \
+"Constant output value", 276, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.Izero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV5.Izero.k", 1,\
  7, 276, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.FFzero.k",\
- "Constant output value", 277, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.FFzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.FFzero.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.FFzero.k", \
+"Constant output value", 277, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.FFzero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV5.FFzero.k", 1,\
  7, 277, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addFF.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.gainPID.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.addFF.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.PIDV5.gainPID.y", 1,\
  5, 1125, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addFF.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.FFzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.addFF.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.PIDV5.FFzero.k", 1,\
  7, 277, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addFF.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV5.addFF.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV5.limiter.u", 1,\
  5, 1130, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addFF.k1",\
- "Gain of input signal 1", 278, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.addFF.k2",\
- "Gain of input signal 2", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.const4.k",\
- "Constant output value", 279, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.const4.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const4.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV5.addFF.k1", \
+"Gain of input signal 1", 278, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV5.addFF.k2", \
+"Gain of input signal 2", 0.0, 0.0,0.0,0.0,0,513)
+DeclareParameter("control_System_Therminol_4_element_all_modes.const4.k", \
+"Constant output value", 279, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.const4.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.const4.k", 1,\
  7, 279, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder4.k",\
- "Gain [1]", 280, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder4.T",\
- "Time Constant [s]", 281, 2, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder4.initType",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder4.k", \
+"Gain [1]", 280, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder4.T", \
+"Time Constant [s]", 281, 2, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.firstOrder4.initType",\
  "Type of initialization (1: no init, 2: steady state, 3/4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder4.y_start",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder4.y_start",\
  "Initial or guess value of output (= state) [1]", 282, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder4.u",\
- "Connector of Real input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV5.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.firstOrder4.u", \
+"Connector of Real input signal", "control_System_Therminol_4_element_all_modes.PIDV5.y", 1,\
  5, 1112, 0)
-DeclareState("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder4.y",\
- "Connector of Real output signal [1]", 6, 0.0, 0.0,1.0,0.0,0,544)
-DeclareDerivative("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder4.der(y)",\
+DeclareState("control_System_Therminol_4_element_all_modes.firstOrder4.y", \
+"Connector of Real output signal [1]", 6, 0.0, 0.0,1.0,0.0,0,544)
+DeclareDerivative("control_System_Therminol_4_element_all_modes.firstOrder4.der(y)",\
  "der(Connector of Real output signal) [s-1]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.u_s",\
- "Connector of setpoint input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error6", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.u_s", \
+"Connector of setpoint input signal", "control_System_Therminol_4_element_all_modes.Error6", 1,\
  5, 1163, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.u_m",\
- "Connector of measurement input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const5.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.u_m", \
+"Connector of measurement input signal", "control_System_Therminol_4_element_all_modes.const5.k", 1,\
  7, 304, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.y",\
- "Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.controlError",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.y", \
+"Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.controlError",\
  "Control error (set point - measurement)", 0.0, 0.0,0.0,0.0,0,512)
 EndNonAlias(5)
 PreNonAliasNew(6)
 StartNonAlias(6)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.controllerType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.controllerType",\
  "Type of controller [:#(type=Modelica.Blocks.Types.SimpleController)]", 2, 1.0,\
 4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.k",\
- "Gain of controller [1]", 283, 25.2, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.Ti",\
- "Time constant of Integrator block [s]", 284, 3.5, 1E-60,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.Td",\
- "Time constant of Derivative block [s]", 285, 0.1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.yMax",\
- "Upper limit of output", 286, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.yMin",\
- "Lower limit of output", 287, 0.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.wp",\
- "Set-point weight for Proportional block (0..1)", 288, 1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.wd",\
- "Set-point weight for Derivative block (0..1)", 289, 0, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.Ni",\
- "Ni*Ti is time constant of anti-windup compensation", 290, 0.9, 1E-13,1E+100,\
-0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.Nd",\
- "The higher Nd, the more ideal the derivative block", 291, 10, 1E-13,1E+100,0.0,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.k", \
+"Gain of controller [1]", 283, 25.2, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.Ti", \
+"Time constant of Integrator block [s]", 284, 3.5, 1E-60,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.Td", \
+"Time constant of Derivative block [s]", 285, 0.1, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.yMax", \
+"Upper limit of output", 286, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.yMin", \
+"Lower limit of output", 287, 0.0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.wp", \
+"Set-point weight for Proportional block (0..1)", 288, 1, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.wd", \
+"Set-point weight for Derivative block (0..1)", 289, 0, 0.0,1E+100,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.Ni", \
+"Ni*Ti is time constant of anti-windup compensation", 290, 0.9, 1E-13,1E+100,0.0,\
 0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.withFeedForward",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.Nd", \
+"The higher Nd, the more ideal the derivative block", 291, 10, 1E-13,1E+100,0.0,\
+0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.withFeedForward",\
  "Use feed-forward input? [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,515)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.kFF",\
- "Gain of feed-forward input", 292, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.initType",\
- "Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.kFF", \
+"Gain of feed-forward input", 292, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.initType", \
+"Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.xi_start",\
- "Initial or guess value for integrator output (= integrator state)", 293, 0, \
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.xi_start", \
+"Initial or guess value for integrator output (= integrator state)", 293, 0, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.xd_start",\
- "Initial or guess value for state of derivative block", 294, 0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.y_start",\
- "Initial value of output", 295, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.homotopyType",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.xd_start", \
+"Initial or guess value for state of derivative block", 294, 0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.y_start", \
+"Initial value of output", 295, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.strict",\
- "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.strict", \
+"= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.unitTime",\
- "[s]", 1, 0.0,0.0,0.0,0,1537)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addP.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error6", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.unitTime", \
+"[s]", 1, 0.0,0.0,0.0,0,1537)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.addP.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.Error6", 1,\
  5, 1163, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addP.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const5.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.addP.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.const5.k", 1,\
  7, 304, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addP.y",\
- "Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addP.k1",\
- "Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addP.k2",\
- "Gain of input signal 2", 296, -1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.P.k",\
- "Gain value multiplied with input signal [1]", 297, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.P.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addP.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.addP.y", \
+"Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.addP.k1", \
+"Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.addP.k2", \
+"Gain of input signal 2", 296, -1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.P.k", \
+"Gain value multiplied with input signal [1]", 297, 1, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.P.u", \
+"Input signal connector", "control_System_Therminol_4_element_all_modes.PIDV6.addP.y", 1,\
  5, 1143, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.P.y",\
- "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.gainPID.k",\
- "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.gainPID.u",\
- "Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.gainPID.y",\
- "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addPID.k1",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.P.y", \
+"Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.gainPID.k", \
+"Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.gainPID.u", \
+"Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.gainPID.y", \
+"Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.addPID.k1",\
  "Gain of input signal 1", 298, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addPID.k2",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.addPID.k2",\
  "Gain of input signal 2", 299, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addPID.k3",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.addPID.k3",\
  "Gain of input signal 3", 300, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addPID.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.P.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.addPID.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.PIDV6.P.y", 1,\
  5, 1145, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addPID.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.Dzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.addPID.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.PIDV6.Dzero.k", 1,\
  7, 301, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addPID.u3",\
- "Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.I.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.addPID.u3", \
+"Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes.PIDV6.I.y", 1,\
  1, 433, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addPID.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.gainPID.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.addPID.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV6.gainPID.u", 1,\
  5, 1147, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.limiter.uMax",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.limiter.uMax",\
  "Upper limits of input signals", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.limiter.uMin",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.limiter.uMin",\
  "Lower limits of input signals", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.limiter.strict",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.limiter.strict",\
  "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.limiter.homotopyType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.limiter.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.limiter.u",\
- "Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.limiter.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.limiter.u", \
+"Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.limiter.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV6.y", 1,\
  5, 1135, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.limiter.simplifiedExpr",\
- "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.limiter.simplifiedExpr",\
+ "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes.PIDV6.limiter.u", 1,\
  5, 1153, 1024)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.with_I",\
- "[:#(type=Boolean)]", true, 0.0,0.0,0.0,0,1539)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.with_D",\
- "[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.Dzero.k",\
- "Constant output value", 301, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.Dzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.Dzero.k", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.with_I", \
+"[:#(type=Boolean)]", true, 0.0,0.0,0.0,0,1539)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.with_D", \
+"[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.Dzero.k", \
+"Constant output value", 301, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.Dzero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV6.Dzero.k", 1,\
  7, 301, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.FFzero.k",\
- "Constant output value", 302, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.FFzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.FFzero.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.FFzero.k", \
+"Constant output value", 302, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.FFzero.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV6.FFzero.k", 1,\
  7, 302, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addFF.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.gainPID.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.addFF.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.PIDV6.gainPID.y", 1,\
  5, 1148, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addFF.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.FFzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.addFF.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.PIDV6.FFzero.k", 1,\
  7, 302, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addFF.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.PIDV6.addFF.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.PIDV6.limiter.u", 1,\
  5, 1153, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addFF.k1",\
- "Gain of input signal 1", 303, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.addFF.k2",\
- "Gain of input signal 2", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.const5.k",\
- "Constant output value", 304, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.const5.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const5.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.PIDV6.addFF.k1", \
+"Gain of input signal 1", 303, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.PIDV6.addFF.k2", \
+"Gain of input signal 2", 0.0, 0.0,0.0,0.0,0,513)
+DeclareParameter("control_System_Therminol_4_element_all_modes.const5.k", \
+"Constant output value", 304, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.const5.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.const5.k", 1,\
  7, 304, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder5.k",\
- "Gain [1]", 305, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder5.T",\
- "Time Constant [s]", 306, 5, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder5.initType",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder5.k", \
+"Gain [1]", 305, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder5.T", \
+"Time Constant [s]", 306, 5, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.firstOrder5.initType",\
  "Type of initialization (1: no init, 2: steady state, 3/4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder5.y_start",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.firstOrder5.y_start",\
  "Initial or guess value of output (= state) [1]", 307, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder5.u",\
- "Connector of Real input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.PIDV6.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.firstOrder5.u", \
+"Connector of Real input signal", "control_System_Therminol_4_element_all_modes.PIDV6.y", 1,\
  5, 1135, 0)
-DeclareState("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder5.y",\
- "Connector of Real output signal [1]", 7, 0.0, 0.0,1.0,0.0,0,544)
-DeclareDerivative("control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder5.der(y)",\
+DeclareState("control_System_Therminol_4_element_all_modes.firstOrder5.y", \
+"Connector of Real output signal [1]", 7, 0.0, 0.0,1.0,0.0,0,544)
+DeclareDerivative("control_System_Therminol_4_element_all_modes.firstOrder5.der(y)",\
  "der(Connector of Real output signal) [s-1]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Valve1.y",\
- "Value of Real output [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error1", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Valve1.y", \
+"Value of Real output [1]", "control_System_Therminol_4_element_all_modes.Error1", 1,\
  5, 1158, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Valve2.y",\
- "Value of Real output [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error2", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Valve2.y", \
+"Value of Real output [1]", "control_System_Therminol_4_element_all_modes.Error2", 1,\
  5, 1159, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Valve3.y",\
- "Value of Real output [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error3", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Valve3.y", \
+"Value of Real output [1]", "control_System_Therminol_4_element_all_modes.Error3", 1,\
  5, 1160, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Valve4.y",\
- "Value of Real output", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error4", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Valve4.y", \
+"Value of Real output", "control_System_Therminol_4_element_all_modes.Error4", 1,\
  5, 1161, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Valve6.y",\
- "Value of Real output", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error6", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Valve6.y", \
+"Value of Real output", "control_System_Therminol_4_element_all_modes.Error6", 1,\
  5, 1163, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Valve5.y",\
- "Value of Real output", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Error5", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Valve5.y", \
+"Value of Real output", "control_System_Therminol_4_element_all_modes.Error5", 1,\
  5, 1162, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Error1",\
- "Valve 1 [1]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Error2",\
- "Valve 2 [1]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Error3",\
- "Valve 3 [1]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Error4",\
- "Valve 4", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Error5",\
- "Valve 5", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Error6",\
- "Valve 6", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.storage_button",\
- "0 equals discharge or stationary, 1 is charging [:#(type=Integer)]", 0, \
+DeclareVariable("control_System_Therminol_4_element_all_modes.Error1", \
+"Valve 1 [1]", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.Error2", \
+"Valve 2 [1]", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.Error3", \
+"Valve 3 [1]", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.Error4", "Valve 4",\
+ 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.Error5", "Valve 5",\
+ 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.Error6", "Valve 6",\
+ 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.storage_button", \
+"0 equals discharge or stationary, 1 is charging [:#(type=Integer)]", 0, \
 0.0,0.0,0.0,0,724)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Q_TES_max",\
- "[W]", 308, 175000.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_max",\
- "[W]", 309, 200000.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.T_hot_design",\
- "[K|degC]", 310, 598.15, 0.0,1E+100,300.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.T_cold_design",\
- "[K|degC]", 311, 498.15, 0.0,1E+100,300.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.m_tes_max",\
- "[kg/s]", 312, 2, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.m_heater_max",\
- "[kg/s]", 313, 2, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.m_bop_heater_demand",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Q_TES_max", "[W]",\
+ 308, 175000.0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_max", \
+"[W]", 309, 200000.0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.T_hot_design", \
+"[K|degC]", 310, 598.15, 0.0,1E+100,300.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.T_cold_design", \
+"[K|degC]", 311, 498.15, 0.0,1E+100,300.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.m_tes_max", \
+"[kg/s]", 312, 2, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.m_heater_max", \
+"[kg/s]", 313, 2, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.m_bop_heater_demand",\
  "[kg/s]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.m_tes_demand",\
- "[kg/s]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.m_heater_demand",\
- "[kg/s]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Q_TES_demanded",\
- "[W]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Q_TES_discharge",\
- "[W]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Cp",\
- "[J/(kg.K)]", 2380.32240625, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.p",\
- "Absolute pressure of medium [Pa|bar]", 100000.0, 0.0,1E+100,100000.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.h",\
- "Specific enthalpy of medium [J/kg]", 654231.6133578125, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.d",\
- "Density of medium [kg/m3|g/cm3]", 828.5350786107, 0.0,100000.0,1.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.T",\
- "Temperature of medium [K|degC]", 548, 1.0,10000.0,300.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.X[1]",\
- "Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]", 1.0, 0.0,1.0,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.m_tes_demand", \
+"[kg/s]", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.m_heater_demand", \
+"[kg/s]", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.Q_TES_demanded", \
+"[W]", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.Q_TES_discharge", \
+"[W]", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.Cp", "[J/(kg.K)]",\
+ 2380.32240625, 0.0,0.0,0.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.p", \
+"Absolute pressure of medium [Pa|bar]", 100000.0, 0.0,1E+100,100000.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.h", \
+"Specific enthalpy of medium [J/kg]", 654231.6133578125, 0.0,0.0,0.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.d", \
+"Density of medium [kg/m3|g/cm3]", 828.5350786107, 0.0,100000.0,1.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.T", \
+"Temperature of medium [K|degC]", 548, 1.0,10000.0,300.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.X[1]", \
+"Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]", 1.0, 0.0,1.0,\
 0.1,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.u",\
- "Specific internal energy of medium [J/kg]", 654110.9184076751, -100000000.0,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.u", \
+"Specific internal energy of medium [J/kg]", 654110.9184076751, -100000000.0,\
 100000000.0,1000000.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.R_s",\
- "Gas constant (of mixture if applicable) [J/(kg.K)]", 32.99365079365079, 0.0,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.R_s", \
+"Gas constant (of mixture if applicable) [J/(kg.K)]", 32.99365079365079, 0.0,\
 10000000.0,1000.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.MM",\
- "Molar mass (of mixture or single fluid) [kg/mol]", 0.252, 0.0,1E+100,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.state.p",\
- "Absolute pressure of medium [Pa|bar]", 100000.0, 0.0,100000000.0,100000.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.state.T",\
- "Temperature of medium [K|degC]", 548.0, 1.0,10000.0,300.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.preferredMediumStates",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.MM", \
+"Molar mass (of mixture or single fluid) [kg/mol]", 0.252, 0.0,1E+100,0.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.state.p", \
+"Absolute pressure of medium [Pa|bar]", 100000.0, 0.0,100000000.0,100000.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.state.T", \
+"Temperature of medium [K|degC]", 548.0, 1.0,10000.0,300.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.preferredMediumStates",\
  "= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]",\
  false, 0.0,0.0,0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.standardOrderComponents",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.standardOrderComponents",\
  "If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]",\
  true, 0.0,0.0,0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.T_degC",\
- "Temperature of medium in [degC] [degC;]", 274.85, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.mediums.p_bar",\
- "Absolute pressure of medium in [bar] [bar]", 1.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.u_s",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.T_degC", \
+"Temperature of medium in [degC] [degC;]", 274.85, 0.0,0.0,0.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.mediums.p_bar", \
+"Absolute pressure of medium in [bar] [bar]", 1.0, 0.0,0.0,0.0,0,513)
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.u_s",\
  "Connector of setpoint input signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.u_m",\
- "Connector of measurement input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const6.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.u_m",\
+ "Connector of measurement input signal", "control_System_Therminol_4_element_all_modes.const6.k", 1,\
  7, 359, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.y",\
  "Connector of actuator output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.controlError",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.controlError",\
  "Control error (set point - measurement)", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.controllerType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.controllerType",\
  "Type of controller [:#(type=Modelica.Blocks.Types.SimpleController)]", 2, 1.0,\
 4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.with_FF",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.with_FF",\
  "enable feed-forward input signal [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.derMeas",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.derMeas",\
  "=true avoid derivative kick [:#(type=Boolean)]", true, 0.0,0.0,0.0,0,515)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.k",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.k",\
  "Controller gain: +/- for direct/reverse acting [1]", 314, 0.8, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.Ti",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.Ti",\
  "Time constant of Integrator block [s]", 315, 3.5, 1E-60,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.Td",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.Td",\
  "Time constant of Derivative block [s]", 316, 0.1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.yb",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.yb",\
  "Output bias. May improve simulation", 317, 0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.k_s",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.k_s",\
  "Setpoint input scaling: k_s*u_s. May improve simulation [1]", 318, 1, 0.0,0.0,\
 0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.k_m",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.k_m",\
  "Measurement input scaling: k_m*u_m. May improve simulation [1]", 319, 1, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.k_ff",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.k_ff",\
  "Measurement input scaling: k_ff*u_ff. May improve simulation", 320, 1, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.yMax",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.yMax",\
  "Upper limit of output", 321, 3, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.yMin",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.yMin",\
  "Lower limit of output", 322, 0.2, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.wp",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.wp",\
  "Set-point weight for Proportional block (0..1)", 323, 1, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.wd",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.wd",\
  "Set-point weight for Derivative block (0..1)", 324, 0, 0.0,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.Ni",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.Ni",\
  "Ni*Ti is time constant of anti-windup compensation", 325, 0.9, 1E-13,1E+100,\
 0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.Nd",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.Nd",\
  "The higher Nd, the more ideal the derivative block", 326, 10, 1E-13,1E+100,0.0,\
 0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.initType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.initType",\
  "Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]",\
  1, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.xi_start",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.xi_start",\
  "Initial or guess value value for integrator output (= integrator state)", 0, \
 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.xd_start",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.xd_start",\
  "Initial or guess value for state of derivative block", 327, 0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.y_start",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.y_start",\
  "Initial value of output", 328, 0.84, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.strict",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.strict",\
  "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.reset",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.reset",\
  "Type of controller output reset [:#(type=TRANSFORM.Types.Reset)]", 1, 1.0,3.0,\
 0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.y_reset",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.y_reset",\
  "Value to which the controller output is reset if the boolean trigger has a rising edge, used if reset == TRANSFORM.Types.Reset.Parameter",\
  0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addP.u1",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addP.u1",\
  "Connector of Real input signal 1", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addP.u2",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addP.u2",\
  "Connector of Real input signal 2", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addP.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addP.y",\
  "Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addP.k1",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addP.k1",\
  "Gain of input signal 1", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addP.k2",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addP.k2",\
  "Gain of input signal 2", 329, -1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.P.k",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.P.k",\
  "Gain value multiplied with input signal [1]", 330, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.P.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addP.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.P.u",\
+ "Input signal connector", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addP.y", 1,\
  5, 1198, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.P.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.P.y",\
  "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.gainPID.k",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.gainPID.k",\
  "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.gainPID.u",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.gainPID.u",\
  "Input signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.gainPID.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.gainPID.y",\
  "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addPID.k1",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addPID.k1",\
  "Gain of input signal 1", 331, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addPID.k2",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addPID.k2",\
  "Gain of input signal 2", 332, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addPID.k3",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addPID.k3",\
  "Gain of input signal 3", 333, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addPID.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.P.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addPID.u1",\
+ "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.P.y", 1,\
  5, 1200, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addPID.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.Dzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addPID.u2",\
+ "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.Dzero.k", 1,\
  7, 806, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addPID.u3",\
- "Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.I.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addPID.u3",\
+ "Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.I.y", 1,\
  1, 434, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addPID.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.gainPID.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addPID.y",\
+ "Connector of Real output signal", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.gainPID.u", 1,\
  5, 1202, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.limiter.uMax",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.limiter.uMax",\
  "Upper limits of input signals", 1, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.limiter.uMin",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.limiter.uMin",\
  "Lower limits of input signals", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.limiter.strict",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.limiter.strict",\
  "= true, if strict limits with noEvent(..) [:#(type=Boolean)]", false, 0.0,0.0,\
 0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.limiter.homotopyType",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.limiter.homotopyType",\
  "Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.limiter.u",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.limiter.u",\
  "Connector of Real input signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.limiter.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.limiter.y",\
+ "Connector of Real output signal", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.y", 1,\
  5, 1186, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.limiter.simplifiedExpr",\
- "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.limiter.simplifiedExpr",\
+ "Simplified expression for homotopy-based initialization", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.limiter.u", 1,\
  5, 1208, 1024)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.Fzero.k",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.Fzero.k",\
  "Constant output value", 334, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.Fzero.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.Fzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.Fzero.y",\
+ "Connector of Real output signal", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.Fzero.k", 1,\
  7, 334, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addFF.k1",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addFF.k1",\
  "Gain of input signal 1", 335, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addFF.k2",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addFF.k2",\
  "Gain of input signal 2", 336, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addFF.k3",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addFF.k3",\
  "Gain of input signal 3", 337, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addFF.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.Fzero.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addFF.u1",\
+ "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.Fzero.k", 1,\
  7, 334, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addFF.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.gainPID.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addFF.u2",\
+ "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.gainPID.y", 1,\
  5, 1203, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addFF.u3",\
- "Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.null_bias.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addFF.u3",\
+ "Connector of Real input signal 3", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.null_bias.k", 1,\
  5, 1211, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addFF.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.limiter.u", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addFF.y",\
+ "Connector of Real output signal", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.limiter.u", 1,\
  5, 1208, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.gain_u_s.k",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.gain_u_s.k",\
  "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.gain_u_s.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.u_s", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.gain_u_s.u",\
+ "Input signal connector", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.u_s", 1,\
  5, 1185, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.gain_u_s.y",\
- "Output signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addP.u1", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.gain_u_s.y",\
+ "Output signal connector", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addP.u1", 1,\
  5, 1196, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.gain_u_m.k",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.gain_u_m.k",\
  "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.gain_u_m.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const6.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.gain_u_m.u",\
+ "Input signal connector", "control_System_Therminol_4_element_all_modes.const6.k", 1,\
  7, 359, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.gain_u_m.y",\
- "Output signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.addP.u2", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.gain_u_m.y",\
+ "Output signal connector", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.addP.u2", 1,\
  5, 1197, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.null_bias.k",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.null_bias.k",\
  "Constant output value", 1, 0.0,0.0,0.0,0,513)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.null_bias.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.null_bias.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.null_bias.y",\
+ "Connector of Real output signal", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.null_bias.k", 1,\
  5, 1211, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.unitTime",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.unitTime",\
  "[s]", 1, 0.0,0.0,0.0,0,1537)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.with_I",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.with_I",\
  "[:#(type=Boolean)]", true, 0.0,0.0,0.0,0,1539)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.with_D",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.with_D",\
  "[:#(type=Boolean)]", false, 0.0,0.0,0.0,0,1539)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.y_reset_internal",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.y_reset_internal",\
  "Internal connector for controller output reset", 0.0, 0.0,0.0,0.0,0,2561)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.delayStart.k",\
- "Constant output value", 338, 20, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.delayStart.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.delayStart.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.delayStart.k", \
+"Constant output value", 338, 20, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.delayStart.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.delayStart.k", 1,\
  7, 338, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Discharge_mass_flow_sensor.u",\
- "Value of Real output [kg/s]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Discharge_mass_flow_sensor.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Discharge_mass_flow_sensor.u",\
+ "Value of Real output [kg/s]", "control_System_Therminol_4_element_all_modes.Discharge_mass_flow_sensor.y", 1,\
  5, 1216, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Discharge_mass_flow_sensor.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Discharge_mass_flow_sensor.y",\
  "[kg/s]", 0.0, -100000.0,100000.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Charge_mass_flow_sensor.u",\
- "Value of Real output [kg/s]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Charge_mass_flow_sensor.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Charge_mass_flow_sensor.u",\
+ "Value of Real output [kg/s]", "control_System_Therminol_4_element_all_modes.Charge_mass_flow_sensor.y", 1,\
  5, 1217, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Charge_mass_flow_sensor.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Charge_mass_flow_sensor.y",\
  "[kg/s]", 0.0, -100000.0,100000.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.add.u1",\
- "Connector of Real input signal 1 [W]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.add.u2",\
- "Connector of Real input signal 2 [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Load.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.add.u1", \
+"Connector of Real input signal 1 [W]", 0.0, 0.0,0.0,0.0,0,512)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.add.u2", \
+"Connector of Real input signal 2 [W]", "control_System_Therminol_4_element_all_modes.Heater_Load.y", 1,\
  5, 1234, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.add.y",\
- "Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.add.k1",\
- "Gain of input signal 1", 339, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.add.k2",\
- "Gain of input signal 2", 340, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.greaterEqual.u1",\
- "Connector of first Real input signal [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Load_TES.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.add.y", \
+"Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareParameter("control_System_Therminol_4_element_all_modes.add.k1", \
+"Gain of input signal 1", 339, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.add.k2", \
+"Gain of input signal 2", 340, 1, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.greaterEqual.u1", \
+"Connector of first Real input signal [W]", "control_System_Therminol_4_element_all_modes.Load_TES.y", 1,\
  5, 1260, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.greaterEqual.u2",\
- "Connector of second Real input signal [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Null.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.greaterEqual.u2", \
+"Connector of second Real input signal [W]", "control_System_Therminol_4_element_all_modes.Null.k", 1,\
  7, 341, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.greaterEqual.y",\
- "Connector of Boolean output signal [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,642)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.switch1.u1",\
- "Connector of first Real input signal [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Load_TES.y", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.greaterEqual.y", \
+"Connector of Boolean output signal [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,642)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.switch1.u1", \
+"Connector of first Real input signal [W]", "control_System_Therminol_4_element_all_modes.Load_TES.y", 1,\
  5, 1260, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.switch1.u2",\
- "Connector of Boolean input signal [:#(type=Boolean)]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.greaterEqual.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.switch1.u2", \
+"Connector of Boolean input signal [:#(type=Boolean)]", "control_System_Therminol_4_element_all_modes.greaterEqual.y", 1,\
  5, 1220, 65)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.switch1.u3",\
- "Connector of second Real input signal [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Null.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.switch1.u3", \
+"Connector of second Real input signal [W]", "control_System_Therminol_4_element_all_modes.Null.k", 1,\
  7, 341, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.switch1.y",\
- "Connector of Real output signal [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.add.u1", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.switch1.y", \
+"Connector of Real output signal [W]", "control_System_Therminol_4_element_all_modes.add.u1", 1,\
  5, 1218, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Null.k",\
- "Constant output value [W]", 341, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Null.y",\
- "Connector of Real output signal [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Null.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Null.k", \
+"Constant output value [W]", 341, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Null.y", \
+"Connector of Real output signal [W]", "control_System_Therminol_4_element_all_modes.Null.k", 1,\
  7, 341, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.greaterEqual1.u1",\
- "Connector of first Real input signal [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Q_TES_discharge", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.greaterEqual1.u1", \
+"Connector of first Real input signal [W]", "control_System_Therminol_4_element_all_modes.Q_TES_discharge", 1,\
  5, 1169, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.greaterEqual1.u2",\
- "Connector of second Real input signal [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Null1.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.greaterEqual1.u2", \
+"Connector of second Real input signal [W]", "control_System_Therminol_4_element_all_modes.Null1.k", 1,\
  7, 342, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.greaterEqual1.y",\
- "Connector of Boolean output signal [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,642)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.switch2.u1",\
- "Connector of first Real input signal [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Q_TES_discharge", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.greaterEqual1.y", \
+"Connector of Boolean output signal [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,642)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.switch2.u1", \
+"Connector of first Real input signal [W]", "control_System_Therminol_4_element_all_modes.Q_TES_discharge", 1,\
  5, 1169, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.switch2.u2",\
- "Connector of Boolean input signal [:#(type=Boolean)]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.greaterEqual1.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.switch2.u2", \
+"Connector of Boolean input signal [:#(type=Boolean)]", "control_System_Therminol_4_element_all_modes.greaterEqual1.y", 1,\
  5, 1221, 65)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.switch2.u3",\
- "Connector of second Real input signal [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Null1.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.switch2.u3", \
+"Connector of second Real input signal [W]", "control_System_Therminol_4_element_all_modes.Null1.k", 1,\
  7, 342, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.switch2.y",\
- "Connector of Real output signal [W]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Q_discharge.y",\
- "Value of Real output [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Q_TES_discharge", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.switch2.y", \
+"Connector of Real output signal [W]", 0.0, 0.0,0.0,0.0,0,512)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Q_discharge.y", \
+"Value of Real output [W]", "control_System_Therminol_4_element_all_modes.Q_TES_discharge", 1,\
  5, 1169, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Null1.k",\
- "Constant output value [W]", 342, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Null1.y",\
- "Connector of Real output signal [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Null1.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Null1.k", \
+"Constant output value [W]", 342, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Null1.y", \
+"Connector of Real output signal [W]", "control_System_Therminol_4_element_all_modes.Null1.k", 1,\
  7, 342, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.add1.u1",\
- "Connector of Real input signal 1 [W]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.switch2.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.add1.u1", \
+"Connector of Real input signal 1 [W]", "control_System_Therminol_4_element_all_modes.switch2.y", 1,\
  5, 1222, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.add1.u2",\
- "Connector of Real input signal 2", "actuatorSubBus.Heater_Input", 1, 3, 6, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.add1.y",\
- "Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.add1.k1",\
- "Gain of input signal 1", 343, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.add1.k2",\
- "Gain of input signal 2", 344, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.clock.y",\
- "Connector of Real output signal [s]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.clock.offset",\
- "Offset of output signal y [s]", 345, 0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.clock.startTime",\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.add1.u2", \
+"Connector of Real input signal 2", "actuatorSubBus.Heater_Input", 1, 3, 6, 0)
+DeclareVariable("control_System_Therminol_4_element_all_modes.add1.y", \
+"Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareParameter("control_System_Therminol_4_element_all_modes.add1.k1", \
+"Gain of input signal 1", 343, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.add1.k2", \
+"Gain of input signal 2", 344, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.clock.y", \
+"Connector of Real output signal [s]", 0.0, 0.0,0.0,0.0,0,512)
+DeclareParameter("control_System_Therminol_4_element_all_modes.clock.offset", \
+"Offset of output signal y [s]", 345, 0, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.clock.startTime",\
  "Output y = offset for time < startTime [s]", 346, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.switch3.u1",\
- "Connector of first Real input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.switch3.u1", \
+"Connector of first Real input signal", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.y", 1,\
  5, 1186, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.switch3.u2",\
- "Connector of Boolean input signal [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,642)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.switch3.u3",\
- "Connector of second Real input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Null2.k", 1,\
+DeclareVariable("control_System_Therminol_4_element_all_modes.switch3.u2", \
+"Connector of Boolean input signal [:#(type=Boolean)]", false, 0.0,0.0,0.0,0,642)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.switch3.u3", \
+"Connector of second Real input signal", "control_System_Therminol_4_element_all_modes.Null2.k", 1,\
  7, 347, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.switch3.y",\
- "Connector of Real output signal", "sensorSubBus.Pump_Flow", 1, 3, 16, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Timer.y",\
- "Value of Real output", "control_System_Therminol_4_element_all_modes_connect_htse_sec.delayStart.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.switch3.y", \
+"Connector of Real output signal", "sensorSubBus.Pump_Flow", 1, 3, 16, 0)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Timer.y", \
+"Value of Real output", "control_System_Therminol_4_element_all_modes.delayStart.k", 1,\
  7, 338, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.greaterEqual2.u1",\
- "Connector of first Real input signal [s]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.clock.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.greaterEqual2.u1", \
+"Connector of first Real input signal [s]", "control_System_Therminol_4_element_all_modes.clock.y", 1,\
  5, 1224, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.greaterEqual2.u2",\
- "Connector of second Real input signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.delayStart.k", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.greaterEqual2.u2", \
+"Connector of second Real input signal", "control_System_Therminol_4_element_all_modes.delayStart.k", 1,\
  7, 338, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.greaterEqual2.y",\
- "Connector of Boolean output signal [:#(type=Boolean)]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.switch3.u2", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.greaterEqual2.y", \
+"Connector of Boolean output signal [:#(type=Boolean)]", "control_System_Therminol_4_element_all_modes.switch3.u2", 1,\
  5, 1225, 65)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Timer1.y",\
- "Value of Real output [s]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.clock.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Timer1.y", \
+"Value of Real output [s]", "control_System_Therminol_4_element_all_modes.clock.y", 1,\
  5, 1224, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Null2.k",\
- "Constant output value", 347, 0.84, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Null2.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Null2.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Null2.k", \
+"Constant output value", 347, 0.84, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Null2.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.Null2.k", 1,\
  7, 347, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Reference_total_mass_flow.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Reference_total_mass_flow.y",\
  "Value of Real output", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Subtract.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.add.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Subtract.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.add.y", 1,\
  5, 1219, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Subtract.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.add1.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Subtract.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.add1.y", 1,\
  5, 1223, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Subtract.y",\
- "Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Subtract.k1",\
- "Gain of input signal 1", 348, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Subtract.k2",\
- "Gain of input signal 2", 349, -1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Mass_Pass_through.k",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Subtract.y", \
+"Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareParameter("control_System_Therminol_4_element_all_modes.Subtract.k1", \
+"Gain of input signal 1", 348, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.Subtract.k2", \
+"Gain of input signal 2", 349, -1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.Mass_Pass_through.k",\
  "Gain value multiplied with input signal [1]", 350, 1, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Mass_Pass_through.u",\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Mass_Pass_through.u",\
  "Input signal connector [kg/s]", "actuatorSubBus.Total_Mass_Flow_System", 1, 3,\
  13, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Mass_Pass_through.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Mass_Pass_through.y",\
  "Output signal connector [kg/s]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Subtract1.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Reference_total_mass_flow.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Subtract1.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.Reference_total_mass_flow.y", 1,\
  5, 1226, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Subtract1.u2",\
- "Connector of Real input signal 2 [kg/s]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Mass_Pass_through.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Subtract1.u2", \
+"Connector of Real input signal 2 [kg/s]", "control_System_Therminol_4_element_all_modes.Mass_Pass_through.y", 1,\
  5, 1228, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Subtract1.y",\
- "Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Subtract1.k1",\
- "Gain of input signal 1", 351, 1, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Subtract1.k2",\
- "Gain of input signal 2", 352, -1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Mass_Pass_through1.k",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Subtract1.y", \
+"Connector of Real output signal", 0.0, 0.0,0.0,0.0,0,512)
+DeclareParameter("control_System_Therminol_4_element_all_modes.Subtract1.k1", \
+"Gain of input signal 1", 351, 1, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.Subtract1.k2", \
+"Gain of input signal 2", 352, -1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.Mass_Pass_through1.k",\
  "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Mass_Pass_through1.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Subtract1.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Mass_Pass_through1.u",\
+ "Input signal connector", "control_System_Therminol_4_element_all_modes.Subtract1.y", 1,\
  5, 1229, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Mass_Pass_through1.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Mass_Pass_through1.y",\
  "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Mass_Pass_through2.k",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Mass_Pass_through2.k",\
  "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Mass_Pass_through2.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Subtract.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Mass_Pass_through2.u",\
+ "Input signal connector", "control_System_Therminol_4_element_all_modes.Subtract.y", 1,\
  5, 1227, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Mass_Pass_through2.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Mass_Pass_through2.y",\
  "Output signal connector", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_flowrate_sensor.u",\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Heater_flowrate_sensor.u",\
  "Value of Real output [kg/s]", "actuatorSubBus.Heater_flowrate", 1, 3, 14, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_flowrate_sensor.y",\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Heater_flowrate_sensor.y",\
  "[kg/s]", "actuatorSubBus.Heater_flowrate", 1, 3, 14, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Load.amplitude",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Load.amplitude",\
  "Amplitude of pulse [W]", 353, 0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Load.width",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Load.width",\
  "Width of pulse in % of period", 354, 50, 1E-60,100.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Load.period",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Load.period",\
  "Time for one period [s|h]", 355, 7200, 1E-60,1E+100,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Load.nperiod",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Load.nperiod",\
  "Number of periods (< 0 means infinite number of periods) [:#(type=Integer)]", 356,\
  -1, 0.0,0.0,0.0,0,564)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Load.y",\
- "Connector of Real output signal [W]", 0.0, 0.0,0.0,0.0,0,640)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Load.offset",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Load.y", \
+"Connector of Real output signal [W]", 0.0, 0.0,0.0,0.0,0,640)
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Load.offset",\
  "Offset of output signal y [W]", 357, 200000.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Load.startTime",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Load.startTime",\
  "Output y = offset for time < startTime [s]", 358, 0, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Load.T_width",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Load.T_width",\
  "[s]", 0.0, 0.0,0.0,0.0,0,2561)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Load.T_start",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Load.T_start",\
  "Start time of current period [s]", 0.0, 0.0,0.0,0.0,0,2688)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Load.count",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Load.count",\
  "Period count [:#(type=Integer)]", 0, 0.0,0.0,0.0,0,2692)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.const6.k",\
- "Constant output value", 359, 0, 0.0,0.0,0.0,0,560)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.const6.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.const6.k", 1,\
+DeclareParameter("control_System_Therminol_4_element_all_modes.const6.k", \
+"Constant output value", 359, 0, 0.0,0.0,0.0,0,560)
+DeclareAlias2("control_System_Therminol_4_element_all_modes.const6.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.const6.k", 1,\
  7, 359, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.add2.u1",\
- "Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Mass_Pass_through2.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.add2.u1", \
+"Connector of Real input signal 1", "control_System_Therminol_4_element_all_modes.Mass_Pass_through2.y", 1,\
  5, 1233, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.add2.u2",\
- "Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Mass_Pass_through1.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.add2.u2", \
+"Connector of Real input signal 2", "control_System_Therminol_4_element_all_modes.Mass_Pass_through1.y", 1,\
  5, 1231, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.add2.y",\
- "Connector of Real output signal", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Chromolox_Heater_Control1.u_s", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.add2.y", \
+"Connector of Real output signal", "control_System_Therminol_4_element_all_modes.Chromolox_Heater_Control1.u_s", 1,\
  5, 1185, 0)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.add2.k1",\
- "Gain of input signal 1", 360, 0.0001, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.add2.k2",\
- "Gain of input signal 2", 361, 1, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_BOP_Demand.y",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.add2.k1", \
+"Gain of input signal 1", 360, 0.0001, 0.0,0.0,0.0,0,560)
+DeclareParameter("control_System_Therminol_4_element_all_modes.add2.k2", \
+"Gain of input signal 2", 361, 1, 0.0,0.0,0.0,0,560)
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_BOP_Demand.y",\
  "Value of Real output [W]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.nout",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.nout",\
  "Number of outputs [:#(type=Integer)]", 2, 1.0,1E+100,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.y[1]",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.y[1]",\
  "Connector of Real output signals", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.y[2]",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.y[2]",\
  "Connector of Real output signals", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.tableOnFile",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.tableOnFile",\
  "= true, if table is defined on file or in function usertab [:#(type=Boolean)]",\
  false, 0.0,0.0,0.0,0,515)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[1, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[1, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 362, 0.0,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[1, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[1, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 363, \
 100.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[1, 3]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[1, 3]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 364, 1.0,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[2, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[2, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 365, 1800,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[2, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[2, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 366, 100,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[2, 3]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[2, 3]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 367, 1, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[3, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[3, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 368, 3600,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[3, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[3, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 369, 0, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[3, 3]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[3, 3]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 370, 4, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[4, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[4, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 371, 4800,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[4, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[4, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 372, 0, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[4, 3]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[4, 3]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 373, 2, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[5, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[5, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 374, 7200,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[5, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[5, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 375, 0, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[5, 3]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[5, 3]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 376, 4, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[6, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[6, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 377, 9600,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[6, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[6, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 378, 100,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[6, 3]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[6, 3]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 379, 5, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[7, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[7, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 380, 10800,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[7, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[7, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 381, 140,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[7, 3]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[7, 3]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 382, 5, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[8, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[8, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 383, \
 12000.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[8, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[8, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 384, \
 140.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[8, 3]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[8, 3]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 385, 0.0,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[9, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[9, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 386, \
 14400.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[9, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[9, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 387, \
 100.0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[9, 3]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[9, 3]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 388, 0.0,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[10, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[10, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 389, 18000,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[10, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[10, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 390, 100,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.table[10, 3]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.table[10, 3]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 391, 0, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.verboseRead",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.verboseRead",\
  "= true, if info message that file is loading is to be printed [:#(type=Boolean)]",\
  392, true, 0.0,0.0,0.0,0,562)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.columns[1]",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.columns[1]",\
  "Columns of table to be interpolated [:#(type=Integer)]", 2, 0.0,0.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.columns[2]",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.columns[2]",\
  "Columns of table to be interpolated [:#(type=Integer)]", 3, 0.0,0.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.smoothness",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.smoothness",\
  "Smoothness of table interpolation [:#(type=Modelica.Blocks.Types.Smoothness)]",\
  1, 1.0,6.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.extrapolation",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.extrapolation",\
  "Extrapolation of data outside the definition range [:#(type=Modelica.Blocks.Types.Extrapolation)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.timeScale",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.timeScale",\
  "Time scale of first table column [s]", 1, 1E-15,1E+100,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.offset[1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.offset[1]",\
  "Offsets of output signals", 393, 0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.startTime",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.startTime",\
  "Output = offset for time < startTime [s]", 394, 0, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.shiftTime",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.shiftTime",\
  "Shift time of first table column [s]", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.timeEvents",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.BOP_relative_demand.timeEvents",\
  "Time event handling of table interpolation [:#(type=Modelica.Blocks.Types.TimeEvents)]",\
  395, 1, 1.0,3.0,0.0,0,564)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.verboseExtrapolation",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.verboseExtrapolation",\
  "= true, if warning messages are to be printed if time is outside the table definition range [:#(type=Boolean)]",\
  false, 0.0,0.0,0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.t_min",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.t_min",\
  "Minimum abscissa value defined in table [s]", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.t_max",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.t_max",\
  "Maximum abscissa value defined in table [s]", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.t_minScaled",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.t_minScaled",\
  "Minimum (scaled) abscissa value defined in table [1]", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.t_maxScaled",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.t_maxScaled",\
  "Maximum (scaled) abscissa value defined in table [1]", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.p_offset[1]",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.p_offset[1]",\
  "Offsets of output signals", 0.0, 0.0,0.0,0.0,0,2561)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.p_offset[2]",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.p_offset[2]",\
  "Offsets of output signals", 0.0, 0.0,0.0,0.0,0,2561)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.tableID.id",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.tableID.id",\
  "[:#(type=Integer)]", 0, 0.0,0.0,0.0,0,2565)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.nextTimeEvent",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.nextTimeEvent",\
  "Next time event instant [s]", 0, 0.0,0.0,0.0,0,2704)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.nextTimeEventScaled",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.nextTimeEventScaled",\
  "Next scaled time event instant [1]", 0, 0.0,0.0,0.0,0,2704)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.timeScaled",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_relative_demand.timeScaled",\
  "Scaled time [1]", 0.0, 0.0,0.0,0.0,0,2560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Load_TES.y",\
- "Value of Real output [W]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_total_demand.k",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Load_TES.y", \
+"Value of Real output [W]", 0.0, 0.0,0.0,0.0,0,512)
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_total_demand.k",\
  "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_total_demand.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_relative_demand.y[1]", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.BOP_total_demand.u",\
+ "Input signal connector", "control_System_Therminol_4_element_all_modes.BOP_relative_demand.y[1]", 1,\
  5, 1240, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.BOP_total_demand.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.BOP_total_demand.y",\
  "Output signal connector [W]", 0.0, 0.0,0.0,0.0,0,512)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_BOP_mass_flow.u",\
- "Value of Real output [kg/s]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_BOP_mass_flow.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Heater_BOP_mass_flow.u",\
+ "Value of Real output [kg/s]", "control_System_Therminol_4_element_all_modes.Heater_BOP_mass_flow.y", 1,\
  5, 1263, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_BOP_mass_flow.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_BOP_mass_flow.y",\
  "[kg/s]", 0.0, 0.0,100000.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.nout",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.nout",\
  "Number of outputs [:#(type=Integer)]", 1, 1.0,1E+100,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.y[1]",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.y[1]",\
  "Connector of Real output signals", 0.0, 0.0,0.0,0.0,0,512)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.tableOnFile",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.tableOnFile",\
  "= true, if table is defined on file or in function usertab [:#(type=Boolean)]",\
  false, 0.0,0.0,0.0,0,515)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[1, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[1, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 396, 0.0,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[1, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[1, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 397, 1.0,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[2, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[2, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 398, 1800,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[2, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[2, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 399, 1, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[3, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[3, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 400, 3600,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[3, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[3, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 401, 1, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[4, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[4, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 402, 4800,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[4, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[4, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 403, 1, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[5, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[5, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 404, 7200,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[5, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[5, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 405, 1, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[6, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[6, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 406, 9000,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[6, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[6, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 407, 1, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[7, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[7, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 408, 9600,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[7, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[7, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 409, 1, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[8, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[8, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 410, 10800,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[8, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[8, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 411, 0, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[9, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[9, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 412, 12000,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[9, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[9, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 413, 0, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[10, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[10, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 414, 14400,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[10, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[10, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 415, 1, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[11, 1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[11, 1]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 416, 18000,\
  0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.table[11, 2]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.table[11, 2]",\
  "Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])", 417, 1, \
 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.verboseRead",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.verboseRead",\
  "= true, if info message that file is loading is to be printed [:#(type=Boolean)]",\
  418, true, 0.0,0.0,0.0,0,562)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.columns[1]",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.columns[1]",\
  "Columns of table to be interpolated [:#(type=Integer)]", 2, 0.0,0.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.smoothness",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.smoothness",\
  "Smoothness of table interpolation [:#(type=Modelica.Blocks.Types.Smoothness)]",\
  1, 1.0,6.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.extrapolation",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.extrapolation",\
  "Extrapolation of data outside the definition range [:#(type=Modelica.Blocks.Types.Extrapolation)]",\
  2, 1.0,4.0,0.0,0,517)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.timeScale",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.timeScale",\
  "Time scale of first table column [s]", 1, 1E-15,1E+100,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.offset[1]",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.offset[1]",\
  "Offsets of output signals", 419, 0, 0.0,0.0,0.0,0,560)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.startTime",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.startTime",\
  "Output = offset for time < startTime [s]", 420, 0, 0.0,0.0,0.0,0,560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.shiftTime",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.shiftTime",\
  "Shift time of first table column [s]", 0.0, 0.0,0.0,0.0,0,513)
-DeclareParameter("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.timeEvents",\
+DeclareParameter("control_System_Therminol_4_element_all_modes.Heater_Demand.timeEvents",\
  "Time event handling of table interpolation [:#(type=Modelica.Blocks.Types.TimeEvents)]",\
  421, 1, 1.0,3.0,0.0,0,564)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.verboseExtrapolation",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.verboseExtrapolation",\
  "= true, if warning messages are to be printed if time is outside the table definition range [:#(type=Boolean)]",\
  false, 0.0,0.0,0.0,0,515)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.t_min",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.t_min",\
  "Minimum abscissa value defined in table [s]", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.t_max",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.t_max",\
  "Maximum abscissa value defined in table [s]", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.t_minScaled",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.t_minScaled",\
  "Minimum (scaled) abscissa value defined in table [1]", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.t_maxScaled",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.t_maxScaled",\
  "Maximum (scaled) abscissa value defined in table [1]", 0.0, 0.0,0.0,0.0,0,513)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.p_offset[1]",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.p_offset[1]",\
  "Offsets of output signals", 0.0, 0.0,0.0,0.0,0,2561)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.tableID.id",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.tableID.id",\
  "[:#(type=Integer)]", 0, 0.0,0.0,0.0,0,2565)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.nextTimeEvent",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.nextTimeEvent",\
  "Next time event instant [s]", 0, 0.0,0.0,0.0,0,2704)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.nextTimeEventScaled",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.nextTimeEventScaled",\
  "Next scaled time event instant [1]", 0, 0.0,0.0,0.0,0,2704)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.timeScaled",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Demand.timeScaled",\
  "Scaled time [1]", 0.0, 0.0,0.0,0.0,0,2560)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Total_Demand.k",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Total_Demand.k",\
  "Gain value multiplied with input signal [1]", 1, 0.0,0.0,0.0,0,513)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Total_Demand.u",\
- "Input signal connector", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Demand.y[1]", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.Heater_Total_Demand.u",\
+ "Input signal connector", "control_System_Therminol_4_element_all_modes.Heater_Demand.y[1]", 1,\
  5, 1265, 0)
-DeclareVariable("control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_Total_Demand.y",\
+DeclareVariable("control_System_Therminol_4_element_all_modes.Heater_Total_Demand.y",\
  "Output signal connector [W]", 0.0, 0.0,0.0,0.0,0,512)
 DeclareVariable("sensor_m_flow3.allowFlowReversal", "= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]",\
  true, 0.0,0.0,0.0,0,515)
 DeclareParameter("sensor_m_flow3.showName", "= false to hide component name [:#(type=Boolean)]",\
  422, true, 0.0,0.0,0.0,0,562)
 DeclareAlias2("sensor_m_flow3.port_a.m_flow", "Mass flow rate from the connection point into the component [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Discharge_mass_flow_sensor.y", 1,\
+ "control_System_Therminol_4_element_all_modes.Discharge_mass_flow_sensor.y", 1,\
  5, 1216, 132)
 DeclareAlias2("sensor_m_flow3.port_a.p", "Thermodynamic pressure in the connection point [Pa|bar]",\
  "sensor_m_flow.port_a.p", 1, 5, 920, 4)
 DeclareAlias2("sensor_m_flow3.port_a.h_outflow", "Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]",\
  "Valve3.port_b.h_outflow", 1, 5, 949, 4)
 DeclareAlias2("sensor_m_flow3.port_b.m_flow", "Mass flow rate from the connection point into the component [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Discharge_mass_flow_sensor.y", -1,\
+ "control_System_Therminol_4_element_all_modes.Discharge_mass_flow_sensor.y", -1,\
  5, 1216, 132)
 DeclareAlias2("sensor_m_flow3.port_b.p", "Thermodynamic pressure in the connection point [Pa|bar]",\
  "sensor_m_flow.port_a.p", 1, 5, 920, 4)
@@ -5100,12 +5094,12 @@ DeclareParameter("sensor_m_flow3.X_start[1]", "Mass fraction [1]", 425, 1.0, 0.0
 DeclareParameter("sensor_m_flow3.precision", "Number of decimals displayed [:#(type=Integer)]",\
  426, 3, 0.0,1E+100,0.0,0,564)
 DeclareAlias2("sensor_m_flow3.var", "Variable to be converted [kg/s]", \
-"control_System_Therminol_4_element_all_modes_connect_htse_sec.Discharge_mass_flow_sensor.y", 1,\
- 5, 1216, 0)
-DeclareAlias2("sensor_m_flow3.y", "Icon display", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Discharge_mass_flow_sensor.y", 1,\
+"control_System_Therminol_4_element_all_modes.Discharge_mass_flow_sensor.y", 1, 5,\
+ 1216, 0)
+DeclareAlias2("sensor_m_flow3.y", "Icon display", "control_System_Therminol_4_element_all_modes.Discharge_mass_flow_sensor.y", 1,\
  5, 1216, 0)
 DeclareAlias2("sensor_m_flow3.m_flow", "Mass flow rate from port_a to port_b [kg/s]",\
- "control_System_Therminol_4_element_all_modes_connect_htse_sec.Discharge_mass_flow_sensor.y", 1,\
+ "control_System_Therminol_4_element_all_modes.Discharge_mass_flow_sensor.y", 1,\
  5, 1216, 0)
 DeclareVariable("thermocline_Insulation.thermocline_fluidprops_heaters_newHC_120C.Radius_Tank",\
  "Radius of the thermocline tank [m] [m]", 0.0, 0.0,0.0,0.0,0,513)

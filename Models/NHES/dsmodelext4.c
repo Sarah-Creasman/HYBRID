@@ -260,41 +260,41 @@ DeclareParameter("Chromolox_Heater_Control.Dzero.k", "Constant output value", 14
  0, 0.0,0.0,0.0,0,560)
 DeclareAlias2("Chromolox_Heater_Control.Dzero.y", "Connector of Real output signal",\
  "Chromolox_Heater_Control.Dzero.k", 1, 7, 1458, 0)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.sensorSubBus.Valve_1_Opening",\
- "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.sensorSubBus.Valve_1_Opening",\
+ "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes.firstOrder.y", 1,\
  1, 2, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.sensorSubBus.Valve_2_Opening",\
- "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder1.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.sensorSubBus.Valve_2_Opening",\
+ "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes.firstOrder1.y", 1,\
  1, 3, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.sensorSubBus.Valve_4_Opening",\
- "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder3.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.sensorSubBus.Valve_4_Opening",\
+ "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes.firstOrder3.y", 1,\
  1, 5, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.sensorSubBus.Valve_5_Opening",\
- "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder4.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.sensorSubBus.Valve_5_Opening",\
+ "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes.firstOrder4.y", 1,\
  1, 6, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.sensorSubBus.Valve_6_Opening",\
- "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder5.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.sensorSubBus.Valve_6_Opening",\
+ "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes.firstOrder5.y", 1,\
  1, 7, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.sensorSubBus.Valve_3_Opening",\
- "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.firstOrder2.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.sensorSubBus.Valve_3_Opening",\
+ "Connector of Real output signal [1]", "control_System_Therminol_4_element_all_modes.firstOrder2.y", 1,\
  1, 4, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.actuatorSubBus.Discharge_FlowRate",\
- "Value of Real output [kg/s]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Discharge_mass_flow_sensor.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.actuatorSubBus.Discharge_FlowRate",\
+ "Value of Real output [kg/s]", "control_System_Therminol_4_element_all_modes.Discharge_mass_flow_sensor.y", 1,\
  5, 1216, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.actuatorSubBus.Charging_flowrate",\
- "Value of Real output [kg/s]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Charge_mass_flow_sensor.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.actuatorSubBus.Charging_flowrate",\
+ "Value of Real output [kg/s]", "control_System_Therminol_4_element_all_modes.Charge_mass_flow_sensor.y", 1,\
  5, 1217, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.actuatorSubBus.Heater_Input",\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.actuatorSubBus.Heater_Input",\
  "Connector of Real input signal 2", "actuatorSubBus.Heater_Input", 1, 3, 6, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.sensorSubBus.Pump_Flow",\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.sensorSubBus.Pump_Flow",\
  "Connector of Real output signal", "sensorSubBus.Pump_Flow", 1, 3, 16, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.actuatorSubBus.Total_Mass_Flow_System",\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.actuatorSubBus.Total_Mass_Flow_System",\
  "Input signal connector [kg/s]", "actuatorSubBus.Total_Mass_Flow_System", 1, 3,\
  13, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.actuatorSubBus.Heater_flowrate",\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.actuatorSubBus.Heater_flowrate",\
  "Value of Real output [kg/s]", "actuatorSubBus.Heater_flowrate", 1, 3, 14, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.actuatorSubBus.heater_BOP_massflow",\
- "Value of Real output [kg/s]", "control_System_Therminol_4_element_all_modes_connect_htse_sec.Heater_BOP_mass_flow.y", 1,\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.actuatorSubBus.heater_BOP_massflow",\
+ "Value of Real output [kg/s]", "control_System_Therminol_4_element_all_modes.Heater_BOP_mass_flow.y", 1,\
  5, 1263, 4)
 DeclareOutput("sensorSubBus.Valve_1_Opening", "=1: completely open, =0: completely closed [1]",\
  0, 0.0, 0.0,1.0,0.0,0,520)
@@ -328,16 +328,16 @@ DeclareOutput("actuatorSubBus.Heater_flowrate", "Mass flow rate from port_a to p
  14, 0.84, -100000.0,100000.0,0.0,0,520)
 DeclareOutput("actuatorSubBus.heater_BOP_massflow", "Mass flow rate from port_a to port_b [kg/s]",\
  15, 0.0, 0.0,0.0,0.0,0,520)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.actuatorSubBus.T_charge_inlet",\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.actuatorSubBus.T_charge_inlet",\
  "Temperature of the passing fluid [K|degC]", "actuatorSubBus.T_charge_inlet", 1,\
  3, 10, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.actuatorSubBus.T_charge_outlet",\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.actuatorSubBus.T_charge_outlet",\
  "Temperature of the passing fluid [K|degC]", "actuatorSubBus.T_charge_outlet", 1,\
  3, 9, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.actuatorSubBus.T_discharge_inlet",\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.actuatorSubBus.T_discharge_inlet",\
  "Temperature of the passing fluid [K|degC]", "actuatorSubBus.T_discharge_inlet", 1,\
  3, 8, 4)
-DeclareAlias2("control_System_Therminol_4_element_all_modes_connect_htse_sec.actuatorSubBus.T_discharge_outlet",\
+DeclareAlias2("control_System_Therminol_4_element_all_modes.actuatorSubBus.T_discharge_outlet",\
  "Temperature of the passing fluid [K|degC]", "actuatorSubBus.T_discharge_outlet", 1,\
  3, 7, 4)
 DeclareOutput("sensorSubBus.Pump_Flow", "Connector of Real output signal", 16, \

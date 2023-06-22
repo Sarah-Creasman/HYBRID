@@ -2,8 +2,8 @@
 Compiling and linking the model (Visual C++). 
  
 dsmodel.c
-dsmodel.c(34563): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-dsmodel.c(72670): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+dsmodel.c(34559): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+dsmodel.c(72667): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
 dsmodelext1.c
 dsmodelext2.c
 dsmodelext3.c

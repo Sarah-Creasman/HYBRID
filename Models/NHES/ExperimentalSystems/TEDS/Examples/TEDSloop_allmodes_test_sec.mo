@@ -66,7 +66,7 @@ model TEDSloop_allmodes_test_sec
     T_ambient=498.15,
     m_flow_start=0.84)
     annotation (Placement(transformation(extent={{220,120},{240,140}})));
-  Data.Data_TEDS data(T_hot_side=598.15, T_cold_side=498.15)
+  Data.Data_TEDS data(T_hot_side=668.15, T_cold_side=498.15)
     annotation (Placement(transformation(extent={{-100,124},{-80,144}})));
 
   TRANSFORM.Fluid.Sensors.TemperatureTwoPort sensor_T(redeclare package Medium

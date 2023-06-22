@@ -1,4 +1,4 @@
-Model: NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_allmodes_test
+Model: NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_allmodes_test_sec
 Integration started at 0 using integration method:
 RK-method: esdirk45a
 Local extrapolation
@@ -7,299 +7,1709 @@ Continuous extension
 
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 1.038783973386105E-05
+  Time: 6.350454178960612E-06
   Tag: simulation.nonlinear[1]
   For debugging information enable
   Simulation/Setup/Debug/Nonlinear solver diagnostics/Detailed logging of failed nonlinear solutions.
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 25.89778349392699
+  Time: 10.23911411311186
   Tag: simulation.nonlinear[1]
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 20.06134095835882
+  Time: 24.85199104574559
   Tag: simulation.nonlinear[1]
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 20.01172421994
+  Time: 21.85537696211013
   Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 20.92768848105731
 
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 20.00346747528037
-  Tag: simulation.nonlinear[1]
-Error: The following error was detected at time: 2313.827471587502
-
-Model error - power: (Glycol_HX.tube.heatTransfer.Res[4]) ^ (0.8) = (-2450.84) ^ (0.8)
-
-Error: The following error was detected at time: 2056.913735793751
-
-Model error - power: (Glycol_HX.tube.heatTransfer.Res[7]) ^ (0.8) = (-4284.36) ^ (0.8)
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[8]) ^ (0.8) = (-15087.8) ^ (0.8)
 
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 1928.456867896875
-  Tag: simulation.nonlinear[1]
-Error: The following error was detected at time: 1864.228433948438
-
-Model error - power: (Glycol_HX.tube.heatTransfer.Res[7]) ^ (0.8) = (-5008.14) ^ (0.8)
-
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 1802.007138560889
+  Time: 20.46384424053091
   Tag: simulation.nonlinear[1]
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 1802.175324489115
+  Time: 20.2319221202677
   Tag: simulation.nonlinear[1]
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 1802.385171670903
+  Time: 20.0289902650374
   Tag: simulation.nonlinear[1]
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 1807.981662117025
+  Time: 20.01449513252095
   Tag: simulation.nonlinear[1]
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 4820.646866467387
+  Time: 20.00724756626273
   Tag: simulation.nonlinear[1]
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 4810.323433233693
+  Time: 20.00179713416871
   Tag: simulation.nonlinear[1]
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 4805.161716616847
+  Time: 42.92028573980564
   Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 2150.911397392736
 
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6969.952756136129
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6969.966174740343
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6969.966174741942
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6969.966174743541
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6971.683756084512
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6971.898453751933
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6971.898453755132
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6971.898453756731
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6971.89845375833
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6971.898453759929
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6971.898453761528
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6971.898453763127
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6971.898453764726
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6971.898453766325
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6971.898453767923
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6971.898453769522
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6972.624061461064
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6972.624065980906
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6972.624065983114
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6972.62406598532
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6972.624065986423
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6974.993764829433
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6974.993773869116
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6974.993774010361
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6974.993774012569
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6974.993774014775
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6979.432002009996
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6979.432005955402
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6979.432005957328
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6979.432005959255
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6979.432005961181
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6979.432005963107
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 6979.432005965034
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 7012.528472402357
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 7012.52847437506
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 7012.528474376986
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 7012.528474378913
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 7234.420325092813
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 7217.210162546407
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 7208.605081273204
-  Tag: simulation.nonlinear[1]
-Error: The following error was detected at time: 7204.302540636601
-
-Model error - power: (Glycol_HX.tube.heatTransfer.Res[2]) ^ (0.8) = (-24.7229) ^ (0.8)
-
-Error: The following error was detected at time: 7202.151270318301
-
-Model error - power: (Glycol_HX.tube.heatTransfer.Res[4]) ^ (0.8) = (-1874.37) ^ (0.8)
-
-Error: The following error was detected at time: 7201.075635159151
-
-Model error - power: (Glycol_HX.tube.heatTransfer.Res[7]) ^ (0.8) = (-868.016) ^ (0.8)
-
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 7200.537817579575
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 8454.475235133879
-  Tag: simulation.nonlinear[1]
-Error: The following error was detected at time: 9243.5898548937
-
-Model error - power: (thermocline_Insulation.thermocline_fluidprops_heaters_newHC_120C.Re[1]) ^ (0.7) = (-2912.61) ^ (0.7)
-
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9121.79492744685
-  Tag: simulation.nonlinear[1]
-Error: The following error was detected at time: 9060.897463723426
-
-Model error - power: (Glycol_HX.tube.heatTransfer.Res[8]) ^ (0.8) = (-4615.58) ^ (0.8)
-
-Error: The following error was detected at time: 9030.448731861712
-
-Model error - power: (thermocline_Insulation.thermocline_fluidprops_heaters_newHC_120C.Re[1]) ^ (0.7) = (-0.405129) ^ (0.7)
-
-Error: The following error was detected at time: 9015.224365930857
-
-Model error - power: (thermocline_Insulation.thermocline_fluidprops_heaters_newHC_120C.Pr[1]) ^ (0.3333333333333333) = (-2.19488) ^ (0.333333)
-
-Error: The following error was detected at time: 9001.903045741357
-
-Model error - power: (Glycol_HX.shell.heatTransfer.Res[2]) ^ (0.8) = (-63.3565) ^ (0.8)
-
-Error: The following error was detected at time: 9601.108193040303
-
-Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-44692.8) ^ (0.8)
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-114261) ^ (0.8)
 
 First evaluation failed for non-linear solver.
 
-Error: The following error was detected at time: 9601.108193040303
+Error: The following error was detected at time: 2150.911397392736
 
-Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-44692.8) ^ (0.8)
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-114261) ^ (0.8)
 
 Non-linear solver will attempt to handle this problem.
 
-Error: The following error was detected at time: 9601.108193040303
+Error: The following error was detected at time: 2150.911397392736
 
-Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-44692.8) ^ (0.8)
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-114261) ^ (0.8)
 
 Non-linear solver will attempt to handle this problem.
 
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9601.108193040303
+  Time: 2150.911397392736
   Tag: simulation.nonlinear[2]
-Error: The following error was detected at time: 9598.731232677088
+Error: The following error was detected at time: 1844.955698696368
 
-Model error - division by zero: (abs(dp_fric)*2*diameter^3*rho) / (IN_con.length*mu*mu) = (0.000275982) / (0)
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-890183) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 1844.955698696368
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-890183) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 1844.955698696368
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-890183) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1844.955698696368
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 1691.977849348184
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[10]) ^ (0.8) = (-341.263) ^ (0.8)
+
+Error: The following error was detected at time: 1615.488924674092
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[6]) ^ (0.8) = (-1.20486e+06) ^ (0.8)
+
+Error: The following error was detected at time: 1577.244462337046
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-23689.4) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 1577.244462337046
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-23689.4) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 1577.244462337046
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-23689.4) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1577.244462337046
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 1558.122231168523
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-173443) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 1558.122231168523
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-173443) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 1558.122231168523
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-173443) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1558.122231168523
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 1548.561115584261
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[3]) ^ (0.8) = (-490643) ^ (0.8)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1540.195139448033
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1539.597569724016
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1539.018674053875
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1722.30421356146
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1712.15210678073
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1704.688144720216
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1714.010105328414
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 3107.645434990136
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[6]) ^ (0.8) = (-0.00803273) ^ (0.8)
+
+Error: The following error was detected at time: 3092.822717495068
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[6]) ^ (0.8) = (-0.843845) ^ (0.8)
+
+Error: The following error was detected at time: 3085.411358747534
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[7]) ^ (0.8) = (-46.3647) ^ (0.8)
+
+Error: The following error was detected at time: 3081.705679373767
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[9]) ^ (0.8) = (-879.722) ^ (0.8)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 3405.553945765964
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 3621.242459719116
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[6]) ^ (0.8) = (-2.55616) ^ (0.8)
+
+Error: The following error was detected at time: 3610.621229859558
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[9]) ^ (0.8) = (-1681.16) ^ (0.8)
+
+Error: The following error was detected at time: 3605.310614929779
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[10]) ^ (0.8) = (-0.00823199) ^ (0.8)
+
+Error: The following error was detected at time: 3602.65530746489
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[10]) ^ (0.8) = (-4.35929) ^ (0.8)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 3601.327653732445
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 4251.662968739113
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = 0.000472446, y1d = -2.33862e-05). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = 0.013, 
+diameter_b = 0.013, 
+crossArea_a = 0.00013273228961416876, 
+crossArea_b = 0.00013273228961416876, 
+length = 0.1, 
+ro...
+
+Error: The following error was detected at time: 4177.831484369557
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[9]) ^ (0.8) = (-0.969315) ^ (0.8)
+
+Error: The following error was detected at time: 4140.915742184779
+
+Model error - power: (thermocline_Insulation.thermocline_fluidprops_heaters_newHC_120C.Re[1]) ^ (0.7) = (-18.7773) ^ (0.7)
+
+Error: The following error was detected at time: 4687.978820872515
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = 0.00226225, y1d = -0.000720443). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = 0.013, 
+diameter_b = 0.013, 
+crossArea_a = 0.00013273228961416876, 
+crossArea_b = 0.00013273228961416876, 
+length = 0.1, 
+ro...
+
+Error: The following error was detected at time: 4612.989410436257
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[8]) ^ (0.8) = (-10.7821) ^ (0.8)
+
+Error: The following error was detected at time: 4575.494705218129
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[10]) ^ (0.8) = (-0.293267) ^ (0.8)
+
+Error: The following error was detected at time: 6321.039370865469
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[5]) ^ (0.8) = (-0.0568989) ^ (0.8)
+
+Error: The following error was detected at time: 6238.019685432735
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[9]) ^ (0.8) = (-17.0984) ^ (0.8)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 6155
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 6155
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 6155
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 6155
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 7011.603519686581
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[4]) ^ (0.8) = (-17.3019) ^ (0.8)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 6909.801759843291
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 6858.900879921645
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 6833.450439960823
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 6820.725219980412
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 6814.362609990206
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 6811.181304995102
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 7244.778671022212
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-62829.8) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 7244.778671022212
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-62829.8) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 7244.778671022212
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-62829.8) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 7244.778671022212
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 7222.389335871108
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-262382) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 7222.389335871108
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-262382) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 7222.389335871108
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-262382) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 7222.389335871108
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 7211.194668295557
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[3]) ^ (0.8) = (-432050) ^ (0.8)
+
+Error: The following error was detected at time: 7205.597334507781
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[2]) ^ (0.8) = (-1.48117) ^ (0.8)
+
+Error: The following error was detected at time: 7202.798667613893
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[2]) ^ (0.8) = (-146.842) ^ (0.8)
+
+Error: The following error was detected at time: 7201.399334166949
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[9]) ^ (0.8) = (-0.130119) ^ (0.8)
+
+Error: The following error was detected at time: 7200.699667443477
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[9]) ^ (0.8) = (-14.3714) ^ (0.8)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 7200.349834081741
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 7772.554920192221
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 7733.277460096111
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 7713.638730048056
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 7703.819365024027
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[2]) ^ (0.8) = (-5294.3) ^ (0.8)
+
+Error: The following error was detected at time: 7698.909682512014
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[6]) ^ (0.8) = (-6227.13) ^ (0.8)
+
+Error: The following error was detected at time: 7696.454841256007
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-637817) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 7696.454841256007
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-637817) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 7696.454841256007
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-637817) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 7696.454841256007
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 7694.306855157
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 8324.002173015822
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-4662.4) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 8324.002173015822
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-4662.4) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 8324.002173015822
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-4662.4) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8324.002173015822
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8265.501086507911
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 8236.250543253956
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-98910.6) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 8236.250543253956
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-98910.6) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 8236.250543253956
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-98910.6) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8236.250543253956
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8221.625271626977
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 8214.312635813489
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[7]) ^ (0.8) = (-60179) ^ (0.8)
+
+Error: The following error was detected at time: 8485.698739927884
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-29895) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 8485.698739927884
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-29895) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 8485.698739927884
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-29895) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8485.698739927884
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 8481.366237672817
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-161742) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 8481.366237672817
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-161742) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 8481.366237672817
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-161742) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8481.366237672817
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8479.199986545284
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8478.116860981516
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8477.575298199634
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 8477.304516808692
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-76788.9) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 8477.304516808692
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-76788.9) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 8477.304516808692
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-76788.9) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8477.304516808692
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8479.318683238682
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8479.796910258572
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8479.821430579892
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8479.906080674982
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8480.050860543843
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8480.107189491469
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8480.220160734023
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8480.304810829113
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8480.389460924203
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8480.474111019294
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8480.558761114384
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8480.643411209474
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8480.728061304564
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8480.88124977042
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8481.170809508141
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8481.340109698322
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8481.509409888502
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8481.800866866053
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8481.778857841329
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8482.237501251799
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8482.66851526625
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8483.795688723123
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8488.903061176195
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8492.043753406699
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8492.037983618629
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 8492.036028119879
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 9107.543525922725
+
+Model error - power: (thermocline_Insulation.thermocline_fluidprops_heaters_newHC_120C.Pr[200]) ^ (0.3333333333333333) = (-0.320688) ^ (0.333333)
+
+Error: The following error was detected at time: 9092.771762961363
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-2.07625e-07) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 9092.771762961363
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-2.07625e-07) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9092.771762961363
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-2.07625e-07) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9092.771762961363
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9085.385881480681
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 9081.69294074034
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-0.0545723) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 9081.69294074034
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-0.0545723) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9081.69294074034
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-0.0545723) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9081.69294074034
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9079.84647037017
+  Tag: simulation.nonlinear[3]
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.90125, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.90123, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.94657, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.94658, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.94659, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.94659, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -6.9466, y1d = 2.93326). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-4014.74) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 9078.923235185086
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-4014.74) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 9078.923235185086
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-4014.74) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9078.923235185086
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9078.461617592542
+  Tag: simulation.nonlinear[3]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9078.230808796272
+  Tag: simulation.nonlinear[3]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9078.115404398135
+  Tag: simulation.nonlinear[3]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 10390.78748887062
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 10301.39374443531
+
+Model error - power: (thermocline_Insulation.thermocline_fluidprops_heaters_newHC_120C.Re[200]) ^ (0.7) = (-3.74678) ^ (0.7)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 10256.69687221766
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 10234.34843610883
+
+Model error - power: (thermocline_Insulation.thermocline_fluidprops_heaters_newHC_120C.Re[200]) ^ (0.7) = (-8990.19) ^ (0.7)
+
+Error: The following error was detected at time: 10223.17421805441
+
+Model error - power: (thermocline_Insulation.thermocline_fluidprops_heaters_newHC_120C.Re[200]) ^ (0.7) = (-191875) ^ (0.7)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 10217.58710902721
+  Tag: simulation.nonlinear[3]
+Error: The following error was detected at time: 10214.7935545136
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[8]) ^ (0.8) = (-8233.98) ^ (0.8)
+
+Error: The following error was detected at time: 10213.3967772568
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-1.07995e+07) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 10213.3967772568
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-1.07995e+07) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 10213.3967772568
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-1.07995e+07) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 10213.3967772568
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 10212.6983886284
+
+Model error - power: (thermocline_Insulation.thermocline_fluidprops_heaters_newHC_120C.Re[200]) ^ (0.7) = (-45098.4) ^ (0.7)
+
+Error: The following error was detected at time: 10212.3491943142
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[4]) ^ (0.8) = (-55255.3) ^ (0.8)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 10212.1745971571
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 10212.08729857855
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-425377) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 10212.08729857855
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-425377) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 10212.08729857855
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-425377) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 10212.08729857855
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 10274.23070854575
+  Tag: simulation.nonlinear[3]
+Error: The following error was detected at time: 10810.42698662603
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-13487.1) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 10810.42698662603
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-13487.1) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 10810.42698662603
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-13487.1) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 10810.42698662603
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 10805.21349367301
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 11377.59660722775
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 11362.29830361387
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 11354.64915180694
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 11350.82457590347
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 11348.91228795173
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 11347.95614397587
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 11347.11951799698
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 12317.5511815381
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 12314.27559076905
+  Tag: simulation.nonlinear[3]
+Error: The following error was detected at time: 12312.63779538453
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[5]) ^ (0.8) = (-94838.8) ^ (0.8)
+
+Error: The following error was detected at time: 12311.81889769226
+  regFun3(): Derivatives at data points do not allow co-monotone interpolation, as both are non-zero, of opposite sign and have an absolute value larger than machine eps (y0d = -1.17921, y1d = 0.723115). Please correct arguments.
+  Failed condition: abs(y0d) < 1E-15 or abs(y1d) < 1E-15
+The stack of functions is:
+Modelica.Fluid.Utilities.regFun3
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 12311.81889769226
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 13849.66863546725
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-12496) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 13849.66863546725
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-12496) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 13849.66863546725
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-12496) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 13849.66863546725
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 13728.43225189952
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-127479) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 13728.43225189952
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-127479) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 13728.43225189952
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-127479) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 13728.43225189952
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 13667.81406011565
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-1.92197e+06) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 13667.81406011565
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-1.92197e+06) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 13667.81406011565
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-1.92197e+06) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 13667.81406011565
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 13637.50496422372
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[3]) ^ (0.8) = (-2.59824e+06) ^ (0.8)
+
+Error: The following error was detected at time: 13622.35041627775
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[8]) ^ (0.8) = (-60656.8) ^ (0.8)
+
+Error: The following error was detected at time: 13614.77314230477
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-491131) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 13614.77314230477
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-491131) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 13614.77314230477
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-491131) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 13614.77314230477
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 13610.98450531828
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-2.00055e+06) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 13610.98450531828
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-2.00055e+06) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 13610.98450531828
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-2.00055e+06) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 13610.98450531828
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 13609.09018682503
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 13607.43265814344
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-115957) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 13607.43265814344
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-115957) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 13607.43265814344
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-115957) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 13607.43265814344
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 13613.98410768569
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[2]) ^ (0.8) = (-550819) ^ (0.8)
+
+Error: The following error was detected at time: 13612.87152416584
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-129412) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 13612.87152416584
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-129412) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 13612.87152416584
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-129412) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 13612.87152416584
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 13612.31523240592
+
+Model error - division by zero: (abs(dp_fric)*2*diameter^3*rho) / (IN_con.length*mu*mu) = (0.00132761) / (0)
 
 The stack of functions is:
 TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.Internal.m_flow_of_dp_fric
@@ -310,239 +1720,89 @@ diameter_a = Glycol_HX.geometry.dimensions_shell[1],
 diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
 crossArea_a = Glycol_HX.geome...
 
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 13612.31523240592
+
+Model error - division by zero: (abs(dp_fric)*2*diameter^3*rho) / (IN_con.length*mu*mu) = (0.00132761) / (0)
+
+The stack of functions is:
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.Internal.m_flow_of_dp_fric
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 13612.31523240592
+
+Model error - division by zero: (abs(dp_fric)*2*diameter^3*rho) / (IN_con.length*mu*mu) = (0.0013299) / (0)
+
+The stack of functions is:
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.Internal.m_flow_of_dp_fric
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_MFLOW_staticHead(
+TRANSFORM.Fluid.ClosureRelations.PressureLoss.Functions.TubesAndConduits.SinglePhase.LaminarTurbulent_MSLDetailed.dp_IN_con(
+diameter_a = Glycol_HX.geometry.dimensions_shell[1], 
+diameter_b = Glycol_HX.geometry.dimensions_shell[1], 
+crossArea_a = Glycol_HX.geome...
+
+Non-linear solver will attempt to handle this problem.
+
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9601.189463533723
+  Time: 13612.31523240592
   Tag: simulation.nonlinear[1]
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9601.116428849511
+  Time: 13612.03708652595
   Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 13617.64969730522
+
+Model error - power: (Glycol_HX.tube.heatTransfer.Res[4]) ^ (0.8) = (-105586) ^ (0.8)
+
+Error: The following error was detected at time: 13675.54782216791
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-0.788089) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 13675.54782216791
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-0.788089) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 13675.54782216791
+
+Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-0.788089) ^ (0.8)
+
+Non-linear solver will attempt to handle this problem.
+
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9601.422407071501
-  Tag: simulation.nonlinear[1]
+  Time: 13675.54782216791
+  Tag: simulation.nonlinear[2]
 
 Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9601.85479394805
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9601.808550418848
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9602.036137869982
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9602.193668235419
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9602.643355737187
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9602.968142550639
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9603.228826890363
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9603.440296706427
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9603.676373784321
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9605.372406757635
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9607.931796934939
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9607.350889996851
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9607.823044152636
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9608.29519830842
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9608.767352464205
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9609.621794159706
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9610.566102471279
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.181184337011
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.454719094425
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.209198933415
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.254132241451
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.226944045877
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.154330678615
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.147533629721
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.144135105273
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.148409085859
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.144572833344
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.144850100727
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.143715516862
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.143982640649
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 9612.143742874867
-  Tag: simulation.nonlinear[1]
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 10819.42763445503
+  Time: 13667.9225685937
   Tag: simulation.nonlinear[3]
 
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 12150.05762638991
-  Tag: simulation.nonlinear[2]
-Error: The following error was detected at time: 12075.02881319496
-
-Model error - power: (Glycol_HX.tube.heatTransfer.Res[10]) ^ (0.8) = (-1225.15) ^ (0.8)
-
-Error: The following error was detected at time: 12037.51440659748
-
-Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-3237.26) ^ (0.8)
-
-First evaluation failed for non-linear solver.
-
-Error: The following error was detected at time: 12037.51440659748
-
-Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-3237.26) ^ (0.8)
-
-Non-linear solver will attempt to handle this problem.
-
-Error: The following error was detected at time: 12037.51440659748
-
-Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-3237.26) ^ (0.8)
-
-Non-linear solver will attempt to handle this problem.
-
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 12037.51440659748
-  Tag: simulation.nonlinear[2]
-Error: The following error was detected at time: 12018.75720329874
-
-Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-33687.8) ^ (0.8)
-
-First evaluation failed for non-linear solver.
-
-Error: The following error was detected at time: 12018.75720329874
-
-Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-33687.8) ^ (0.8)
-
-Non-linear solver will attempt to handle this problem.
-
-Error: The following error was detected at time: 12018.75720329874
-
-Model error - power: (Glycol_HX.shell.heatTransfer.Res[1]) ^ (0.8) = (-33687.8) ^ (0.8)
-
-Non-linear solver will attempt to handle this problem.
-
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 12018.75720329874
-  Tag: simulation.nonlinear[2]
-Error: The following error was detected at time: 12009.37860164937
-
-Model error - power: (Glycol_HX.tube.heatTransfer.Res[10]) ^ (0.8) = (-522.203) ^ (0.8)
-
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 12004.68930082468
-  Tag: simulation.nonlinear[2]
-Error: The following error was detected at time: 14400.45383688263
-
-Model error - power: (Glycol_HX.shell.heatTransfer.Res[3]) ^ (0.8) = (-11747.9) ^ (0.8)
-
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 14399.20678026721
-  Tag: simulation.nonlinear[2]
-Error: The following error was detected at time: 14440.65745955244
-
-Model error - power: (Glycol_HX.tube.heatTransfer.Res[2]) ^ (0.8) = (-0.109392) ^ (0.8)
-
-
-Warning: Failed to solve nonlinear system using Newton solver.
-  Time: 14437.7959278384
-  Tag: simulation.nonlinear[1]
-Error: The following error was detected at time: 14436.36516198138
-
-Model error - power: (Glycol_HX.tube.heatTransfer.Res[7]) ^ (0.8) = (-32094.5) ^ (0.8)
-
-
 Integration terminated successfully at T = 18000
-   CPU-time for integration                  : 520.384 seconds
+   CPU-time for integration                  : 539.038 seconds
    CPU-time for initialization               : 0.007 seconds
-   Number of result points                   : 1846
-   Number of grid points                     : 1800
-   Number of accepted steps                  : 894
-   Number of rejected steps                  : 553
-   Number of f-evaluations (dynamics)        : 13189
-   Number of crossing function evaluations   : 3293
-   Number of Jacobian-evaluations            : 237
-   Number of model time events               : 10
-   Number of state events                    : 14
+   Number of result points                   : 1888
+   Number of grid points                     : 1801
+   Number of accepted steps                  : 966
+   Number of rejected steps                  : 535
+   Number of f-evaluations (dynamics)        : 14575
+   Number of crossing function evaluations   : 3840
+   Number of Jacobian-evaluations            : 266
+   Number of model time events               : 21
+   Number of state events                    : 24
    Number of step events                     : 0
 
-SUCCESSFUL simulation of NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_allmodes_test
+SUCCESSFUL simulation of NHES.ExperimentalSystems.TEDS.Examples.TEDSloop_allmodes_test_sec

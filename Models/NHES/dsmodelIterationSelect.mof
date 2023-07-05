@@ -1,26 +1,6 @@
 model dsmodelIterationSelect
-  extends NHES.Systems.PrimaryHeatSystem.HTGR.Brayton_Systems.Examples.Pebble_Bed_CC_Test;
-  annotation(__Dymola_SimulationIterationVariables={"Pebble_Bed_HTGR.core.coolantSubchannel.flowModel.dps_fg[5]",
-   "Pebble_Bed_HTGR.Core_Outlet.port_a.h_outflow", "Pebble_Bed_HTGR.core.coolantSubchannel.Ts_wall[4, 1]",
-   "Pebble_Bed_HTGR.core.coolantSubchannel.Ts_wall[3, 1]", "Pebble_Bed_HTGR.core.coolantSubchannel.Ts_wall[2, 1]",
-   "Pebble_Bed_HTGR.turbine.w", "Pebble_Bed_HTGR.Reheater.Tube_out.m_flow", 
-  "Pebble_Bed_HTGR.transportDelayPipe.v", "Pebble_Bed_HTGR.compressor.Ti", 
-  "Pebble_Bed_HTGR.springBallValve.port_a.m_flow", "Pebble_Bed_HTGR.Intercooler.medium.p",
-   "Pebble_Bed_HTGR.compressor1.pout", "Pebble_Bed_HTGR.transportDelayPipe.state.T",
-   "Pebble_Bed_HTGR.transportDelayPipe.state.p", "Pebble_Bed_HTGR.core.coolantSubchannel.flowModel.dps_fg[1]",
-   "Pebble_Bed_HTGR.core.coolantSubchannel.state_a.T", "Pebble_Bed_HTGR.core.coolantSubchannel.state_a.p",
-   "Pebble_Bed_HTGR.combined_cycle_port_b.p", "Pebble_Bed_HTGR.core.coolantSubchannel.Ts_wall[1, 1]",
-   "Pebble_Bed_HTGR.core.fuelModel[1].Fuel_kernel.materials[1].state.T", 
-  "Pebble_Bed_HTGR.core.fuelModel[1].Fuel_kernel.port_b1.T", "Pebble_Bed_HTGR.core.fuelModel[1].Fuel_kernel_center.materials[1].state.T",
-   "Pebble_Bed_HTGR.core.fuelModel[1].Fuel_kernel_center.port_b1.T", 
-  "Pebble_Bed_HTGR.core.fuelModel[2].Fuel_kernel.materials[1].state.T", 
-  "Pebble_Bed_HTGR.core.fuelModel[2].Fuel_kernel.port_b1.T", "Pebble_Bed_HTGR.core.fuelModel[2].Fuel_kernel_center.materials[1].state.T",
-   "Pebble_Bed_HTGR.core.fuelModel[2].Fuel_kernel_center.port_b1.T", 
-  "Pebble_Bed_HTGR.core.fuelModel[3].Fuel_kernel.materials[1].state.T", 
-  "Pebble_Bed_HTGR.core.fuelModel[3].Fuel_kernel.port_b1.T", "Pebble_Bed_HTGR.core.fuelModel[3].Fuel_kernel_center.materials[1].state.T",
-   "Pebble_Bed_HTGR.core.fuelModel[3].Fuel_kernel_center.port_b1.T", 
-  "Pebble_Bed_HTGR.core.fuelModel[4].Fuel_kernel.materials[1].state.T", 
-  "Pebble_Bed_HTGR.core.fuelModel[4].Fuel_kernel.port_b1.T", "Pebble_Bed_HTGR.core.fuelModel[4].Fuel_kernel_center.materials[1].state.T",
-   "Pebble_Bed_HTGR.core.fuelModel[4].Fuel_kernel_center.port_b1.T", 
-  "Pebble_Bed_HTGR.Core_Outlet.medium.T"});
+  extends NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_NoDRACSNoOffgas;
+  annotation(__Dymola_SimulationIterationVariables={"PHX.tubeWall.port_b2[1].T",
+   "PHX.tubeWall.port_b2[2].T", "PHX.tubeWall.port_b2[3].T", "SHX.tubeWall.port_b2[1].T",
+   "SHX.tubeWall.port_b2[2].T", "SHX.tubeWall.port_b2[3].T"});
 end dsmodelIterationSelect;

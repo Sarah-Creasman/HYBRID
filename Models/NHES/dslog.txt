@@ -1,4 +1,4 @@
-Model: NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_NoDRACSNoOffgas
+Model: NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_1
 Integration started at 0 using integration method:
 RK-method: esdirk45a
 Local extrapolation
@@ -7,17 +7,17 @@ Continuous extension
 
 
 Integration terminated successfully at T = 1.5768e+08
-   CPU-time for integration                  : 147.559 seconds
-   CPU-time for initialization               : 0.014 seconds
+   CPU-time for integration                  : 166.761 seconds
+   CPU-time for initialization               : 0.015 seconds
    Number of result points                   : 1826
    Number of grid points                     : 1826
-   Number of accepted steps                  : 259
-   Number of rejected steps                  : 56
-   Number of f-evaluations (dynamics)        : 3960
-   Number of crossing function evaluations   : 778
-   Number of Jacobian-evaluations            : 59
+   Number of accepted steps                  : 280
+   Number of rejected steps                  : 65
+   Number of f-evaluations (dynamics)        : 4190
+   Number of crossing function evaluations   : 841
+   Number of Jacobian-evaluations            : 54
    Number of model time events               : 0
    Number of state events                    : 0
    Number of step events                     : 0
 
-SUCCESSFUL simulation of NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_NoDRACSNoOffgas
+SUCCESSFUL simulation of NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_1

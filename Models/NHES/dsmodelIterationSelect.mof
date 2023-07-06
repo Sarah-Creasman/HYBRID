@@ -1,5 +1,5 @@
 model dsmodelIterationSelect
-  extends NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_NoDRACSNoOffgas;
+  extends NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec;
   annotation(__Dymola_SimulationIterationVariables={"PHX.tubeWall.port_b2[1].T",
    "PHX.tubeWall.port_b2[2].T", "PHX.tubeWall.port_b2[3].T", "SHX.tubeWall.port_b2[1].T",
    "SHX.tubeWall.port_b2[2].T", "SHX.tubeWall.port_b2[3].T"});

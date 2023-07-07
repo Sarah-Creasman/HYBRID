@@ -1,4 +1,4 @@
-Model: NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_1
+Model: NHES.Systems.BalanceOfPlant.Turbine.Examples.SteamTurbine_L2_ClosedFeedHeat_Test_a
 Integration started at 0 using integration method:
 RK-method: esdirk45a
 Local extrapolation
@@ -6,18 +6,18 @@ FSAL
 Continuous extension
 
 
-Integration terminated successfully at T = 1.5768e+08
-   CPU-time for integration                  : 166.761 seconds
-   CPU-time for initialization               : 0.015 seconds
-   Number of result points                   : 1826
-   Number of grid points                     : 1826
-   Number of accepted steps                  : 280
-   Number of rejected steps                  : 65
-   Number of f-evaluations (dynamics)        : 4190
-   Number of crossing function evaluations   : 841
-   Number of Jacobian-evaluations            : 54
-   Number of model time events               : 0
-   Number of state events                    : 0
+Integration terminated successfully at T = 300
+   CPU-time for integration                  : 10.254 seconds
+   CPU-time for initialization               : 0.004 seconds
+   Number of result points                   : 75
+   Number of grid points                     : 31
+   Number of accepted steps                  : 1367
+   Number of rejected steps                  : 520
+   Number of f-evaluations (dynamics)        : 19114
+   Number of crossing function evaluations   : 4712
+   Number of Jacobian-evaluations            : 434
+   Number of model time events               : 1
+   Number of state events                    : 21
    Number of step events                     : 0
 
-SUCCESSFUL simulation of NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_1
+SUCCESSFUL simulation of NHES.Systems.BalanceOfPlant.Turbine.Examples.SteamTurbine_L2_ClosedFeedHeat_Test_a

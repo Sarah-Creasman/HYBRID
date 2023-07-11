@@ -25153,7 +25153,7 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
         redeclare package Medium = Medium_BOP) annotation (Placement(transformation(
             extent={{10,-10},{-10,10}},
             rotation=0,
-            origin={330,40})));
+            origin={330,42})));
       TRANSFORM.Examples.MoltenSaltReactor.Data.data_OFFGAS data_OFFGAS
         annotation (Placement(transformation(extent={{290,120},{310,140}})));
       Components.GenericPipe_forMSRs reflR(
@@ -25840,7 +25840,7 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
       connect(pipeToSHX_PCL.port_b, SHX.port_a_shell)
         annotation (Line(points={{290,40},{295.4,40},{295.4,10}}, color={0,127,255}));
       connect(boundary1.ports[1], SHX.port_b_tube)
-        annotation (Line(points={{320,40},{300,40},{300,10}}, color={0,127,255}));
+        annotation (Line(points={{320,42},{300,42},{300,10}}, color={0,127,255}));
       connect(SHX.port_a_tube, boundary4.ports[1])
         annotation (Line(points={{300,-10},{300,-40},{320,-40}}, color={0,127,255}));
       connect(pipeToPHX_PCL.port_b, PHX.port_a_shell)
@@ -33690,12 +33690,28 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
     end PrimaryFuelLoop1;
 
     model ConnectToBOP
-      MCA_Base_withBOP_sec_1 mCA_Base_withBOP_sec_1_1
-        annotation (Placement(transformation(extent={{-52,-6},{-32,14}})));
+      MCA_Base_withBOP_sec_2 mCA_Base_withBOP_sec_2_1
+        annotation (Placement(transformation(extent={{-70,-12},{-50,8}})));
       MoltenSaltReactor.Components.BOP3 bOP3_1
-        annotation (Placement(transformation(extent={{28,-6},{48,14}})));
+        annotation (Placement(transformation(extent={{20,-10},{40,10}})));
+      TRANSFORM.Fluid.Sensors.Temperature sensor_T(redeclare package Medium =
+            Modelica.Media.Water.StandardWater)
+        annotation (Placement(transformation(extent={{-12,4},{8,24}})));
+      TRANSFORM.Fluid.Sensors.Temperature sensor_T1(redeclare package Medium =
+            Modelica.Media.Water.StandardWater)
+        annotation (Placement(transformation(extent={{-10,-34},{10,-14}})));
+    equation
+      connect(mCA_Base_withBOP_sec_2_1.port_b, bOP3_1.port_b) annotation (Line(
+            points={{-24.8,1.4},{-24.8,4},{20,4}}, color={0,127,255}));
+      connect(mCA_Base_withBOP_sec_2_1.port_a, bOP3_1.port_a) annotation (Line(
+            points={{-24.2,-5.2},{-24.2,-4},{20,-4}}, color={0,127,255}));
+      connect(mCA_Base_withBOP_sec_2_1.port_b, sensor_T.port) annotation (Line(
+            points={{-24.8,1.4},{-24.8,4},{-2,4}}, color={0,127,255}));
+      connect(sensor_T1.port, bOP3_1.port_a)
+        annotation (Line(points={{0,-34},{0,-4},{20,-4}}, color={0,127,255}));
       annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
-            coordinateSystem(preserveAspectRatio=false)));
+            coordinateSystem(preserveAspectRatio=false)),
+        experiment(StopTime=100000, __Dymola_Algorithm="Esdirk45a"));
     end ConnectToBOP;
 
     model MCA_Base_withBOP_sec_2
@@ -35060,6 +35076,65 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
 <p>Based on MSDR_v0, removed everything that is not believed to be necessary for the off-gas work. Will add back later if needed.</p>
 </html>"));
     end MCA_Base_withBOP_sec_2;
+
+    model ConnectToBOP_MoreComplicatedBOP
+      BalanceOfPlant.Turbine.SteamTurbine_L3_HPOFWH steamTurbine_L3_HPOFWH
+        annotation (Placement(transformation(extent={{22,-12},{42,8}})));
+      TRANSFORM.Fluid.BoundaryConditions.Boundary_pT bypassdump2(
+        redeclare package Medium = Modelica.Media.Water.StandardWater,
+        use_p_in=false,
+        p=14000000,
+        nPorts=1)
+        annotation (Placement(transformation(extent={{-54,-62},{-34,-42}})));
+      TRANSFORM.Fluid.BoundaryConditions.Boundary_pT bypassdump(
+        redeclare package Medium = Modelica.Media.Water.StandardWater,
+        use_p_in=false,
+        p=2000000,
+        nPorts=1)
+        annotation (Placement(transformation(extent={{-36,-102},{-16,-82}})));
+      TRANSFORM.Electrical.Sources.FrequencySource boundary
+        annotation (Placement(transformation(extent={{106,-14},{86,6}})));
+      Modelica.Blocks.Continuous.Integrator integrator
+        annotation (Placement(transformation(extent={{82,30},{102,50}})));
+      Electrical.PowerSensor      sensorW
+        annotation (Placement(transformation(extent={{52,6},{72,-14}})));
+      TRANSFORM.Fluid.BoundaryConditions.Boundary_pT steamdump(
+        redeclare package Medium = Modelica.Media.Water.StandardWater,
+        p=3400000,
+        nPorts=1)
+        annotation (Placement(transformation(extent={{-38,30},{-18,50}})));
+      TRANSFORM.Fluid.BoundaryConditions.MassFlowSource_h
+                                                     bypassdump3(
+        redeclare package Medium = Modelica.Media.Water.StandardWater,
+        use_m_flow_in=false,
+        m_flow=40,
+        h=3366e3,
+        nPorts=1)
+        annotation (Placement(transformation(extent={{-68,-10},{-48,10}})));
+    equation
+      connect(bypassdump2.ports[1], steamTurbine_L3_HPOFWH.port_b_bypass)
+        annotation (Line(points={{-34,-52},{16,-52},{16,-8},{18,-8},{18,-2},{22,
+              -2}}, color={0,127,255}));
+      connect(bypassdump.ports[1], steamTurbine_L3_HPOFWH.port_b_feed)
+        annotation (Line(points={{-16,-92},{20,-92},{20,-16},{18,-16},{18,-8},{
+              22,-8}}, color={0,127,255}));
+      connect(boundary.port,sensorW. port_b) annotation (Line(points={{86,-4},{
+              79,-4},{79,-3.8},{72,-3.8}},
+                                 color={255,0,0}));
+      connect(sensorW.W,integrator. u) annotation (Line(points={{62,5.4},{62,40},
+              {80,40}},                    color={0,0,127}));
+      connect(steamTurbine_L3_HPOFWH.port_a_elec, sensorW.port_a)
+        annotation (Line(points={{42,-2},{42,-4},{52,-4}}, color={255,0,0}));
+      connect(bypassdump3.ports[1], steamTurbine_L3_HPOFWH.port_a_steam)
+        annotation (Line(points={{-48,0},{16,0},{16,4},{22,4}}, color={0,127,
+              255}));
+      connect(steamdump.ports[1], steamTurbine_L3_HPOFWH.prt_b_steamdump)
+        annotation (Line(points={{-18,40},{16,40},{16,8},{22,8}}, color={0,127,
+              255}));
+      annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
+            coordinateSystem(preserveAspectRatio=false)),
+        experiment(StopTime=100000, __Dymola_Algorithm="Esdirk45a"));
+    end ConnectToBOP_MoreComplicatedBOP;
   end Examples;
 
   package Functions

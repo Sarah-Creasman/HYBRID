@@ -5,3 +5,5 @@ SteamTurbine_L2_ClosedFeedHeat_Test_b
 SteamTurbine_OpenFeedHeat_DivertPowerControl_Test
 Example_FMU_construction
 ObsoleteBOPExamples
+BOP_test
+BOP_test_MSR

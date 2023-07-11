@@ -3605,7 +3605,7 @@ package ObsoleteRankines
        redeclare package Medium = Medium,
        each nPorts=1,
       each use_m_flow_in=true,
-      each use_h_in=true) if  nPorts_a3 > 0
+      each use_h_in=true)  if nPorts_a3 > 0
        annotation (Placement(transformation(extent={{72,-150},{92,-130}})));
     TRANSFORM.Fluid.Sensors.MassFlowRate massFlowRate[nPorts_a3](redeclare
         package Medium = Medium) if nPorts_a3 > 0
@@ -4543,7 +4543,7 @@ package ObsoleteRankines
        redeclare package Medium = Medium,
        each nPorts=1,
       each use_m_flow_in=true,
-      each use_h_in=true) if  nPorts_a3 > 0
+      each use_h_in=true)  if nPorts_a3 > 0
        annotation (Placement(transformation(extent={{72,-150},{92,-130}})));
     TRANSFORM.Fluid.Sensors.MassFlowRate massFlowRate[nPorts_a3](redeclare
         package Medium = Medium) if nPorts_a3 > 0

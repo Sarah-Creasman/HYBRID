@@ -1,23 +1,41 @@
-Model: NHES.Systems.BalanceOfPlant.Turbine.Examples.SteamTurbine_L2_ClosedFeedHeat_Test_a
+Model: NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP
 Integration started at 0 using integration method:
 RK-method: esdirk45a
 Local extrapolation
 FSAL
 Continuous extension
 
+Error: The following error was detected at time: 2772.246592177638
 
-Integration terminated successfully at T = 300
-   CPU-time for integration                  : 10.254 seconds
-   CPU-time for initialization               : 0.004 seconds
-   Number of result points                   : 75
-   Number of grid points                     : 31
-   Number of accepted steps                  : 1367
-   Number of rejected steps                  : 520
-   Number of f-evaluations (dynamics)        : 19114
-   Number of crossing function evaluations   : 4712
-   Number of Jacobian-evaluations            : 434
-   Number of model time events               : 1
-   Number of state events                    : 21
+Model error - power: (DRACS.thimbles_drainTank_fluid.heatTransfer.Res[1]) ^ (0.8) = (-2.82273e+14) ^ (0.8)
+
+Error: The following error was detected at time: 2571.88153932832
+  Error in region computation of IF97 steam tables(p = 100000, h = -1.11201e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(DRACS.waterTank.p_surface, DRACS.waterTank.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.T_ph(DRACS.waterTank.p_surface, DRACS.waterTank.h, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.temperature_ph_Unique357(DRACS.waterTank.p_surface, DRACS.waterTank.h, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique374(DRACS.waterTank.p_surface, DRAC...
+
+Error: The following error was detected at time: 2471.699012903662
+
+Model error - power: (DRACS.thimbles_drainTank_fluid.heatTransfer.Res[1]) ^ (0.8) = (-1.91629e+11) ^ (0.8)
+
+
+Integration terminated successfully at T = 1.5768e+08
+   CPU-time for integration                  : 450.847 seconds
+   CPU-time for initialization               : 0.018 seconds
+   Number of result points                   : 1830
+   Number of grid points                     : 1826
+   Number of accepted steps                  : 431
+   Number of rejected steps                  : 133
+   Number of f-evaluations (dynamics)        : 6661
+   Number of crossing function evaluations   : 1309
+   Number of Jacobian-evaluations            : 88
+   Number of model time events               : 0
+   Number of state events                    : 2
    Number of step events                     : 0
 
-SUCCESSFUL simulation of NHES.Systems.BalanceOfPlant.Turbine.Examples.SteamTurbine_L2_ClosedFeedHeat_Test_a
+SUCCESSFUL simulation of NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP

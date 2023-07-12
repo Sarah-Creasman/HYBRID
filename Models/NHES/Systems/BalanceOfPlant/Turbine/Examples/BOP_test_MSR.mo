@@ -31,7 +31,7 @@ model BOP_test_MSR
         eta_mech=data.eta_mech,
         eta_p=data.eta_p),
       LPT1_BV_PID(k=5e-11, Ti=300)),
-    redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
+    redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3_MSR data(
       HPT_p_in=data.HPT_p_in,
       p_dump=data.p_dump,
       p_i1=data.p_i1,
@@ -65,25 +65,6 @@ model BOP_test_MSR
     annotation (Placement(transformation(extent={{-24,-72},{-4,-52}})));
   TRANSFORM.Electrical.Sources.FrequencySource boundary
     annotation (Placement(transformation(extent={{194,22},{174,42}})));
-  NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
-    HPT_p_in=14000000,
-    p_dump=16000000,
-    p_i1=P_ext*100000,
-    Tin=788.15,
-    Tfeed=481.15,
-    d_HPT_in(displayUnit="kg/m3") = 43.049187,
-    d_LPT1_in(displayUnit="g/cm3") = d_ext,
-    d_LPT2_in(displayUnit="kg/m3"),
-    mdot_total=40.44025635,
-    mdot_fh=8.5063954,
-    mdot_hpt=31.93386095,
-    mdot_lpt1=31.93386095,
-    mdot_lpt2=28.04335968,
-    m_ext=m_ext,
-    eta_t=0.9,
-    eta_mech=0.99,
-    eta_p=0.8)
-    annotation (Placement(transformation(extent={{-100,82},{-80,102}})));
 
   Modelica.Blocks.Continuous.Integrator integrator
     annotation (Placement(transformation(extent={{170,66},{190,86}})));
@@ -98,6 +79,22 @@ model BOP_test_MSR
   PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_2
     mCA_Base_withBOP_sec_2_1
     annotation (Placement(transformation(extent={{-40,32},{-20,52}})));
+  Data.Data_L3_MSR data(
+    HPT_p_in=12000000,
+    p_dump=20000000,
+    p_i1=2000000,
+    p_i2=150000,
+    Tin=813.15,
+    Tfeed=473.15,
+    d_HPT_in(displayUnit="kg/m3") = 34.69607167,
+    d_LPT1_in(displayUnit="kg/m3") = 8.189928251,
+    d_LPT2_in(displayUnit="kg/m3") = 0.862546399,
+    mdot_total=288.5733428,
+    mdot_fh=56.43116714,
+    mdot_hpt=232.1421757,
+    mdot_lpt1=232.1421757,
+    mdot_lpt2=217.023541)
+    annotation (Placement(transformation(extent={{-92,74},{-72,94}})));
 initial equation
 
 equation
@@ -117,10 +114,8 @@ equation
       Line(points={{5.2,45.4},{48,45.4},{48,40},{58,40}}, color={0,127,255}));
   connect(mCA_Base_withBOP_sec_2_1.port_a, BOP.port_a_steam) annotation (Line(
         points={{5.8,38.8},{48,38.8},{48,28},{58,28}}, color={0,127,255}));
-  annotation (experiment(
-      StopTime=10000000,
-      Interval=500,
-      __Dymola_Algorithm="Esdirk45a"), Documentation(info="<html>
+  annotation (experiment(StopTime=10000000, __Dymola_Algorithm="Esdirk45a"),
+                                       Documentation(info="<html>
 <p>Test of Pebble_Bed_Three-Stage_Rankine. The simulation should experience transient where external electricity demand is oscilating and control valves are opening and closing corresponding to the required power demand. </p>
 <p>The ThreeStaged Turbine BOP model contains four control elements: </p>
 <p>1. maintaining steam (steam generator outlet) pressure by using TCV</p>

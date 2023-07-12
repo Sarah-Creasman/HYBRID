@@ -3,7 +3,12 @@ model CS_L3
 
   extends NHES.Systems.BalanceOfPlant.Turbine.BaseClasses.Partial_ControlSystem;
 
-  replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data
+  replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
+    mdot_total=288.5733428,
+    mdot_fh=1.128623343,
+    mdot_hpt=287.4447195,
+    mdot_lpt1=287.4447195,
+    mdot_lpt2=268.7244172)
     annotation (Placement(transformation(extent={{-100,-100},{-80,-80}})));
   Modelica.Blocks.Sources.RealExpression T_in_set(y=data.Tin)
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));

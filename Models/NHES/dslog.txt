@@ -1,41 +1,1230 @@
-Model: NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP
+Error: The following error was detected at time: 0
+  IF97 medium function tsat called with too low pressure
+p = -2.66571e+07 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.rho_props_ph(
+BOP.HPT.portHP.p, 
+BOP.TCV.port_b.h_outflow, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.portHP.p, BOP.TCV.port_b.h_outflow, 0, 0))
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.HPT.portHP.p, BOP.TCV.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique10(BOP.HPT.portHP.p, BOP.TCV.port_b.h_outflow, 0, 0)
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 18
+
+Model: NHES.Systems.BalanceOfPlant.Turbine.Examples.BOP_test_MSR
 Integration started at 0 using integration method:
 RK-method: esdirk45a
 Local extrapolation
 FSAL
 Continuous extension
 
-Error: The following error was detected at time: 2772.246592177638
+Error: The following error was detected at time: 0.4105934520619415
+  IF97 medium function tsat called with too low pressure
+p = -568640 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
 
-Model error - power: (DRACS.thimbles_drainTank_fluid.heatTransfer.Res[1]) ^ (0.8) = (-2.82273e+14) ^ (0.8)
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 5
 
-Error: The following error was detected at time: 2571.88153932832
-  Error in region computation of IF97 steam tables(p = 100000, h = -1.11201e+06)
+Error: The following error was detected at time: 0.448050387210647
+  IF97 medium function tsat called with too low pressure
+p = -945006 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0.448050387210647
+  IF97 medium function tsat called with too low pressure
+p = -945006 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 0.4562556581903848
+  IF97 medium function tsat called with too low pressure
+p = -1.87421e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 0.4562556581903848
+  IF97 medium function tsat called with too low pressure
+p = -1.85299e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 0.4562556581903848
+  IF97 medium function tsat called with too low pressure
+p = -1.78333e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 0.4562556581903848
+  IF97 medium function tsat called with too low pressure
+p = -1.79699e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 0.4562556581903848
+  IF97 medium function tsat called with too low pressure
+p = -337958 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 9.919111993382806
+  IF97 medium function tsat called with too low pressure
+p = -17111.1 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 9.919111993382806
+  IF97 medium function tsat called with too low pressure
+p = -1283.96 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 60
+
+Error: The following error was detected at time: 9.960617689673317
+  IF97 medium function tsat called with too low pressure
+p = -32233.6 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 9.960617689673317
+  IF97 medium function tsat called with too low pressure
+p = -35823 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 56
+
+Error: The following error was detected at time: 9.858052785884006
+  IF97 medium function tsat called with too low pressure
+p = -757620 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 37
+
+Error: The following error was detected at time: 10.26137908071432
+  IF97 medium function tsat called with too low pressure
+p = -27616.9 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 10.26137908071432
+  IF97 medium function tsat called with too low pressure
+p = -27616.9 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 10.27201966730945
+  IF97 medium function tsat called with too low pressure
+p = -14460 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 10.27201966730945
+  IF97 medium function tsat called with too low pressure
+p = -14460 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 10.2791133917062
+  IF97 medium function tsat called with too low pressure
+p = -639874 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 10.2791133917062
+  IF97 medium function tsat called with too low pressure
+p = -640403 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 10.27674006401548
+  IF97 medium function tsat called with too low pressure
+p = -56258.8 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 10.27674006401548
+  IF97 medium function tsat called with too low pressure
+p = -55098.5 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 10.27747947139526
+  IF97 medium function tsat called with too low pressure
+p = -143455 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 10.27747947139526
+  IF97 medium function tsat called with too low pressure
+p = -143430 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 10.27747947139526
+  IF97 medium function tsat called with too low pressure
+p = -143739 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 10.27747947139526
+  IF97 medium function tsat called with too low pressure
+p = -143441 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 10.27747947139526
+  IF97 medium function tsat called with too low pressure
+p = -143210 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 10.29490580112666
+  IF97 medium function tsat called with too low pressure
+p = -118115 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 10.29490580112666
+  IF97 medium function tsat called with too low pressure
+p = -25749.8 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 3
+
+Error: The following error was detected at time: 10.76875940777038
+  IF97 medium function tsat called with too low pressure
+p = -8023.6 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 10.76875940777038
+  IF97 medium function tsat called with too low pressure
+p = -8023.6 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 218.8191766843184
+  Error in region computation of IF97 steam tables(p = 9.01885e+06, h = 1.42484e+07)
   Failed condition: false
 The stack of functions is:
 Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(DRACS.waterTank.p_surface, DRACS.waterTank.h, 0, 0)
-Modelica.Media.Water.IF97_Utilities.T_ph(DRACS.waterTank.p_surface, DRACS.waterTank.h, 0, 0)
-Modelica.Media.Water.WaterIF97_ph.temperature_ph_Unique357(DRACS.waterTank.p_surface, DRACS.waterTank.h, 0, 0)
-Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique374(DRACS.waterTank.p_surface, DRAC...
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique10(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.ph...
 
-Error: The following error was detected at time: 2471.699012903662
+Error: The following error was detected at time: 205.8803325855883
+  Error in region computation of IF97 steam tables(p = 1.0793e+07, h = 8.56264e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique10(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.ph...
 
-Model error - power: (DRACS.thimbles_drainTank_fluid.heatTransfer.Res[1]) ^ (0.8) = (-1.91629e+11) ^ (0.8)
+Error: The following error was detected at time: 199.4109105362232
+  Error in region computation of IF97 steam tables(p = 1.01984e+08, h = 2.41381e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 14
+
+Error: The following error was detected at time: 199.4109105362232
+  Error in region computation of IF97 steam tables(p = 1.17484e+07, h = 5.86938e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique10(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.ph...
+
+Error: The following error was detected at time: 196.1761995115407
+  Error in region computation of IF97 steam tables(p = 1.20693e+07, h = 4.5734e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique10(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.ph...
+
+Error: The following error was detected at time: 194.5588439991994
+  IF97 medium function tsat called with too low pressure
+p = -2.35151e+07 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, 
+...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 6
+
+Error: The following error was detected at time: 194.5588439991994
+  Error in region computation of IF97 steam tables(p = 10489.2, h = 1.99395e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.LPT1.portHP.p, BOP.LPT1_bypass.port_2.h_outflow, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.LPT1.portHP.p, BOP.LPT1_bypass.port_2.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique10(BOP.LPT1.portHP.p, BOP.LPT1_bypass.port_2.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique9(BOP.LPT1.portHP...
 
 
-Integration terminated successfully at T = 1.5768e+08
-   CPU-time for integration                  : 450.847 seconds
-   CPU-time for initialization               : 0.018 seconds
-   Number of result points                   : 1830
-   Number of grid points                     : 1826
-   Number of accepted steps                  : 431
-   Number of rejected steps                  : 133
-   Number of f-evaluations (dynamics)        : 6661
-   Number of crossing function evaluations   : 1309
-   Number of Jacobian-evaluations            : 88
-   Number of model time events               : 0
-   Number of state events                    : 2
-   Number of step events                     : 0
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1930.966399729073
+  Tag: simulation.nonlinear[1]
+  For debugging information enable
+  Simulation/Setup/Debug/Nonlinear solver diagnostics/Detailed logging of failed nonlinear solutions.
 
-SUCCESSFUL simulation of NHES.Systems.PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1930.966399729073
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1930.966399729073
+  Tag: simulation.nonlinear[1]
+Error: The following error was detected at time: 1936.224340412788
+  IF97 medium function g2: the temperature (= -4652.62 K) is lower than 273.15 K!
+  Failed condition: T >= 273.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique10(BOP.SteamHeader.medium.p, BOP.SteamHeader.medium.h, BOP.SteamHeader.medium.ph...
+
+Error: The following error was detected at time: 1940.074161295368
+  IF97 medium function tsat called with too low pressure
+p = -2.27797e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(BOP.SteamHeader.medium.sat.psat)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(BOP.SteamHeader.medium.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique15(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = BOP.SteamHeader.medium.sat.psat, 
+Tsat = BOP.SteamHeader.medium.sat.Tsat
+))
+
+Error: The following error was detected at time: 1940.031944939077
+  IF97 medium function tsat called with too low pressure
+p = -950770 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(BOP.SteamHeader.medium.sat.psat)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(BOP.SteamHeader.medium.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique15(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = BOP.SteamHeader.medium.sat.psat, 
+Tsat = BOP.SteamHeader.medium.sat.Tsat
+))
+
+Error: The following error was detected at time: 1940.010836760931
+  IF97 medium function tsat called with too low pressure
+p = -286890 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(BOP.SteamHeader.medium.sat.psat)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(BOP.SteamHeader.medium.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique15(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = BOP.SteamHeader.medium.sat.psat, 
+Tsat = BOP.SteamHeader.medium.sat.Tsat
+))
+
+Error: The following error was detected at time: 1940.000282671858
+  Error in region computation of IF97 steam tables(p = 45120, h = -842581)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(mCA_Base_withBOP_sec_2_1.SHX.tube.mediums[1].p, mCA_Base_withBOP_sec_2_1.SHX.tube.mediums[1].h, mCA_Base_withBOP_sec_2_1.SHX.tube.mediums[1].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(mCA_Base_withBOP_sec_2_1.SHX.tube.mediums[1].p, mCA_Base_withBOP_sec_2_1.SHX.tube.mediums[1].h, mCA_Base_withBOP_sec_2_1.SHX.tube.mediums[1].phase, 0)...
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000345169333
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.00024410848
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000030178759
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999982954191
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999892517786
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999875673419
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999883070851
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999911219582
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999909230444
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999970066488
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000000042138
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999982506377
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999978920704
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999979576928
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999976231449
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.99997578324
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999975559135
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999975447083
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999975391057
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999975363044
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999975349037
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1939.999975351601
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000027699891
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000020528545
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000016942872
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000015150036
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000014253617
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000013805408
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000013581304
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000013469251
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000013413225
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000013385212
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000013371206
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.00006572848
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000058557134
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.00005497146
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000053178624
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000052282206
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000051833997
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000051609892
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.00005149784
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000051441814
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000051413801
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000051399794
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000103763449
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000096592103
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000097904551
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000091213594
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000090317176
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000089536004
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000089478381
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000089449569
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000089435163
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.00008942796
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000089429278
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000142213738
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000134837947
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000131150051
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000129306104
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.00012838413
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000127923143
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000127692649
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000127577403
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000127519779
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000127490968
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000127476562
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000127469359
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000127470677
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000180259342
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.00017288355
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000169195655
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000167351707
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000166429733
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000165968746
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000165738252
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000165623006
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000165565382
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000165536571
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000165522165
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000218311304
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000256425364
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000294542927
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000370862944
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.00040898825
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000485321492
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.00052345343
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000561588993
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000637943311
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000676085177
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000714230647
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000752379504
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000828760215
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000866915316
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.00094430441
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000936928619
+  Tag: simulation.nonlinear[1]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1940.000933240723
+  Tag: simulation.nonli

@@ -24650,7 +24650,7 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
       MSR.MoltenSaltReactor.Data.data_PUMP data_PUMP
         annotation (Placement(transformation(extent={{320,120},{340,140}})));
       MSR.MoltenSaltReactor.Data.data_SHX data_SHX
-        annotation (Placement(transformation(extent={{320,100},{340,120}})));
+        annotation (Placement(transformation(extent={{320,102},{340,122}})));
       MSR.MoltenSaltReactor.Data.data_PIPING data_PIPING
         annotation (Placement(transformation(extent={{260,80},{280,100}})));
       TRANSFORM.Fluid.Pipes.GenericPipe_MultiTransferSurface fuelCell(

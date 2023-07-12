@@ -7,7 +7,12 @@ model SteamTurbine_L3_HPOFWH
       CS,
     redeclare replaceable
       NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.ED_Dummy ED,
-    redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data);
+    redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
+      mdot_total=288.5733428,
+      mdot_fh=1.128623343,
+      mdot_hpt=287.4447195,
+      mdot_lpt1=287.4447195,
+      mdot_lpt2=268.7244172));
   TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_a_steam(redeclare package
       Medium = Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{-110,50},{-90,70}})));
@@ -180,8 +185,8 @@ model SteamTurbine_L3_HPOFWH
   TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_a_cond(redeclare package
       Medium = Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{90,-50},{110,-30}})));
-  TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium =
-        Modelica.Media.Water.StandardWater)
+  TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium
+      = Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{-70,10},{-90,-10}})));
 equation
   connect(TBV.port_a, SteamHeader.port_b)

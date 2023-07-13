@@ -29,6 +29,8 @@ package SHS_Two_Tank
         redeclare replaceable
           NHES.Systems.EnergyStorage.SHS_Two_Tank.Data.Data_SHS data(DHX_K_tube(
               unit="1/m4"), DHX_K_shell(unit="1/m4")),
+        redeclare package Storage_Medium =
+            TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66,
         Produced_steam_flow=valveLinear.port_a.m_flow)
         annotation (Placement(transformation(extent={{-50,-50},{46,52}})));
       TRANSFORM.Fluid.Sensors.TemperatureTwoPort CHX_Inlet_T(redeclare package
@@ -2612,6 +2614,7 @@ package SHS_Two_Tank
             TRANSFORM.Fluid.ClosureRelations.PressureLoss.Models.DistributedPipe_1D.SinglePhase_Developed_2Region_Simple,
         redeclare model HeatTransfer_tube =
             TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.DistributedPipe_1D_MultiTransferSurface.Nus_DittusBoelter_Simple,
+
         p_a_start_tube=1500000,
         p_b_start_tube=800000,
         exposeState_b_shell=false,
@@ -2649,22 +2652,22 @@ package SHS_Two_Tank
                 {90,-72},{110,-52}})));
       FlowMultiplier flowMultiplier1(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=0.5,
+        capacityScaler=1,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{38,-60},{58,-40}})));
       FlowMultiplier flowMultiplier(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=2,
+        capacityScaler=1,
         port_b(m_flow(start=-1)))
-        annotation (Placement(transformation(extent={{70,-102},{90,-82}})));
+        annotation (Placement(transformation(extent={{68,-102},{88,-82}})));
       FlowMultiplier flowMultiplier2(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=0.5,
+        capacityScaler=1,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{-22,52},{-42,72}})));
       FlowMultiplier flowMultiplier3(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=2,
+        capacityScaler=1,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{-36,-8},{-16,12}})));
     equation
@@ -2759,18 +2762,18 @@ package SHS_Two_Tank
       connect(flowMultiplier1.port_b, hot_tank.port_a) annotation (Line(points=
               {{58,-50},{62,-50},{62,-70},{48,-70},{48,-77.6}}, color={0,127,
               255}));
-      connect(flowMultiplier.port_a, hot_tank.port_b) annotation (Line(points={
-              {70,-92},{64,-92},{64,-100},{48,-100},{48,-94.4}}, color={0,127,
+      connect(flowMultiplier.port_a, hot_tank.port_b) annotation (Line(points={{68,-92},
+              {64,-92},{64,-100},{48,-100},{48,-94.4}},          color={0,127,
               255}));
       connect(flowMultiplier.port_b, discharge_pump.port_a) annotation (Line(
-            points={{90,-92},{98,-92},{98,-76},{82,-76}}, color={0,127,255}));
+            points={{88,-92},{98,-92},{98,-76},{82,-76}}, color={0,127,255}));
       connect(flowMultiplier2.port_a, cold_tank_dump_pipe.port_b) annotation (
           Line(points={{-22,62},{-20,62},{-20,58},{-18,58},{-18,36},{-22,36}},
             color={0,127,255}));
       connect(flowMultiplier2.port_b, cold_tank.port_a) annotation (Line(points
             ={{-42,62},{-44,62},{-44,58},{-48,58},{-48,36.4}}, color={0,127,255}));
-      connect(flowMultiplier3.port_a, cold_tank.port_b) annotation (Line(points
-            ={{-36,2},{-12,2},{-12,14},{-48,14},{-48,19.6}}, color={0,127,255}));
+      connect(flowMultiplier3.port_a, cold_tank.port_b) annotation (Line(points={{-36,2},
+              {-28,2},{-28,18},{-48,18},{-48,19.6}},         color={0,127,255}));
       connect(flowMultiplier3.port_b, charge_pump.port_a) annotation (Line(
             points={{-16,2},{-14,2},{-14,14},{-40,14},{-40,8},{-48,8}}, color={
               0,127,255}));
@@ -8154,8 +8157,8 @@ package SHS_Two_Tank
             extent={{10,-10},{-10,10}},
             rotation=180,
             origin={8,14})));
-      TRANSFORM.Fluid.Volumes.SimpleVolume     volume(redeclare package Medium
-          = Storage_Medium, redeclare model Geometry =
+      TRANSFORM.Fluid.Volumes.SimpleVolume     volume(redeclare package Medium =
+            Storage_Medium, redeclare model Geometry =
             TRANSFORM.Fluid.ClosureRelations.Geometry.Models.LumpedVolume.GenericVolume
             (V=data.ctvolume_volume))
         annotation (Placement(transformation(extent={{10,-10},{-10,10}},
@@ -9571,7 +9574,7 @@ package SHS_Two_Tank
       extends BaseClasses.Partial_ControlSystem;
 
       Data.Data_Default data
-        annotation (Placement(transformation(extent={{-50,136},{-30,156}})));
+        annotation (Placement(transformation(extent={{58,60},{78,80}})));
       TRANSFORM.Controls.LimPID PID1(
         controllerType=Modelica.Blocks.Types.SimpleController.PI,
         k=-1e-3,

@@ -3,7 +3,12 @@ model CS_L3_HTGR_extraction
 
   extends NHES.Systems.BalanceOfPlant.Turbine.BaseClasses.Partial_ControlSystem;
 
-  replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data
+  replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
+    Tin=813.15,
+    Tfeed=473.15,
+    d_HPT_in=34696.07167,
+    d_LPT1_in=8189.928251,
+    d_LPT2_in=862.546399)
     annotation (Placement(transformation(extent={{-100,-100},{-80,-80}})));
   Modelica.Blocks.Sources.RealExpression T_in_set(y=data.Tin)
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));

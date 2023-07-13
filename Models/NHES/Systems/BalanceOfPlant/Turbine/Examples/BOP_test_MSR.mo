@@ -31,7 +31,7 @@ model BOP_test_MSR
         eta_mech=data.eta_mech,
         eta_p=data.eta_p),
       LPT1_BV_PID(k=5e-11, Ti=300)),
-    redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3_MSR data(
+    redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
       HPT_p_in=data.HPT_p_in,
       p_dump=data.p_dump,
       p_i1=data.p_i1,
@@ -54,7 +54,7 @@ model BOP_test_MSR
     OFWH_1(T_start=333.15),
     OFWH_2(T_start=353.15),
     LPT1_bypass_valve(dp_nominal(displayUnit="Pa") = 1, m_flow_nominal=10*m_ext))
-    annotation (Placement(transformation(extent={{58,-20},{118,40}})));
+    annotation (Placement(transformation(extent={{56,-20},{116,40}})));
      // booleanStep2(startTime=100000),
       //Steam_Extraction(y=data.m_ext),
   TRANSFORM.Fluid.BoundaryConditions.Boundary_pT bypassdump(
@@ -79,41 +79,46 @@ model BOP_test_MSR
   PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_2
     mCA_Base_withBOP_sec_2_1
     annotation (Placement(transformation(extent={{-40,32},{-20,52}})));
-  Data.Data_L3_MSR data(
+  Data.Data_L3 data(
     HPT_p_in=12000000,
     p_dump=20000000,
     p_i1=2000000,
     p_i2=150000,
+    cond_p=10000,
     Tin=813.15,
     Tfeed=473.15,
     d_HPT_in(displayUnit="kg/m3") = 34.69607167,
     d_LPT1_in(displayUnit="kg/m3") = 8.189928251,
     d_LPT2_in(displayUnit="kg/m3") = 0.862546399,
-    mdot_total=288.5733428,
-    mdot_fh=56.43116714,
-    mdot_hpt=232.1421757,
-    mdot_lpt1=232.1421757,
-    mdot_lpt2=217.023541)
-    annotation (Placement(transformation(extent={{-92,74},{-72,94}})));
+    mdot_total=5.771466857,
+    mdot_fh=1.128623343,
+    mdot_hpt=4.642843514,
+    mdot_lpt1=4.642843514,
+    mdot_lpt2=4.340470821,
+    m_ext=1,
+    eta_t=0.93,
+    eta_mech=1,
+    eta_p=0.9)
+    annotation (Placement(transformation(extent={{-88,62},{-68,82}})));
 initial equation
 
 equation
 
-  connect(BOP.port_a_elec, sensorW.port_a) annotation (Line(points={{118,10},{134,
-          10},{134,32},{140,32}},                   color={255,0,0}));
+  connect(BOP.port_a_elec, sensorW.port_a) annotation (Line(points={{116,10},{
+          134,10},{134,32},{140,32}},               color={255,0,0}));
   connect(boundary.port, sensorW.port_b) annotation (Line(points={{174,32},{167,
           32},{167,32.2},{160,32.2}},
                              color={255,0,0}));
   connect(sensorW.W, integrator.u) annotation (Line(points={{150,41.4},{150,76},
           {168,76}},                   color={0,0,127}));
   connect(bypassdump.ports[1], BOP.port_b_feed) annotation (Line(points={{-4,-62},
-          {48,-62},{48,-8},{58,-8}}, color={0,127,255}));
-  connect(bypassdump2.ports[1], BOP.port_b_bypass) annotation (Line(points={{-22,
-          -8},{44,-8},{44,10},{58,10}}, color={0,127,255}));
+          {48,-62},{48,-8},{56,-8}}, color={0,127,255}));
+  connect(bypassdump2.ports[1], BOP.port_b_bypass) annotation (Line(points={{-22,-8},
+          {44,-8},{44,10},{56,10}},     color={0,127,255}));
   connect(mCA_Base_withBOP_sec_2_1.port_b, BOP.prt_b_steamdump) annotation (
-      Line(points={{5.2,45.4},{48,45.4},{48,40},{58,40}}, color={0,127,255}));
+      Line(points={{5.2,45.4},{48,45.4},{48,40},{56,40}}, color={0,127,255}));
   connect(mCA_Base_withBOP_sec_2_1.port_a, BOP.port_a_steam) annotation (Line(
-        points={{5.8,38.8},{48,38.8},{48,28},{58,28}}, color={0,127,255}));
+        points={{5.8,38.8},{48,38.8},{48,28},{56,28}}, color={0,127,255}));
   annotation (experiment(StopTime=10000000, __Dymola_Algorithm="Esdirk45a"),
                                        Documentation(info="<html>
 <p>Test of Pebble_Bed_Three-Stage_Rankine. The simulation should experience transient where external electricity demand is oscilating and control valves are opening and closing corresponding to the required power demand. </p>

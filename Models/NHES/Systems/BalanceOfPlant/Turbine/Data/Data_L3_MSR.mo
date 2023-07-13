@@ -15,9 +15,10 @@ model Data_L3_MSR
   parameter Modelica.Units.SI.Temperature Tin=573.15 "Inlet Steam Temperature" annotation(Dialog(group="Temperature Sets"));
   parameter Modelica.Units.SI.Temperature Tfeed=331.65 "Target Feed Water Temperature" annotation(Dialog(group="Temperature Sets"));
 
-  parameter Modelica.Units.SI.Density d_HPT_in = 15.07744  "HPT inlet density"  annotation(Dialog(group="Density Sets"));
-  parameter Modelica.Units.SI.Density d_LPT1_in = 1.81354   "LPT1 inlet density"  annotation(Dialog(group="Density Sets"));
-  parameter Modelica.Units.SI.Density d_LPT2_in = 0.86254   "LPT2 inlet density"  annotation(Dialog(group="Density Sets"));
+  parameter Modelica.Units.SI.Density d_HPT_in = 34.69607167  "HPT inlet density"  annotation(Dialog(group="Density Sets"));
+  parameter Modelica.Units.SI.Density d_LPT1_in = 8.189928251
+   "LPT1 inlet density"  annotation(Dialog(group="Density Sets"));
+  parameter Modelica.Units.SI.Density d_LPT2_in = 0.862546399   "LPT2 inlet density"  annotation(Dialog(group="Density Sets"));
 
   parameter Modelica.Units.SI.Pressure HPT_p_out=p_i1 annotation(Dialog(tab="Initialization"));
   parameter Modelica.Units.SI.Pressure LPT1_p_in=p_i1 annotation(Dialog(tab="Initialization"));

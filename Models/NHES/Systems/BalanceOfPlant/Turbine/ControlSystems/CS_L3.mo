@@ -4,6 +4,11 @@ model CS_L3
   extends NHES.Systems.BalanceOfPlant.Turbine.BaseClasses.Partial_ControlSystem;
 
   replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
+    Tin=813.15,
+    Tfeed=473.15,
+    d_HPT_in(displayUnit="kg/m3") = 34.69607167,
+    d_LPT1_in(displayUnit="kg/m3") = 8.189928251,
+    d_LPT2_in(displayUnit="kg/m3") = 0.862546399,
     mdot_total=288.5733428,
     mdot_fh=1.128623343,
     mdot_hpt=287.4447195,

@@ -34270,7 +34270,7 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
         T_b_start_tube=data_SHX.T_outlet_tube,
         m_flow_a_start_tube=2*3*data_SHX.m_flow_tube,
         redeclare model HeatTransfer_tube =
-            TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.DistributedPipe_1D_MultiTransferSurface.Nus_SinglePhase_2Region,
+            TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.DistributedPipe_1D_MultiTransferSurface.Alphas_TwoPhase_3Region,
         redeclare model HeatTransfer_shell =
             TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.DistributedPipe_1D_MultiTransferSurface.FlowAcrossTubeBundles_Grimison
             (

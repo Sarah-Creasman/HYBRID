@@ -57,12 +57,6 @@ model BOP_test_MSR
     annotation (Placement(transformation(extent={{56,-20},{116,40}})));
      // booleanStep2(startTime=100000),
       //Steam_Extraction(y=data.m_ext),
-  TRANSFORM.Fluid.BoundaryConditions.Boundary_pT bypassdump(
-    redeclare package Medium = Modelica.Media.Water.StandardWater,
-    use_p_in=false,
-    p=2000000,
-    nPorts=1)
-    annotation (Placement(transformation(extent={{-24,-72},{-4,-52}})));
   TRANSFORM.Electrical.Sources.FrequencySource boundary
     annotation (Placement(transformation(extent={{194,22},{174,42}})));
 
@@ -77,7 +71,12 @@ model BOP_test_MSR
     nPorts=1)
     annotation (Placement(transformation(extent={{-42,-18},{-22,2}})));
   PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_2
-    mCA_Base_withBOP_sec_2_1
+    mCA_Base_withBOP_sec_2_1(SHX(
+      p_a_start_tube=12000000,
+      p_b_start_tube=12000000,
+      T_a_start_tube=573.15,
+      T_b_start_tube=788.15,
+      m_flow_a_start_tube=200))
     annotation (Placement(transformation(extent={{-40,32},{-20,52}})));
   Data.Data_L3 data(
     HPT_p_in=12000000,
@@ -90,16 +89,21 @@ model BOP_test_MSR
     d_HPT_in(displayUnit="kg/m3") = 34.69607167,
     d_LPT1_in(displayUnit="kg/m3") = 8.189928251,
     d_LPT2_in(displayUnit="kg/m3") = 0.862546399,
-    mdot_total=5.771466857,
-    mdot_fh=1.128623343,
-    mdot_hpt=4.642843514,
-    mdot_lpt1=4.642843514,
-    mdot_lpt2=4.340470821,
+    mdot_total=288.5733428,
+    mdot_fh=56.4311671,
+    mdot_hpt=232.1421757,
+    mdot_lpt1=232.1421757,
+    mdot_lpt2=217.0235411,
     m_ext=1,
     eta_t=0.93,
     eta_mech=1,
     eta_p=0.9)
     annotation (Placement(transformation(extent={{-88,62},{-68,82}})));
+  TRANSFORM.Fluid.BoundaryConditions.Boundary_pT steamdump(
+    redeclare package Medium = Modelica.Media.Water.StandardWater,
+    p=3400000,
+    nPorts=1)
+    annotation (Placement(transformation(extent={{-4,56},{16,76}})));
 initial equation
 
 equation
@@ -111,14 +115,15 @@ equation
                              color={255,0,0}));
   connect(sensorW.W, integrator.u) annotation (Line(points={{150,41.4},{150,76},
           {168,76}},                   color={0,0,127}));
-  connect(bypassdump.ports[1], BOP.port_b_feed) annotation (Line(points={{-4,-62},
-          {48,-62},{48,-8},{56,-8}}, color={0,127,255}));
   connect(bypassdump2.ports[1], BOP.port_b_bypass) annotation (Line(points={{-22,-8},
           {44,-8},{44,10},{56,10}},     color={0,127,255}));
-  connect(mCA_Base_withBOP_sec_2_1.port_b, BOP.prt_b_steamdump) annotation (
-      Line(points={{5.2,45.4},{48,45.4},{48,40},{56,40}}, color={0,127,255}));
-  connect(mCA_Base_withBOP_sec_2_1.port_a, BOP.port_a_steam) annotation (Line(
-        points={{5.8,38.8},{48,38.8},{48,28},{56,28}}, color={0,127,255}));
+  connect(BOP.prt_b_steamdump, steamdump.ports[1]) annotation (Line(points={{56,
+          40},{22,40},{22,66},{16,66}}, color={0,127,255}));
+  connect(BOP.port_a_steam, mCA_Base_withBOP_sec_2_1.port_b) annotation (Line(
+        points={{56,28},{10,28},{10,45.4},{5.2,45.4}}, color={0,127,255}));
+  connect(mCA_Base_withBOP_sec_2_1.port_a, BOP.port_b_feed) annotation (Line(
+        points={{5.8,38.8},{5.8,-10},{48,-10},{48,-8},{56,-8}}, color={0,127,
+          255}));
   annotation (experiment(StopTime=10000000, __Dymola_Algorithm="Esdirk45a"),
                                        Documentation(info="<html>
 <p>Test of Pebble_Bed_Three-Stage_Rankine. The simulation should experience transient where external electricity demand is oscilating and control valves are opening and closing corresponding to the required power demand. </p>

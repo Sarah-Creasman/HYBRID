@@ -31,7 +31,11 @@ package SHS_Two_Tank
               unit="1/m4"), DHX_K_shell(unit="1/m4")),
         redeclare package Storage_Medium =
             TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66,
-        Produced_steam_flow=valveLinear.port_a.m_flow)
+        Produced_steam_flow=valveLinear.port_a.m_flow,
+        flowMultiplier1(capacityScaler=0.1),
+        flowMultiplier(capacityScaler=10),
+        flowMultiplier2(capacityScaler=0.1),
+        flowMultiplier3(capacityScaler=10))
         annotation (Placement(transformation(extent={{-50,-50},{46,52}})));
       TRANSFORM.Fluid.Sensors.TemperatureTwoPort CHX_Inlet_T(redeclare package
           Medium = Modelica.Media.Water.StandardWater)
@@ -2455,8 +2459,8 @@ package SHS_Two_Tank
             extent={{10,-10},{-10,10}},
             rotation=180,
             origin={8,14})));
-      TRANSFORM.Fluid.Volumes.SimpleVolume     volume(redeclare package Medium
-          = Storage_Medium, redeclare model Geometry =
+      TRANSFORM.Fluid.Volumes.SimpleVolume     volume(redeclare package Medium =
+            Storage_Medium, redeclare model Geometry =
             TRANSFORM.Fluid.ClosureRelations.Geometry.Models.LumpedVolume.GenericVolume
             (V=data.ctvolume_volume))
         annotation (Placement(transformation(extent={{10,-10},{-10,10}},
@@ -2614,7 +2618,6 @@ package SHS_Two_Tank
             TRANSFORM.Fluid.ClosureRelations.PressureLoss.Models.DistributedPipe_1D.SinglePhase_Developed_2Region_Simple,
         redeclare model HeatTransfer_tube =
             TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.DistributedPipe_1D_MultiTransferSurface.Nus_DittusBoelter_Simple,
-
         p_a_start_tube=1500000,
         p_b_start_tube=800000,
         exposeState_b_shell=false,
@@ -2652,22 +2655,22 @@ package SHS_Two_Tank
                 {90,-72},{110,-52}})));
       FlowMultiplier flowMultiplier1(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=1,
+        capacityScaler=0.25,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{38,-60},{58,-40}})));
       FlowMultiplier flowMultiplier(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=1,
+        capacityScaler=4,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{68,-102},{88,-82}})));
       FlowMultiplier flowMultiplier2(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=1,
+        capacityScaler=0.25,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{-22,52},{-42,72}})));
       FlowMultiplier flowMultiplier3(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=1,
+        capacityScaler=4,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{-36,-8},{-16,12}})));
     equation

@@ -1,61 +1,1894 @@
-Error: The following error was detected at time: 0
-  Error in region computation of IF97 steam tables(p = 1.58365e+08, h = 3.45578e+06)
+Model: NHES.Systems.EnergyStorage.SHS_Two_Tank.Examples.Build_Test
+Integration started at 0 using integration method:
+RK-method: esdirk45a
+Local extrapolation
+FSAL
+Continuous extension
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 13.26687127864478
+  Error in region computation of IF97 steam tables(p = 3.89913e+08, h = 1.07208e+06)
   Failed condition: false
 The stack of functions is:
 Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
-Modelica.Media.Water.IF97_Utilities.rho_props_ph(
-BOP.HPT.portHP.p, 
-BOP.TCV.port_b.h_outflow, 
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.portHP.p, BOP.TCV.port_b.h_outflow, 0, 0))
-Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.HPT.portHP.p, BOP.TCV.port_b.h_outflow, 0, 0)
-Modelica.Media.Water.WaterIF97_ph.density_ph_Unique10(BOP.HPT.portHP.p, BOP.TCV.port_b.h_outflow, 0, 0)
-...
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
 
-Non-linear solver will silently attempt to handle this problem.
-Non-linear solver gave up after attempt: 49
+Error: The following error was detected at time: 11.48346896928773
+  Error in region computation of IF97 steam tables(p = 1.95216e+08, h = 858675)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
 
-Trying to solve non-linear system using global homotopy-method.
-Error: The following error was detected at time: 0
+Error: The following error was detected at time: 9.713640387942281
   IF97 medium function tsat called with too low pressure
-p = -447.528 Pa <= 611.657 Pa (triple point pressure)
+p = -2.55595e+06 Pa <= 611.657 Pa (triple point pressure)
   Failed condition: p > 611.657
 The stack of functions is:
 Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
 Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(two_Tank_SHS_System.DHX.Shell.medium.sat.psat)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(two_Tank_SHS_System.DHX.Shell.medium.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = two_Tank_SHS_System.DHX.Shell.medium.sat.psat, 
+Tsat ...
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 59.47511067003472
+  Tag: simulation.nonlinear[2]
+  For debugging information enable
+  Simulation/Setup/Debug/Nonlinear solver diagnostics/Detailed logging of failed nonlinear solutions.
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 57.65337461230781
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 60.01365149622053
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 378.481558028268
+  IF97 medium function tsat called with too low pressure
+p = -448845 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 372.4922436784878
+  Error in region computation of IF97 steam tables(p = 1.33541e+08, h = 755633)
+  Failed condition: false
+The stack of functions is:
 Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
-Modelica.Media.Water.IF97_Utilities.s_props_ph(
-BOP.HPT.state_a.p, 
-BOP.HPT.state_a.h, 
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0))
-Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
-Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
-Modelica.Media.Water.WaterIF97_base.Thermodynam...
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(boundary3.ports[1].p, boilerDrum.medium_liquid.h, boilerDrum.medium_liquid.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(boilerDrum.medium_liquid.p, boilerDrum.medium_liquid.h, boilerDrum.medium_liquid.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique48(boilerDrum.medium_liquid.p, boilerDrum.medium_liquid.h, boilerDrum.medi...
+
+Error: The following error was detected at time: 369.4975865035977
+  Error in region computation of IF97 steam tables(p = 2.23988e+07, h = 8.56499e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(boundary3.ports[1].p, boilerDrum.medium_vapor.h, boilerDrum.medium_vapor.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(boilerDrum.medium_vapor.p, boilerDrum.medium_vapor.h, boilerDrum.medium_vapor.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique48(boilerDrum.medium_vapor.p, boilerDrum.medium_vapor.h, boilerDrum.medium_vapo...
+
+Error: The following error was detected at time: 9837.802695168213
+  Error in region computation of IF97 steam tables(p = 7.87796e+07, h = -2.66139e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 9820.470620702316
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 13016.16931439696
+  IF97 medium function tsat called with too low pressure
+p = -3.61982e+07 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 12804.45015575221
+  IF97 medium function tsat called with too low pressure
+p = -9.6514e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 12825.86964422471
+  IF97 medium function tsat called with too low pressure
+p = -7.71186e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 12772.93985456352
+  IF97 medium function tsat called with too low pressure
+p = -212804 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 18074.0062702605
+  Error in region computation of IF97 steam tables(p = 4.67039e+07, h = 3.27415e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(boundary3.ports[1].p, boilerDrum.medium_vapor.h, boilerDrum.medium_vapor.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(boilerDrum.medium_vapor.p, boilerDrum.medium_vapor.h, boilerDrum.medium_vapor.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique48(boilerDrum.medium_vapor.p, boilerDrum.medium_vapor.h, boilerDrum.medium_vapo...
+
+Error: The following error was detected at time: 27846.72546000545
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = -8.39762e+06
+  fb = f(u_max) = -7.26473e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
 
 First evaluation failed for non-linear solver.
 
-Error: The following error was detected at time: 0
-  IF97 medium function tsat called with too low pressure
-p = -447.528 Pa <= 611.657 Pa (triple point pressure)
-  Failed condition: p > 611.657
+Error: The following error was detected at time: 27846.72546000545
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = -8.39762e+06
+  fb = f(u_max) = -7.26473e+06
+fa and fb must have opposite sign which is not the case
 The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
-Modelica.Media.Water.IF97_Utilities.s_props_ph(
-BOP.HPT.state_a.p, 
-BOP.HPT.state_a.h, 
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0))
-Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
-Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique8(
-Modelica.Media.Water.WaterIF97_base.Thermodynam...
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
 
 Non-linear solver will silently attempt to handle this problem.
 Non-linear solver gave up after attempt: 2
 
-Error: could not solve simplified initialization for homotopy method.
+Error: The following error was detected at time: 27829.32898971202
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = -1.76701e+06
+  fb = f(u_max) = -634119
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
 
-FixInitials:Init: Integrator failed to start model.
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 27829.32898971202
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = -1.76701e+06
+  fb = f(u_max) = -634119
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 45847.94805705597
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 317919
+  fb = f(u_max) = 1.45081e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 45847.94805705597
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 317919
+  fb = f(u_max) = 1.45081e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 45834.55366573497
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 1036.56
+  fb = f(u_max) = 1.13393e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 45834.55366573497
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 1036.56
+  fb = f(u_max) = 1.13393e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 48841.07260395207
+  IF97 medium function tsat called with too low pressure
+p = -3.00329e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 63868.38152810718
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = -1.8009e+06
+  fb = f(u_max) = -668005
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 63868.38152810718
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = -1.8009e+06
+  fb = f(u_max) = -668005
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 63849.67756303709
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 63840.32558050205
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 63832.14259578388
+
+Model error - sqrt (0.010000000000000002+two_Tank_SHS_System.DHX.Shell_dp.port_a.m_flow*two_Tank_SHS_System.DHX.Shell_dp.port_a.m_flow) = sqrt (nan)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 1
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 63916.62736609806
+  Tag: simulation.nonlinear[2]
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 66984.31674310903
+  IF97 medium function tsat called with too low pressure
+p = -1.31469e+07 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 66855.45172554757
+  IF97 medium function tsat called with too low pressure
+p = -512564 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 81880.51321337812
+  Error in region computation of IF97 steam tables(p = 8.70183e+07, h = 5.06675e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Error: The following error was detected at time: 81860.93557852949
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 303509
+  fb = f(u_max) = 1.4364e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 81860.93557852949
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 303509
+  fb = f(u_max) = 1.4364e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 81851.14676110516
+  Error in region computation of IF97 steam tables(p = 2.22505e+07, h = -392080)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Error: The following error was detected at time: 84859.75486132836
+  IF97 medium function tsat called with too low pressure
+p = -86885.1 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 99884.70605867333
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 290535
+  fb = f(u_max) = 1.42343e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 99884.70605867333
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 290535
+  fb = f(u_max) = 1.42343e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 99868.60745578985
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 99860.55815434811
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 99853.43794571985
+
+Model error - sqrt (0.010000000000000002+two_Tank_SHS_System.DHX.Shell_dp.port_a.m_flow*two_Tank_SHS_System.DHX.Shell_dp.port_a.m_flow) = sqrt (nan)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 1
+
+Error: The following error was detected at time: 102980.529141297
+  IF97 medium function tsat called with too low pressure
+p = -5.14394e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 117904.8605308347
+  Error in region computation of IF97 steam tables(p = 8.86043e+07, h = 5.76414e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Error: The following error was detected at time: 117884.6147601935
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 242308
+  fb = f(u_max) = 1.3752e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 117884.6147601935
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 242308
+  fb = f(u_max) = 1.3752e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 117874.4918748729
+  Error in region computation of IF97 steam tables(p = 2.26409e+07, h = -1.03289e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Error: The following error was detected at time: 117865.3150291605
+
+Model error - sqrt (0.010000000000000002+two_Tank_SHS_System.DHX.Shell_dp.port_a.m_flow*two_Tank_SHS_System.DHX.Shell_dp.port_a.m_flow) = sqrt (nan)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 1
+
+Error: The following error was detected at time: 120989.1395699353
+  IF97 medium function tsat called with too low pressure
+p = -4.22788e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 135903.8943733078
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 191639
+  fb = f(u_max) = 1.32453e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 135903.8943733078
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 191639
+  fb = f(u_max) = 1.32453e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 135890.5734536682
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 113224
+  fb = f(u_max) = 1.24612e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.DHX.Tube_dp.port_a.p, two_Tank_SHS_System.DHX.Tube_dp.port_a.h_outflow_inStream)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.DHX.Tube_dp.port_a.p, two_Tank_SHS_System.DHX.Tube_dp.port_a.h_outflow_inStream, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 135890.5734536682
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 113224
+  fb = f(u_max) = 1.24612e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.DHX.Tube_dp.port_a.p, two_Tank_SHS_System.DHX.Tube_dp.port_a.h_outflow_inStream)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.DHX.Tube_dp.port_a.p, two_Tank_SHS_System.DHX.Tube_dp.port_a.h_outflow_inStream, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 135966.7669956394
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 139051.0244401253
+  IF97 medium function tsat called with too low pressure
+p = -5.37397e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 153929.8610504192
+  Error in region computation of IF97 steam tables(p = 8.27854e+07, h = 5.19032e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 153910.5629390091
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 153900.9138833041
+  Error in region computation of IF97 steam tables(p = 2.11719e+07, h = -778223)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Error: The following error was detected at time: 156911.9138174154
+  IF97 medium function tsat called with too low pressure
+p = -599748 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 166341.3931069956
+
+Model error - power: (two_Tank_SHS_System.CHX.tube.heatTransfer.Res[5]) ^ (0.8) = (-130669) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 166341.3931069956
+
+Model error - power: (two_Tank_SHS_System.CHX.tube.heatTransfer.Res[5]) ^ (0.8) = (-130669) ^ (0.8)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 166185.3931069956
+
+Model error - power: (two_Tank_SHS_System.CHX.tube.heatTransfer.Res[5]) ^ (0.8) = (-12555.7) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 166185.3931069956
+
+Model error - power: (two_Tank_SHS_System.CHX.tube.heatTransfer.Res[5]) ^ (0.8) = (-12555.7) ^ (0.8)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 166107.3931069956
+
+Model error - power: (two_Tank_SHS_System.CHX.tube.heatTransfer.Res[5]) ^ (0.8) = (-286.954) ^ (0.8)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 166107.3931069956
+
+Model error - power: (two_Tank_SHS_System.CHX.tube.heatTransfer.Res[5]) ^ (0.8) = (-286.954) ^ (0.8)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 166068.3931069956
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 335368
+  fb = f(u_max) = 1.46826e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.hot_tank_dump_pipe.port_a.p, two_Tank_SHS_System.CHX.port_b_tube.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.hot_tank_dump_pipe.port_a.p, two_Tank_SHS_System.CHX.port_b_tube.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 166068.3931069956
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 335368
+  fb = f(u_max) = 1.46826e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.hot_tank_dump_pipe.port_a.p, two_Tank_SHS_System.CHX.port_b_tube.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.hot_tank_dump_pipe.port_a.p, two_Tank_SHS_System.CHX.port_b_tube.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 166048.8931069956
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 20239.9
+  fb = f(u_max) = 1.15313e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.hot_tank_dump_pipe.port_a.p, two_Tank_SHS_System.CHX.port_b_tube.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.hot_tank_dump_pipe.port_a.p, two_Tank_SHS_System.CHX.port_b_tube.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 166048.8931069956
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 20239.9
+  fb = f(u_max) = 1.15313e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.hot_tank_dump_pipe.port_a.p, two_Tank_SHS_System.CHX.port_b_tube.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.hot_tank_dump_pipe.port_a.p, two_Tank_SHS_System.CHX.port_b_tube.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 166039.1431069956
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = -1.15062e+06
+  fb = f(u_max) = -17725.7
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.hot_tank_dump_pipe.port_a.p, two_Tank_SHS_System.CHX.port_b_tube.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.hot_tank_dump_pipe.port_a.p, two_Tank_SHS_System.CHX.port_b_tube.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 166039.1431069956
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = -1.15062e+06
+  fb = f(u_max) = -17725.7
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.hot_tank_dump_pipe.port_a.p, two_Tank_SHS_System.CHX.port_b_tube.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.hot_tank_dump_pipe.port_a.p, two_Tank_SHS_System.CHX.port_b_tube.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 166759.3297045054
+  Error in region computation of IF97 steam tables(p = 4.96305e+06, h = -5.09122e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[2].p, two_Tank_SHS_System.CHX.shell.mediums[2].h, two_Tank_SHS_System.CHX.shell.mediums[2].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[2].p, two_Tank_SHS_System.CHX.shell.mediums[2].h, two_Tank_SHS_System.CHX.shell.mediums[2].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 166757.2332983657
+  Error in region computation of IF97 steam tables(p = 4.9874e+06, h = -2.0862e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[2].p, two_Tank_SHS_System.CHX.shell.mediums[2].h, two_Tank_SHS_System.CHX.shell.mediums[2].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[2].p, two_Tank_SHS_System.CHX.shell.mediums[2].h, two_Tank_SHS_System.CHX.shell.mediums[2].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 166756.1850952958
+  Error in region computation of IF97 steam tables(p = 4.99866e+06, h = -628111)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[2].p, two_Tank_SHS_System.CHX.shell.mediums[2].h, two_Tank_SHS_System.CHX.shell.mediums[2].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[2].p, two_Tank_SHS_System.CHX.shell.mediums[2].h, two_Tank_SHS_System.CHX.shell.mediums[2].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 166755.6609937609
+  Error in region computation of IF97 steam tables(p = 5.00205e+06, h = 1934.69)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[2].p, two_Tank_SHS_System.CHX.shell.mediums[2].h, two_Tank_SHS_System.CHX.shell.mediums[2].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[2].p, two_Tank_SHS_System.CHX.shell.mediums[2].h, two_Tank_SHS_System.CHX.shell.mediums[2].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 166838.8785560975
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -2.82198 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.T, boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase ...
+
+Error: The following error was detected at time: 166835.7199063187
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -7.89534 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.T, boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase ...
+
+Error: The following error was detected at time: 166834.1405814293
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -31.754 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.T, boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase ...
+
+Error: The following error was detected at time: 167115.4674710077
+  Error in region computation of IF97 steam tables(p = 4.9993e+06, h = -1.58782e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[2].p, two_Tank_SHS_System.CHX.shell.mediums[2].h, two_Tank_SHS_System.CHX.shell.mediums[2].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[2].p, two_Tank_SHS_System.CHX.shell.mediums[2].h, two_Tank_SHS_System.CHX.shell.mediums[2].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 167043.6683693233
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -0.354211 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.T, boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase ...
+
+Error: The following error was detected at time: 167038.184509102
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -0.707507 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.T, boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase ...
+
+Error: The following error was detected at time: 167035.4425789913
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -1.66514 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.T, boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase ...
+
+Error: The following error was detected at time: 167034.071613936
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -4.59171 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.T, boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase ...
+
+Error: The following error was detected at time: 167033.3861314083
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -16.7499 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.T, boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase ...
+
+Error: The following error was detected at time: 167033.0433901445
+  IF97 medium function visc_dTp: viscosity computed outside the range
+of validity of the IF97 formulation: p = 5.06567e+06 Pa, Tc = 931.056 K
+  Failed condition: p <= 500000000.0 and (Tc >= 0.0 and Tc <= 150) or p <= 350000000.0 and (Tc > 150.0 and Tc <= 600) or p <= 300000000.0 and (Tc > 600.0 and Tc <= 900)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[3].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[3].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[3].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[3].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167345.6948877143
+  Error in region computation of IF97 steam tables(p = 4.99988e+06, h = -4.03621e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[3].p, two_Tank_SHS_System.CHX.shell.mediums[3].h, two_Tank_SHS_System.CHX.shell.mediums[3].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[3].p, two_Tank_SHS_System.CHX.shell.mediums[3].h, two_Tank_SHS_System.CHX.shell.mediums[3].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 167304.8841208987
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -0.256733 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167298.1542906137
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -0.512855 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167294.7893754712
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -1.19593 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167293.1069178999
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -3.19853 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167292.2656891143
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -10.3851 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167291.8450747214
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -74.0706 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167553.5910416691
+  Error in region computation of IF97 steam tables(p = 5.23459e+06, h = -1.1519e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[5].p, two_Tank_SHS_System.CHX.shell.mediums[5].h, two_Tank_SHS_System.CHX.shell.mediums[5].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[5].p, two_Tank_SHS_System.CHX.shell.mediums[5].h, two_Tank_SHS_System.CHX.shell.mediums[5].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 167551.5332014069
+  Error in region computation of IF97 steam tables(p = 5.11794e+06, h = -5.01921e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[5].p, two_Tank_SHS_System.CHX.shell.mediums[5].h, two_Tank_SHS_System.CHX.shell.mediums[5].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[5].p, two_Tank_SHS_System.CHX.shell.mediums[5].h, two_Tank_SHS_System.CHX.shell.mediums[5].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 167550.5042812758
+  Error in region computation of IF97 steam tables(p = 5.0596e+06, h = -1.79523e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[5].p, two_Tank_SHS_System.CHX.shell.mediums[5].h, two_Tank_SHS_System.CHX.shell.mediums[5].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[5].p, two_Tank_SHS_System.CHX.shell.mediums[5].h, two_Tank_SHS_System.CHX.shell.mediums[5].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 167549.9898212102
+  Error in region computation of IF97 steam tables(p = 5.03016e+06, h = -373481)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[5].p, two_Tank_SHS_System.CHX.shell.mediums[5].h, two_Tank_SHS_System.CHX.shell.mediums[5].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[5].p, two_Tank_SHS_System.CHX.shell.mediums[5].h, two_Tank_SHS_System.CHX.shell.mediums[5].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 167549.7325911774
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -10660.8 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167827.9581033445
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -0.281809 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167820.2282644456
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -0.57164 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167816.3633449962
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -1.34116 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167814.4308852715
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -3.5935 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167813.4646554091
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -11.6559 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 167812.981540478
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -81.9384 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 170208.1484929128
+  IF97 medium function visc_dTp: viscosity computed outside the range
+of validity of the IF97 formulation: p = 5.03694e+06 Pa, Tc = 1704.1 K
+  Failed condition: p <= 500000000.0 and (Tc >= 0.0 and Tc <= 150) or p <= 350000000.0 and (Tc > 150.0 and Tc <= 600) or p <= 300000000.0 and (Tc > 600.0 and Tc <= 900)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.T, boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase ...
+
+Error: The following error was detected at time: 169976.3595313196
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -27.8613 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 169860.4650505229
+  IF97 medium function visc_dTp: viscosity computed outside the range
+of validity of the IF97 formulation: p = 5.03493e+06 Pa, Tc = 1547.98 K
+  Failed condition: p <= 500000000.0 and (Tc >= 0.0 and Tc <= 150) or p <= 350000000.0 and (Tc > 150.0 and Tc <= 600) or p <= 300000000.0 and (Tc > 600.0 and Tc <= 900)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.T, boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase ...
+
+Error: The following error was detected at time: 171924.0774979264
+  Error in region computation of IF97 steam tables(p = 2.45154e+07, h = -279619)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Error: The following error was detected at time: 174321.3383127103
+  Error in region computation of IF97 steam tables(p = 5.00029e+06, h = 7.76298e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.heatTransfer.states[5].p, two_Tank_SHS_System.CHX.shell.heatTransfer.states[5].h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.cp_ph(two_Tank_SHS_System.CHX.shell.heatTransfer.states[5].p, two_Tank_SHS_System.CHX.shell.heatTransfer.states[5].h, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.specificHeatCapacityCp_Unique78(...
+
+Error: The following error was detected at time: 174171.439863151
+  Error in region computation of IF97 steam tables(p = 5.00055e+06, h = 1.0362e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.heatTransfer.states[5].p, two_Tank_SHS_System.CHX.shell.heatTransfer.states[5].h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.cp_ph(two_Tank_SHS_System.CHX.shell.heatTransfer.states[5].p, two_Tank_SHS_System.CHX.shell.heatTransfer.states[5].h, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.specificHeatCapacityCp_Unique78(...
+
+Error: The following error was detected at time: 174026.2257401404
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -105.975 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 174947.0782885631
+  IF97 medium function tsat called with too low pressure
+p = -1.10845e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 189919.0328546583
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 347706
+  fb = f(u_max) = 1.4806e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 189919.0328546583
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 347706
+  fb = f(u_max) = 1.4806e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 189902.6081648969
+  Tag: simulation.nonlinear[2]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 189894.3958200162
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 189887.194918359
+
+Model error - sqrt (0.010000000000000002+two_Tank_SHS_System.DHX.Shell_dp.port_a.m_flow*two_Tank_SHS_System.DHX.Shell_dp.port_a.m_flow) = sqrt (nan)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 1
+
+Error: The following error was detected at time: 193239.3589842053
+  IF97 medium function tsat called with too low pressure
+p = -2.3898e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 207925.6784769858
+  Error in region computation of IF97 steam tables(p = 1.00016e+08, h = 774569)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.DHX.Shell.medium.p, two_Tank_SHS_System.DHX.Shell.medium.h, two_Tank_SHS_System.DHX.Shell.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 207901.5088008123
+  Tag: simulation.nonlinear[2]
+Error: The following error was detected at time: 207889.4239627255
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 99594.9
+  fb = f(u_max) = 1.23249e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.DHX.Tube_dp.port_a.p, two_Tank_SHS_System.DHX.Tube_dp.port_a.h_outflow_inStream)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.DHX.Tube_dp.port_a.p, two_Tank_SHS_System.DHX.Tube_dp.port_a.h_outflow_inStream, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 207889.4239627255
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 99594.9
+  fb = f(u_max) = 1.23249e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.DHX.Tube_dp.port_a.p, two_Tank_SHS_System.DHX.Tube_dp.port_a.h_outflow_inStream)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.DHX.Tube_dp.port_a.p, two_Tank_SHS_System.DHX.Tube_dp.port_a.h_outflow_inStream, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 216344.4395523726
+  IF97 medium function tsat called with too low pressure
+p = -77284.7 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(boundary3.ports[1].p)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(boilerDrum.medium_liquid.sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique52(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = boilerDrum.medium_liquid.sat.psat, 
+Tsat = boilerDrum.medium_liquid.sat.Tsat
+))
+
+Error: The following error was detected at time: 222485.4706228246
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -29.953 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 222541.9894620227
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -424.637 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 222803.3257679502
+  IF97 medium function visc_dTp: viscosity computed outside the range
+of validity of the IF97 formulation: p = 7.6177e+09 Pa, Tc = 373.946 K
+  Failed condition: p <= 500000000.0 and (Tc >= 0.0 and Tc <= 150) or p <= 350000000.0 and (Tc > 150.0 and Tc <= 600) or p <= 300000000.0 and (Tc > 600.0 and Tc <= 900)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.T, boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase ...
+
+Error: The following error was detected at time: 222803.2973213703
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -1.45781 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 222803.2914187482
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -4.14602 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 222803.2884674371
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -20.9896 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 222803.2856361424
+  IF97 medium function tsat called with too low pressure
+p = -70050.5 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].p)
+
+Error: The following error was detected at time: 222803.2855761343
+  IF97 medium function tsat called with too low pressure
+p = -31756.5 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].p)
+
+Error: The following error was detected at time: 222803.2855461302
+  IF97 medium function tsat called with too low pressure
+p = -3.27886e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].p)
+
+Error: The following error was detected at time: 222803.2855311281
+  IF97 medium function tsat called with too low pressure
+p = -1.70535e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].p)
+
+Error: The following error was detected at time: 222803.2855236271
+  IF97 medium function tsat called with too low pressure
+p = -633161 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[5].p)
+
+Error: The following error was detected at time: 222803.5735792212
+  Error in region computation of IF97 steam tables(p = 1.03123e+08, h = 950542)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[4].p, two_Tank_SHS_System.CHX.shell.mediums[4].h, two_Tank_SHS_System.CHX.shell.mediums[4].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[4].p, two_Tank_SHS_System.CHX.shell.mediums[4].h, two_Tank_SHS_System.CHX.shell.mediums[4].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 222803.5570716371
+  IF97 medium function tsat called with too low pressure
+p = -2.1288e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(boundary5.ports[1].p)
+
+Error: The following error was detected at time: 222803.548817845
+  IF97 medium function tsat called with too low pressure
+p = -2.02782e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].p)
+
+Error: The following error was detected at time: 222803.544690949
+  IF97 medium function tsat called with too low pressure
+p = -524977 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[4].p)
+
+Error: The following error was detected at time: 222803.542627501
+  IF97 medium function tsat called with too low pressure
+p = -167832 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[3].p)
+
+Error: The following error was detected at time: 222803.5415957769
+  IF97 medium function g2: the input temperature (= 4.18495e+08 K) is higher than the limit of 1073.15 K
+  Failed condition: T <= 1073.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[3].p, two_Tank_SHS_System.CHX.shell.mediums[3].h, two_Tank_SHS_System.CHX.shell.mediums[3].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[3].p, two_Tank_SHS_System.CHX.shell.mediums[3].h, two_Tank_SHS_System.CHX.shell.mediums[3].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 222803.5410799149
+  IF97 medium function g2: the input temperature (= 3.44637e+06 K) is higher than the limit of 1073.15 K
+  Failed condition: T <= 1073.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[3].p, two_Tank_SHS_System.CHX.shell.mediums[3].h, two_Tank_SHS_System.CHX.shell.mediums[3].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[3].p, two_Tank_SHS_System.CHX.shell.mediums[3].h, two_Tank_SHS_System.CHX.shell.mediums[3].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 222803.976062518
+  Error in region computation of IF97 steam tables(p = 1.36571e+08, h = 1.05575e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[3].p, two_Tank_SHS_System.CHX.shell.mediums[3].h, two_Tank_SHS_System.CHX.shell.mediums[3].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[3].p, two_Tank_SHS_System.CHX.shell.mediums[3].h, two_Tank_SHS_System.CHX.shell.mediums[3].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 222803.9427383551
+  IF97 medium function tsat called with too low pressure
+p = -9.04887e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(boundary5.ports[1].p)
+
+Error: The following error was detected at time: 222803.9260762736
+  IF97 medium function tsat called with too low pressure
+p = -2.11872e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(boundary5.ports[1].p)
+
+Error: The following error was detected at time: 222803.9177452329
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -1.76474 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.T, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water....
+
+Error: The following error was detected at time: 222804.5020468144
+  Error in region computation of IF97 steam tables(p = 1.77465e+08, h = 1.16541e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[2].p, two_Tank_SHS_System.CHX.shell.mediums[2].h, two_Tank_SHS_System.CHX.shell.mediums[2].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[2].p, two_Tank_SHS_System.CHX.shell.mediums[2].h, two_Tank_SHS_System.CHX.shell.mediums[2].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 222804.4401476973
+  IF97 medium function tsat called with too low pressure
+p = -4.04577e+07 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(boundary5.ports[1].p)
+
+Error: The following error was detected at time: 222804.4091981387
+  IF97 medium function tsat called with too low pressure
+p = -1.27092e+07 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(boundary5.ports[1].p)
+
+Error: The following error was detected at time: 222804.3937233594
+  IF97 medium function tsat called with too low pressure
+p = -2.61913e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(boundary5.ports[1].p)
+
+Error: The following error was detected at time: 222804.3859859698
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -27.006 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.d, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.T, boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[1].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique70(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase ...
+
+Error: The following error was detected at time: 222805.1702309524
+  Error in region computation of IF97 steam tables(p = 1.40808e+08, h = 1.19329e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(boundary5.ports[1].p, two_Tank_SHS_System.CHX.shell.mediums[1].h, two_Tank_SHS_System.CHX.shell.mediums[1].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[1].p, two_Tank_SHS_System.CHX.shell.mediums[1].h, two_Tank_SHS_System.CHX.shell.mediums[1].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_...
+
+Error: The following error was detected at time: 222805.095677773
+  IF97 medium function tsat called with too low pressure
+p = -5.55761e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique60
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique72(two_Tank_SHS_System.CHX.shell.flowModel.mediaProps[2].p)
+
+Error: The following error was detected at time: 225260.0000018001
+  Error in region computation of IF97 steam tables(p = 5.00011e+06, h = -4.78267e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[4].p, two_Tank_SHS_System.CHX.shell.mediums[4].h, two_Tank_SHS_System.CHX.shell.mediums[4].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[4].p, two_Tank_SHS_System.CHX.shell.mediums[4].h, two_Tank_SHS_System.CHX.shell.mediums[4].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 225130.0000018001
+  Error in region computation of IF97 steam tables(p = 5.00004e+06, h = -276560)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(two_Tank_SHS_System.CHX.shell.mediums[4].p, two_Tank_SHS_System.CHX.shell.mediums[4].h, two_Tank_SHS_System.CHX.shell.mediums[4].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(two_Tank_SHS_System.CHX.shell.mediums[4].p, two_Tank_SHS_System.CHX.shell.mediums[4].h, two_Tank_SHS_System.CHX.shell.mediums[4].phase, 0)
+Modelica.Media.Water.Wa...
+
+Error: The following error was detected at time: 225932.9002762218
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 156790
+  fb = f(u_max) = 1.28968e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 225932.9002762218
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 156790
+  fb = f(u_max) = 1.28968e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 225919.9188828834
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 151537
+  fb = f(u_max) = 1.28443e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.DHX.Tube_dp.port_a.p, two_Tank_SHS_System.DHX.Tube_dp.port_a.h_outflow_inStream)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.DHX.Tube_dp.port_a.p, two_Tank_SHS_System.DHX.Tube_dp.port_a.h_outflow_inStream, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 225919.9188828834
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 151537
+  fb = f(u_max) = 1.28443e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.DHX.Tube_dp.port_a.p, two_Tank_SHS_System.DHX.Tube_dp.port_a.h_outflow_inStream)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.DHX.Tube_dp.port_a.p, two_Tank_SHS_System.DHX.Tube_dp.port_a.h_outflow_inStream, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+Residual was NaN or Inf.
+
+Non-linear solver will attempt to handle this problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 235131.2917536006
+  Tag: simulation.nonlinear[4]
+Error: The following error was detected at time: 243921.1029344063
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 365401
+  fb = f(u_max) = 1.49829e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 243921.1029344063
+The arguments u_min and u_max provided in the function call
+    solveOneNonlinearEquation(f,u_min,u_max)
+do not bracket the root of the single non-linear equation 0=f(u):
+  u_min  = 273.15
+  u_max  = 753.15
+  fa = f(u_min) = 365401
+  fb = f(u_max) = 1.49829e+06
+fa and fb must have opposite sign which is not the case
+The stack of functions is:
+Modelica.Math.Nonlinear.solveOneNonlinearEquation
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.T_ph_Unique33(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow)
+TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66.setState_phX_Unique32(two_Tank_SHS_System.cold_tank_dump_pipe.port_a.p, two_Tank_SHS_System.DHX.Tube_out.h_outflow, {})
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+

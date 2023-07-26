@@ -71,12 +71,7 @@ model BOP_test_MSR
     nPorts=1)
     annotation (Placement(transformation(extent={{-42,-18},{-22,2}})));
   PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_2
-    mCA_Base_withBOP_sec_2_1(SHX(
-      p_a_start_tube=12000000,
-      p_b_start_tube=12000000,
-      T_a_start_tube=573.15,
-      T_b_start_tube=788.15,
-      m_flow_a_start_tube=200))
+    mCA_Base_withBOP_sec_2_1
     annotation (Placement(transformation(extent={{-40,32},{-20,52}})));
   Data.Data_L3 data(
     HPT_p_in=12000000,

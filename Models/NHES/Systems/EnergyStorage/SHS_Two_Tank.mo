@@ -32,10 +32,10 @@ package SHS_Two_Tank
         redeclare package Storage_Medium =
             TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66,
         Produced_steam_flow=valveLinear.port_a.m_flow,
-        flowMultiplier1(capacityScaler=0.1),
-        flowMultiplier(capacityScaler=10),
-        flowMultiplier2(capacityScaler=0.1),
-        flowMultiplier3(capacityScaler=10))
+        flowMultiplier1(capacityScaler=0.1111),
+        flowMultiplier(capacityScaler=9),
+        flowMultiplier2(capacityScaler=0.1111),
+        flowMultiplier3(capacityScaler=9))
         annotation (Placement(transformation(extent={{-50,-50},{46,52}})));
       TRANSFORM.Fluid.Sensors.TemperatureTwoPort CHX_Inlet_T(redeclare package
           Medium = Modelica.Media.Water.StandardWater)
@@ -2655,22 +2655,22 @@ package SHS_Two_Tank
                 {90,-72},{110,-52}})));
       FlowMultiplier flowMultiplier1(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=0.25,
+        capacityScaler=0.1111,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{38,-60},{58,-40}})));
       FlowMultiplier flowMultiplier(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=4,
+        capacityScaler=9,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{68,-102},{88,-82}})));
       FlowMultiplier flowMultiplier2(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=0.25,
+        capacityScaler=0.1111,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{-22,52},{-42,72}})));
       FlowMultiplier flowMultiplier3(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=4,
+        capacityScaler=9,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{-36,-8},{-16,12}})));
     equation

@@ -40,7 +40,8 @@ model SteamTurbine_L3_HPOFWH
     p_outlet_nominal=data.HPT_p_out,
     use_T_nominal=false,
     T_nominal=data.Tin,
-    d_nominal=data.d_HPT_in)
+    d_nominal=data.d_HPT_in,
+    state_a(p(start=10e6, fixed=true)))
     annotation (Placement(transformation(extent={{-46,44},{-26,64}})));
   TRANSFORM.Fluid.Machines.SteamTurbine LPT1(
     eta_mech=data.eta_mech,

@@ -96,14 +96,8 @@ model BOP_test_MSR_NTU
     p=3400000,
     nPorts=1)
     annotation (Placement(transformation(extent={{-4,56},{16,76}})));
-  PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_2_WorksNTU
-    mCA_Base_withBOP_sec_2_WorksNTU(nTU_HX_SinglePhase(
-      use_T_start_tube=false,
-      h_start_tube_inlet=1.34e6,
-      h_start_tube_outlet=3.39e6,
-      p_start_shell=1000000,
-      m_start_tube=288))
-    annotation (Placement(transformation(extent={{-52,26},{-32,46}})));
+  PrimaryHeatSystem.MSR.Examples.MSR_NTU mSR_NTU
+    annotation (Placement(transformation(extent={{-58,24},{-38,44}})));
 initial equation
 
 equation
@@ -119,11 +113,10 @@ equation
           {44,-8},{44,10},{56,10}},     color={0,127,255}));
   connect(BOP.prt_b_steamdump, steamdump.ports[1]) annotation (Line(points={{56,
           40},{22,40},{22,66},{16,66}}, color={0,127,255}));
-  connect(mCA_Base_withBOP_sec_2_WorksNTU.port_b, BOP.port_a_steam) annotation (
-     Line(points={{-0.8,36.4},{20,36.4},{20,28},{56,28}}, color={0,127,255}));
-  connect(mCA_Base_withBOP_sec_2_WorksNTU.port_a, BOP.port_b_feed) annotation (
-      Line(points={{-0.2,29.8},{-0.2,-10},{48,-10},{48,-8},{56,-8}}, color={0,
-          127,255}));
+  connect(mSR_NTU.port_b, BOP.port_a_steam) annotation (Line(points={{-12.8,
+          37.4},{46,37.4},{46,28},{56,28}}, color={0,127,255}));
+  connect(mSR_NTU.port_a, BOP.port_b_feed) annotation (Line(points={{-12.2,30.8},
+          {-12.2,-10},{48,-10},{48,-8},{56,-8}}, color={0,127,255}));
   annotation (experiment(StopTime=10000000, __Dymola_Algorithm="Esdirk45a"),
                                        Documentation(info="<html>
 <p>Test of Pebble_Bed_Three-Stage_Rankine. The simulation should experience transient where external electricity demand is oscilating and control valves are opening and closing corresponding to the required power demand. </p>

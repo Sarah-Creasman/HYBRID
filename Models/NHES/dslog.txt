@@ -1,32 +1,125 @@
-Log-file of program ./dymosim
-(generated: Mon Jul 31 14:32:27 2023)
+Model: NHES.Systems.BalanceOfPlant.Turbine.Examples.PCL_BOP
+Integration started at 0 using integration method:
+RK-method: esdirk45a
+Local extrapolation
+FSAL
+Continuous extension
 
-dymosim started
-... "NHES.Systems.PrimaryHeatSystem.MSR.Examples.PCL_WithHeatSource" simulating
-... "dsin.txt" loading (dymosim input file)
-... "PCL_WithHeatSource.mat" creating (simulation result file)
+Error: The following error was detected at time: 0.07252849651090751
+  IF97 medium function tsat called with too low pressure
+p = -326899 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique14(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, ...
 
-Integration started at T = 0 using integration method DASSL
-(DAE multi-step solver (dassl/dasslrt of Petzold modified by Dassault Systemes))
+First evaluation failed for non-linear solver.
 
-Integration terminated successfully at T = 10000000
-   CPU-time for integration                : 0.07 seconds
-   CPU-time for one grid interval          : 0.14 milliseconds
-   CPU-time for initialization             : 0.001 seconds
-   Number of result points                 : 502
-   Number of grid points                   : 501
-   Number of accepted steps                : 242
-   Number of f-evaluations (dynamics)      : 506
-   Number of crossing function evaluations : 742
-   Number of Jacobian-evaluations          : 56
-   Number of model time events             : 0
-   Number of input time events             : 0
-   Number of state events                  : 0
-   Number of step events                   : 0
-   Minimum integration stepsize            : 6.8e-10
-   Maximum integration stepsize            : 4.73e+06
-   Maximum integration order               : 1
-Calling terminal section
-... "dsfinal.txt" creating (final states)
+Error: The following error was detected at time: 0.07252849651090751
+  IF97 medium function tsat called with too low pressure
+p = -326899 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique14(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, ...
 
-SUCCESSFUL simulation of NHES.Systems.PrimaryHeatSystem.MSR.Examples.PCL_WithHeatSource
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 0.0719928366074294
+  IF97 medium function tsat called with too low pressure
+p = -65540.9 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique14(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, ...
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0.0719928366074294
+  IF97 medium function tsat called with too low pressure
+p = -65540.9 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique14(
+Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
+phase = BOP.HPT.state_a.phase, 
+h = BOP.HPT.state_a.h, 
+d = BOP.HPT.state_a.d, ...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 123.2387066191769
+  Error in region computation of IF97 steam tables(p = 1.195e+07, h = -809067)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.OFWH_2.port_a.p, BOP.OFWH_2.port_a.h_outflow, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.FWCP.port_a.p, BOP.OFWH_2.port_a.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.FWCP.port_a.p, BOP.OFWH_2.port_a.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique15(BOP.FWCP.port_a.p, BOP.OFWH...
+
+Error: The following error was detected at time: 109.1443332250486
+  IF97 medium function g2: the input temperature (= 1228.55 K) is higher than the limit of 1073.15 K
+  Failed condition: T <= 1073.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.LPT1_bypass.medium.p, BOP.LPT1_bypass.medium.h, BOP.LPT1_bypass.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.LPT1_bypass.medium.p, BOP.LPT1_bypass.medium.h, BOP.LPT1_bypass.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.LPT1_bypass.medium.p, BOP.LPT1_bypass.medium.h, BOP.LPT1_bypass.medium.ph...
+
+
+Integration terminated successfully at T = 1000
+   CPU-time for integration                  : 1.087 seconds
+   CPU-time for initialization               : 0.002 seconds
+   Number of result points                   : 1001
+   Number of grid points                     : 1001
+   Number of accepted steps                  : 207
+   Number of rejected steps                  : 85
+   Number of f-evaluations (dynamics)        : 3437
+   Number of crossing function evaluations   : 687
+   Number of Jacobian-evaluations            : 110
+   Number of model time events               : 0
+   Number of state events                    : 5
+   Number of step events                     : 0
+
+SUCCESSFUL simulation of NHES.Systems.BalanceOfPlant.Turbine.Examples.PCL_BOP

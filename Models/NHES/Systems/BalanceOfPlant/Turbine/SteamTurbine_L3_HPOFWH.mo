@@ -14,10 +14,10 @@ model SteamTurbine_L3_HPOFWH
       d_LPT1_in=8189.928251,
       d_LPT2_in=862.546399,
       mdot_total=288.5733428,
-      mdot_fh=1.128623343,
-      mdot_hpt=287.4447195,
-      mdot_lpt1=287.4447195,
-      mdot_lpt2=268.7244172));
+      mdot_fh=56.43116714,
+      mdot_hpt=232.1421757,
+      mdot_lpt1=232.1421757,
+      mdot_lpt2=217.023541));
   TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_a_steam(redeclare package
       Medium = Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{-110,50},{-90,70}})));
@@ -190,8 +190,8 @@ model SteamTurbine_L3_HPOFWH
   TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_a_cond(redeclare package
       Medium = Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{90,-50},{110,-30}})));
-  TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium =
-        Modelica.Media.Water.StandardWater)
+  TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium
+      = Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{-70,10},{-90,-10}})));
 equation
   connect(TBV.port_a, SteamHeader.port_b)

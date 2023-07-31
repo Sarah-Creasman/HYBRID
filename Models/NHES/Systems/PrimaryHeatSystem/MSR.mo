@@ -40601,8 +40601,7 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
 
     model PCL_WithHeatSource
         replaceable package Medium_PFL =
-          TRANSFORM.Media.Fluids.FLiBe.LinearFLiBe_12Th_05U_pT (                             extraPropertiesNames=
-              kinetics.extraPropertiesNames, C_nominal=fill(1e25, kinetics.data.nC + kinetics.reactivity.nC))
+          TRANSFORM.Media.Fluids.FLiBe.LinearFLiBe_12Th_05U_pT
         "Primary fuel loop medium";
 
       package Medium_PCL = TRANSFORM.Media.Fluids.FLiBe.LinearFLiBe_pT "Primary coolant loop medium";
@@ -40627,16 +40626,15 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
 
       TRANSFORM.Fluid.BoundaryConditions.Boundary_pT boundary(
         redeclare package Medium = Medium_PFL,
-        C=PHX.port_a_tube.C_outflow,
         nPorts=1)
         annotation (Placement(transformation(extent={{-150,-34},{-130,-14}})));
       TRANSFORM.Fluid.BoundaryConditions.MassFlowSource_T boundary2(
         redeclare package Medium = Medium_PFL,
-        C=PHX.port_a_tube.C_outflow,
         nPorts=1)
         annotation (Placement(transformation(extent={{-166,32},{-146,52}})));
     protected
-      Components.GenericDistributed_HX_withMass_forMSRs PHX(
+      TRANSFORM.HeatExchangers.GenericDistributed_HX_withMass
+                                                        PHX(
         redeclare package Medium_shell = Medium_PCL,
         redeclare package Medium_tube = Medium_PFL,
         p_a_start_shell=data_PHX.p_inlet_shell,
@@ -40671,12 +40669,11 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
             th_wall=data_PHX.th_tube,
             dimension_tube=data_PHX.D_tube_inner,
             length_tube=data_PHX.length_tube,
-            nV=nV_PHX),
-        redeclare record Data_PG = Data_PG,
-        redeclare record Data_ISO = Data_ISO) annotation (Placement(transformation(
+            nV=nV_PHX))                       annotation (Placement(transformation(
             extent={{10,10},{-10,-10}},
             rotation=90,
             origin={-60,6})));
+
       //  C_a_start_tube=Cs_start,
 
       TRANSFORM.Fluid.Pipes.GenericPipe_MultiTransferSurface pipeFromPHX_PCL(
@@ -40746,7 +40743,6 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
         m_flow=2*3*data_SHX.m_flow_tube,
         T=data_SHX.T_inlet_tube,
         nPorts=1,
-        showName=systemTF.showName,
         redeclare package Medium = Medium_BOP) annotation (Placement(transformation(
             extent={{-10,-10},{10,10}},
             rotation=180,
@@ -40795,7 +40791,6 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
         p=data_SHX.p_outlet_tube,
         T=data_SHX.T_outlet_tube,
         nPorts=1,
-        showName=systemTF.showName,
         redeclare package Medium = Medium_BOP) annotation (Placement(transformation(
             extent={{10,-10},{-10,10}},
             rotation=0,
@@ -40807,6 +40802,50 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
         redeclare package Material_Graphite =
             TRANSFORM.Media.Solids.Graphite.Graphite_0,
         redeclare package Material_Vessel = TRANSFORM.Media.Solids.AlloyN,
+        nG_reflA_blocks=1,
+        dims_reflAG_1=1,
+        dims_reflAG_2=1,
+        dims_reflAG_3=1,
+        dims_reflAG_4=0.017453292519943,
+        crossArea_reflA=1,
+        perimeter_reflA=1,
+        alpha_reflA=111,
+        surfaceArea_reflA=1,
+        m_reflAG=1,
+        m_reflA=1,
+        nG_reflR_blocks=1,
+        dims_reflRG_1=1,
+        dims_reflRG_2=1,
+        dims_reflRG_3=1,
+        crossArea_reflR=1,
+        perimeter_reflR=1,
+        alpha_reflR=1,
+        surfaceArea_reflR=1,
+        m_reflRG=1,
+        m_reflR=1,
+        volume_reflRG=1,
+        nG_fuelCell=1,
+        dims_fuelG_1=1,
+        dims_fuelG_2=1,
+        dims_fuelG_3=1,
+        crossArea_fuel=1,
+        perimeter_fuel=1,
+        alpha_fuel=1,
+        surfaceArea_fuel=1,
+        m_fuelG=1,
+        m_fuel=1,
+        m_plenum=1,
+        m_tee_inlet=1,
+        dims_pumpBowl_1=1,
+        dims_pumpBowl_2=1,
+        level_nom_pumpBowl=1,
+        m_pumpBowl=1,
+        dims_pipeToPHX_1=1,
+        dims_pipeToPHX_2=1,
+        m_pipeToPHX_PFL=1,
+        dims_pipeFromPHX_1=1,
+        dims_pipeFromPHX_2=1,
+        m_pipeFromPHX_PFL=1,
         T_tube_inlet_PHX=data_PHX.T_inlet_tube,
         T_tube_outlet_PHX=data_PHX.T_outlet_tube,
         p_inlet_tube_PHX=data_PHX.p_inlet_tube,
@@ -40924,19 +40963,6 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
         annotation (Placement(transformation(extent={{260,100},{280,120}})));
       MSR.MoltenSaltReactor.Data.data_PUMP data_PUMP
         annotation (Placement(transformation(extent={{320,120},{340,140}})));
-      TRANSFORM.Nuclear.ReactorKinetics.SparseMatrix.PointKinetics_L1_atomBased_external_sparseMatrix
-        kinetics(
-        Q_nominal=data_RCTR.Q_nominal,
-        specifyPower=false,
-        redeclare record Data = Data_PG,
-        Q_fission_input=data_RCTR.Q_nominal*(1 - 0.12),
-        rho_input=0.003370 - 0.00133511,
-        nFeedback=2,
-        alphas_feedback={-3.22e-5,2.35e-5},
-        vals_feedback_reference={649.114 + 273.15,649.385 + 273.15},
-        toggle_Reactivity=false)
-        "- 0.000540251 < power nominal | -0.00133511 < temperature outlet nominal"
-        annotation (Placement(transformation(extent={{68,68},{88,88}})));
     equation
       connect(PHX.port_b_shell,pipeFromPHX_PCL. port_a)
         annotation (Line(points={{-55.4,16},{-56,16},{-56,46},{-40,46}}, color={0,127,255}));
@@ -40964,7 +40990,8 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
       connect(boundary.ports[1], PHX.port_b_tube) annotation (Line(points={{
               -130,-24},{-60,-24},{-60,-4}}, color={0,127,255}));
       annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
-            coordinateSystem(preserveAspectRatio=false)));
+            coordinateSystem(preserveAspectRatio=false)),
+        experiment(StopTime=10000000, __Dymola_Algorithm="Dassl"));
     end PCL_WithHeatSource;
   end Examples;
 
@@ -41204,6 +41231,41 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
 
       annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(coordinateSystem(preserveAspectRatio=false)));
     end Datasets;
+
+    model GenericDistributed_HX_withMass_forMSRswithoutFP
+      extends TRANSFORM.HeatExchangers.GenericDistributed_HX_withMass(
+          replaceable package Medium_tube =
+            TRANSFORM.Media.Fluids.FLiBe.LinearFLiBe_12Th_05U_pT (extraPropertiesNames=
+                extraPropertiesNames, C_nominal=C_nominal), redeclare
+          replaceable model
+                InternalTraceGen_tube =
+            TRANSFORM.Fluid.ClosureRelations.InternalTraceGeneration.Models.DistributedVolume_Trace_1D.GenericTraceGeneration
+            (mC_gens=mC_gens));
+
+      extends Datasets;
+
+      TRANSFORM.Units.ExtraPropertyFlowRate mC_gens[geometry.nV,data_PG.nC + data_ISO.nC]=cat(
+          2,
+          mC_gens_PG,
+          mC_gens_ISO);
+      TRANSFORM.Units.ExtraPropertyFlowRate mC_gens_PG[geometry.nV,data_PG.nC];
+      TRANSFORM.Units.ExtraPropertyFlowRate mC_gens_ISO[geometry.nV,data_ISO.nC];
+
+    equation
+
+      for i in 1:geometry.nV loop
+        for j in 1:data_PG.nC loop
+          mC_gens_PG[i, j] = -data_PG.lambdas[j]*tube.mCs[i, j]*tube.nParallel;
+        end for;
+        for j in 1:data_ISO.nC loop
+          mC_gens_ISO[i, j] = sum({data_ISO.l_lambdas[sum(data_ISO.l_lambdas_count[1:j - 1]) + k]*tube.mCs[i,
+            data_ISO.l_lambdas_col[sum(data_ISO.l_lambdas_count[1:j - 1]) + k] + data_PG.nC]*tube.nParallel
+            for k in 1:data_ISO.l_lambdas_count[j]}) - data_ISO.lambdas[j]*tube.mCs[i, j + data_PG.nC]*
+            tube.nParallel;
+        end for;
+      end for;
+
+    end GenericDistributed_HX_withMass_forMSRswithoutFP;
   end Components;
 
   package CustomSalts

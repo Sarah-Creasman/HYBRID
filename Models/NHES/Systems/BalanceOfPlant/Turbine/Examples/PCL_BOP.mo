@@ -99,10 +99,12 @@ model PCL_BOP
     nPorts=1)
     annotation (Placement(transformation(extent={{-4,56},{16,76}})));
   PrimaryHeatSystem.MSR.Examples.PCL_WithHeatSource pCL_WithHeatSource(
-    boundary2(m_flow=831.5860117*10, T=949.15),
+    boundary2(m_flow=831.5860117*8, T=949.15),
     boundary(p=1200000),
-    SHX(nParallel=20),
-    PHX(nParallel=20))
+    SHX(nParallel=24),
+    PHX(nParallel=24),
+    pump_PCL(m_flow_nominal=8*466),
+    data_PHX(m_flow_tube=831.5860117*8, m_flow_shell=8*466))
     annotation (Placement(transformation(extent={{-32,20},{-12,40}})));
 initial equation
 
@@ -125,7 +127,7 @@ equation
           {-9.8,27.2},{-6,27.2},{-6,-10},{48,-10},{48,-8},{56,-8}}, color={0,
           127,255}));
   annotation (experiment(
-      StopTime=100,
+      StopTime=1000000,
       Interval=1,
       __Dymola_Algorithm="Esdirk45a"), Documentation(info="<html>
 <p>Test of Pebble_Bed_Three-Stage_Rankine. The simulation should experience transient where external electricity demand is oscilating and control valves are opening and closing corresponding to the required power demand. </p>

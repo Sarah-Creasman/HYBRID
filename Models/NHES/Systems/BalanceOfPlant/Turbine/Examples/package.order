@@ -12,3 +12,4 @@ BOP_test_MSR_NTU
 BOP_MSR_NTU_2
 BOP_test_NTU_3
 PCL_BOP
+PCL_BOP_withController

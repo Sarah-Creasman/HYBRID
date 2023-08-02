@@ -8,9 +8,7 @@ model PCL_BOP_withController
 
   NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_L3_HPOFWH BOP(
     redeclare replaceable
-      NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_L3_HTGR_extraction
-      CS(
-      data(
+      NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_L3_2 CS(data(
         HPT_p_in=data.HPT_p_in,
         p_dump=data.p_dump,
         p_i1=data.p_i1,
@@ -29,9 +27,7 @@ model PCL_BOP_withController
         m_ext=data.m_ext,
         eta_t=data.eta_t,
         eta_mech=data.eta_mech,
-        eta_p=data.eta_p),
-      LPT1_BV_PID(k=5e-11, Ti=300),
-      TCV_PID(yMin=0)),
+        eta_p=data.eta_p)),
     redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
       HPT_p_in=data.HPT_p_in,
       p_dump=data.p_dump,
@@ -130,10 +126,11 @@ equation
     annotation (Line(points={{-7.8,29.2},{-2,29.2},{-2,-10},{48,-10},{48,-8},{
           56,-8}}, color={0,127,255}));
   connect(pCL_WithHeatSource_withController.port_b, BOP.port_a_steam)
-    annotation (Line(points={{-7,35.2},{46,35.2},{46,28},{56,28}}, color={0,127,
+    annotation (Line(points={{-3.6,36.6},{46,36.6},{46,28},{56,28}},
+                                                                   color={0,127,
           255}));
   annotation (experiment(
-      StopTime=1000000,
+      StopTime=1000,
       Interval=1,
       __Dymola_Algorithm="Esdirk45a"), Documentation(info="<html>
 <p>Test of Pebble_Bed_Three-Stage_Rankine. The simulation should experience transient where external electricity demand is oscilating and control valves are opening and closing corresponding to the required power demand. </p>

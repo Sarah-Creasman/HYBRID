@@ -98,7 +98,8 @@ model PCL_BOP
     p=3400000,
     nPorts=1)
     annotation (Placement(transformation(extent={{-4,56},{16,76}})));
-  PrimaryHeatSystem.MSR.Examples.PCL_WithHeatSource pCL_WithHeatSource(
+  PrimaryHeatSystem.MSR.Examples.Old_NotInUseRightNow.PCL_WithHeatSource
+    pCL_WithHeatSource(
     boundary2(m_flow=831.5860117*8, T=949.15),
     boundary(p=1200000),
     SHX(nParallel=24),

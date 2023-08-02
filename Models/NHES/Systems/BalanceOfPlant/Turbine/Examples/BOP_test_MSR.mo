@@ -70,7 +70,7 @@ model BOP_test_MSR
     p=14000000,
     nPorts=1)
     annotation (Placement(transformation(extent={{-42,-18},{-22,2}})));
-  PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_sec_2
+  PrimaryHeatSystem.MSR.Examples.Old_NotInUseRightNow.MCA_Base_withBOP_sec_2
     mCA_Base_withBOP_sec_2_1
     annotation (Placement(transformation(extent={{-40,32},{-20,52}})));
   Data.Data_L3 data(

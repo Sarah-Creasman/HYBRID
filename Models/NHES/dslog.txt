@@ -1,23 +1,72 @@
-Model: NHES.Systems.PrimaryHeatSystem.MSR.Examples.PCL_WithHeatSource_withController_standAlone
-Integration started at 0 using integration method:
-RK-method: esdirk45a
-Local extrapolation
-FSAL
-Continuous extension
+Error: The following error was detected at time: 0
+  Error in region computation of IF97 steam tables(p = 100000, h = 0)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.rho_props_ph(
+pCL_WithHeatSource_withController.SHX.tube.port_b.p, 
+pCL_WithHeatSource_withController.SHX.tube.port_b.h_outflow_inStream, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pCL_WithHeatSource_withController.SHX.tube.port_b.p, pCL_WithHeatSource_withController.SHX.tube.port_b.h_outflow_inStream, 0, 0))
+Modelica.Media.Water.IF97_Utilities.rho...
 
+First evaluation failed for non-linear solver.
 
-Integration terminated successfully at T = 1e+07
-   CPU-time for integration                  : 0.115 seconds
-   CPU-time for initialization               : 0.001 seconds
-   Number of result points                   : 501
-   Number of grid points                     : 501
-   Number of accepted steps                  : 98
-   Number of rejected steps                  : 20
-   Number of f-evaluations (dynamics)        : 1368
-   Number of crossing function evaluations   : 295
-   Number of Jacobian-evaluations            : 47
-   Number of model time events               : 0
-   Number of state events                    : 0
-   Number of step events                     : 0
+Error: The following error was detected at time: 0
+  Error in region computation of IF97 steam tables(p = 100000, h = 0)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.rho_props_ph(
+pCL_WithHeatSource_withController.SHX.tube.port_b.p, 
+pCL_WithHeatSource_withController.SHX.tube.port_b.h_outflow_inStream, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pCL_WithHeatSource_withController.SHX.tube.port_b.p, pCL_WithHeatSource_withController.SHX.tube.port_b.h_outflow_inStream, 0, 0))
+Modelica.Media.Water.IF97_Utilities.rho...
 
-SUCCESSFUL simulation of NHES.Systems.PrimaryHeatSystem.MSR.Examples.PCL_WithHeatSource_withController_standAlone
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Trying to solve non-linear system using global homotopy-method.
+Error: The following error was detected at time: 0
+  IF97 medium function tsat called with too low pressure
+p = -447.528 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.s_props_ph(
+BOP.HPT.state_a.p, 
+BOP.HPT.state_a.h, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0))
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique14(
+Modelica.Media.Water.WaterIF97_base.Thermodyna...
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+  IF97 medium function tsat called with too low pressure
+p = -447.528 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.s_props_ph(
+BOP.HPT.state_a.p, 
+BOP.HPT.state_a.h, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0))
+Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique14(
+Modelica.Media.Water.WaterIF97_base.Thermodyna...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: could not solve simplified initialization for homotopy method.
+
+FixInitials:Init: Integrator failed to start model.

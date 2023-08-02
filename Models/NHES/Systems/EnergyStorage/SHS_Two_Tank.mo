@@ -2459,8 +2459,8 @@ package SHS_Two_Tank
             extent={{10,-10},{-10,10}},
             rotation=180,
             origin={8,14})));
-      TRANSFORM.Fluid.Volumes.SimpleVolume     volume(redeclare package Medium =
-            Storage_Medium, redeclare model Geometry =
+      TRANSFORM.Fluid.Volumes.SimpleVolume     volume(redeclare package Medium
+          = Storage_Medium, redeclare model Geometry =
             TRANSFORM.Fluid.ClosureRelations.Geometry.Models.LumpedVolume.GenericVolume
             (V=data.ctvolume_volume))
         annotation (Placement(transformation(extent={{10,-10},{-10,10}},
@@ -2531,7 +2531,7 @@ package SHS_Two_Tank
         Use_T_Start=true,
         h_start=133e3,
         T_start=data.cold_tank_init_temp)
-        annotation (Placement(transformation(extent={{-58,18},{-38,38}})));
+        annotation (Placement(transformation(extent={{-62,32},{-42,52}})));
       TRANSFORM.Fluid.Machines.Pump charge_pump(
         redeclare package Medium = Storage_Medium,
         V=data.charge_pump_volume,
@@ -2548,7 +2548,7 @@ package SHS_Two_Tank
                       annotation (Placement(transformation(
             extent={{-10,10},{10,-10}},
             rotation=270,
-            origin={-48,-2})));
+            origin={-48,-8})));
       Fluid.Valves.ValveLinear Charging_Valve(
         redeclare package Medium = Storage_Medium,
         allowFlowReversal=true,
@@ -2556,7 +2556,7 @@ package SHS_Two_Tank
         m_flow_nominal=data.chvalve_m_flow_nom)
         annotation (Placement(transformation(extent={{10,-10},{-10,10}},
             rotation=90,
-            origin={-26,-26})));
+            origin={-26,-34})));
       Modelica.Blocks.Sources.RealExpression Charging_Mass_Flow(y=Charging_Valve.m_flow)
         annotation (Placement(transformation(extent={{-102,76},{-82,96}})));
 
@@ -2667,12 +2667,14 @@ package SHS_Two_Tank
         redeclare package Medium = Storage_Medium,
         capacityScaler=0.1111,
         port_b(m_flow(start=-1)))
-        annotation (Placement(transformation(extent={{-22,52},{-42,72}})));
+        annotation (Placement(transformation(extent={{-26,44},{-46,64}})));
       FlowMultiplier flowMultiplier3(
         redeclare package Medium = Storage_Medium,
         capacityScaler=9,
         port_b(m_flow(start=-1)))
-        annotation (Placement(transformation(extent={{-36,-8},{-16,12}})));
+        annotation (Placement(transformation(extent={{10,-10},{-10,10}},
+            rotation=-90,
+            origin={-48,18})));
     equation
       connect(volume.port_a, Discharging_Valve.port_b)
         annotation (Line(points={{56,-10},{82,-10},{82,-18}},
@@ -2682,15 +2684,14 @@ package SHS_Two_Tank
                               color={0,127,255}));
       connect(DHX.Tube_out, cold_tank_dump_pipe.port_a)
         annotation (Line(points={{-2,10},{-22,10},{-22,16}}, color={0,127,255}));
-      connect(charge_pump.port_b, Charging_Valve.port_a) annotation (Line(points={{-48,-12},
-              {-48,-16},{-40,-16},{-40,-14},{-34,-14},{-34,-8},{-26,-8},{-26,
-              -16}},
+      connect(charge_pump.port_b, Charging_Valve.port_a) annotation (Line(points={{-48,-18},
+              {-48,-22},{-26,-22},{-26,-24}},
             color={0,127,255}));
       connect(discharge_pump.port_b, Discharging_Valve.port_a)
         annotation (Line(points={{82,-56},{82,-38}}, color={0,127,255}));
       connect(actuatorBus.Charge_Valve_Position, Charging_Valve.opening)
         annotation (Line(
-          points={{30,100},{30,60},{-66,60},{-66,-26},{-34,-26}},
+          points={{30,100},{30,60},{-66,60},{-66,-34},{-34,-34}},
           color={111,216,99},
           pattern=LinePattern.Dash,
           thickness=0.5));
@@ -2740,7 +2741,7 @@ package SHS_Two_Tank
           color={239,82,82},
           pattern=LinePattern.Dash,
           thickness=0.5));
-      connect(Charging_Valve.port_b, CHX.port_a_tube) annotation (Line(points={{-26,-36},
+      connect(Charging_Valve.port_b, CHX.port_a_tube) annotation (Line(points={{-26,-44},
               {-26,-46},{-8,-46},{-8,-50}},        color={0,127,255}));
       connect(hot_tank_dump_pipe.port_a, CHX.port_b_tube) annotation (Line(points={
               {10,-70},{8,-70},{8,-74},{2,-74},{2,-82},{-8,-82},{-8,-70}}, color={0,
@@ -2771,15 +2772,14 @@ package SHS_Two_Tank
       connect(flowMultiplier.port_b, discharge_pump.port_a) annotation (Line(
             points={{88,-92},{98,-92},{98,-76},{82,-76}}, color={0,127,255}));
       connect(flowMultiplier2.port_a, cold_tank_dump_pipe.port_b) annotation (
-          Line(points={{-22,62},{-20,62},{-20,58},{-18,58},{-18,36},{-22,36}},
+          Line(points={{-26,54},{-26,44},{-22,44},{-22,36}},
             color={0,127,255}));
-      connect(flowMultiplier2.port_b, cold_tank.port_a) annotation (Line(points
-            ={{-42,62},{-44,62},{-44,58},{-48,58},{-48,36.4}}, color={0,127,255}));
-      connect(flowMultiplier3.port_a, cold_tank.port_b) annotation (Line(points={{-36,2},
-              {-28,2},{-28,18},{-48,18},{-48,19.6}},         color={0,127,255}));
-      connect(flowMultiplier3.port_b, charge_pump.port_a) annotation (Line(
-            points={{-16,2},{-14,2},{-14,14},{-40,14},{-40,8},{-48,8}}, color={
-              0,127,255}));
+      connect(flowMultiplier2.port_b, cold_tank.port_a) annotation (Line(points={{-46,54},
+              {-50,54},{-50,50.4},{-52,50.4}},                 color={0,127,255}));
+      connect(charge_pump.port_a, flowMultiplier3.port_a)
+        annotation (Line(points={{-48,2},{-48,8}}, color={0,127,255}));
+      connect(flowMultiplier3.port_b, cold_tank.port_b) annotation (Line(points
+            ={{-48,28},{-52,28},{-52,33.6}}, color={0,127,255}));
       annotation (experiment(
           StopTime=432000,
           Interval=37,

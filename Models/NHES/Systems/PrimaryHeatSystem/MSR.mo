@@ -41389,7 +41389,7 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
     model PCL_WithHeatSource_withController
       extends MSR.BaseClasses.Partial_SubSystem_A(
       redeclare replaceable MSR.Data.fissionProducts_1a data,
-      redeclare replaceable MSR.CS.CS_Dummy CS,
+      redeclare replaceable MSR.CS.CS_1 CS,
       redeclare replaceable MSR.CS.ED_Dummy ED);
 
         replaceable package Medium_PFL =
@@ -41432,6 +41432,8 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
       Modelica.Fluid.Interfaces.FluidPort_b port_b(redeclare package Medium =
             Medium_BOP)
         annotation (Placement(transformation(extent={{120,22},{140,42}})));
+      Modelica.Fluid.Sensors.RelativePressure relativePressure
+        annotation (Placement(transformation(extent={{94,26},{114,46}})));
     protected
       TRANSFORM.HeatExchangers.GenericDistributed_HX_withMass
                                                         PHX(
@@ -41773,8 +41775,6 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
       connect(port_a, SHX.port_a_tube) annotation (Line(points={{122,-28},{122,
               -10},{80,-10},{80,-4}},
                                  color={0,127,255}));
-      connect(SHX.port_b_tube, port_b)
-        annotation (Line(points={{80,16},{80,32},{130,32}}, color={0,127,255}));
       connect(actuatorBus.pump_speed, pump_PCL.in_m_flow) annotation (Line(
           points={{30,100},{30,53.3}},
           color={111,216,99},
@@ -41783,6 +41783,19 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
           string="%first",
           index=-1,
           extent={{-3,6},{-3,6}},
+          horizontalAlignment=TextAlignment.Right));
+      connect(SHX.port_b_tube, relativePressure.port_a)
+        annotation (Line(points={{80,16},{80,36},{94,36}}, color={0,127,255}));
+      connect(relativePressure.port_b, port_b) annotation (Line(points={{114,36},{120,
+              36},{120,32},{130,32}}, color={0,127,255}));
+      connect(sensorBus.SG_pressure, relativePressure.p_rel) annotation (Line(
+          points={{-30,100},{92,100},{92,27},{104,27}},
+          color={239,82,82},
+          pattern=LinePattern.Dash,
+          thickness=0.5), Text(
+          string="%first",
+          index=-1,
+          extent={{-6,3},{-6,3}},
           horizontalAlignment=TextAlignment.Right));
       annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
             coordinateSystem(preserveAspectRatio=false)),
@@ -42947,7 +42960,7 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
   package CS "Control systems package"
     model CS_Dummy
 
-      extends Templates.SubSystem_Standalone.BaseClasses.Partial_ControlSystem;
+      extends MSR.BaseClasses.Partial_ControlSystem;
 
     equation
 
@@ -42963,7 +42976,7 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
 
     model ED_Dummy
 
-      extends Templates.SubSystem_Standalone.BaseClasses.Partial_EventDriver;
+      extends MSR.BaseClasses.Partial_EventDriver;
 
     equation
 
@@ -42979,7 +42992,7 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
 
     model CS_1
 
-      extends Templates.SubSystem_Standalone.BaseClasses.Partial_ControlSystem;
+      extends MSR.BaseClasses.Partial_ControlSystem;
 
       TRANSFORM.Controls.LimPID PID(controllerType=Modelica.Blocks.Types.SimpleController.PI)
         annotation (Placement(transformation(extent={{-32,-28},{34,38}})));
@@ -42989,6 +43002,15 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
 
       connect(realExpression.y, PID.u_s) annotation (Line(points={{-151,8},{-50,
               8},{-50,5},{-38.6,5}}, color={0,0,127}));
+      connect(sensorBus.SG_pressure, PID.u_m) annotation (Line(
+          points={{-30,-100},{-30,-48},{1,-48},{1,-34.6}},
+          color={239,82,82},
+          pattern=LinePattern.Dash,
+          thickness=0.5), Text(
+          string="%first",
+          index=-1,
+          extent={{-6,3},{-6,3}},
+          horizontalAlignment=TextAlignment.Right));
       connect(actuatorBus.pump_speed, PID.y) annotation (Line(
           points={{30,-100},{30,-32},{48,-32},{48,5},{37.3,5}},
           color={111,216,99},
@@ -42996,7 +43018,7 @@ H = A+B/T+C*log10(T)+D*T - henrys law = f(T)
           thickness=0.5), Text(
           string="%first",
           index=-1,
-          extent={{-6,3},{-6,3}},
+          extent={{-3,-6},{-3,-6}},
           horizontalAlignment=TextAlignment.Right));
     annotation(defaultComponentName="changeMe_CS", Icon(graphics={
             Text(

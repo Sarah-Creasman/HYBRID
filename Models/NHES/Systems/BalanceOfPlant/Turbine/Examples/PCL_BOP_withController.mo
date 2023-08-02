@@ -108,7 +108,8 @@ model PCL_BOP_withController
     nV_pipeFromPHX_PFL=2,
     nV_pipeFromPHX_PCL=2,
     nV_pipeToPHX_PCL=2,
-    nV_pipeToSHX_PCL=2)
+    nV_pipeToSHX_PCL=2,
+    CS(realExpression(y=120e5)))
     annotation (Placement(transformation(extent={{-30,22},{-10,42}})));
 initial equation
 

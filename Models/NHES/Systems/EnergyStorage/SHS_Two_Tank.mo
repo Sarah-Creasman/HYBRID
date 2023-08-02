@@ -2459,8 +2459,8 @@ package SHS_Two_Tank
             extent={{10,-10},{-10,10}},
             rotation=180,
             origin={8,14})));
-      TRANSFORM.Fluid.Volumes.SimpleVolume     volume(redeclare package Medium
-          = Storage_Medium, redeclare model Geometry =
+      TRANSFORM.Fluid.Volumes.SimpleVolume     volume(redeclare package Medium =
+            Storage_Medium, redeclare model Geometry =
             TRANSFORM.Fluid.ClosureRelations.Geometry.Models.LumpedVolume.GenericVolume
             (V=data.ctvolume_volume))
         annotation (Placement(transformation(extent={{10,-10},{-10,10}},

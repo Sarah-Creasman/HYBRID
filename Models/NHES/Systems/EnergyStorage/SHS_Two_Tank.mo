@@ -28,7 +28,8 @@ package SHS_Two_Tank
           CS,
         redeclare replaceable
           NHES.Systems.EnergyStorage.SHS_Two_Tank.Data.Data_SHS data(DHX_K_tube(
-              unit="1/m4"), DHX_K_shell(unit="1/m4")),
+              unit="1/m4"), DHX_K_shell(unit="1/m4"),
+          discharge_pump_rho_nominal(displayUnit="kg/m3")),
         redeclare package Storage_Medium =
             TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66,
         Produced_steam_flow=valveLinear.port_a.m_flow,

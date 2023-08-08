@@ -10,7 +10,7 @@ double experiment(7,1)
        0                   # StartTime    Time at which integration starts
                            #              (and linearization and trimming time)
   1.0000000000000000E+06   # StopTime     Time at which integration stops
-       1                   # Increment    Communication step size, if > 0
+      10                   # Increment    Communication step size, if > 0
        0                   # nInterval    Number of communication intervals, if > 0
   1.0000000000000000E-04   # Tolerance    Relative precision of signals for
                            #              simulation, linearization and trimming
@@ -102,7 +102,7 @@ int settings(13,1)
 
 
 #    Names of initial variables
-char initialName(6134,92)
+char initialName(5720,92)
 systemTF.p_ambient
 systemTF.T_ambient
 systemTF.g
@@ -145,8 +145,11 @@ P_ext
 P_demand
 d_ext
 m_ext
+BOP.CS.actuatorBus.opening_TCV
+BOP.CS.actuatorBus.LPT1_BV
 BOP.CS.sensorBus.Q_balance
 BOP.CS.sensorBus.W_balance
+BOP.CS.sensorBus.Extract_flow
 BOP.CS.data.FH_type
 BOP.CS.data.HPT_p_in
 BOP.CS.data.p_dump
@@ -194,9 +197,8 @@ BOP.CS.data.BypassFeedHeater_m_start_tube
 BOP.CS.data.BypassFeedHeater_m_start_shell
 BOP.CS.data.BypassFeedHeater_Q_init
 BOP.CS.T_in_set.y
-BOP.CS.Steam_Extraction.y
+BOP.CS.P_in_set.y
 BOP.CS.FeedPump_PID.u_s
-BOP.CS.FeedPump_PID.u_m
 BOP.CS.FeedPump_PID.y
 BOP.CS.FeedPump_PID.controlError
 BOP.CS.FeedPump_PID.controllerType
@@ -271,157 +273,6 @@ BOP.CS.FeedPump_PID.addSat.k1
 BOP.CS.FeedPump_PID.addSat.k2
 BOP.CS.FeedPump_PID.gainTrack.k
 BOP.CS.FeedPump_PID.Dzero.k
-BOP.CS.TCV_PID.controlError
-BOP.CS.TCV_PID.controllerType
-BOP.CS.TCV_PID.with_FF
-BOP.CS.TCV_PID.derMeas
-BOP.CS.TCV_PID.k
-BOP.CS.TCV_PID.Ti
-BOP.CS.TCV_PID.Td
-BOP.CS.TCV_PID.yb
-BOP.CS.TCV_PID.k_s
-BOP.CS.TCV_PID.k_m
-BOP.CS.TCV_PID.k_ff
-BOP.CS.TCV_PID.yMax
-BOP.CS.TCV_PID.yMin
-BOP.CS.TCV_PID.wp
-BOP.CS.TCV_PID.wd
-BOP.CS.TCV_PID.Ni
-BOP.CS.TCV_PID.Nd
-BOP.CS.TCV_PID.initType
-BOP.CS.TCV_PID.xi_start
-BOP.CS.TCV_PID.xd_start
-BOP.CS.TCV_PID.y_start
-BOP.CS.TCV_PID.strict
-BOP.CS.TCV_PID.reset
-BOP.CS.TCV_PID.y_reset
-BOP.CS.TCV_PID.addP.u1
-BOP.CS.TCV_PID.addP.u2
-BOP.CS.TCV_PID.addP.y
-BOP.CS.TCV_PID.addP.k1
-BOP.CS.TCV_PID.addP.k2
-BOP.CS.TCV_PID.P.k
-BOP.CS.TCV_PID.P.y
-BOP.CS.TCV_PID.gainPID.k
-BOP.CS.TCV_PID.gainPID.u
-BOP.CS.TCV_PID.gainPID.y
-BOP.CS.TCV_PID.addPID.k1
-BOP.CS.TCV_PID.addPID.k2
-BOP.CS.TCV_PID.addPID.k3
-BOP.CS.TCV_PID.limiter.uMax
-BOP.CS.TCV_PID.limiter.uMin
-BOP.CS.TCV_PID.limiter.strict
-BOP.CS.TCV_PID.limiter.homotopyType
-BOP.CS.TCV_PID.limiter.u
-BOP.CS.TCV_PID.Fzero.k
-BOP.CS.TCV_PID.addFF.k1
-BOP.CS.TCV_PID.addFF.k2
-BOP.CS.TCV_PID.addFF.k3
-BOP.CS.TCV_PID.gain_u_s.k
-BOP.CS.TCV_PID.gain_u_m.k
-BOP.CS.TCV_PID.null_bias.k
-BOP.CS.TCV_PID.unitTime
-BOP.CS.TCV_PID.with_I
-BOP.CS.TCV_PID.with_D
-BOP.CS.TCV_PID.y_reset_internal
-BOP.CS.TCV_PID.I.u
-BOP.CS.TCV_PID.I.y
-BOP.CS.TCV_PID.I.der(y)
-BOP.CS.TCV_PID.I.k
-BOP.CS.TCV_PID.I.initType
-BOP.CS.TCV_PID.I.y_start
-BOP.CS.TCV_PID.I.reset
-BOP.CS.TCV_PID.I.y_reset
-BOP.CS.TCV_PID.I.y_reset_internal
-BOP.CS.TCV_PID.I.trigger_internal
-BOP.CS.TCV_PID.addI.k1
-BOP.CS.TCV_PID.addI.k2
-BOP.CS.TCV_PID.addI.k3
-BOP.CS.TCV_PID.addI.u3
-BOP.CS.TCV_PID.addSat.y
-BOP.CS.TCV_PID.addSat.k1
-BOP.CS.TCV_PID.addSat.k2
-BOP.CS.TCV_PID.gainTrack.k
-BOP.CS.TCV_PID.Dzero.k
-BOP.CS.LPT1_BV_PID.u_s
-BOP.CS.LPT1_BV_PID.u_m
-BOP.CS.LPT1_BV_PID.y
-BOP.CS.LPT1_BV_PID.controllerType
-BOP.CS.LPT1_BV_PID.with_FF
-BOP.CS.LPT1_BV_PID.derMeas
-BOP.CS.LPT1_BV_PID.k
-BOP.CS.LPT1_BV_PID.Ti
-BOP.CS.LPT1_BV_PID.Td
-BOP.CS.LPT1_BV_PID.yb
-BOP.CS.LPT1_BV_PID.k_s
-BOP.CS.LPT1_BV_PID.k_m
-BOP.CS.LPT1_BV_PID.k_ff
-BOP.CS.LPT1_BV_PID.yMax
-BOP.CS.LPT1_BV_PID.yMin
-BOP.CS.LPT1_BV_PID.wp
-BOP.CS.LPT1_BV_PID.wd
-BOP.CS.LPT1_BV_PID.Ni
-BOP.CS.LPT1_BV_PID.Nd
-BOP.CS.LPT1_BV_PID.initType
-BOP.CS.LPT1_BV_PID.xi_start
-BOP.CS.LPT1_BV_PID.xd_start
-BOP.CS.LPT1_BV_PID.y_start
-BOP.CS.LPT1_BV_PID.strict
-BOP.CS.LPT1_BV_PID.reset
-BOP.CS.LPT1_BV_PID.y_reset
-BOP.CS.LPT1_BV_PID.addP.u1
-BOP.CS.LPT1_BV_PID.addP.u2
-BOP.CS.LPT1_BV_PID.addP.y
-BOP.CS.LPT1_BV_PID.addP.k1
-BOP.CS.LPT1_BV_PID.addP.k2
-BOP.CS.LPT1_BV_PID.P.k
-BOP.CS.LPT1_BV_PID.P.y
-BOP.CS.LPT1_BV_PID.gainPID.k
-BOP.CS.LPT1_BV_PID.gainPID.u
-BOP.CS.LPT1_BV_PID.gainPID.y
-BOP.CS.LPT1_BV_PID.addPID.k1
-BOP.CS.LPT1_BV_PID.addPID.k2
-BOP.CS.LPT1_BV_PID.addPID.k3
-BOP.CS.LPT1_BV_PID.limiter.uMax
-BOP.CS.LPT1_BV_PID.limiter.uMin
-BOP.CS.LPT1_BV_PID.limiter.strict
-BOP.CS.LPT1_BV_PID.limiter.homotopyType
-BOP.CS.LPT1_BV_PID.limiter.u
-BOP.CS.LPT1_BV_PID.Fzero.k
-BOP.CS.LPT1_BV_PID.addFF.k1
-BOP.CS.LPT1_BV_PID.addFF.k2
-BOP.CS.LPT1_BV_PID.addFF.k3
-BOP.CS.LPT1_BV_PID.gain_u_s.k
-BOP.CS.LPT1_BV_PID.gain_u_s.u
-BOP.CS.LPT1_BV_PID.gain_u_s.y
-BOP.CS.LPT1_BV_PID.gain_u_m.k
-BOP.CS.LPT1_BV_PID.null_bias.k
-BOP.CS.LPT1_BV_PID.unitTime
-BOP.CS.LPT1_BV_PID.with_I
-BOP.CS.LPT1_BV_PID.with_D
-BOP.CS.LPT1_BV_PID.y_reset_internal
-BOP.CS.LPT1_BV_PID.I.u
-BOP.CS.LPT1_BV_PID.I.y
-BOP.CS.LPT1_BV_PID.I.der(y)
-BOP.CS.LPT1_BV_PID.I.k
-BOP.CS.LPT1_BV_PID.I.initType
-BOP.CS.LPT1_BV_PID.I.y_start
-BOP.CS.LPT1_BV_PID.I.reset
-BOP.CS.LPT1_BV_PID.I.y_reset
-BOP.CS.LPT1_BV_PID.I.y_reset_internal
-BOP.CS.LPT1_BV_PID.I.trigger_internal
-BOP.CS.LPT1_BV_PID.addI.k1
-BOP.CS.LPT1_BV_PID.addI.k2
-BOP.CS.LPT1_BV_PID.addI.k3
-BOP.CS.LPT1_BV_PID.addI.u1
-BOP.CS.LPT1_BV_PID.addI.u3
-BOP.CS.LPT1_BV_PID.addSat.y
-BOP.CS.LPT1_BV_PID.addSat.k1
-BOP.CS.LPT1_BV_PID.addSat.k2
-BOP.CS.LPT1_BV_PID.gainTrack.k
-BOP.CS.LPT1_BV_PID.Dzero.k
-BOP.CS.LPT2_BV_PID.u_m
-BOP.CS.LPT2_BV_PID.y
 BOP.CS.LPT2_BV_PID.controlError
 BOP.CS.LPT2_BV_PID.controllerType
 BOP.CS.LPT2_BV_PID.with_FF
@@ -494,6 +345,11 @@ BOP.CS.LPT2_BV_PID.addSat.k1
 BOP.CS.LPT2_BV_PID.addSat.k2
 BOP.CS.LPT2_BV_PID.gainTrack.k
 BOP.CS.LPT2_BV_PID.Dzero.k
+BOP.CS.extractValve.y
+BOP.CS.add.u2
+BOP.CS.add.k1
+BOP.CS.add.k2
+BOP.CS.T_in_set1.y
 BOP.CS.hysteresis.uLow
 BOP.CS.hysteresis.uHigh
 BOP.CS.hysteresis.pre_y_start
@@ -508,26 +364,11 @@ BOP.CS.ramp.duration
 BOP.CS.ramp.y
 BOP.CS.ramp.offset
 BOP.CS.ramp.startTime
-BOP.CS.switch2.u2
-BOP.CS.booleanStep.startTime
-BOP.CS.booleanStep.startValue
-BOP.CS.switch3.u3
-BOP.CS.switch4.u2
-BOP.CS.booleanStep1.startTime
-BOP.CS.booleanStep1.startValue
-BOP.CS.switch5.u3
-BOP.CS.T_in_set2.y
-BOP.CS.switch6.u2
-BOP.CS.switch6.u3
-BOP.CS.booleanStep2.startTime
-BOP.CS.booleanStep2.startValue
-BOP.CS.switch7.u3
-BOP.CS.ext_pos_start.height
-BOP.CS.ext_pos_start.duration
-BOP.CS.ext_pos_start.offset
-BOP.CS.ext_pos_start.startTime
+BOP.ED.actuatorBus.opening_TCV
+BOP.ED.actuatorBus.LPT1_BV
 BOP.ED.sensorBus.Q_balance
 BOP.ED.sensorBus.W_balance
+BOP.ED.sensorBus.Extract_flow
 BOP.data.FH_type
 BOP.data.HPT_p_in
 BOP.data.p_dump
@@ -575,9 +416,11 @@ BOP.data.BypassFeedHeater_m_start_tube
 BOP.data.BypassFeedHeater_m_start_shell
 BOP.data.BypassFeedHeater_Q_init
 BOP.actuatorBus.opening_TCV
+BOP.actuatorBus.LPT1_BV
 BOP.sensorBus.Q_balance
 BOP.sensorBus.W_balance
 BOP.sensorBus.W_total
+BOP.sensorBus.Extract_flow
 BOP.Q_balance.y
 BOP.W_balance.y
 BOP.port_a_steam.m_flow
@@ -790,7 +633,7 @@ BOP.LPT2.use_T_nominal
 BOP.LPT2.T_nominal
 BOP.LPT2.d_nominal
 BOP.LPT2.Kt
-BOP.SteamHeader.port_a.m_flow
+BOP.SteamHeader.port_b.m_flow
 BOP.SteamHeader.V
 BOP.SteamHeader.energyDynamics
 BOP.SteamHeader.massDynamics
@@ -928,15 +771,19 @@ BOP.LPT1_bypass.der(m)
 BOP.LPT1_bypass.U
 BOP.LPT1_bypass.der(U)
 BOP.LPT1_bypass.initialize_p
+BOP.LPT1_bypass.port_3.m_flow
 BOP.LPT1_bypass_valve.allowFlowReversal
 BOP.LPT1_bypass_valve.showDesignFlowDirection
 BOP.LPT1_bypass_valve.showName
+BOP.LPT1_bypass_valve.port_a.m_flow
+BOP.LPT1_bypass_valve.port_b.m_flow
 BOP.LPT1_bypass_valve.port_b.p
 BOP.LPT1_bypass_valve.dp_start
 BOP.LPT1_bypass_valve.m_flow_start
 BOP.LPT1_bypass_valve.m_flow_small
 BOP.LPT1_bypass_valve.show_T
 BOP.LPT1_bypass_valve.show_V_flow
+BOP.LPT1_bypass_valve.m_flow
 BOP.LPT1_bypass_valve.dp
 BOP.LPT1_bypass_valve.V_flow
 BOP.LPT1_bypass_valve.port_a_T
@@ -1237,6 +1084,7 @@ BOP.TCV.state_b.T
 BOP.TCV.dp_nominal
 BOP.TCV.m_flow_nominal
 BOP.TCV.k
+BOP.TCV.opening
 BOP.Feed_T.allowFlowReversal
 BOP.Feed_T.showName
 BOP.Feed_T.port.m_flow
@@ -1262,7 +1110,9 @@ BOP.port_a_cond.m_flow
 BOP.port_a_cond.h_outflow
 BOP.sensor_m_flow.allowFlowReversal
 BOP.sensor_m_flow.showName
+BOP.sensor_m_flow.port_a.m_flow
 BOP.sensor_m_flow.port_a.p
+BOP.sensor_m_flow.port_b.m_flow
 BOP.sensor_m_flow.port_b.p
 BOP.sensor_m_flow.m_flow_small
 BOP.sensor_m_flow.p_start
@@ -1271,6 +1121,9 @@ BOP.sensor_m_flow.T_start
 BOP.sensor_m_flow.h_start
 BOP.sensor_m_flow.X_start[1]
 BOP.sensor_m_flow.precision
+BOP.sensor_m_flow.var
+BOP.sensor_m_flow.y
+BOP.sensor_m_flow.m_flow
 boundary.use_port
 boundary.f
 integrator.k
@@ -1299,6 +1152,7 @@ bypassdump2.medium.T_degC
 bypassdump2.medium.p_bar
 bypassdump2.medium.sat.psat
 bypassdump2.medium.sat.Tsat
+bypassdump2.ports[1].m_flow
 bypassdump2.ports[1].p
 bypassdump2.ports[1].h_outflow
 bypassdump2.flowDirection
@@ -1389,6 +1243,7 @@ steamdump.p_in_internal
 steamdump.T_in_internal
 steamdump.X_in_internal[1]
 pCL_WithHeatSource_withController.CS.PID.u_s
+pCL_WithHeatSource_withController.CS.PID.y
 pCL_WithHeatSource_withController.CS.PID.controlError
 pCL_WithHeatSource_withController.CS.PID.controllerType
 pCL_WithHeatSource_withController.CS.PID.with_FF
@@ -1463,277 +1318,10 @@ pCL_WithHeatSource_withController.CS.PID.addSat.k2
 pCL_WithHeatSource_withController.CS.PID.gainTrack.k
 pCL_WithHeatSource_withController.CS.PID.Dzero.k
 pCL_WithHeatSource_withController.CS.realExpression.y
-pCL_WithHeatSource_withController.data.nC
-pCL_WithHeatSource_withController.data.molarMass[1]
-pCL_WithHeatSource_withController.data.molarMass[2]
-pCL_WithHeatSource_withController.data.molarMass[3]
-pCL_WithHeatSource_withController.data.molarMass[4]
-pCL_WithHeatSource_withController.data.molarMass[5]
-pCL_WithHeatSource_withController.data.molarMass[6]
-pCL_WithHeatSource_withController.data.molarMass[7]
-pCL_WithHeatSource_withController.data.molarMass[8]
-pCL_WithHeatSource_withController.data.molarMass[9]
-pCL_WithHeatSource_withController.data.molarMass[10]
-pCL_WithHeatSource_withController.data.molarMass[11]
-pCL_WithHeatSource_withController.data.molarMass[12]
-pCL_WithHeatSource_withController.data.molarMass[13]
-pCL_WithHeatSource_withController.data.molarMass[14]
-pCL_WithHeatSource_withController.data.molarMass[15]
-pCL_WithHeatSource_withController.data.molarMass[16]
-pCL_WithHeatSource_withController.data.molarMass[17]
-pCL_WithHeatSource_withController.data.molarMass[18]
-pCL_WithHeatSource_withController.data.molarMass[19]
-pCL_WithHeatSource_withController.data.molarMass[20]
-pCL_WithHeatSource_withController.data.molarMass[21]
-pCL_WithHeatSource_withController.data.molarMass[22]
-pCL_WithHeatSource_withController.data.molarMass[23]
-pCL_WithHeatSource_withController.data.molarMass[24]
-pCL_WithHeatSource_withController.data.molarMass[25]
-pCL_WithHeatSource_withController.data.molarMass[26]
-pCL_WithHeatSource_withController.data.molarMass[27]
-pCL_WithHeatSource_withController.data.molarMass[28]
-pCL_WithHeatSource_withController.data.molarMass[29]
-pCL_WithHeatSource_withController.data.molarMass[30]
-pCL_WithHeatSource_withController.data.molarMass[31]
-pCL_WithHeatSource_withController.data.molarMass[32]
-pCL_WithHeatSource_withController.data.molarMass[33]
-pCL_WithHeatSource_withController.data.molarMass[34]
-pCL_WithHeatSource_withController.data.molarMass[35]
-pCL_WithHeatSource_withController.data.molarMass[36]
-pCL_WithHeatSource_withController.data.molarMass[37]
-pCL_WithHeatSource_withController.data.molarMass[38]
-pCL_WithHeatSource_withController.data.molarMass[39]
-pCL_WithHeatSource_withController.data.molarMass[40]
-pCL_WithHeatSource_withController.data.molarMass[41]
-pCL_WithHeatSource_withController.data.molarMass[42]
-pCL_WithHeatSource_withController.data.molarMass[43]
-pCL_WithHeatSource_withController.data.molarMass[44]
-pCL_WithHeatSource_withController.data.molarMass[45]
-pCL_WithHeatSource_withController.data.molarMass[46]
-pCL_WithHeatSource_withController.data.molarMass[47]
-pCL_WithHeatSource_withController.data.molarMass[48]
-pCL_WithHeatSource_withController.data.molarMass[49]
-pCL_WithHeatSource_withController.data.molarMass[50]
-pCL_WithHeatSource_withController.data.molarMass[51]
-pCL_WithHeatSource_withController.data.molarMass[52]
-pCL_WithHeatSource_withController.data.molarMass[53]
-pCL_WithHeatSource_withController.data.molarMass[54]
-pCL_WithHeatSource_withController.data.molarMass[55]
-pCL_WithHeatSource_withController.data.molarMass[56]
-pCL_WithHeatSource_withController.data.molarMass[57]
-pCL_WithHeatSource_withController.data.molarMass[58]
-pCL_WithHeatSource_withController.data.molarMass[59]
-pCL_WithHeatSource_withController.data.molarMass[60]
-pCL_WithHeatSource_withController.data.molarMass[61]
-pCL_WithHeatSource_withController.data.molarMass[62]
-pCL_WithHeatSource_withController.data.molarMass[63]
-pCL_WithHeatSource_withController.data.molarMass[64]
-pCL_WithHeatSource_withController.data.molarMass[65]
-pCL_WithHeatSource_withController.data.molarMass[66]
-pCL_WithHeatSource_withController.data.molarMass[67]
-pCL_WithHeatSource_withController.data.molarMass[68]
-pCL_WithHeatSource_withController.data.molarMass[69]
-pCL_WithHeatSource_withController.data.molarMass[70]
-pCL_WithHeatSource_withController.data.molarMass[71]
-pCL_WithHeatSource_withController.data.molarMass[72]
-pCL_WithHeatSource_withController.data.molarMass[73]
-pCL_WithHeatSource_withController.data.molarMass[74]
-pCL_WithHeatSource_withController.data.molarMass[75]
-pCL_WithHeatSource_withController.data.molarMass[76]
-pCL_WithHeatSource_withController.data.molarMass[77]
-pCL_WithHeatSource_withController.data.molarMass[78]
-pCL_WithHeatSource_withController.data.molarMass[79]
-pCL_WithHeatSource_withController.data.molarMass[80]
-pCL_WithHeatSource_withController.data.molarMass[81]
-pCL_WithHeatSource_withController.data.molarMass[82]
-pCL_WithHeatSource_withController.data.molarMass[83]
-pCL_WithHeatSource_withController.data.molarMass[84]
-pCL_WithHeatSource_withController.data.molarMass[85]
-pCL_WithHeatSource_withController.data.molarMass[86]
-pCL_WithHeatSource_withController.data.molarMass[87]
-pCL_WithHeatSource_withController.data.molarMass[88]
-pCL_WithHeatSource_withController.data.molarMass[89]
-pCL_WithHeatSource_withController.data.molarMass[90]
-pCL_WithHeatSource_withController.data.molarMass[91]
-pCL_WithHeatSource_withController.data.molarMass[92]
-pCL_WithHeatSource_withController.data.molarMass[93]
-pCL_WithHeatSource_withController.data.molarMass[94]
-pCL_WithHeatSource_withController.data.molarMass[95]
-pCL_WithHeatSource_withController.data.molarMass[96]
-pCL_WithHeatSource_withController.data.molarMass[97]
-pCL_WithHeatSource_withController.data.molarMass[98]
-pCL_WithHeatSource_withController.data.molarMass[99]
-pCL_WithHeatSource_withController.data.molarMass[100]
-pCL_WithHeatSource_withController.data.molarMass[101]
-pCL_WithHeatSource_withController.data.molarMass[102]
-pCL_WithHeatSource_withController.data.molarMass[103]
-pCL_WithHeatSource_withController.data.molarMass[104]
-pCL_WithHeatSource_withController.data.molarMass[105]
-pCL_WithHeatSource_withController.data.molarMass[106]
-pCL_WithHeatSource_withController.data.molarMass[107]
-pCL_WithHeatSource_withController.data.molarMass[108]
-pCL_WithHeatSource_withController.data.molarMass[109]
-pCL_WithHeatSource_withController.data.molarMass[110]
-pCL_WithHeatSource_withController.data.molarMass[111]
-pCL_WithHeatSource_withController.data.molarMass[112]
-pCL_WithHeatSource_withController.data.molarMass[113]
-pCL_WithHeatSource_withController.data.molarMass[114]
-pCL_WithHeatSource_withController.data.molarMass[115]
-pCL_WithHeatSource_withController.data.molarMass[116]
-pCL_WithHeatSource_withController.data.molarMass[117]
-pCL_WithHeatSource_withController.data.molarMass[118]
-pCL_WithHeatSource_withController.data.molarMass[119]
-pCL_WithHeatSource_withController.data.molarMass[120]
-pCL_WithHeatSource_withController.data.molarMass[121]
-pCL_WithHeatSource_withController.data.molarMass[122]
-pCL_WithHeatSource_withController.data.molarMass[123]
-pCL_WithHeatSource_withController.data.molarMass[124]
-pCL_WithHeatSource_withController.data.molarMass[125]
-pCL_WithHeatSource_withController.data.molarMass[126]
-pCL_WithHeatSource_withController.data.molarMass[127]
-pCL_WithHeatSource_withController.data.molarMass[128]
-pCL_WithHeatSource_withController.data.molarMass[129]
-pCL_WithHeatSource_withController.data.molarMass[130]
-pCL_WithHeatSource_withController.data.molarMass[131]
-pCL_WithHeatSource_withController.data.molarMass[132]
-pCL_WithHeatSource_withController.data.molarMass[133]
-pCL_WithHeatSource_withController.data.molarMass[134]
-pCL_WithHeatSource_withController.data.molarMass[135]
-pCL_WithHeatSource_withController.data.molarMass[136]
-pCL_WithHeatSource_withController.data.molarMass[137]
-pCL_WithHeatSource_withController.data.molarMass[138]
-pCL_WithHeatSource_withController.data.molarMass[139]
-pCL_WithHeatSource_withController.data.molarMass[140]
-pCL_WithHeatSource_withController.data.molarMass[141]
-pCL_WithHeatSource_withController.data.molarMass[142]
-pCL_WithHeatSource_withController.data.molarMass[143]
-pCL_WithHeatSource_withController.data.molarMass[144]
-pCL_WithHeatSource_withController.data.molarMass[145]
-pCL_WithHeatSource_withController.data.molarMass[146]
-pCL_WithHeatSource_withController.data.molarMass[147]
-pCL_WithHeatSource_withController.data.molarMass[148]
-pCL_WithHeatSource_withController.data.molarMass[149]
-pCL_WithHeatSource_withController.data.molarMass[150]
-pCL_WithHeatSource_withController.data.molarMass[151]
-pCL_WithHeatSource_withController.data.molarMass[152]
-pCL_WithHeatSource_withController.data.molarMass[153]
-pCL_WithHeatSource_withController.data.molarMass[154]
-pCL_WithHeatSource_withController.data.molarMass[155]
-pCL_WithHeatSource_withController.data.molarMass[156]
-pCL_WithHeatSource_withController.data.molarMass[157]
-pCL_WithHeatSource_withController.data.molarMass[158]
-pCL_WithHeatSource_withController.data.molarMass[159]
-pCL_WithHeatSource_withController.data.molarMass[160]
-pCL_WithHeatSource_withController.data.molarMass[161]
-pCL_WithHeatSource_withController.data.molarMass[162]
-pCL_WithHeatSource_withController.data.molarMass[163]
-pCL_WithHeatSource_withController.data.molarMass[164]
-pCL_WithHeatSource_withController.data.molarMass[165]
-pCL_WithHeatSource_withController.data.molarMass[166]
-pCL_WithHeatSource_withController.data.molarMass[167]
-pCL_WithHeatSource_withController.data.molarMass[168]
-pCL_WithHeatSource_withController.data.molarMass[169]
-pCL_WithHeatSource_withController.data.molarMass[170]
-pCL_WithHeatSource_withController.data.molarMass[171]
-pCL_WithHeatSource_withController.data.molarMass[172]
-pCL_WithHeatSource_withController.data.molarMass[173]
-pCL_WithHeatSource_withController.data.molarMass[174]
-pCL_WithHeatSource_withController.data.molarMass[175]
-pCL_WithHeatSource_withController.data.molarMass[176]
-pCL_WithHeatSource_withController.data.molarMass[177]
-pCL_WithHeatSource_withController.data.molarMass[178]
-pCL_WithHeatSource_withController.data.molarMass[179]
-pCL_WithHeatSource_withController.data.molarMass[180]
-pCL_WithHeatSource_withController.data.molarMass[181]
-pCL_WithHeatSource_withController.data.molarMass[182]
-pCL_WithHeatSource_withController.data.molarMass[183]
-pCL_WithHeatSource_withController.data.molarMass[184]
-pCL_WithHeatSource_withController.data.molarMass[185]
-pCL_WithHeatSource_withController.data.molarMass[186]
-pCL_WithHeatSource_withController.data.molarMass[187]
-pCL_WithHeatSource_withController.data.molarMass[188]
-pCL_WithHeatSource_withController.data.molarMass[189]
-pCL_WithHeatSource_withController.data.molarMass[190]
-pCL_WithHeatSource_withController.data.molarMass[191]
-pCL_WithHeatSource_withController.data.molarMass[192]
-pCL_WithHeatSource_withController.data.molarMass[193]
-pCL_WithHeatSource_withController.data.molarMass[194]
-pCL_WithHeatSource_withController.data.molarMass[195]
-pCL_WithHeatSource_withController.data.molarMass[196]
-pCL_WithHeatSource_withController.data.molarMass[197]
-pCL_WithHeatSource_withController.data.molarMass[198]
-pCL_WithHeatSource_withController.data.molarMass[199]
-pCL_WithHeatSource_withController.data.molarMass[200]
-pCL_WithHeatSource_withController.data.molarMass[201]
-pCL_WithHeatSource_withController.data.molarMass[202]
-pCL_WithHeatSource_withController.data.molarMass[203]
-pCL_WithHeatSource_withController.data.molarMass[204]
-pCL_WithHeatSource_withController.data.molarMass[205]
-pCL_WithHeatSource_withController.data.molarMass[206]
-pCL_WithHeatSource_withController.data.molarMass[207]
-pCL_WithHeatSource_withController.data.molarMass[208]
-pCL_WithHeatSource_withController.data.molarMass[209]
-pCL_WithHeatSource_withController.data.molarMass[210]
-pCL_WithHeatSource_withController.data.molarMass[211]
-pCL_WithHeatSource_withController.data.molarMass[212]
-pCL_WithHeatSource_withController.data.molarMass[213]
-pCL_WithHeatSource_withController.data.molarMass[214]
-pCL_WithHeatSource_withController.data.molarMass[215]
-pCL_WithHeatSource_withController.data.molarMass[216]
-pCL_WithHeatSource_withController.data.molarMass[217]
-pCL_WithHeatSource_withController.data.molarMass[218]
-pCL_WithHeatSource_withController.data.molarMass[219]
-pCL_WithHeatSource_withController.data.molarMass[220]
-pCL_WithHeatSource_withController.data.molarMass[221]
-pCL_WithHeatSource_withController.data.molarMass[222]
-pCL_WithHeatSource_withController.data.molarMass[223]
-pCL_WithHeatSource_withController.data.molarMass[224]
-pCL_WithHeatSource_withController.data.molarMass[225]
-pCL_WithHeatSource_withController.data.molarMass[226]
-pCL_WithHeatSource_withController.data.molarMass[227]
-pCL_WithHeatSource_withController.data.molarMass[228]
-pCL_WithHeatSource_withController.data.molarMass[229]
-pCL_WithHeatSource_withController.data.molarMass[230]
-pCL_WithHeatSource_withController.data.molarMass[231]
-pCL_WithHeatSource_withController.data.molarMass[232]
-pCL_WithHeatSource_withController.data.molarMass[233]
-pCL_WithHeatSource_withController.data.molarMass[234]
-pCL_WithHeatSource_withController.data.molarMass[235]
-pCL_WithHeatSource_withController.data.molarMass[236]
-pCL_WithHeatSource_withController.data.molarMass[237]
-pCL_WithHeatSource_withController.data.molarMass[238]
-pCL_WithHeatSource_withController.data.molarMass[239]
-pCL_WithHeatSource_withController.data.molarMass[240]
-pCL_WithHeatSource_withController.data.molarMass[241]
-pCL_WithHeatSource_withController.data.molarMass[242]
-pCL_WithHeatSource_withController.data.molarMass[243]
-pCL_WithHeatSource_withController.data.molarMass[244]
-pCL_WithHeatSource_withController.data.molarMass[245]
-pCL_WithHeatSource_withController.data.molarMass[246]
-pCL_WithHeatSource_withController.data.molarMass[247]
-pCL_WithHeatSource_withController.data.molarMass[248]
-pCL_WithHeatSource_withController.data.molarMass[249]
-pCL_WithHeatSource_withController.data.molarMass[250]
-pCL_WithHeatSource_withController.data.molarMass[251]
-pCL_WithHeatSource_withController.data.molarMass[252]
-pCL_WithHeatSource_withController.data.molarMass[253]
-pCL_WithHeatSource_withController.data.molarMass[254]
-pCL_WithHeatSource_withController.data.molarMass[255]
-pCL_WithHeatSource_withController.data.molarMass[256]
-pCL_WithHeatSource_withController.data.molarMass[257]
-pCL_WithHeatSource_withController.data.molarMass[258]
-pCL_WithHeatSource_withController.data.molarMass[259]
-pCL_WithHeatSource_withController.data.molarMass[260]
-pCL_WithHeatSource_withController.data.molarMass[261]
-pCL_WithHeatSource_withController.data.molarMass[262]
-pCL_WithHeatSource_withController.data.molarMass[263]
-pCL_WithHeatSource_withController.data.molarMass[264]
-pCL_WithHeatSource_withController.data.molarMass[265]
-pCL_WithHeatSource_withController.data.molarMass[266]
-pCL_WithHeatSource_withController.data.molarMass[267]
-pCL_WithHeatSource_withController.data.molarMass[268]
-pCL_WithHeatSource_withController.data.nA
-pCL_WithHeatSource_withController.data.nus[1]
+pCL_WithHeatSource_withController.CS.add.u1
+pCL_WithHeatSource_withController.CS.add.k1
+pCL_WithHeatSource_withController.CS.add.k2
+pCL_WithHeatSource_withController.CS.realExpression1.y
 pCL_WithHeatSource_withController.toggleStaticHead
 pCL_WithHeatSource_withController.nV_fuelCell
 pCL_WithHeatSource_withController.nV_PHX
@@ -1800,13 +1388,13 @@ pCL_WithHeatSource_withController.boundary2.X[1]
 pCL_WithHeatSource_withController.boundary2.m_flow_in_internal
 pCL_WithHeatSource_withController.boundary2.T_in_internal
 pCL_WithHeatSource_withController.boundary2.X_in_internal[1]
-pCL_WithHeatSource_withController.port_b.m_flow
 pCL_WithHeatSource_withController.port_b.h_outflow
-pCL_WithHeatSource_withController.relativePressure.port_a.m_flow
-pCL_WithHeatSource_withController.relativePressure.port_a.p
-pCL_WithHeatSource_withController.relativePressure.port_a.h_outflow
-pCL_WithHeatSource_withController.relativePressure.port_b.m_flow
-pCL_WithHeatSource_withController.relativePressure.p_rel
+pCL_WithHeatSource_withController.sensor_p.allowFlowReversal
+pCL_WithHeatSource_withController.sensor_p.showName
+pCL_WithHeatSource_withController.sensor_p.port.m_flow
+pCL_WithHeatSource_withController.sensor_p.port.h_outflow
+pCL_WithHeatSource_withController.sensor_p.precision
+pCL_WithHeatSource_withController.sensor_p.y
 pCL_WithHeatSource_withController.PHX.port_a_tube.m_flow
 pCL_WithHeatSource_withController.PHX.port_a_tube.h_outflow
 pCL_WithHeatSource_withController.PHX.port_a_tube.der(h_outflow)
@@ -4263,7 +3851,6 @@ pCL_WithHeatSource_withController.pipeToPHX_PCL.mediums[2].preferredMediumStates
 pCL_WithHeatSource_withController.pipeToPHX_PCL.mediums[2].standardOrderComponents
 pCL_WithHeatSource_withController.pipeToPHX_PCL.mediums[2].T_degC
 pCL_WithHeatSource_withController.pipeToPHX_PCL.mediums[2].p_bar
-pCL_WithHeatSource_withController.SHX.port_b_tube.m_flow
 pCL_WithHeatSource_withController.SHX.port_a_shell.h_outflow
 pCL_WithHeatSource_withController.SHX.port_a_shell.der(h_outflow)
 pCL_WithHeatSource_withController.SHX.port_b_shell.h_outflow
@@ -4952,7 +4539,6 @@ pCL_WithHeatSource_withController.SHX.tube.summary.xpos[2]
 pCL_WithHeatSource_withController.SHX.tube.summary.xpos_norm[1]
 pCL_WithHeatSource_withController.SHX.tube.summary.xpos_norm[2]
 pCL_WithHeatSource_withController.SHX.tube.allowFlowReversal
-pCL_WithHeatSource_withController.SHX.tube.port_b.m_flow
 pCL_WithHeatSource_withController.SHX.tube.nParallel
 pCL_WithHeatSource_withController.SHX.tube.nV
 pCL_WithHeatSource_withController.SHX.tube.Vs[1]
@@ -5014,7 +4600,6 @@ pCL_WithHeatSource_withController.SHX.tube.flowModel.dps_start[1]
 pCL_WithHeatSource_withController.SHX.tube.flowModel.dps_start[2]
 pCL_WithHeatSource_withController.SHX.tube.flowModel.m_flows_start[1]
 pCL_WithHeatSource_withController.SHX.tube.flowModel.m_flows_start[2]
-pCL_WithHeatSource_withController.SHX.tube.flowModel.vs[3]
 pCL_WithHeatSource_withController.SHX.tube.flowModel.roughnesses[1]
 pCL_WithHeatSource_withController.SHX.tube.flowModel.roughnesses[2]
 pCL_WithHeatSource_withController.SHX.tube.flowModel.roughnesses[3]
@@ -5026,7 +4611,6 @@ pCL_WithHeatSource_withController.SHX.tube.flowModel.Re_turb
 pCL_WithHeatSource_withController.SHX.tube.flowModel.from_dp
 pCL_WithHeatSource_withController.SHX.tube.flowModel.m_flow_small
 pCL_WithHeatSource_withController.SHX.tube.flowModel.dp_small
-pCL_WithHeatSource_withController.SHX.tube.flowModel.m_flows[2]
 pCL_WithHeatSource_withController.SHX.tube.flowModel.Is[1]
 pCL_WithHeatSource_withController.SHX.tube.flowModel.Is[2]
 pCL_WithHeatSource_withController.SHX.tube.flowModel.Ibs[1]
@@ -5212,9 +4796,11 @@ pCL_WithHeatSource_withController.SHX.tube.state_a.phase
 pCL_WithHeatSource_withController.SHX.tube.state_a.d
 pCL_WithHeatSource_withController.SHX.tube.state_a.T
 pCL_WithHeatSource_withController.SHX.tube.state_b.phase
+pCL_WithHeatSource_withController.SHX.tube.state_b.h
 pCL_WithHeatSource_withController.SHX.tube.state_b.d
 pCL_WithHeatSource_withController.SHX.tube.state_b.T
 pCL_WithHeatSource_withController.SHX.tube.m_flows[1]
+pCL_WithHeatSource_withController.SHX.tube.m_flows[2]
 pCL_WithHeatSource_withController.SHX.tube.m_flows[3]
 pCL_WithHeatSource_withController.SHX.tube.H_flows[1]
 pCL_WithHeatSource_withController.SHX.tube.H_flows[2]
@@ -6238,7 +5824,7 @@ _GlobalScope.Modelica.Media.Water.waterConstants[1].SCRIT0
 _GlobalScope.Modelica.Media.Water.waterConstants[1].deltah
 _GlobalScope.Modelica.Media.Water.waterConstants[1].deltas
 
-double initialValue(6134,6)
+double initialValue(5720,6)
  -1  1.0132500000000000E+05       0                 1.0000000000000000E+100
   1   280   # systemTF.p_ambient
  -1  2.9314999999999998E+02       0                 1.0000000000000000E+100
@@ -6323,10 +5909,16 @@ double initialValue(6134,6)
   1   280   # d_ext
  -1       0                       0                       0                
   1   280   # m_ext
+  0       1                       0                       0                
+  6   260   # BOP.CS.actuatorBus.opening_TCV
+  0       0                       0                       0                
+  6   260   # BOP.CS.actuatorBus.LPT1_BV
   0       0                       0                       0                
   6   260   # BOP.CS.sensorBus.Q_balance
   0       0                       0                       0                
   6   260   # BOP.CS.sensorBus.W_balance
+  0       0                       0                       0                
+  6   260   # BOP.CS.sensorBus.Extract_flow
  -1       1                       1                       2                
   1   282   # BOP.CS.data.FH_type
   0       0                       0                       0                
@@ -6421,12 +6013,10 @@ double initialValue(6134,6)
   1   280   # BOP.CS.data.BypassFeedHeater_Q_init
   0  8.1314999999999998E+02       0                       0                
   6   256   # BOP.CS.T_in_set.y
-  0       0                       0                       0                
-  6   256   # BOP.CS.Steam_Extraction.y
+  0       1                       0                       0                
+  6   256   # BOP.CS.P_in_set.y
   0  8.1314999999999998E+02       0                       0                
   6   256   # BOP.CS.FeedPump_PID.u_s
-  0       0                       0                       0                
-  6   256   # BOP.CS.FeedPump_PID.u_m
   0       0                       0                       0                
   6   256   # BOP.CS.FeedPump_PID.y
   0       0                       0                       0                
@@ -6437,9 +6027,9 @@ double initialValue(6134,6)
   6   257   # BOP.CS.FeedPump_PID.with_FF
   0       1                       0                       0                
   6   257   # BOP.CS.FeedPump_PID.derMeas
- -1 -5.0000000000000001E-04       0                       0                
+ -1 -5.0000000000000001E-03       0                       0                
   1   280   # BOP.CS.FeedPump_PID.k
- -1      10                  9.9999999999999997E-61 1.0000000000000000E+100
+ -1      30                  9.9999999999999997E-61 1.0000000000000000E+100
   1   280   # BOP.CS.FeedPump_PID.Ti
  -1  1.0000000000000001E-01       0                 1.0000000000000000E+100
   1   280   # BOP.CS.FeedPump_PID.Td
@@ -6576,308 +6166,6 @@ double initialValue(6134,6)
  -1       0                       0                       0                
   1   280   # BOP.CS.FeedPump_PID.Dzero.k
   0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.controlError
-  0       2                       1                       4                
-  6   258   # BOP.CS.TCV_PID.controllerType
-  0       0                       0                       0                
-  6   257   # BOP.CS.TCV_PID.with_FF
-  0       1                       0                       0                
-  6   257   # BOP.CS.TCV_PID.derMeas
- -1 -5.0000000000000003E-10       0                       0                
-  1   280   # BOP.CS.TCV_PID.k
- -1     360                  9.9999999999999997E-61 1.0000000000000000E+100
-  1   280   # BOP.CS.TCV_PID.Ti
- -1  1.0000000000000001E-01       0                 1.0000000000000000E+100
-  1   280   # BOP.CS.TCV_PID.Td
- -1       0                       0                       0                
-  1   280   # BOP.CS.TCV_PID.yb
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.k_s
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.k_m
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.k_ff
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.yMax
- -1       0                       0                       0                
-  1   280   # BOP.CS.TCV_PID.yMin
- -1       1                       0                 1.0000000000000000E+100
-  1   280   # BOP.CS.TCV_PID.wp
- -1       0                       0                 1.0000000000000000E+100
-  1   280   # BOP.CS.TCV_PID.wd
- -1  9.0000000000000002E-01  1.0000000000000000E-13 1.0000000000000000E+100
-  1   280   # BOP.CS.TCV_PID.Ni
- -1      10                  1.0000000000000000E-13 1.0000000000000000E+100
-  1   280   # BOP.CS.TCV_PID.Nd
-  0       1                       1                       4                
-  6   258   # BOP.CS.TCV_PID.initType
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.xi_start
- -1       0                       0                       0                
-  1   280   # BOP.CS.TCV_PID.xd_start
- -1       0                       0                       0                
-  1   280   # BOP.CS.TCV_PID.y_start
-  0       0                       0                       0                
-  6   257   # BOP.CS.TCV_PID.strict
-  0       1                       1                       3                
-  6   258   # BOP.CS.TCV_PID.reset
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.y_reset
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.addP.u1
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.addP.u2
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.addP.y
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.addP.k1
- -1      -1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.addP.k2
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.P.k
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.P.y
-  0       1                       0                       0                
-  6   256   # BOP.CS.TCV_PID.gainPID.k
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.gainPID.u
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.gainPID.y
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.addPID.k1
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.addPID.k2
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.addPID.k3
-  0       1                       0                       0                
-  6   256   # BOP.CS.TCV_PID.limiter.uMax
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.limiter.uMin
-  0       0                       0                       0                
-  6   257   # BOP.CS.TCV_PID.limiter.strict
-  0       2                       1                       4                
-  6   258   # BOP.CS.TCV_PID.limiter.homotopyType
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.limiter.u
- -1       0                       0                       0                
-  1   280   # BOP.CS.TCV_PID.Fzero.k
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.addFF.k1
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.addFF.k2
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.addFF.k3
-  0       1                       0                       0                
-  6   256   # BOP.CS.TCV_PID.gain_u_s.k
-  0       1                       0                       0                
-  6   256   # BOP.CS.TCV_PID.gain_u_m.k
-  0       1                       0                       0                
-  6   256   # BOP.CS.TCV_PID.null_bias.k
-  0       1                       0                       0                
-  6   768   # BOP.CS.TCV_PID.unitTime
-  0       1                       0                       0                
-  6   769   # BOP.CS.TCV_PID.with_I
-  0       0                       0                       0                
-  6   769   # BOP.CS.TCV_PID.with_D
-  0       0                       0                       0                
-  6  1280   # BOP.CS.TCV_PID.y_reset_internal
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.I.u
- -1       0                       0                       0                
-  2   280   # BOP.CS.TCV_PID.I.y
-  0       0                       0                       0                
-  3   256   # BOP.CS.TCV_PID.I.der(y)
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.I.k
-  0       1                       1                       4                
-  6   258   # BOP.CS.TCV_PID.I.initType
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.I.y_start
-  0       1                       1                       3                
-  6   258   # BOP.CS.TCV_PID.I.reset
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.I.y_reset
-  0       0                       0                       0                
-  6  1280   # BOP.CS.TCV_PID.I.y_reset_internal
-  0       0                       0                       0                
-  6  1281   # BOP.CS.TCV_PID.I.trigger_internal
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.addI.k1
- -1      -1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.addI.k2
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.addI.k3
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.addI.u3
-  0       0                       0                       0                
-  6   256   # BOP.CS.TCV_PID.addSat.y
- -1       1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.addSat.k1
- -1      -1                       0                       0                
-  1   280   # BOP.CS.TCV_PID.addSat.k2
-  0       1                       0                       0                
-  6   256   # BOP.CS.TCV_PID.gainTrack.k
- -1       0                       0                       0                
-  1   280   # BOP.CS.TCV_PID.Dzero.k
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.u_s
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.u_m
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.y
-  0       2                       1                       4                
-  6   258   # BOP.CS.LPT1_BV_PID.controllerType
-  0       0                       0                       0                
-  6   257   # BOP.CS.LPT1_BV_PID.with_FF
-  0       1                       0                       0                
-  6   257   # BOP.CS.LPT1_BV_PID.derMeas
- -1  5.0000000000000002E-11       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.k
- -1     300                  9.9999999999999997E-61 1.0000000000000000E+100
-  1   280   # BOP.CS.LPT1_BV_PID.Ti
- -1  1.0000000000000001E-01       0                 1.0000000000000000E+100
-  1   280   # BOP.CS.LPT1_BV_PID.Td
- -1       0                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.yb
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.k_s
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.k_m
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.k_ff
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.yMax
- -1       0                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.yMin
- -1       1                       0                 1.0000000000000000E+100
-  1   280   # BOP.CS.LPT1_BV_PID.wp
- -1       0                       0                 1.0000000000000000E+100
-  1   280   # BOP.CS.LPT1_BV_PID.wd
- -1  9.0000000000000002E-01  1.0000000000000000E-13 1.0000000000000000E+100
-  1   280   # BOP.CS.LPT1_BV_PID.Ni
- -1      10                  1.0000000000000000E-13 1.0000000000000000E+100
-  1   280   # BOP.CS.LPT1_BV_PID.Nd
-  0       1                       1                       4                
-  6   258   # BOP.CS.LPT1_BV_PID.initType
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.xi_start
- -1       0                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.xd_start
- -1       0                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.y_start
-  0       0                       0                       0                
-  6   257   # BOP.CS.LPT1_BV_PID.strict
-  0       1                       1                       3                
-  6   258   # BOP.CS.LPT1_BV_PID.reset
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.y_reset
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.addP.u1
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.addP.u2
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.addP.y
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.addP.k1
- -1      -1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.addP.k2
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.P.k
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.P.y
-  0       1                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.gainPID.k
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.gainPID.u
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.gainPID.y
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.addPID.k1
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.addPID.k2
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.addPID.k3
-  0       1                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.limiter.uMax
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.limiter.uMin
-  0       0                       0                       0                
-  6   257   # BOP.CS.LPT1_BV_PID.limiter.strict
-  0       2                       1                       4                
-  6   258   # BOP.CS.LPT1_BV_PID.limiter.homotopyType
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.limiter.u
- -1       0                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.Fzero.k
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.addFF.k1
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.addFF.k2
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.addFF.k3
-  0       1                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.gain_u_s.k
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.gain_u_s.u
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.gain_u_s.y
-  0       1                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.gain_u_m.k
-  0       1                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.null_bias.k
-  0       1                       0                       0                
-  6   768   # BOP.CS.LPT1_BV_PID.unitTime
-  0       1                       0                       0                
-  6   769   # BOP.CS.LPT1_BV_PID.with_I
-  0       0                       0                       0                
-  6   769   # BOP.CS.LPT1_BV_PID.with_D
-  0       0                       0                       0                
-  6  1280   # BOP.CS.LPT1_BV_PID.y_reset_internal
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.I.u
- -1       0                       0                       0                
-  2   280   # BOP.CS.LPT1_BV_PID.I.y
-  0       0                       0                       0                
-  3   256   # BOP.CS.LPT1_BV_PID.I.der(y)
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.I.k
-  0       1                       1                       4                
-  6   258   # BOP.CS.LPT1_BV_PID.I.initType
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.I.y_start
-  0       1                       1                       3                
-  6   258   # BOP.CS.LPT1_BV_PID.I.reset
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.I.y_reset
-  0       0                       0                       0                
-  6  1280   # BOP.CS.LPT1_BV_PID.I.y_reset_internal
-  0       0                       0                       0                
-  6  1281   # BOP.CS.LPT1_BV_PID.I.trigger_internal
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.addI.k1
- -1      -1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.addI.k2
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.addI.k3
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.addI.u1
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.addI.u3
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.addSat.y
- -1       1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.addSat.k1
- -1      -1                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.addSat.k2
-  0       1                       0                       0                
-  6   256   # BOP.CS.LPT1_BV_PID.gainTrack.k
- -1       0                       0                       0                
-  1   280   # BOP.CS.LPT1_BV_PID.Dzero.k
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT2_BV_PID.u_m
-  0       0                       0                       0                
-  6   256   # BOP.CS.LPT2_BV_PID.y
-  0       0                       0                       0                
   6   256   # BOP.CS.LPT2_BV_PID.controlError
   0       2                       1                       4                
   6   258   # BOP.CS.LPT2_BV_PID.controllerType
@@ -6885,9 +6173,9 @@ double initialValue(6134,6)
   6   257   # BOP.CS.LPT2_BV_PID.with_FF
   0       1                       0                       0                
   6   257   # BOP.CS.LPT2_BV_PID.derMeas
- -1  9.9999999999999995E-08       0                       0                
+ -1  1.0000000000000001E-05       0                       0                
   1   280   # BOP.CS.LPT2_BV_PID.k
- -1      20                  9.9999999999999997E-61 1.0000000000000000E+100
+ -1      15                  9.9999999999999997E-61 1.0000000000000000E+100
   1   280   # BOP.CS.LPT2_BV_PID.Ti
  -1  1.0000000000000001E-01       0                 1.0000000000000000E+100
   1   280   # BOP.CS.LPT2_BV_PID.Td
@@ -7022,6 +6310,16 @@ double initialValue(6134,6)
  -1       0                       0                       0                
   1   280   # BOP.CS.LPT2_BV_PID.Dzero.k
   0       0                       0                       0                
+  6   256   # BOP.CS.extractValve.y
+  0     200                       0                       0                
+  6   256   # BOP.CS.add.u2
+ -1       1                       0                       0                
+  1   280   # BOP.CS.add.k1
+ -1       1                       0                       0                
+  1   280   # BOP.CS.add.k2
+  0     200                       0                       0                
+  6   256   # BOP.CS.T_in_set1.y
+  0       0                       0                       0                
   6   256   # BOP.CS.hysteresis.uLow
   0       1                       0                       0                
   6   256   # BOP.CS.hysteresis.uHigh
@@ -7045,50 +6343,20 @@ double initialValue(6134,6)
   1   280   # BOP.CS.ramp.duration
   0       0                       0                       0                
   6   256   # BOP.CS.ramp.y
- -1       1                       0                       0                
+ -1       0                       0                       0                
   1   280   # BOP.CS.ramp.offset
  -1    8000                       0                       0                
   1   280   # BOP.CS.ramp.startTime
-  0       0                       0                       0                
-  6   321   # BOP.CS.switch2.u2
- -1    4000                       0                       0                
-  1   280   # BOP.CS.booleanStep.startTime
- -1       0                       0                       0                
-  1   281   # BOP.CS.booleanStep.startValue
-  0  8.1314999999999998E+02       0                       0                
-  6   256   # BOP.CS.switch3.u3
-  0       0                       0                       0                
-  6   321   # BOP.CS.switch4.u2
- -1  1.2000000000000000E+06       0                       0                
-  1   280   # BOP.CS.booleanStep1.startTime
- -1       0                       0                       0                
-  1   281   # BOP.CS.booleanStep1.startValue
-  0  2.9999999999999999E-02       0                       0                
-  6   256   # BOP.CS.switch5.u3
-  0  2.9999999999999999E-02       0                       0                
-  6   256   # BOP.CS.T_in_set2.y
-  0       0                       0                       0                
-  6   321   # BOP.CS.switch6.u2
-  0       0                       0                       0                
-  6   256   # BOP.CS.switch6.u3
- -1  1.2000000000000000E+06       0                       0                
-  1   280   # BOP.CS.booleanStep2.startTime
- -1       0                       0                       0                
-  1   281   # BOP.CS.booleanStep2.startValue
-  0       0                       0                       0                
-  6   256   # BOP.CS.switch7.u3
- -1       0                       0                       0                
-  1   280   # BOP.CS.ext_pos_start.height
- -1    1000                       0                 1.0000000000000000E+100
-  1   280   # BOP.CS.ext_pos_start.duration
- -1       0                       0                       0                
-  1   280   # BOP.CS.ext_pos_start.offset
- -1    2000                       0                       0                
-  1   280   # BOP.CS.ext_pos_start.startTime
+  0       1                       0                       0                
+  6   260   # BOP.ED.actuatorBus.opening_TCV
+  0       0                       0                       1                
+  6   260   # BOP.ED.actuatorBus.LPT1_BV
   0       0                       0                       0                
   6   260   # BOP.ED.sensorBus.Q_balance
   0       0                       0                       0                
   6   260   # BOP.ED.sensorBus.W_balance
+  0       0                       0                       0                
+  6   260   # BOP.ED.sensorBus.Extract_flow
  -1       1                       1                       2                
   1   282   # BOP.data.FH_type
   0       0                       0                       0                
@@ -7181,8 +6449,10 @@ double initialValue(6134,6)
   1   280   # BOP.data.BypassFeedHeater_m_start_shell
  -1  1.0000000000000000E+06       0                       0                
   1   280   # BOP.data.BypassFeedHeater_Q_init
-  0       0                       0                       1                
+  0       1                       0                       1                
   6   260   # BOP.actuatorBus.opening_TCV
+  0       0                       0                       1                
+  6   260   # BOP.actuatorBus.LPT1_BV
   0       0                       0                       0                
   6   260   # BOP.sensorBus.Q_balance
   0       0                       0                       0                
@@ -7190,10 +6460,12 @@ double initialValue(6134,6)
   0       0                       0                       0                
   6   260   # BOP.sensorBus.W_total
   0       0                       0                       0                
+  6   260   # BOP.sensorBus.Extract_flow
+  0       0                       0                       0                
   6   256   # BOP.Q_balance.y
   0       0                       0                       0                
   6   256   # BOP.W_balance.y
-  0       0                 -100000                       0                
+  0       0                 -100000                  100000                
   6   388   # BOP.port_a_steam.m_flow
   0  100000                 -1.0000000000000000E+10  1.0000000000000000E+10
   6   260   # BOP.port_a_steam.h_outflow
@@ -7614,7 +6886,7 @@ double initialValue(6134,6)
   0       0                       0                       0                
   6   256   # BOP.LPT2.Kt
   0       0                 -100000                  100000                
-  6   388   # BOP.SteamHeader.port_a.m_flow
+  6   388   # BOP.SteamHeader.port_b.m_flow
   0       2                       0                 1.0000000000000000E+100
   6   256   # BOP.SteamHeader.V
   0       1                       1                       4                
@@ -7673,7 +6945,7 @@ double initialValue(6134,6)
   6   256   # BOP.SteamHeader.medium.sat.Tsat
   0       0                       0                 1.0000000000000000E+100
   6   256   # BOP.SteamHeader.m
-  0       0                 -100000                  100000                
+  0       0                       0                       0                
   6   256   # BOP.SteamHeader.der(m)
   0       0                       0                       0                
   6   256   # BOP.SteamHeader.U
@@ -7889,12 +7161,18 @@ double initialValue(6134,6)
   6   256   # BOP.LPT1_bypass.der(U)
  -1       1                       0                       0                
   1  1305   # BOP.LPT1_bypass.initialize_p
+  0       0                 -100000                  100000                
+  6   388   # BOP.LPT1_bypass.port_3.m_flow
   0       1                       0                       0                
   6   257   # BOP.LPT1_bypass_valve.allowFlowReversal
  -1       1                       0                       0                
   1   281   # BOP.LPT1_bypass_valve.showDesignFlowDirection
  -1       1                       0                       0                
   1   281   # BOP.LPT1_bypass_valve.showName
+  0       0                 -9.9999999999999995E+59  100000                
+  6   388   # BOP.LPT1_bypass_valve.port_a.m_flow
+  0       0                 -100000                  9.9999999999999995E+59
+  6   388   # BOP.LPT1_bypass_valve.port_b.m_flow
   0  1.4000000000000000E+07  6.1165700000000004E+02  1.0000000000000000E+08
   6   260   # BOP.LPT1_bypass_valve.port_b.p
  -1  1.0000000000000001E-05 -9.9999999999999995E+59  1.0000000000000000E+08
@@ -7907,6 +7185,8 @@ double initialValue(6134,6)
   6   257   # BOP.LPT1_bypass_valve.show_T
   0       1                       0                       0                
   6   257   # BOP.LPT1_bypass_valve.show_V_flow
+  0       0                 -9.9999999999999995E+59  100000                
+  6   256   # BOP.LPT1_bypass_valve.m_flow
   0       0                       0                       0                
   6   256   # BOP.LPT1_bypass_valve.dp
   0       0                       0                       0                
@@ -8175,8 +7455,8 @@ double initialValue(6134,6)
   6   256   # BOP.pump1.Ub
   0       0                       0                       0                
   6   257   # BOP.pump1.use_input
-  0  1.0000000000000000E+06  6.1165700000000004E+02  1.0000000000000000E+08
-  6   256   # BOP.pump1.p_nominal
+ -1  1.0500000000000000E+07  6.1165700000000004E+02  1.0000000000000000E+08
+  1   280   # BOP.pump1.p_nominal
   0       0                       0                 1.0000000000000000E+100
   6   256   # BOP.pump1.eta
   0       0                 -100000                  100000                
@@ -8507,6 +7787,8 @@ double initialValue(6134,6)
   6   256   # BOP.TCV.m_flow_nominal
   0       0                       0                       0                
   6   256   # BOP.TCV.k
+  0       1                       0                       1                
+  6   256   # BOP.TCV.opening
   0       1                       0                       0                
   6   257   # BOP.Feed_T.allowFlowReversal
  -1       1                       0                       0                
@@ -8557,8 +7839,12 @@ double initialValue(6134,6)
   6   257   # BOP.sensor_m_flow.allowFlowReversal
  -1       1                       0                       0                
   1   281   # BOP.sensor_m_flow.showName
+  0       0                 -9.9999999999999995E+59  100000                
+  6   388   # BOP.sensor_m_flow.port_a.m_flow
   0  1.4000000000000000E+07  6.1165700000000004E+02  1.0000000000000000E+08
   6   260   # BOP.sensor_m_flow.port_a.p
+  0       0                 -100000                  9.9999999999999995E+59
+  6   388   # BOP.sensor_m_flow.port_b.m_flow
   0  1.4000000000000000E+07  6.1165700000000004E+02  1.0000000000000000E+08
   6   260   # BOP.sensor_m_flow.port_b.p
  -1  1.0000000000000000E-04       0                  100000                
@@ -8575,6 +7861,12 @@ double initialValue(6134,6)
   1   280   # BOP.sensor_m_flow.X_start[1]
  -1       0                       0                 1.0000000000000000E+100
   1   282   # BOP.sensor_m_flow.precision
+  0       0                       0                       0                
+  6   256   # BOP.sensor_m_flow.var
+  0       0                       0                       0                
+  6   256   # BOP.sensor_m_flow.y
+  0       0                       0                       0                
+  6   256   # BOP.sensor_m_flow.m_flow
   0       0                       0                       0                
   6   257   # boundary.use_port
  -1      60                       0                       0                
@@ -8631,6 +7923,8 @@ double initialValue(6134,6)
   6   256   # bypassdump2.medium.sat.psat
   0  6.0981936862812518E+02  2.7314999999999998E+02  2.2731500000000001E+03
   6   256   # bypassdump2.medium.sat.Tsat
+  0       0                 -9.9999999999999995E+59  9.9999999999999995E+59
+  6   388   # bypassdump2.ports[1].m_flow
   0  1.4000000000000000E+07  6.1165700000000004E+02  1.0000000000000000E+08
   6   260   # bypassdump2.ports[1].p
   0       0                 -1.0000000000000000E+10  1.0000000000000000E+10
@@ -8812,6 +8106,8 @@ double initialValue(6134,6)
   0  1.2000000000000000E+07       0                       0                
   6   256   # pCL_WithHeatSource_withController.CS.PID.u_s
   0       0                       0                       0                
+  6   256   # pCL_WithHeatSource_withController.CS.PID.y
+  0       0                       0                       0                
   6   256   # pCL_WithHeatSource_withController.CS.PID.controlError
   0       2                       1                       4                
   6   258   # pCL_WithHeatSource_withController.CS.PID.controllerType
@@ -8819,7 +8115,7 @@ double initialValue(6134,6)
   6   257   # pCL_WithHeatSource_withController.CS.PID.with_FF
   0       1                       0                       0                
   6   257   # pCL_WithHeatSource_withController.CS.PID.derMeas
- -1       1                       0                       0                
+ -1  1.0000000000000001E-05       0                       0                
   1   280   # pCL_WithHeatSource_withController.CS.PID.k
  -1  5.0000000000000000E-01  9.9999999999999997E-61 1.0000000000000000E+100
   1   280   # pCL_WithHeatSource_withController.CS.PID.Ti
@@ -8833,10 +8129,10 @@ double initialValue(6134,6)
   1   280   # pCL_WithHeatSource_withController.CS.PID.k_m
  -1       1                       0                       0                
   1   280   # pCL_WithHeatSource_withController.CS.PID.k_ff
- -1  9.9999999999999995E+59       0                       0                
+ -1   20000                       0                       0                
   1   280   # pCL_WithHeatSource_withController.CS.PID.yMax
-  0       0                       0                       0                
-  6   256   # pCL_WithHeatSource_withController.CS.PID.yMin
+ -1    -990                       0                       0                
+  1   280   # pCL_WithHeatSource_withController.CS.PID.yMin
  -1       1                       0                 1.0000000000000000E+100
   1   280   # pCL_WithHeatSource_withController.CS.PID.wp
  -1       0                       0                 1.0000000000000000E+100
@@ -8959,548 +8255,14 @@ double initialValue(6134,6)
   1   280   # pCL_WithHeatSource_withController.CS.PID.Dzero.k
   0  1.2000000000000000E+07       0                       0                
   6   256   # pCL_WithHeatSource_withController.CS.realExpression.y
-  0     268                       0                       0                
-  6   770   # pCL_WithHeatSource_withController.data.nC
-  0  1.0078300256282091E-03       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[1]
-  0  2.0141000859439373E-03       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[2]
-  0  3.0160502064973116E-03       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[3]
-  0  3.0160301830619574E-03       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[4]
-  0  4.0026004426181316E-03       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[5]
-  0  6.0151205398142338E-03       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[6]
-  0  7.0160003378987312E-03       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[7]
-  0  9.0121803805232048E-03       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[8]
-  0  1.0012940503656864E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[9]
-  0  1.1009310372173786E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[10]
-  0  1.5994910150766373E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[11]
-  0  1.0690510272979736E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[12]
-  0  1.0890474915504456E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[13]
-  0  1.0990611463785172E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[14]
-  0  1.0990300774574280E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[15]
-  0  1.1090418696403503E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[16]
-  0  1.1190276592969894E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[17]
-  0  1.1290440708398819E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[18]
-  0  1.1390336602926254E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[19]
-  0  1.1490543931722641E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[20]
-  0  1.1290406435728073E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[21]
-  0  1.1490388214588165E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[22]
-  0  1.2090381979942322E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[23]
-  0  1.2290421873331070E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[24]
-  0  1.2390594184398651E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[25]
-  0  1.2490525841712952E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[26]
-  0  1.5191973745822906E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[27]
-  0  1.5292210876941681E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[28]
-  0  1.5091985464096069E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[29]
-  0  1.5192174911499023E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[30]
-  0  1.5192174911499023E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[31]
-  0  1.5292124450206757E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[32]
-  0  1.5392297506332397E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[33]
-  0  1.5492290258407593E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[34]
-  0  1.5592475235462189E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[35]
-  0  1.5692542493343353E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[36]
-  0  1.5191979706287384E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[37]
-  0  1.5392087399959564E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[38]
-  0  1.5492263436317444E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[39]
-  0  1.5592212975025177E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[40]
-  0  1.5692397952079773E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[41]
-  0  1.5792411565780640E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[42]
-  0  1.5892639756202698E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[43]
-  0  1.5992705523967743E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[44]
-  0  1.6092967987060547E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[45]
-  0  1.5892535448074341E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[46]
-  0  1.5992717444896698E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[47]
-  0  1.6092757880687714E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[48]
-  0  1.5992520749568939E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[49]
-  0  1.6092693805694580E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[50]
-  0  1.6192680597305298E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[51]
-  0  1.6292873024940491E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[52]
-  0  1.6392917931079865E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[53]
-  0  1.6493171453475952E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[54]
-  0  1.6493031382560730E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[55]
-  0  1.6192878782749176E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[56]
-  0  1.6392920911312103E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[57]
-  0  1.6593028604984283E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[58]
-  0  1.6693206131458282E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[59]
-  0  1.6693206131458282E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[60]
-  0  1.6793237626552582E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[61]
-  0  1.6893459856510162E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[62]
-  0  1.6993546485900879E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[63]
-  0  1.7093804478645325E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[64]
-  0  1.6893421113491058E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[65]
-  0  1.6993580758571625E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[66]
-  0  1.7093643546104431E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[67]
-  0  1.7394006252288818E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[68]
-  0  1.7594140768051147E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[69]
-  0  1.7694322764873505E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[70]
-  0  1.7794370651245117E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[71]
-  0  1.7894582450389862E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[72]
-  0  1.7994655668735504E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[73]
-  0  1.8094910681247711E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[74]
-  0  1.8094800412654877E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[75]
-  0  1.8195015192031860E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[76]
-  0  2.3003314435482025E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[77]
-  0  2.3103630542755127E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[78]
-  0  2.3203806579113007E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[79]
-  0  2.3304158449172974E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[80]
-  0  2.3404359817504883E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[81]
-  0  2.3103588819503784E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[82]
-  0  2.3203860223293304E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[83]
-  0  2.3304025828838348E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[84]
-  0  2.3404331505298615E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[85]
-  0  2.3203717172145844E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[86]
-  0  2.3303964734077454E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[87]
-  0  2.3404096066951752E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[88]
-  0  2.3504394292831421E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[89]
-  0  2.3604556918144226E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[90]
-  0  2.3704874515533447E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[91]
-  0  2.3805080354213715E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[92]
-  0  2.3905430734157562E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[93]
-  0  2.3604658246040344E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[94]
-  0  2.3704817891120911E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[95]
-  0  2.3805096745491028E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[96]
-  0  2.3905295133590698E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[97]
-  0  2.4005617201328278E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[98]
-  0  2.4005617201328278E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[99]
-  0  2.3604607582092285E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[100]
-  0  2.3704843223094940E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[101]
-  0  2.3804956674575806E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[102]
-  0  2.3905216157436371E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[103]
-  0  2.4005381762981415E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[104]
-  0  2.4105685949325562E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[105]
-  0  2.4205875396728516E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[106]
-  0  2.4306200444698334E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[107]
-  0  2.4105682969093323E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[108]
-  0  2.4205957353115082E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[109]
-  0  2.4205951392650604E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[110]
-  0  2.4306139349937439E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[111]
-  0  2.4406430125236511E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[112]
-  0  2.4406464397907257E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[113]
-  0  2.4205884337425232E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[114]
-  0  2.4306139349937439E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[115]
-  0  2.4406275153160095E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[116]
-  0  2.4506549537181854E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[117]
-  0  2.4606722593307495E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[118]
-  0  8.0916292965412140E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[119]
-  0  8.1916801631450653E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[120]
-  0  8.1913486123085022E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[121]
-  0  8.2914143800735474E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[122]
-  0  8.3911508321762085E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[123]
-  0  8.4912531077861786E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[124]
-  0  8.5910610854625702E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[125]
-  0  8.8907450437545776E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[126]
-  0  8.9907743036746979E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[127]
-  0  8.8905856013298035E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[128]
-  0  8.9907154440879822E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[129]
-  0  9.0907312929630280E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[130]
-  0  9.0905651450157166E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[131]
-  0  9.2906482517719269E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[132]
-  0  9.4908043742179871E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[133]
-  0  9.5908276736736298E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[134]
-  0  9.4906844198703766E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[135]
-  0  9.4905845820903778E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[136]
-  0  9.5904685556888580E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[137]
-  0  9.6906028687953949E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[138]
-  0  9.7905412316322327E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[139]
-  0  9.8907709121704102E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[140]
-  0  9.9907480180263519E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[141]
-  0  9.8906256258487701E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[142]
-  0  9.8906256258487701E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[143]
-  0  9.9907666444778442E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[144]
-  0  9.9904224276542664E-02       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[145]
-  0  1.0090558230876923E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[146]
-  0  1.0190435498952866E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[147]
-  0  1.0290632396936417E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[148]
-  0  1.0390543937683105E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[149]
-  0  1.0490775853395462E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[150]
-  0  1.0590733587741852E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[151]
-  0  1.0190684348344803E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[152]
-  0  1.0190684348344803E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[153]
-  0  1.0290550440549850E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[154]
-  0  1.0290550440549850E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[155]
-  0  1.0390666872262955E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[156]
-  0  1.0490569472312927E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[157]
-  0  1.0490569472312927E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[158]
-  0  1.0590729117393494E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[159]
-  0  1.0590729117393494E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[160]
-  0  1.0390404611825943E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[161]
-  0  1.0490509867668152E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[162]
-  0  1.0590349137783051E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[163]
-  0  1.0690513253211975E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[164]
-  0  1.0790389776229858E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[165]
-  0  1.0890595614910126E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[166]
-  0  1.0890474915504456E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[167]
-  0  1.0890474915504456E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[168]
-  0  1.0990611463785172E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[169]
-  0  1.0990615934133530E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[170]
-  0  1.1090529710054398E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[171]
-  0  1.0990300774574280E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[172]
-  0  1.1090418696403503E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[173]
-  0  1.1290440708398819E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[174]
-  0  1.1490388214588165E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[175]
-  0  1.2090381979942322E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[176]
-  0  1.2290421873331070E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[177]
-  0  1.2490525841712952E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[178]
-  0  1.2690693140029907E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[179]
-  0  1.2690523266792297E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[180]
-  0  1.2690518796443939E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[181]
-  0  1.2890738248825073E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[182]
-  0  1.3190856575965881E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[183]
-  0  1.2690447270870209E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[184]
-  0  1.2790581583976746E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[185]
-  0  1.2890498340129852E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[186]
-  0  1.2990668416023254E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[187]
-  0  1.3090611994266510E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[188]
-  0  1.3190801441669464E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[189]
-  0  1.3491006195545197E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[190]
-  0  1.2790353596210480E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[191]
-  0  1.2990351021289825E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[192]
-  0  1.3090507686138153E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[193]
-  0  1.3190415501594543E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[194]
-  0  1.3290591537952423E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[195]
-  0  1.3390539586544037E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[196]
-  0  1.3490723073482513E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[197]
-  0  1.3490723073482513E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[198]
-  0  1.3590723276138306E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[199]
-  0  1.3691157102584839E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[200]
-  0  1.3290546834468842E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[201]
-  0  1.3390672206878662E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[202]
-  0  1.3490597903728485E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[203]
-  0  1.3590730726718903E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[204]
-  0  1.3690710067749023E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[205]
-  0  1.3390451669692993E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[206]
-  0  1.3690583407878876E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[207]
-  0  1.3991062343120575E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[208]
-  0  1.3890635967254639E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[209]
-  0  1.3990949094295502E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[210]
-  0  1.3990545272827148E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[211]
-  0  1.4090828597545624E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[212]
-  0  1.4190924167633057E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[213]
-  0  1.4291238784790039E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[214]
-  0  1.4391365647315979E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[215]
-  0  1.4090766012668610E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[216]
-  0  1.4191004633903503E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[217]
-  0  1.4291082322597504E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[218]
-  0  1.4391332864761353E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[219]
-  0  1.4190772175788879E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[220]
-  0  1.4290980994701385E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[221]
-  0  1.4391009509563446E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[222]
-  0  1.4491257071495056E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[223]
-  0  1.4591312408447266E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[224]
-  0  1.4691612124443054E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[225]
-  0  1.4791689813137054E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[226]
-  0  1.4892016351222992E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[227]
-  0  1.4992089569568634E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[228]
-  0  1.5092383325099945E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[229]
-  0  1.4691515266895294E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[230]
-  0  1.4791749417781830E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[231]
-  0  1.4792072772979736E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[232]
-  0  1.4891834557056427E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[233]
-  0  1.4992098510265350E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[234]
-  0  1.5092121064662933E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[235]
-  0  1.4691491425037384E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[236]
-  0  1.4791482686996460E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[237]
-  0  1.4891718327999115E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[238]
-  0  1.4991728961467743E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[239]
-  0  1.5091994404792786E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[240]
-  0  1.5191973745822906E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[241]
-  0  1.5292210876941681E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[242]
-  0  1.5392221510410309E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[243]
-  0  1.5492464601993561E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[244]
-  0  1.5091985464096069E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[245]
-  0  1.5292124450206757E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[246]
-  0  1.5392297506332397E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[247]
-  0  1.5492290258407593E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[248]
-  0  1.5592475235462189E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[249]
-  0  1.5692542493343353E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[250]
-  0  1.5392087399959564E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[251]
-  0  1.5492263436317444E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[252]
-  0  1.5592212975025177E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[253]
-  0  1.5692397952079773E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[254]
-  0  1.5792411565780640E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[255]
-  0  1.5892639756202698E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[256]
-  0  1.5992705523967743E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[257]
-  0  1.6092967987060547E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[258]
-  0  1.5892535448074341E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[259]
-  0  1.5992717444896698E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[260]
-  0  1.6092757880687714E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[261]
-  0  1.5992520749568939E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[262]
-  0  1.6092693805694580E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[263]
-  0  1.6192680597305298E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[264]
-  0  1.6292873024940491E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[265]
-  0  1.6392917931079865E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[266]
-  0  1.6493171453475952E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[267]
-  0  1.6493031382560730E-01       0                 1.0000000000000000E+100
-  6   256   # pCL_WithHeatSource_withController.data.molarMass[268]
-  0      42                       0                       0                
-  6   258   # pCL_WithHeatSource_withController.data.nA
- -1  2.3999999999999999E+00       0                       0                
-  1   280   # pCL_WithHeatSource_withController.data.nus[1]
+  0    1000                       0                       0                
+  6   256   # pCL_WithHeatSource_withController.CS.add.u1
+ -1       1                       0                       0                
+  1   280   # pCL_WithHeatSource_withController.CS.add.k1
+ -1       1                       0                       0                
+  1   280   # pCL_WithHeatSource_withController.CS.add.k2
+  0    1000                       0                       0                
+  6   256   # pCL_WithHeatSource_withController.CS.realExpression1.y
  -1       0                       0                       0                
   1   282   # pCL_WithHeatSource_withController.toggleStaticHead
  -1       2                       0                       0                
@@ -9633,20 +8395,20 @@ double initialValue(6134,6)
   6  1280   # pCL_WithHeatSource_withController.boundary2.T_in_internal
   0       1                       0                       0                
   6  1280   # pCL_WithHeatSource_withController.boundary2.X_in_internal[1]
-  0       0                 -100000                  100000                
-  6   388   # pCL_WithHeatSource_withController.port_b.m_flow
   0  100000                 -1.0000000000000000E+10  1.0000000000000000E+10
   6   260   # pCL_WithHeatSource_withController.port_b.h_outflow
-  0       0                       0                  100000                
-  6   388   # pCL_WithHeatSource_withController.relativePressure.port_a.m_flow
-  0  100000                  6.1165700000000004E+02  1.0000000000000000E+08
-  6   292   # pCL_WithHeatSource_withController.relativePressure.port_a.p
-  0  100000                 -1.0000000000000000E+10  1.0000000000000000E+10
-  6   260   # pCL_WithHeatSource_withController.relativePressure.port_a.h_outflow
-  0       0                       0                  100000                
-  6   388   # pCL_WithHeatSource_withController.relativePressure.port_b.m_flow
+  0       1                       0                       0                
+  6   257   # pCL_WithHeatSource_withController.sensor_p.allowFlowReversal
+ -1       1                       0                       0                
+  1   281   # pCL_WithHeatSource_withController.sensor_p.showName
+  0       0                 -9.9999999999999995E+59  100000                
+  6   388   # pCL_WithHeatSource_withController.sensor_p.port.m_flow
+  0       0                 -1.0000000000000000E+10  1.0000000000000000E+10
+  6   260   # pCL_WithHeatSource_withController.sensor_p.port.h_outflow
+ -1       0                       0                 1.0000000000000000E+100
+  1   282   # pCL_WithHeatSource_withController.sensor_p.precision
   0       0                       0                       0                
-  6   256   # pCL_WithHeatSource_withController.relativePressure.p_rel
+  6   256   # pCL_WithHeatSource_withController.sensor_p.y
   0  8.3158601170000002E+03 -100000                  100000                
   6  1412   # pCL_WithHeatSource_withController.PHX.port_a_tube.m_flow
   0       0                 -1.0000000000000000E+10  1.0000000000000000E+10
@@ -14559,8 +13321,6 @@ double initialValue(6134,6)
   6  1280   # pCL_WithHeatSource_withController.pipeToPHX_PCL.mediums[2].T_degC
   0       0                       0                       0                
   6  1280   # pCL_WithHeatSource_withController.pipeToPHX_PCL.mediums[2].p_bar
-  0       0                 -100000                  100000                
-  6  1412   # pCL_WithHeatSource_withController.SHX.port_b_tube.m_flow
   0       0                 -1.0000000000000000E+10  1.0000000000000000E+10
   6  1284   # pCL_WithHeatSource_withController.SHX.port_a_shell.h_outflow
   0       0                       0                       0                
@@ -15937,8 +14697,6 @@ double initialValue(6134,6)
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.summary.xpos_norm[2]
   0       1                       0                       0                
   6  1281   # pCL_WithHeatSource_withController.SHX.tube.allowFlowReversal
-  0       0                 -100000                  9.9999999999999995E+59
-  6  1412   # pCL_WithHeatSource_withController.SHX.tube.port_b.m_flow
   0       0                       0                       0                
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.nParallel
   0       2                       1                 1.0000000000000000E+100
@@ -15979,7 +14737,7 @@ double initialValue(6134,6)
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.ms[2]
   0       0                       0                       0                
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.der(ms[1])
-  0       0                 -9.9999999999999995E+59 1.0000000000000000E+100
+  0       0                       0                       0                
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.der(ms[2])
   0       0                       0                       0                
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.Us[1]
@@ -16061,8 +14819,6 @@ double initialValue(6134,6)
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.flowModel.m_flows_start[1]
   0       0                       0                       0                
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.flowModel.m_flows_start[2]
-  0       0                       0                       0                
-  6  1280   # pCL_WithHeatSource_withController.SHX.tube.flowModel.vs[3]
   0  2.5000000000000001E-05       0                 1.0000000000000000E+100
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.flowModel.roughnesses[1]
   0  2.5000000000000001E-05       0                 1.0000000000000000E+100
@@ -16085,8 +14841,6 @@ double initialValue(6134,6)
   1  1304   # pCL_WithHeatSource_withController.SHX.tube.flowModel.m_flow_small
  -1       1                       0                 1.0000000000000000E+100
   1  1304   # pCL_WithHeatSource_withController.SHX.tube.flowModel.dp_small
-  0       0                 -9.9999999999999995E+59 1.0000000000000000E+100
-  6  1280   # pCL_WithHeatSource_withController.SHX.tube.flowModel.m_flows[2]
   0       0                       0                       0                
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.flowModel.Is[1]
   0       0                       0                       0                
@@ -16457,12 +15211,16 @@ double initialValue(6134,6)
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.state_a.T
   0       0                       0                       2                
   6  1282   # pCL_WithHeatSource_withController.SHX.tube.state_b.phase
+  0  100000                 -1.0000000000000000E+10  1.0000000000000000E+10
+  6  1280   # pCL_WithHeatSource_withController.SHX.tube.state_b.h
   0     150                       0                  100000                
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.state_b.d
   0     500                  2.7314999999999998E+02  2.2731500000000001E+03
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.state_b.T
   0       0                       0                       0                
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.m_flows[1]
+  0       0                 -9.9999999999999995E+59 1.0000000000000000E+100
+  6  1280   # pCL_WithHeatSource_withController.SHX.tube.m_flows[2]
   0       0                 -9.9999999999999995E+59 1.0000000000000000E+100
   6  1280   # pCL_WithHeatSource_withController.SHX.tube.m_flows[3]
   0       0                       0                       0                
@@ -18553,7 +17311,7 @@ double initialValue(6134,6)
 #   Which variables will be important for initialization and continue
 #   is indicated by value in column 6 & dsStartMasks.
 #
-char initialDescription(6134,143)
+char initialDescription(5720,143)
 Default ambient pressure [Pa|bar]
 Default ambient temperature [K|degC]
 Constant gravity acceleration [m/s2]
@@ -18596,8 +17354,11 @@ Default small mass flow rate for regularization of laminar and zero flow [kg/s]
 
 kg/m3 [kg/m3|g/cm3]
 [kg/s]
+TCV fraction open [1]
+Value of Real output [1]
 Heat loss (negative)/gain (positive) not accounted for in connections (e.g., energy vented to atmosphere) [W]
 Electricity loss (negative)/gain (positive) not accounted for in connections (e.g., heating/cooling, pumps, etc.) [W]
+Mass flow rate from port_a to port_b [kg/s]
 Type of Feed Heating [:#(type=NHES.Systems.BalanceOfPlant.Turbine.Data.BOP_Type)]
 High Pressure Turbine Inlet Pressure [Pa|bar]
 Overpressure Set Pressure   [Pa|bar]
@@ -18645,10 +17406,9 @@ Initial tube mass flow rate in bypass feedwater heater [kg/s]
 Initial shell mass flow rate in main feedwater heater [kg/s]
 Initial Heat Flow in main feedwater heater [W]
 Value of Real output [K]
-Value of Real output [kg/s]
+Value of Real output [1]
 Connector of setpoint input signal [K]
-Connector of measurement input signal [K]
-Connector of actuator output signal [kg/s]
+Connector of actuator output signal
 Control error (set point - measurement) [K]
 Type of controller [:#(type=Modelica.Blocks.Types.SimpleController)]
 enable feed-forward input signal [:#(type=Boolean)]
@@ -18660,8 +17420,8 @@ Output bias. May improve simulation
 Setpoint input scaling: k_s*u_s. May improve simulation [1]
 Measurement input scaling: k_m*u_m. May improve simulation [1]
 Measurement input scaling: k_ff*u_ff. May improve simulation
-Upper limit of output [kg/s]
-Lower limit of output [kg/s]
+Upper limit of output
+Lower limit of output
 Set-point weight for Proportional block (0..1)
 Set-point weight for Derivative block (0..1)
 Ni*Ti is time constant of anti-windup compensation
@@ -18669,7 +17429,7 @@ The higher Nd, the more ideal the derivative block
 Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]
 Initial or guess value value for integrator output (= integrator state)
 Initial or guess value for state of derivative block
-Initial value of output [kg/s]
+Initial value of output
 = true, if strict limits with noEvent(..) [:#(type=Boolean)]
 Type of controller output reset [:#(type=TRANSFORM.Types.Reset)]
 Value to which the controller output is reset if the boolean trigger has a rising edge, used if reset == TRANSFORM.Types.Reset.Parameter
@@ -18686,11 +17446,11 @@ Output signal connector
 Gain of input signal 1
 Gain of input signal 2
 Gain of input signal 3
-Upper limits of input signals [kg/s]
-Lower limits of input signals [kg/s]
+Upper limits of input signals
+Lower limits of input signals
 = true, if strict limits with noEvent(..) [:#(type=Boolean)]
 Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]
-Connector of Real input signal [kg/s]
+Connector of Real input signal
 Constant output value
 Gain of input signal 1
 Gain of input signal 2
@@ -18722,157 +17482,6 @@ Gain of input signal 1
 Gain of input signal 2
 Gain value multiplied with input signal [1]
 Constant output value
-Control error (set point - measurement) [Pa]
-Type of controller [:#(type=Modelica.Blocks.Types.SimpleController)]
-enable feed-forward input signal [:#(type=Boolean)]
-=true avoid derivative kick [:#(type=Boolean)]
-Controller gain: +/- for direct/reverse acting [1]
-Time constant of Integrator block [s]
-Time constant of Derivative block [s]
-Output bias. May improve simulation
-Setpoint input scaling: k_s*u_s. May improve simulation [1]
-Measurement input scaling: k_m*u_m. May improve simulation [1]
-Measurement input scaling: k_ff*u_ff. May improve simulation
-Upper limit of output [1]
-Lower limit of output [1]
-Set-point weight for Proportional block (0..1)
-Set-point weight for Derivative block (0..1)
-Ni*Ti is time constant of anti-windup compensation
-The higher Nd, the more ideal the derivative block
-Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]
-Initial or guess value value for integrator output (= integrator state)
-Initial or guess value for state of derivative block
-Initial value of output [1]
-= true, if strict limits with noEvent(..) [:#(type=Boolean)]
-Type of controller output reset [:#(type=TRANSFORM.Types.Reset)]
-Value to which the controller output is reset if the boolean trigger has a rising edge, used if reset == TRANSFORM.Types.Reset.Parameter
-Connector of Real input signal 1 [Pa]
-Connector of Real input signal 2 [Pa]
-Connector of Real output signal
-Gain of input signal 1
-Gain of input signal 2
-Gain value multiplied with input signal [1]
-Output signal connector
-Gain value multiplied with input signal [1]
-Input signal connector
-Output signal connector
-Gain of input signal 1
-Gain of input signal 2
-Gain of input signal 3
-Upper limits of input signals [1]
-Lower limits of input signals [1]
-= true, if strict limits with noEvent(..) [:#(type=Boolean)]
-Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]
-Connector of Real input signal [1]
-Constant output value
-Gain of input signal 1
-Gain of input signal 2
-Gain of input signal 3
-Gain value multiplied with input signal [1]
-Gain value multiplied with input signal [1]
-Constant output value
-[s]
-[:#(type=Boolean)]
-[:#(type=Boolean)]
-Internal connector for controller output reset
-Connector of Real input signal
-Connector of Real output signal
-der(Connector of Real output signal)
-Integrator gain [1]
-Type of initialization (1: no init, 2: steady state, 3,4: initial output) [:#(type=Modelica.Blocks.Types.Init)]
-Initial or guess value of output (= state)
-Type of integrator reset [:#(type=TRANSFORM.Types.Reset)]
-Value to which integrator is reset, used if reset = TRANSFORM.Types.Reset.Parameter
-Internal connector for integrator reset
-Needed to use conditional connector trigger [:#(type=Boolean)]
-Gain of input signal 1
-Gain of input signal 2
-Gain of input signal 3
-Connector of Real input signal 3
-Connector of Real output signal
-Gain of input signal 1
-Gain of input signal 2
-Gain value multiplied with input signal [1]
-Constant output value
-Connector of setpoint input signal [kg/s]
-Connector of measurement input signal [kg/s]
-Connector of actuator output signal [1]
-Type of controller [:#(type=Modelica.Blocks.Types.SimpleController)]
-enable feed-forward input signal [:#(type=Boolean)]
-=true avoid derivative kick [:#(type=Boolean)]
-Controller gain: +/- for direct/reverse acting [1]
-Time constant of Integrator block [s]
-Time constant of Derivative block [s]
-Output bias. May improve simulation
-Setpoint input scaling: k_s*u_s. May improve simulation [1]
-Measurement input scaling: k_m*u_m. May improve simulation [1]
-Measurement input scaling: k_ff*u_ff. May improve simulation
-Upper limit of output [1]
-Lower limit of output [1]
-Set-point weight for Proportional block (0..1)
-Set-point weight for Derivative block (0..1)
-Ni*Ti is time constant of anti-windup compensation
-The higher Nd, the more ideal the derivative block
-Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]
-Initial or guess value value for integrator output (= integrator state)
-Initial or guess value for state of derivative block
-Initial value of output [1]
-= true, if strict limits with noEvent(..) [:#(type=Boolean)]
-Type of controller output reset [:#(type=TRANSFORM.Types.Reset)]
-Value to which the controller output is reset if the boolean trigger has a rising edge, used if reset == TRANSFORM.Types.Reset.Parameter
-Connector of Real input signal 1 [kg/s]
-Connector of Real input signal 2 [kg/s]
-Connector of Real output signal
-Gain of input signal 1
-Gain of input signal 2
-Gain value multiplied with input signal [1]
-Output signal connector
-Gain value multiplied with input signal [1]
-Input signal connector
-Output signal connector
-Gain of input signal 1
-Gain of input signal 2
-Gain of input signal 3
-Upper limits of input signals [1]
-Lower limits of input signals [1]
-= true, if strict limits with noEvent(..) [:#(type=Boolean)]
-Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]
-Connector of Real input signal [1]
-Constant output value
-Gain of input signal 1
-Gain of input signal 2
-Gain of input signal 3
-Gain value multiplied with input signal [1]
-Input signal connector [kg/s]
-Output signal connector [kg/s]
-Gain value multiplied with input signal [1]
-Constant output value
-[s]
-[:#(type=Boolean)]
-[:#(type=Boolean)]
-Internal connector for controller output reset
-Connector of Real input signal
-Connector of Real output signal
-der(Connector of Real output signal)
-Integrator gain [1]
-Type of initialization (1: no init, 2: steady state, 3,4: initial output) [:#(type=Modelica.Blocks.Types.Init)]
-Initial or guess value of output (= state)
-Type of integrator reset [:#(type=TRANSFORM.Types.Reset)]
-Value to which integrator is reset, used if reset = TRANSFORM.Types.Reset.Parameter
-Internal connector for integrator reset
-Needed to use conditional connector trigger [:#(type=Boolean)]
-Gain of input signal 1
-Gain of input signal 2
-Gain of input signal 3
-Connector of Real input signal 1 [kg/s]
-Connector of Real input signal 3
-Connector of Real output signal
-Gain of input signal 1
-Gain of input signal 2
-Gain value multiplied with input signal [1]
-Constant output value
-Connector of measurement input signal [K]
-Connector of actuator output signal [1]
 Control error (set point - measurement) [K]
 Type of controller [:#(type=Modelica.Blocks.Types.SimpleController)]
 enable feed-forward input signal [:#(type=Boolean)]
@@ -18945,6 +17554,11 @@ Gain of input signal 1
 Gain of input signal 2
 Gain value multiplied with input signal [1]
 Constant output value
+Value of Real output [1]
+Connector of Real input signal 2
+Gain of input signal 1
+Gain of input signal 2
+Value of Real output
 If y=true and u<uLow, switch to y=false [Pa]
 If y=false and u>uHigh, switch to y=true [Pa]
 Value of pre(y) at initial time [:#(type=Boolean)]
@@ -18959,26 +17573,11 @@ Duration of ramp (= 0.0 gives a Step) [s]
 Connector of Real output signal
 Offset of output signal y
 Output y = offset for time < startTime [s]
-Connector of Boolean input signal [:#(type=Boolean)]
-Time instant of step start [s]
-Output before startTime [:#(type=Boolean)]
-Connector of second Real input signal [K]
-Connector of Boolean input signal [:#(type=Boolean)]
-Time instant of step start [s]
-Output before startTime [:#(type=Boolean)]
-Connector of second Real input signal [1]
-Value of Real output [1]
-Connector of Boolean input signal [:#(type=Boolean)]
-Connector of second Real input signal [kg/s]
-Time instant of step start [s]
-Output before startTime [:#(type=Boolean)]
-Connector of second Real input signal [1]
-Height of ramps [1]
-Duration of ramp (= 0.0 gives a Step) [s]
-Offset of output signal y [1]
-Output y = offset for time < startTime [s]
+TCV fraction open [1]
+=1: completely open, =0: completely closed [1]
 Heat loss (negative)/gain (positive) not accounted for in connections (e.g., energy vented to atmosphere) [W]
 Electricity loss (negative)/gain (positive) not accounted for in connections (e.g., heating/cooling, pumps, etc.) [W]
+Mass flow rate from port_a to port_b [kg/s]
 Type of Feed Heating [:#(type=NHES.Systems.BalanceOfPlant.Turbine.Data.BOP_Type)]
 High Pressure Turbine Inlet Pressure [Pa|bar]
 Overpressure Set Pressure   [Pa|bar]
@@ -19026,9 +17625,11 @@ Initial tube mass flow rate in bypass feedwater heater [kg/s]
 Initial shell mass flow rate in main feedwater heater [kg/s]
 Initial Heat Flow in main feedwater heater [W]
 TCV fraction open [1]
+=1: completely open, =0: completely closed [1]
 Heat loss (negative)/gain (positive) not accounted for in connections (e.g., energy vented to atmosphere) [W]
 Electricity loss (negative)/gain (positive) not accounted for in connections (e.g., heating/cooling, pumps, etc.) [W]
 Total electrical power generated [W]
+Mass flow rate from port_a to port_b [kg/s]
 Value of Real output [W]
 Value of Real output [W]
 Mass flow rate from the connection point into the component [kg/s]
@@ -19379,15 +17980,19 @@ der(Mass) [kg/s]
 Internal energy [J]
 der(Internal energy) [W]
 = true to set up initial equations for pressure [:#(type=Boolean)]
+Mass flow rate from the connection point into the component [kg/s]
 = true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
 = false to hide the flow direction arrow [:#(type=Boolean)]
 = false to hide component name [:#(type=Boolean)]
+Mass flow rate from the connection point into the component [kg/s]
+Mass flow rate from the connection point into the component [kg/s]
 Thermodynamic pressure in the connection point [Pa|bar]
 Guess value of dp = port_a.p - port_b.p [Pa|bar]
 Guess value of m_flow = port_a.m_flow [kg/s]
 Small mass flow rate for regularization of zero flow [kg/s]
 = true, if temperatures at port_a and port_b are computed [:#(type=Boolean)]
 = true, if volume flow rate at inflowing port is computed [:#(type=Boolean)]
+Mass flow rate in design flow direction [kg/s]
 Pressure difference between port_a and port_b (= port_a.p - port_b.p) [Pa|bar]
 Volume flow rate at inflowing port (positive when flow from port_a to port_b) [m3/s]
 Temperature close to port_a, if show_T = true [K|degC]
@@ -19688,6 +18293,7 @@ Temperature [K|degC]
 Nominal pressure drop at full opening [Pa|bar]
 Nominal mass flowrate at full opening [kg/s]
 Hydraulic conductance at full opening [kg/(s.Pa)]
+=1: completely open, =0: completely closed [1]
 = true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
 = false to hide component name [:#(type=Boolean)]
 Mass flow rate from the connection point into the component [kg/s]
@@ -19713,7 +18319,9 @@ Mass flow rate from the connection point into the component [kg/s]
 Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
 = true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
 = false to hide component name [:#(type=Boolean)]
+Mass flow rate from the connection point into the component [kg/s]
 Thermodynamic pressure in the connection point [Pa|bar]
+Mass flow rate from the connection point into the component [kg/s]
 Thermodynamic pressure in the connection point [Pa|bar]
 Regularization for zero flow:|m_flow| < m_flow_small [kg/s]
 Pressure [Pa|bar]
@@ -19722,6 +18330,9 @@ Temperature [K|degC]
 Specific enthalpy [J/kg]
 Mass fraction [1]
 Number of decimals displayed [:#(type=Integer)]
+Variable to be converted [kg/s]
+Icon display
+Mass flow rate from port_a to port_b [kg/s]
 = true to use input signal [:#(type=Boolean)]
 Frequency [Hz]
 Integrator gain [1]
@@ -19750,6 +18361,7 @@ Temperature of medium in [degC] [degC;]
 Absolute pressure of medium in [bar] [bar]
 Saturation pressure [Pa|bar]
 Saturation temperature [K|degC]
+Mass flow rate from the connection point into the component [kg/s]
 Thermodynamic pressure in the connection point [Pa|bar]
 Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
 Allowed flow direction [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
@@ -19840,6 +18452,7 @@ Needed to connect to conditional connector [Pa]
 Needed to connect to conditional connector [K]
 Needed to connect to conditional connector [1]
 Connector of setpoint input signal [Pa]
+Connector of actuator output signal
 Control error (set point - measurement) [Pa]
 Type of controller [:#(type=Modelica.Blocks.Types.SimpleController)]
 enable feed-forward input signal [:#(type=Boolean)]
@@ -19851,8 +18464,8 @@ Output bias. May improve simulation
 Setpoint input scaling: k_s*u_s. May improve simulation [1]
 Measurement input scaling: k_m*u_m. May improve simulation [1]
 Measurement input scaling: k_ff*u_ff. May improve simulation
-Upper limit of output [kg/s]
-Lower limit of output [kg/s]
+Upper limit of output
+Lower limit of output
 Set-point weight for Proportional block (0..1)
 Set-point weight for Derivative block (0..1)
 Ni*Ti is time constant of anti-windup compensation
@@ -19860,7 +18473,7 @@ The higher Nd, the more ideal the derivative block
 Type of initialization (1: no init, 2: steady state, 3: initial state, 4: initial output) [:#(type=Modelica.Blocks.Types.Init)]
 Initial or guess value value for integrator output (= integrator state)
 Initial or guess value for state of derivative block
-Initial value of output [kg/s]
+Initial value of output
 = true, if strict limits with noEvent(..) [:#(type=Boolean)]
 Type of controller output reset [:#(type=TRANSFORM.Types.Reset)]
 Value to which the controller output is reset if the boolean trigger has a rising edge, used if reset == TRANSFORM.Types.Reset.Parameter
@@ -19877,11 +18490,11 @@ Output signal connector
 Gain of input signal 1
 Gain of input signal 2
 Gain of input signal 3
-Upper limits of input signals [kg/s]
-Lower limits of input signals [kg/s]
+Upper limits of input signals
+Lower limits of input signals
 = true, if strict limits with noEvent(..) [:#(type=Boolean)]
 Simplified model for homotopy-based initialization [:#(type=Modelica.Blocks.Types.LimiterHomotopy)]
-Connector of Real input signal [kg/s]
+Connector of Real input signal
 Constant output value
 Gain of input signal 1
 Gain of input signal 2
@@ -19914,277 +18527,10 @@ Gain of input signal 2
 Gain value multiplied with input signal [1]
 Constant output value
 Value of Real output [Pa]
-# of isotopes (e.g., I/Xe) [:#(type=Integer)]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-Molar mass [kg/mol]
-[:#(type=Integer)]
-Neutrons per fission [1]
+Connector of Real input signal 1
+Gain of input signal 1
+Gain of input signal 2
+Value of Real output
 =1 to turn on, =0 to turn off [:#(type=Integer)]
 [:#(type=Integer)]
 [:#(type=Integer)]
@@ -20251,13 +18597,13 @@ Fixed value of composition [kg/kg]
 Needed to connect to conditional connector [kg/s]
 Needed to connect to conditional connector [K]
 Needed to connect to conditional connector [1]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+= false to hide component name [:#(type=Boolean)]
 Mass flow rate from the connection point into the component [kg/s]
 Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
-Mass flow rate from the connection point into the component [kg/s]
-Thermodynamic pressure in the connection point [Pa|bar]
-Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
-Mass flow rate from the connection point into the component [kg/s]
-Relative pressure signal [Pa|bar]
+Number of decimals displayed [:#(type=Integer)]
+Icon display
 Mass flow rate from the connection point into the component [kg/s]
 Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
 der(Specific thermodynamic enthalpy close to the connection point if m_flow < 0) [m2/s3]
@@ -22714,7 +21060,6 @@ Molar mass (of mixture or single fluid) [kg/mol]
 If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
 Temperature of medium in [degC] [degC;]
 Absolute pressure of medium in [bar] [bar]
-Mass flow rate from the connection point into the component [kg/s]
 Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
 der(Specific thermodynamic enthalpy close to the connection point if m_flow < 0) [m2/s3]
 Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
@@ -23403,7 +21748,6 @@ x-position for physical location reference
 x-position for physical location reference normalized by total length
 x-position for physical location reference normalized by total length
 = true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
-Mass flow rate from the connection point into the component [kg/s]
 Number of parallel components [1]
 Number of discrete volumes [:#(type=Integer)]
 Discretized volumes [m3]
@@ -23465,7 +21809,6 @@ Pressure changes {p[2]-p[1],...,p[n+1]-p[n]} [Pa|bar]
 Pressure changes {p[2]-p[1],...,p[n+1]-p[n]} [Pa|bar]
 Mass flow rates [kg/s]
 Mass flow rates [kg/s]
-Mean velocities of fluid flow [m/s]
 Average height of surface asperities [m]
 Average height of surface asperities [m]
 Average height of surface asperities [m]
@@ -23477,7 +21820,6 @@ Turbulent transition Reynolds number [1]
 = true, use m_flow = f(dp), otherwise dp = f(m_flow) [:#(type=Boolean)]
 Within regularization if |m_flows| < m_flow_small (may be wider for large discontinuities in static head) [kg/s]
 Within regularization if |dp| < dp_small (may be wider for large discontinuities in static head) [Pa|bar]
-Mass flow rate across interfaces [kg/s]
 Momenta of flow segments [kg.m/s]
 Momenta of flow segments [kg.m/s]
 Flow of momentum across boundaries and source/sink in volumes [N]
@@ -23663,8 +22005,10 @@ Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., inter
 Density [kg/m3|g/cm3]
 Temperature [K|degC]
 Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Specific enthalpy [J/kg]
 Density [kg/m3|g/cm3]
 Temperature [K|degC]
+Mass flow rates across segment boundaries [kg/s]
 Mass flow rates across segment boundaries [kg/s]
 Mass flow rates across segment boundaries [kg/s]
 Enthalpy flow rates across segment boundaries [W]

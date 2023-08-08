@@ -8,7 +8,7 @@ model PCL_BOP_withController
 
   NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_L3_HPOFWH BOP(
     redeclare replaceable
-      NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_L3_2 CS(data(
+      NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_L3_3 CS(data(
         HPT_p_in=data.HPT_p_in,
         p_dump=data.p_dump,
         p_i1=data.p_i1,
@@ -51,7 +51,8 @@ model PCL_BOP_withController
     OFWH_1(T_start=333.15),
     OFWH_2(T_start=353.15),
     LPT1_bypass_valve(dp_nominal(displayUnit="Pa") = 1, m_flow_nominal=10*m_ext),
-    moistureSeperator(T_start=373.15))
+    moistureSeperator(T_start=373.15),
+    pump1(p_nominal=10500000))
     annotation (Placement(transformation(extent={{56,-20},{116,40}})));
      // booleanStep2(startTime=100000),
       //Steam_Extraction(y=data.m_ext),
@@ -130,8 +131,8 @@ equation
                                                                    color={0,127,
           255}));
   annotation (experiment(
-      StopTime=1000,
-      Interval=1,
+      StopTime=1000000,
+      Interval=10,
       __Dymola_Algorithm="Esdirk45a"), Documentation(info="<html>
 <p>Test of Pebble_Bed_Three-Stage_Rankine. The simulation should experience transient where external electricity demand is oscilating and control valves are opening and closing corresponding to the required power demand. </p>
 <p>The ThreeStaged Turbine BOP model contains four control elements: </p>

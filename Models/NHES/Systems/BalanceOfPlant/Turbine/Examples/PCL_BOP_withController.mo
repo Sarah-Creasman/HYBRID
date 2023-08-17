@@ -27,7 +27,7 @@ model PCL_BOP_withController
         m_ext=data.m_ext,
         eta_t=data.eta_t,
         eta_mech=data.eta_mech,
-        eta_p=data.eta_p)),
+        eta_p=data.eta_p), booleanStep(startTime=1.1e6)),
     redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
       HPT_p_in=data.HPT_p_in,
       p_dump=data.p_dump,
@@ -106,7 +106,9 @@ model PCL_BOP_withController
     nV_pipeFromPHX_PCL=2,
     nV_pipeToPHX_PCL=2,
     nV_pipeToSHX_PCL=2,
-    CS(realExpression(y=120e5)))
+    CS(realExpression(y=120e5),
+      PID(yMax=200000, yMin=-200000),
+      realExpression1(y=4000)))
     annotation (Placement(transformation(extent={{-30,22},{-10,42}})));
 initial equation
 

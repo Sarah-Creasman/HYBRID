@@ -2619,7 +2619,6 @@ package SHS_Two_Tank
             TRANSFORM.Fluid.ClosureRelations.PressureLoss.Models.DistributedPipe_1D.SinglePhase_Developed_2Region_Simple,
         redeclare model HeatTransfer_tube =
             TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.DistributedPipe_1D_MultiTransferSurface.Nus_DittusBoelter_Simple,
-
         p_a_start_tube=1500000,
         p_b_start_tube=800000,
         exposeState_b_shell=false,

@@ -4,7 +4,7 @@ model CS_1
   extends MSR.BaseClasses.Partial_ControlSystem;
 
   TRANSFORM.Controls.LimPID PID(controllerType=Modelica.Blocks.Types.SimpleController.PI,
-    k=1e-5,
+    k=1e-7,
     yMax=20000,
     yMin=-990)
     annotation (Placement(transformation(extent={{-44,-16},{-8,20}})));
@@ -12,8 +12,8 @@ model CS_1
     annotation (Placement(transformation(extent={{-172,-2},{-152,18}})));
   Modelica.Blocks.Math.Add add
     annotation (Placement(transformation(extent={{38,8},{58,28}})));
-  Modelica.Blocks.Sources.RealExpression realExpression1(y=1000)
-    annotation (Placement(transformation(extent={{-92,32},{-72,52}})));
+  Modelica.Blocks.Sources.RealExpression realExpression1(y=4400)
+    annotation (Placement(transformation(extent={{-94,32},{-74,52}})));
 equation
 
   connect(realExpression.y, PID.u_s) annotation (Line(points={{-151,8},{-58,
@@ -38,8 +38,8 @@ equation
       index=-1,
       extent={{-3,-6},{-3,-6}},
       horizontalAlignment=TextAlignment.Right));
-  connect(add.u1, realExpression1.y) annotation (Line(points={{36,24},{-66,
-          24},{-66,42},{-71,42}}, color={0,0,127}));
+  connect(add.u1, realExpression1.y) annotation (Line(points={{36,24},{-66,24},
+          {-66,42},{-73,42}},     color={0,0,127}));
 annotation(defaultComponentName="changeMe_CS", Icon(graphics={
         Text(
           extent={{-94,82},{94,74}},

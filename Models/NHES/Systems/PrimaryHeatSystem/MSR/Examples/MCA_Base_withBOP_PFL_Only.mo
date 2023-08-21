@@ -409,7 +409,7 @@ protected
     p_a_start_tube=data_PHX.p_inlet_tube,
     T_a_start_tube=data_PHX.T_inlet_tube,
     T_b_start_tube=data_PHX.T_outlet_tube,
-    nParallel=2*3,
+    nParallel=24,
     m_flow_a_start_shell=2*3*data_PHX.m_flow_shell,
     C_a_start_tube=Cs_start,
     m_flow_a_start_tube=2*3*data_PHX.m_flow_tube,
@@ -1069,7 +1069,7 @@ protected
         rotation=0,
         origin={-268,-52})));
   TRANSFORM.Fluid.Machines.Pump_SimpleMassFlow pump_drainTank(redeclare package
-              Medium =                                                                   Medium_PFL,
+      Medium =                                                                           Medium_PFL,
       use_input=true) annotation (Placement(transformation(extent={{-248,-62},{-228,-42}})));
   TRANSFORM.Fluid.Machines.Pump_SimpleMassFlow pump_OffGas_bypass(use_input=true, redeclare
       package Medium =
@@ -1094,7 +1094,7 @@ protected
         rotation=90,
         origin={-318,98})));
   TRANSFORM.Fluid.Machines.Pump_SimpleMassFlow pump_bypass(redeclare package
-              Medium =                                                                Medium_PFL,
+      Medium =                                                                        Medium_PFL,
       use_input=true) annotation (Placement(transformation(extent={{-286,110},{-306,130}})));
   Modelica.Blocks.Sources.RealExpression m_flow_pump_bypass(y=x_bypass.y*abs(pump_PFL.port_a.m_flow))
     annotation (Placement(transformation(extent={{-326,124},{-306,144}})));

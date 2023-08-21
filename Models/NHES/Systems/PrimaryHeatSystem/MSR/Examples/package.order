@@ -10,3 +10,6 @@ MCA_Base_withBOP_PFL_Only
 MCA_Base_withBOP_PFL_Standalone
 PCL_PortsBothSides
 PCL_PortsBothSides_NoPHX
+PCL_WithHeatSource_withController_BOP_Ports
+MCA_Base_withBOP_PFL_NoPHX
+PCL_PortsBothSides_NoPHXPressureFIx

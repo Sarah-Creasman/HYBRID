@@ -45,7 +45,8 @@ model PCL_WithHeatSource_withController
   Modelica.Fluid.Interfaces.FluidPort_b port_b(redeclare package Medium =
         Medium_BOP)
     annotation (Placement(transformation(extent={{154,36},{174,56}})));
-  TRANSFORM.Fluid.Sensors.Pressure sensor_p
+  TRANSFORM.Fluid.Sensors.Pressure sensor_p(redeclare package Medium =
+        Medium_BOP)
     annotation (Placement(transformation(extent={{88,48},{108,68}})));
 protected
   TRANSFORM.HeatExchangers.GenericDistributed_HX_withMass

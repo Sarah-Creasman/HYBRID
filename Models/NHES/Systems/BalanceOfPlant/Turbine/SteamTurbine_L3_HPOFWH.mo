@@ -3,8 +3,8 @@ model SteamTurbine_L3_HPOFWH
   "Three Stage Turbine with open feed water heating using high pressure steam"
   extends NHES.Systems.BalanceOfPlant.Turbine.BaseClasses.Partial_SubSystem(
     redeclare replaceable
-      NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_L3
-      CS(TCV_PID(yMax=1, yMin=1)),
+      NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_L3_3
+      CS,
     redeclare replaceable
       NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.ED_Dummy ED,
     redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(

@@ -96,10 +96,10 @@ model PCL_BOP_withController_PFLNoController
     nPorts=1)
     annotation (Placement(transformation(extent={{-4,56},{16,76}})));
   PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_PFL_Only
-    mCA_Base_withBOP_PFL_Only
+    mCA_Base_withBOP_PFL_Only(PHX(nParallel=24))
     annotation (Placement(transformation(extent={{-122,24},{-102,44}})));
-  PrimaryHeatSystem.MSR.Examples.PCL_PortsBothSides_NoPHX
-    pCL_PortsBothSides_NoPHX
+  PrimaryHeatSystem.MSR.Examples.PCL_PortsBothSides_NoPHXPressureFIx
+    pCL_PortsBothSides_NoPHX(CS(realExpression(y=120e5)))
     annotation (Placement(transformation(extent={{-44,20},{-24,40}})));
 initial equation
 
@@ -117,19 +117,19 @@ equation
   connect(BOP.prt_b_steamdump, steamdump.ports[1]) annotation (Line(points={{56,
           40},{22,40},{22,66},{16,66}}, color={0,127,255}));
   connect(pCL_PortsBothSides_NoPHX.port_b, BOP.port_a_steam) annotation (Line(
-        points={{-17.6,34.6},{46,34.6},{46,28},{56,28}}, color={0,127,255}));
+        points={{-21.6,34.4},{46,34.4},{46,28},{56,28}}, color={0,127,255}));
   connect(pCL_PortsBothSides_NoPHX.port_a, BOP.port_b_feed) annotation (Line(
         points={{-21.8,27.2},{-10,27.2},{-10,-10},{48,-10},{48,-8},{56,-8}},
         color={0,127,255}));
   connect(pCL_PortsBothSides_NoPHX.port_b1, mCA_Base_withBOP_PFL_Only.port_a)
-    annotation (Line(points={{-48.8,29.4},{-86.4,29.4},{-86.4,26}}, color={0,
+    annotation (Line(points={{-40.2,27.8},{-86.4,27.8},{-86.4,26}}, color={0,
           127,255}));
   connect(pCL_PortsBothSides_NoPHX.port_a1, mCA_Base_withBOP_PFL_Only.port_b)
-    annotation (Line(points={{-50.8,34.8},{-86.2,34.8},{-86.2,37.4}}, color={0,
+    annotation (Line(points={{-42.8,34.6},{-86.2,34.6},{-86.2,37.4}}, color={0,
           127,255}));
   annotation (experiment(
-      StopTime=100,
-      Interval=10,
+      StopTime=100000,
+      Interval=5,
       __Dymola_Algorithm="Esdirk45a"), Documentation(info="<html>
 <p>Test of Pebble_Bed_Three-Stage_Rankine. The simulation should experience transient where external electricity demand is oscilating and control valves are opening and closing corresponding to the required power demand. </p>
 <p>The ThreeStaged Turbine BOP model contains four control elements: </p>

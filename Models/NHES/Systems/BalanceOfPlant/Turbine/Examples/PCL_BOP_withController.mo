@@ -27,7 +27,7 @@ model PCL_BOP_withController
         m_ext=data.m_ext,
         eta_t=data.eta_t,
         eta_mech=data.eta_mech,
-        eta_p=data.eta_p), booleanStep(startTime=1.1e6)),
+        eta_p=data.eta_p)),
     redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
       HPT_p_in=data.HPT_p_in,
       p_dump=data.p_dump,

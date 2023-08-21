@@ -1,147 +1,24 @@
-Model: NHES.Systems.BalanceOfPlant.Turbine.Examples.PCL_BOP_withController_PFLNoController
+Could not read input file "dsu.txt", inputs will be at their start-values.
+Model: NHES.Systems.PrimaryHeatSystem.MSR.Examples.PCL_WithHeatSource_withController_StandAlone1
 Integration started at 0 using integration method:
 RK-method: esdirk45a
 Local extrapolation
 FSAL
 Continuous extension
 
-Error: The following error was detected at time: 0.0002337405991271158
-  Error in region computation of IF97 steam tables(p = 6.3747e+08, h = 1.27766e+06)
-  Failed condition: false
-The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, 0, 0)
-Modelica.Media.Water.IF97_Utilities.s_ph(BOP.HPT.state_a.p, BOP.HPT.state_a.h, BOP.HPT.state_a.phase, 0)
-Modelica.Media.Water.WaterIF97_ph.specificEntropy_Unique14(
-Modelica.Media.Water.WaterIF97_base.ThermodynamicState(
-phase = BOP.HPT.state_a.phase, 
-h = BOP.HPT.state_a.h, 
-d = BOP.HPT.state_a.d, ...
 
-Non-linear solver will silently attempt to handle this problem.
-Non-linear solver gave up after attempt: 44
+Integration terminated successfully at T = 1e+07
+   CPU-time for integration                  : 0.123 seconds
+   CPU-time for initialization               : 0.001 seconds
+   Number of result points                   : 501
+   Number of grid points                     : 501
+   Number of accepted steps                  : 111
+   Number of rejected steps                  : 26
+   Number of f-evaluations (dynamics)        : 1644
+   Number of crossing function evaluations   : 334
+   Number of Jacobian-evaluations            : 51
+   Number of model time events               : 0
+   Number of state events                    : 0
+   Number of step events                     : 0
 
-Error: The following error was detected at time: 4.180584061360566
-  IF97 medium function tsat called with too low pressure
-p = -1.23889e+07 Pa <= 611.657 Pa (triple point pressure)
-  Failed condition: p > 611.657
-The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].sat.psat)
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].sat.psat)
-Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique21(
-Modelica.Media.Water.WaterIF97_base.SaturationProperties(
-psat = pCL_PortsBothSides_NoPHX.SHX.tube.med...
-
-Error: The following error was detected at time: 4.081165900765281
-  IF97 medium function tsat called with too low pressure
-p = -73936.3 Pa <= 611.657 Pa (triple point pressure)
-  Failed condition: p > 611.657
-The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.Feed_T.port.p, BOP.Feed_T.port.h_outflow_inStream, 0, 0)
-Modelica.Media.Water.IF97_Utilities.T_ph(BOP.Feed_T.port.p, BOP.Feed_T.port.h_outflow_inStream, 0, 0)
-Modelica.Media.Water.WaterIF97_ph.temperature_ph_Unique39(BOP.Feed_T.port.p, BOP.Feed_T.port.h_outflow_inStream, 0, 0)
-Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique37(BOP.Fe...
-
-Error: The following error was detected at time: 4.031456820467638
-  IF97 medium function g2: the input temperature (= 10071.1 K) is higher than the limit of 1073.15 K
-  Failed condition: T <= 1073.15
-The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[1].p, pCL_PortsBothSides_NoPHX.SHX.tube.mediums[1].h, pCL_PortsBothSides_NoPHX.SHX.tube.mediums[1].phase, 0)
-Modelica.Media.Water.IF97_Utilities.rho_ph(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[1].p, pCL_PortsBothSides_NoPHX.SHX.tube.mediums[1].h, pCL_PortsBothSides_NoPHX.SHX.tube.mediums[1].phase, 0)...
-
-Error: The following error was detected at time: 59.32782090850813
-  IF97 medium function tsat called with too low pressure
-p = -1.27529e+07 Pa <= 611.657 Pa (triple point pressure)
-  Failed condition: p > 611.657
-The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].sat.psat)
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].sat.psat)
-Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique21(
-Modelica.Media.Water.WaterIF97_base.SaturationProperties(
-psat = pCL_PortsBothSides_NoPHX.SHX.tube.med...
-
-Error: The following error was detected at time: 58.68456004968267
-  IF97 medium function tsat called with too low pressure
-p = -5.12817e+06 Pa <= 611.657 Pa (triple point pressure)
-  Failed condition: p > 611.657
-The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].sat.psat)
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].sat.psat)
-Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique21(
-Modelica.Media.Water.WaterIF97_base.SaturationProperties(
-psat = pCL_PortsBothSides_NoPHX.SHX.tube.med...
-
-Error: The following error was detected at time: 58.36292962026995
-  IF97 medium function tsat called with too low pressure
-p = -1.65315e+06 Pa <= 611.657 Pa (triple point pressure)
-  Failed condition: p > 611.657
-The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].sat.psat)
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].sat.psat)
-Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique21(
-Modelica.Media.Water.WaterIF97_base.SaturationProperties(
-psat = pCL_PortsBothSides_NoPHX.SHX.tube.med...
-
-Error: The following error was detected at time: 58.20211440556358
-  IF97 medium function tsat called with too low pressure
-p = -232055 Pa <= 611.657 Pa (triple point pressure)
-  Failed condition: p > 611.657
-The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].sat.psat)
-Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].sat.psat)
-Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique21(
-Modelica.Media.Water.WaterIF97_base.SaturationProperties(
-psat = pCL_PortsBothSides_NoPHX.SHX.tube.med...
-
-Error: The following error was detected at time: 58.1217067982104
-  Error in region computation of IF97 steam tables(p = 309724, h = 1.38685e+07)
-  Failed condition: false
-The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
-Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].p, pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].h, pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].phase, 0)
-Modelica.Media.Water.IF97_Utilities.rho_ph(pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].p, pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].h, pCL_PortsBothSides_NoPHX.SHX.tube.mediums[2].phase, 0)...
-
-Error: The following error was detected at time: 58.08150299453381
-  IF97 medium function visc_dTp: viscosity computed outside the range
-of validity of the IF97 formulation: p = 507241 Pa, Tc = 1838.12 K
-  Failed condition: p <= 500000000.0 and (Tc >= 0.0 and Tc <= 150) or p <= 350000000.0 and (Tc > 150.0 and Tc <= 600) or p <= 300000000.0 and (Tc > 600.0 and Tc <= 900)
-The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.dynamicViscosity
-Modelica.Media.Water.IF97_Utilities.dynamicViscosity(pCL_PortsBothSides_NoPHX.SHX.tube.flowModel.mediaProps[2].state.d, pCL_PortsBothSides_NoPHX.SHX.tube.flowModel.mediaProps[2].state.T, pCL_PortsBothSides_NoPHX.SHX.tube.flowModel.mediaProps[2].state.p, pCL_PortsBothSides_NoPHX.SHX.tube.flowModel.mediaProps[2].state.phase, true)
-Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique533(
-Mode...
-
-Error: The following error was detected at time: 58.06140109269551
-  IF97 medium function visc_dTp: viscosity computed outside the range
-of validity of the IF97 formulation: p = 577279 Pa, Tc = 939.327 K
-  Failed condition: p <= 500000000.0 and (Tc >= 0.0 and Tc <= 150) or p <= 350000000.0 and (Tc > 150.0 and Tc <= 600) or p <= 300000000.0 and (Tc > 600.0 and Tc <= 900)
-The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.dynamicViscosity
-Modelica.Media.Water.IF97_Utilities.dynamicViscosity(pCL_PortsBothSides_NoPHX.SHX.tube.flowModel.mediaProps[2].state.d, pCL_PortsBothSides_NoPHX.SHX.tube.flowModel.mediaProps[2].state.T, pCL_PortsBothSides_NoPHX.SHX.tube.flowModel.mediaProps[2].state.p, pCL_PortsBothSides_NoPHX.SHX.tube.flowModel.mediaProps[2].state.phase, true)
-Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique533(
-Mode...
-
-Error: The following error was detected at time: 67.03311825343106
-  IF97 medium function visc_dTp for viscosity called with too low density
-d = -84.4837 <= 0.00485458 (triple point density)
-  Failed condition: d > 0.004854575724778614
-The stack of functions is:
-Modelica.Media.Water.IF97_Utilities.dynamicViscosity
-Modelica
+SUCCESSFUL simulation of NHES.Systems.PrimaryHeatSystem.MSR.Examples.PCL_WithHeatSource_withController_StandAlone1

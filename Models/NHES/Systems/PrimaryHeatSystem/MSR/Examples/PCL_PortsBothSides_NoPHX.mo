@@ -2,7 +2,7 @@ within NHES.Systems.PrimaryHeatSystem.MSR.Examples;
 model PCL_PortsBothSides_NoPHX
   extends MSR.BaseClasses.Partial_SubSystem_A(
   redeclare replaceable MSR.Data.data_new data,
-  redeclare replaceable MSR.CS.CS_1 CS(realExpression(y=1)),
+  redeclare replaceable MSR.CS.CS_1 CS,
   redeclare replaceable MSR.CS.ED_Dummy ED);
 
     replaceable package Medium_PFL =
@@ -34,18 +34,16 @@ model PCL_PortsBothSides_NoPHX
     annotation (Placement(transformation(extent={{112,-38},{132,-18}})));
   Modelica.Fluid.Interfaces.FluidPort_b port_b(redeclare package Medium =
         Medium_BOP)
-    annotation (Placement(transformation(extent={{154,36},{174,56}})));
+    annotation (Placement(transformation(extent={{114,34},{134,54}})));
   TRANSFORM.Fluid.Sensors.Pressure sensor_p(redeclare package Medium =
         Medium_BOP)
     annotation (Placement(transformation(extent={{88,48},{108,68}})));
-  TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_a1(redeclare package
-      Medium =
+  TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_a1(redeclare package Medium =
         Medium_PCL)
-    annotation (Placement(transformation(extent={{-178,38},{-158,58}})));
-  TRANSFORM.Fluid.Interfaces.FluidPort_State port_b1(redeclare package
-      Medium =
-        Medium_PCL)
-    annotation (Placement(transformation(extent={{-158,-16},{-138,4}})));
+    annotation (Placement(transformation(extent={{-98,36},{-78,56}})));
+  TRANSFORM.Fluid.Interfaces.FluidPort_State port_b1(redeclare package Medium
+      = Medium_PCL)
+    annotation (Placement(transformation(extent={{-72,-32},{-52,-12}})));
 
   //  C_a_start_tube=Cs_start,
 
@@ -270,68 +268,6 @@ protected
     surfaceArea_shell_SHX=1,
     m_shell_SHX=1)
     annotation (Placement(transformation(extent={{-96,78},{-76,98}})));
-  //  nTubes_PHX=PHX.geometry.nTubes,
-   // diameter_outer_tube_PHX=PHX.geometry.D_o_tube,
-  //  th_tube_PHX=PHX.geometry.th_wall,
-  //  length_tube_PHX=PHX.geometry.length_tube,
- //   alpha_tube_PHX=sum(PHX.tube.heatTransfer.alphas)/PHX.tube.nV,
-//   m_tube_PHX=PHX.geometry.nTubes*sum(PHX.tube.ms),
-//    perimeter_shell_PHX=PHX.geometry.perimeter_shell,
-//    surfaceArea_tube_PHX=PHX.geometry.nTubes*PHX.geometry.surfaceArea_tube[1],
-  //  crossArea_shell_PHX=PHX.geometry.crossArea_shell,
- //   m_tube_SHX=SHX.geometry.nTubes*sum(SHX.tube.ms),
- //   m_shell_SHX=sum(SHX.shell.ms),
- //   m_shell_PHX=sum(PHX.shell.ms),
-  //  surfaceArea_shell_PHX=PHX.geometry.surfaceArea_shell[1],
-  //  crossArea_shell_SHX=SHX.geometry.crossArea_shell,
-  //  perimeter_shell_SHX=SHX.geometry.perimeter_shell,
-  //  surfaceArea_shell_SHX=SHX.geometry.surfaceArea_shell[1],
-  //  alpha_shell_PHX=sum(PHX.shell.heatTransfer.alphas)/PHX.shell.nV,
-   // dp_tube_PHX=abs(PHX.port_a_tube.p - PHX.port_b_tube.p),
-   // dp_shell_PHX=abs(PHX.port_a_shell.p - PHX.port_b_shell.p),
-  //  nG_fuelCell=fuelCellG.nParallel,
-  //  dims_fuelG_1=fuelCellG.geometry.length_x,
-  //  dims_fuelG_2=fuelCellG.geometry.length_z,
-   // dims_fuelG_3=fuelCellG.geometry.length_y,
- //   nG_reflA_blocks=reflA_upperG.nParallel,
- //   dims_reflAG_1=reflA_upperG.geometry.r_inner,
- //   dims_reflAG_2=reflA_upperG.geometry.r_outer,
-  //  dims_reflAG_3=reflA_upperG.geometry.length_z,
-  //  dims_reflAG_4=reflA_upperG.geometry.angle_theta,
-  //  nG_reflR_blocks=reflRG.nParallel,
-  //  dims_reflRG_1=reflRG.geometry.length_x,
-  //  dims_reflRG_2=reflRG.geometry.length_z,
-  //  dims_reflRG_3=reflRG.geometry.length_y,
-  //  m_reflAG=reflA_upperG.nParallel*sum(reflA_upperG.ms),
-  //  m_reflA=reflA_upper.nParallel*sum(reflA_upper.ms),
-  //  m_reflRG=reflRG.nParallel*sum(reflRG.ms),
-  //  m_reflR=reflR.nParallel*sum(reflR.ms),
-  //  crossArea_reflA=reflA_upper.nParallel*reflA_upper.geometry.crossArea,
- //   perimeter_reflA=reflA_upper.nParallel*reflA_upper.geometry.perimeter,
- //   crossArea_reflR=reflR.nParallel*reflR.geometry.crossArea,
-  //  perimeter_reflR=reflR.nParallel*reflR.geometry.perimeter,
-  //  crossArea_fuel=fuelCell.nParallel*fuelCell.geometry.crossArea,
-  //  perimeter_fuel=fuelCell.nParallel*fuelCell.geometry.perimeter,
-  //  surfaceArea_reflA=reflA_upper.nParallel*reflA_upper.geometry.surfaceArea_total,
-  //  surfaceArea_reflR=reflR.nParallel*reflR.geometry.surfaceArea_total,
-  //  surfaceArea_fuel=fuelCell.nParallel*fuelCell.geometry.surfaceArea_total,
- //   m_fuelG=fuelCellG.nParallel*sum(fuelCellG.ms),
- //   m_fuel=fuelCell.nParallel*sum(fuelCell.ms),
- //   m_plenum=plenum_upper.m,
-  //  dims_pumpBowl_2=data_RCTR.length_pumpbowl,
- //   dims_pipeToPHX_1=pipeToPHX_PFL.geometry.dimension,
- //   dims_pipeToPHX_2=pipeToPHX_PFL.geometry.length,
- //   m_pipeToPHX_PFL=sum(pipeToPHX_PFL.ms),
- //   dims_pipeFromPHX_1=pipeFromPHX_PFL.geometry.dimension,
- //   dims_pipeFromPHX_2=pipeFromPHX_PFL.geometry.length,
- //   m_pipeFromPHX_PFL=sum(pipeFromPHX_PFL.ms),
- //   dims_pumpBowl_1=sqrt(4*pumpBowl_PFL.A/Modelica.Constants.pi/3),
-//    m_pumpBowl=pumpBowl_PFL.m/3,
- //   level_nom_pumpBowl=data_RCTR.level_pumpbowlnominal,
-  //  m_tee_inlet=tee_inlet.m,
- //   alpha_reflA=sum(reflA_upper.heatTransfer.alphas)/reflA_upper.nV,
- //   alpha_reflR=sum(reflR.heatTransfer.alphas)/reflR.nV,
-  //  alpha_fuel=sum(fuelCell.heatTransfer.alphas)/fuelCell.nV,
 
 protected
   MoltenSaltReactor.Data.data_PHX     data_PHX
@@ -341,9 +277,9 @@ protected
   MoltenSaltReactor.Data.data_PIPING     data_PIPING
     annotation (Placement(transformation(extent={{-18,78},{2,98}})));
       MSR.MoltenSaltReactor.Data.data_RCTR data_RCTR
-    annotation (Placement(transformation(extent={{260,100},{280,120}})));
+    annotation (Placement(transformation(extent={{-90,-94},{-70,-74}})));
   MSR.MoltenSaltReactor.Data.data_PUMP data_PUMP
-    annotation (Placement(transformation(extent={{320,120},{340,140}})));
+    annotation (Placement(transformation(extent={{-58,-94},{-38,-74}})));
 equation
   connect(pipeFromPHX_PCL.port_b,pumpBowl_PCL. port_a)
     annotation (Line(points={{-20,46},{-7,46}},  color={0,127,255}));
@@ -372,8 +308,8 @@ equation
       horizontalAlignment=TextAlignment.Right));
   connect(SHX.port_b_tube, sensor_p.port) annotation (Line(points={{80,16},
           {80,42},{98,42},{98,48}}, color={0,127,255}));
-  connect(sensor_p.port, port_b) annotation (Line(points={{98,48},{98,42},{
-          148,42},{148,46},{164,46}}, color={0,127,255}));
+  connect(sensor_p.port, port_b) annotation (Line(points={{98,48},{98,44},{124,44}},
+                                      color={0,127,255}));
   connect(sensorBus.SG_pressure, sensor_p.p) annotation (Line(
       points={{-30,100},{114,100},{114,58},{104,58}},
       color={239,82,82},
@@ -383,10 +319,13 @@ equation
       index=-1,
       extent={{-6,3},{-6,3}},
       horizontalAlignment=TextAlignment.Right));
-  connect(port_a1, pipeFromPHX_PCL.port_a) annotation (Line(points={{-168,48},{-168,
-          46},{-40,46}}, color={0,127,255}));
-  connect(port_b1, pipeToPHX_PCL.port_b) annotation (Line(points={{-148,-6},{-148,
-          -34},{1.77636e-15,-34}}, color={0,127,255}));
+  connect(port_a1, pipeFromPHX_PCL.port_a) annotation (Line(points={{-88,46},{-40,
+          46}},          color={0,127,255}));
+  connect(port_b1, pipeToPHX_PCL.port_b) annotation (Line(points={{-62,-22},{-6,
+          -22},{-6,-34},{1.77636e-15,-34}},
+                                   color={0,127,255}));
+  connect(port_b1, port_b1)
+    annotation (Line(points={{-62,-22},{-62,-22}}, color={0,127,255}));
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
         coordinateSystem(preserveAspectRatio=false)),
     experiment(StopTime=10000000, __Dymola_Algorithm="Esdirk45a"));

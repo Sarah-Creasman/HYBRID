@@ -14,3 +14,6 @@ BOP_test_NTU_3
 PCL_BOP
 PCL_BOP_withController
 PCL_BOP_withController_PFLNoController
+PCL_BOP_withController2
+PCL_BOP_withController_Test
+PFL_BOP_withController

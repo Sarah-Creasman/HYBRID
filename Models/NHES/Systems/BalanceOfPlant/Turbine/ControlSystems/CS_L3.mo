@@ -61,7 +61,7 @@ model CS_L3
     annotation (Placement(transformation(extent={{4,64},{24,84}})));
   Modelica.Blocks.Logical.Switch switch2
     annotation (Placement(transformation(extent={{38,72},{58,92}})));
-  Modelica.Blocks.Sources.BooleanStep booleanStep(startTime=4000)
+  Modelica.Blocks.Sources.BooleanStep booleanStep(startTime=1.1e6)
     annotation (Placement(transformation(extent={{-10,114},{10,134}})));
   Modelica.Blocks.Logical.Switch switch3
     annotation (Placement(transformation(extent={{-54,60},{-34,80}})));

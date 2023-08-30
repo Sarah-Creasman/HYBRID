@@ -31,19 +31,23 @@ model PCL_PortsBothSides_NoPHXPressureFIx
 
   Modelica.Fluid.Interfaces.FluidPort_a port_a(redeclare package Medium =
         Medium_BOP)
-    annotation (Placement(transformation(extent={{112,-38},{132,-18}})));
+    annotation (Placement(transformation(extent={{88,-34},{108,-14}}),
+        iconTransformation(extent={{88,-34},{108,-14}})));
   Modelica.Fluid.Interfaces.FluidPort_b port_b(redeclare package Medium =
         Medium_BOP)
-    annotation (Placement(transformation(extent={{114,34},{134,54}})));
+    annotation (Placement(transformation(extent={{88,38},{108,58}}),
+        iconTransformation(extent={{88,38},{108,58}})));
   TRANSFORM.Fluid.Sensors.Pressure sensor_p(redeclare package Medium =
         Medium_BOP)
     annotation (Placement(transformation(extent={{88,48},{108,68}})));
   TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_a1(redeclare package Medium =
         Medium_PCL)
-    annotation (Placement(transformation(extent={{-98,36},{-78,56}})));
+    annotation (Placement(transformation(extent={{-108,36},{-88,56}}),
+        iconTransformation(extent={{-108,36},{-88,56}})));
   TRANSFORM.Fluid.Interfaces.FluidPort_State port_b1(redeclare package Medium =
         Medium_PCL)
-    annotation (Placement(transformation(extent={{-72,-32},{-52,-12}})));
+    annotation (Placement(transformation(extent={{-108,-36},{-88,-16}}),
+        iconTransformation(extent={{-108,-36},{-88,-16}})));
 
   //  C_a_start_tube=Cs_start,
 
@@ -51,7 +55,7 @@ model PCL_PortsBothSides_NoPHXPressureFIx
     redeclare package Medium = Medium_PCL,
     p=1000000,
     nPorts=1) annotation (Placement(transformation(extent={{-18,-6},{2,14}})));
-protected
+public
   TRANSFORM.Fluid.Pipes.GenericPipe_MultiTransferSurface pipeFromPHX_PCL(
     nParallel=3,
     redeclare package Medium = Medium_PCL,
@@ -273,7 +277,6 @@ protected
     m_shell_SHX=1)
     annotation (Placement(transformation(extent={{-96,78},{-76,98}})));
 
-protected
   MoltenSaltReactor.Data.data_PHX     data_PHX
     annotation (Placement(transformation(extent={{-70,78},{-50,98}})));
   MoltenSaltReactor.Data.data_SHX     data_SHX
@@ -298,9 +301,8 @@ equation
 public
   record Data_ISO = Data.fissionProducts_1a;
 equation
-  connect(port_a, SHX.port_a_tube) annotation (Line(points={{122,-28},{122,
-          -10},{80,-10},{80,-4}},
-                             color={0,127,255}));
+  connect(port_a, SHX.port_a_tube) annotation (Line(points={{98,-24},{98,-10},{
+          80,-10},{80,-4}},  color={0,127,255}));
   connect(actuatorBus.pump_speed, pump_PCL.in_m_flow) annotation (Line(
       points={{30,100},{30,53.3}},
       color={111,216,99},
@@ -312,7 +314,7 @@ equation
       horizontalAlignment=TextAlignment.Right));
   connect(SHX.port_b_tube, sensor_p.port) annotation (Line(points={{80,16},
           {80,42},{98,42},{98,48}}, color={0,127,255}));
-  connect(sensor_p.port, port_b) annotation (Line(points={{98,48},{98,44},{124,44}},
+  connect(sensor_p.port, port_b) annotation (Line(points={{98,48},{98,48}},
                                       color={0,127,255}));
   connect(sensorBus.SG_pressure, sensor_p.p) annotation (Line(
       points={{-30,100},{114,100},{114,58},{104,58}},
@@ -323,16 +325,20 @@ equation
       index=-1,
       extent={{-6,3},{-6,3}},
       horizontalAlignment=TextAlignment.Right));
-  connect(port_a1, pipeFromPHX_PCL.port_a) annotation (Line(points={{-88,46},{-40,
-          46}},          color={0,127,255}));
-  connect(port_b1, pipeToPHX_PCL.port_b) annotation (Line(points={{-62,-22},{-6,
-          -22},{-6,-34},{1.77636e-15,-34}},
+  connect(port_a1, pipeFromPHX_PCL.port_a) annotation (Line(points={{-98,46},{
+          -70,46},{-70,46},{-40,46}},
+                         color={0,127,255}));
+  connect(port_b1, pipeToPHX_PCL.port_b) annotation (Line(points={{-98,-26},{-6,
+          -26},{-6,-34},{1.77636e-15,-34}},
                                    color={0,127,255}));
   connect(port_b1, port_b1)
-    annotation (Line(points={{-62,-22},{-62,-22}}, color={0,127,255}));
+    annotation (Line(points={{-98,-26},{-98,-26}}, color={0,127,255}));
   connect(boundary.ports[1], pipeToPHX_PCL.port_a) annotation (Line(points={{2,
           4},{26,4},{26,-34},{20,-34}}, color={0,127,255}));
-  annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
+  annotation (Icon(coordinateSystem(preserveAspectRatio=false), graphics={Text(
+          extent={{-78,70},{74,-50}},
+          textColor={28,108,200},
+          textString="MSR-PCL")}),                               Diagram(
         coordinateSystem(preserveAspectRatio=false)),
     experiment(StopTime=10000000, __Dymola_Algorithm="Esdirk45a"));
 end PCL_PortsBothSides_NoPHXPressureFIx;

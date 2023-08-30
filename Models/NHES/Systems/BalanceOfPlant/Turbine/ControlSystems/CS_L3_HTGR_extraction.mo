@@ -69,7 +69,7 @@ model CS_L3_HTGR_extraction
     annotation (Placement(transformation(extent={{2,64},{22,84}})));
   Modelica.Blocks.Logical.Switch switch2
     annotation (Placement(transformation(extent={{38,72},{58,92}})));
-  Modelica.Blocks.Sources.BooleanStep booleanStep(startTime=4000)
+  Modelica.Blocks.Sources.BooleanStep booleanStep(startTime=40000)
     annotation (Placement(transformation(extent={{-10,114},{10,134}})));
   Modelica.Blocks.Logical.Switch switch3
     annotation (Placement(transformation(extent={{-54,60},{-34,80}})));

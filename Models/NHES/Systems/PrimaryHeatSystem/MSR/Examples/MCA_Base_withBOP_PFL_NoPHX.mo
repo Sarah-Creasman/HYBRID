@@ -67,9 +67,9 @@ public
 protected
   Modelica.Units.SI.Temperature Ts[fuelCell.geometry.nV]=fuelCell.mediums.T;
 
-  Modelica.Units.SI.Temperature Tst[PHX.geometry.nV]=PHX.tube.mediums.T;
+ // Modelica.Units.SI.Temperature Tst[PHX.geometry.nV]=PHX.tube.mediums.T;
 
-  Modelica.Units.SI.Temperature Tss[PHX.geometry.nV]=PHX.shell.mediums.T;
+//  Modelica.Units.SI.Temperature Tss[PHX.geometry.nV]=PHX.shell.mediums.T;
 
   parameter Integer iPu=kinetics.data.nC + Functions.FindIndexOfMatch(           20094239, kinetics.reactivity.data.SIZZZAAA);
 
@@ -80,18 +80,18 @@ public
   parameter Integer iSep[:]={kinetics.data.nC + Functions.FindIndexOfMatch(           i, kinetics.reactivity.data.SIZZZAAA)
       for i in iSep_ID} "Index array of substances from Medium separated by Medium_carrier";
 
-  Modelica.Units.SI.Temperature Ts_loop[1 + reflA_lower.nV + fuelCell.nV + reflA_upper.nV + 1 +
-    pipeToPHX_PFL.nV + PHX.tube.nV + pipeFromPHX_PFL.nV + 1]=cat(
-      1,
-      {plenum_lower.medium.T},
-      reflA_lower.mediums.T,
-      fuelCell.mediums.T,
-      reflA_upper.mediums.T,
-      {plenum_upper.medium.T},
-      pipeToPHX_PFL.mediums.T,
-      PHX.tube.mediums.T,
-      pipeFromPHX_PFL.mediums.T,
-      {tee_inlet.medium.T});
+//  Modelica.Units.SI.Temperature Ts_loop[1 + reflA_lower.nV + fuelCell.nV + reflA_upper.nV + 1 +
+ //   pipeToPHX_PFL.nV + PHX.tube.nV + pipeFromPHX_PFL.nV + 1]=cat(
+  //    1,
+   //   {plenum_lower.medium.T},
+    //  reflA_lower.mediums.T,
+     // fuelCell.mediums.T,
+     // reflA_upper.mediums.T,
+     // {plenum_upper.medium.T},
+      //pipeToPHX_PFL.mediums.T,
+      //PHX.tube.mediums.T,
+      //pipeFromPHX_PFL.mediums.T,
+      //{tee_inlet.medium.T});
 
 protected
   MSR.MoltenSaltReactor.Data.data_PHX data_PHX
@@ -400,49 +400,6 @@ protected
         rotation=90,
         origin={160,-70})));
 
-  Components.GenericDistributed_HX_withMass_forMSRs PHX(
-    redeclare package Medium_shell = Medium_PCL,
-    redeclare package Medium_tube = Medium_PFL,
-    p_a_start_shell=data_PHX.p_inlet_shell,
-    T_a_start_shell=data_PHX.T_inlet_shell,
-    T_b_start_shell=data_PHX.T_outlet_shell,
-    p_a_start_tube=data_PHX.p_inlet_tube,
-    T_a_start_tube=data_PHX.T_inlet_tube,
-    T_b_start_tube=data_PHX.T_outlet_tube,
-    nParallel=24,
-    m_flow_a_start_shell=2*3*data_PHX.m_flow_shell,
-    C_a_start_tube=Cs_start,
-    m_flow_a_start_tube=2*3*data_PHX.m_flow_tube,
-    redeclare model HeatTransfer_tube =
-        TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.DistributedPipe_1D_MultiTransferSurface.Nus_SinglePhase_2Region,
-    redeclare model HeatTransfer_shell =
-        TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.DistributedPipe_1D_MultiTransferSurface.FlowAcrossTubeBundles_Grimison
-        (
-        D=data_PHX.D_tube_outer,
-        S_T=data_PHX.pitch_tube,
-        S_L=data_PHX.pitch_tube,
-        CFs=fill(
-            0.44,
-            PHX.shell.heatTransfer.nHT,
-            PHX.shell.heatTransfer.nSurfaces)),
-    redeclare package Material_wall = TRANSFORM.Media.Solids.AlloyN,
-    redeclare model Geometry =
-        TRANSFORM.Fluid.ClosureRelations.Geometry.Models.DistributedVolume_1D.HeatExchanger.ShellAndTubeHX
-        (
-        D_o_shell=data_PHX.D_shell_inner,
-        nTubes=data_PHX.nTubes,
-        nR=3,
-        length_shell=data_PHX.length_tube,
-        th_wall=data_PHX.th_tube,
-        dimension_tube=data_PHX.D_tube_inner,
-        length_tube=data_PHX.length_tube,
-        nV=nV_PHX),
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO) annotation (Placement(transformation(
-        extent={{10,10},{-10,-10}},
-        rotation=90,
-        origin={160,0})));
-
   Components.GenericPipe_forMSRs pipeToPHX_PFL(
     nParallel=3,
     redeclare package Medium = Medium_PFL,
@@ -617,32 +574,32 @@ protected
     T_tube_inlet_PHX=data_PHX.T_inlet_tube,
     T_tube_outlet_PHX=data_PHX.T_outlet_tube,
     p_inlet_tube_PHX=data_PHX.p_inlet_tube,
+    dp_tube_PHX=100000,
     m_flow_tube_PHX=data_PHX.m_flow_tube,
     T_shell_inlet_PHX=data_PHX.T_inlet_shell,
     T_shell_outlet_PHX=data_PHX.T_outlet_shell,
     p_inlet_shell_PHX=data_PHX.p_inlet_shell,
+    dp_shell_PHX=100000,
     m_flow_shell_PHX=data_PHX.m_flow_shell,
-    nTubes_PHX=PHX.geometry.nTubes,
-    diameter_outer_tube_PHX=PHX.geometry.D_o_tube,
-    th_tube_PHX=PHX.geometry.th_wall,
-    length_tube_PHX=PHX.geometry.length_tube,
-    tube_pitch_PHX=data_PHX.pitch_tube,
-    m_tube_PHX=PHX.geometry.nTubes*sum(PHX.tube.ms),
-    crossArea_shell_PHX=PHX.geometry.crossArea_shell,
-    perimeter_shell_PHX=PHX.geometry.perimeter_shell,
-    m_shell_PHX=sum(PHX.shell.ms),
-    surfaceArea_shell_PHX=PHX.geometry.surfaceArea_shell[1],
-    dp_tube_PHX=abs(PHX.port_a_tube.p - PHX.port_b_tube.p),
-    dp_shell_PHX=abs(PHX.port_a_shell.p - PHX.port_b_shell.p),
-    surfaceArea_tube_PHX=PHX.geometry.nTubes*PHX.geometry.surfaceArea_tube[1],
     m_tee_inlet=tee_inlet.m,
     redeclare package Medium_PCL = Medium_PCL,
     redeclare package Medium_BOP = Modelica.Media.Water.StandardWater,
     alpha_reflA=sum(reflA_upper.heatTransfer.alphas)/reflA_upper.nV,
     alpha_reflR=sum(reflR.heatTransfer.alphas)/reflR.nV,
     alpha_fuel=sum(fuelCell.heatTransfer.alphas)/fuelCell.nV,
-    alpha_tube_PHX=sum(PHX.tube.heatTransfer.alphas)/PHX.tube.nV,
-    alpha_shell_PHX=sum(PHX.shell.heatTransfer.alphas)/PHX.shell.nV,
+    nTubes_PHX=1,
+    diameter_outer_tube_PHX=1,
+    th_tube_PHX=1,
+    length_tube_PHX=1,
+    tube_pitch_PHX=1,
+    alpha_tube_PHX=1,
+    surfaceArea_tube_PHX=1,
+    m_tube_PHX=1,
+    crossArea_shell_PHX=1,
+    perimeter_shell_PHX=1,
+    alpha_shell_PHX=1,
+    surfaceArea_shell_PHX=1,
+    m_shell_PHX=1,
     dims_pumpBowl_PCL_1=1,
     dims_pumpBowl_PCL_2=1,
     level_nom_pumpBowl_PCL=1,
@@ -680,6 +637,21 @@ protected
     surfaceArea_shell_SHX=1,
     m_shell_SHX=1)
     annotation (Placement(transformation(extent={{260,122},{280,142}})));
+  //  m_shell_PHX=sum(PHX.shell.ms),
+  //  alpha_shell_PHX=sum(PHX.shell.heatTransfer.alphas)/PHX.shell.nV,
+  //  m_tube_PHX=PHX.geometry.nTubes*sum(PHX.tube.ms),
+   // alpha_tube_PHX=sum(PHX.tube.heatTransfer.alphas)/PHX.tube.nV,
+//    nTubes_PHX=PHX.geometry.nTubes,
+//    diameter_outer_tube_PHX=PHX.geometry.D_o_tube,
+//    th_tube_PHX=PHX.geometry.th_wall,
+//    length_tube_PHX=PHX.geometry.length_tube,
+//    tube_pitch_PHX=data_PHX.pitch_tube,
+ //   crossArea_shell_PHX=PHX.geometry.crossArea_shell,
+ //   perimeter_shell_PHX=PHX.geometry.perimeter_shell,
+//    surfaceArea_shell_PHX=PHX.geometry.surfaceArea_shell[1],
+//    dp_tube_PHX=abs(PHX.port_a_tube.p - PHX.port_b_tube.p),
+//    dp_shell_PHX=abs(PHX.port_a_shell.p - PHX.port_b_shell.p),
+//    surfaceArea_tube_PHX=PHX.geometry.nTubes*PHX.geometry.surfaceArea_tube[1],
 
   Modelica.Blocks.Sources.RealExpression m_flow_pump_PFL(y=2*3*data_PHX.m_flow_tube)
     annotation (Placement(transformation(extent={{76,132},{56,152}})));
@@ -818,7 +790,7 @@ public
       reflA_lower.mCs;
   SIadd.NonDim mCs_pipeFromPHX_PFL[pipeFromPHX_PFL.nV,kinetics.data.nC + kinetics.reactivity.data.nC]=
      pipeFromPHX_PFL.mCs;
-  SIadd.NonDim mCs_PHX_tube[PHX.tube.nV,kinetics.data.nC + kinetics.reactivity.data.nC]=PHX.tube.mCs;
+//  SIadd.NonDim mCs_PHX_tube[PHX.tube.nV,kinetics.data.nC + kinetics.reactivity.data.nC]=PHX.tube.mCs;
   SIadd.NonDim mCs_pipeToPHX_PFL[pipeToPHX_PFL.nV,kinetics.data.nC + kinetics.reactivity.data.nC]=
       pipeToPHX_PFL.mCs;
   SIadd.NonDim mCs_reflR[reflR.nV,kinetics.data.nC + kinetics.reactivity.data.nC]=reflR.mCs;
@@ -839,20 +811,20 @@ public
       reflA_lower.mCs[:, i])*reflA_lower.nParallel for i in 1:kinetics.data.nC + kinetics.reactivity.data.nC};
   SIadd.NonDim mCs_pipeFromPHX_PFL_total[kinetics.data.nC + kinetics.reactivity.data.nC]={sum(
       pipeFromPHX_PFL.mCs[:, i])*pipeFromPHX_PFL.nParallel for i in 1:kinetics.data.nC + kinetics.reactivity.data.nC};
-  SIadd.NonDim mCs_PHX_tube_total[kinetics.data.nC + kinetics.reactivity.data.nC]={sum(PHX.tube.mCs[
-      :, i])*PHX.tube.nParallel for i in 1:kinetics.data.nC + kinetics.reactivity.data.nC};
+//  SIadd.NonDim mCs_PHX_tube_total[kinetics.data.nC + kinetics.reactivity.data.nC]={sum(PHX.tube.mCs[
+ //     :, i])*PHX.tube.nParallel for i in 1:kinetics.data.nC + kinetics.reactivity.data.nC};
   SIadd.NonDim mCs_pipeToPHX_PFL_total[kinetics.data.nC + kinetics.reactivity.data.nC]={sum(
       pipeToPHX_PFL.mCs[:, i])*pipeToPHX_PFL.nParallel for i in 1:kinetics.data.nC + kinetics.reactivity.data.nC};
   SIadd.NonDim mCs_reflR_total[kinetics.data.nC + kinetics.reactivity.data.nC]={sum(reflR.mCs[:, i])*
       reflR.nParallel for i in 1:kinetics.data.nC + kinetics.reactivity.data.nC};
 
   // atoms total
-  SIadd.NonDim mC_total[kinetics.data.nC + kinetics.reactivity.data.nC]={mC_plenum_upper_total[i] +
-      mC_plenum_lower_total[i] + mC_tee_inlet_total[i] + mC_pumpBowl_PFL_total[i] +
-      mC_drainTank_gas_total[i] + mC_drainTank_liquid_total[i] + mCs_fuelCell_total[i] +
-      mCs_reflA_upper_total[i] + mCs_reflA_lower_total[i] + mCs_pipeFromPHX_PFL_total[i] +
-      mCs_PHX_tube_total[i] + mCs_pipeToPHX_PFL_total[i] + mCs_reflR_total[i] for i in 1:kinetics.data.nC
-       + kinetics.reactivity.data.nC};
+ // SIadd.NonDim mC_total[kinetics.data.nC + kinetics.reactivity.data.nC]={mC_plenum_upper_total[i] +
+ //     mC_plenum_lower_total[i] + mC_tee_inlet_total[i] + mC_pumpBowl_PFL_total[i] +
+ //     mC_drainTank_gas_total[i] + mC_drainTank_liquid_total[i] + mCs_fuelCell_total[i] +
+ //     mCs_reflA_upper_total[i] + mCs_reflA_lower_total[i] + mCs_pipeFromPHX_PFL_total[i] +
+ //     mCs_PHX_tube_total[i] + mCs_pipeToPHX_PFL_total[i] + mCs_reflR_total[i] for i in 1:kinetics.data.nC
+  //     + kinetics.reactivity.data.nC};
 
   // nParallel
   Real plenum_upper_nParallel=1;
@@ -865,7 +837,7 @@ public
   Real reflA_upper_nParallel=reflA_upper.nParallel;
   Real reflA_lower_nParallel=reflA_lower.nParallel;
   Real pipeFromPHX_PFL_nParallel=pipeFromPHX_PFL.nParallel;
-  Real PHX_tube_nParallel=PHX.tube.nParallel;
+ // Real PHX_tube_nParallel=PHX.tube.nParallel;
   Real pipeToPHX_PFL_nParallel=pipeToPHX_PFL.nParallel;
   Real reflR_nParallel=reflR.nParallel;
 
@@ -879,7 +851,7 @@ public
   SI.Mass reflA_upper_m[reflA_upper.nV]=reflA_upper.ms;
   SI.Mass reflA_lower_m[reflA_lower.nV]=reflA_lower.ms;
   SI.Mass pipeFromPHX_PFL_m[pipeFromPHX_PFL.nV]=pipeFromPHX_PFL.ms;
-  SI.Mass PHX_tube_m[PHX.tube.nV]=PHX.tube.ms;
+ // SI.Mass PHX_tube_m[PHX.tube.nV]=PHX.tube.ms;
   SI.Mass pipeToPHX_PFL_m[pipeToPHX_PFL.nV]=pipeToPHX_PFL.ms;
   SI.Mass reflR_m[reflR.nV]=reflR.ms;
 
@@ -893,15 +865,15 @@ public
   SI.Mass reflA_upper_m_total=sum(reflA_upper.ms)*reflA_upper.nParallel;
   SI.Mass reflA_lower_m_total=sum(reflA_lower.ms)*reflA_lower.nParallel;
   SI.Mass pipeFromPHX_PFL_m_total=sum(pipeFromPHX_PFL.ms)*pipeFromPHX_PFL.nParallel;
-  SI.Mass PHX_tube_m_total=sum(PHX.tube.ms)*PHX.tube.nParallel;
+//  SI.Mass PHX_tube_m_total=sum(PHX.tube.ms)*PHX.tube.nParallel;
   SI.Mass pipeToPHX_PFL_m_total=sum(pipeToPHX_PFL.ms)*pipeToPHX_PFL.nParallel;
   SI.Mass reflR_m_total=sum(reflR.ms)*reflR.nParallel;
 
   // mass total
-  SI.Mass m_total=plenum_upper_m_total + plenum_lower_m_total + tee_inlet_m_total +
-      pumpBowl_PFL_m_total + drainTank_liquid_m_total + fuelCell_m_total +
-      reflA_upper_m_total + reflA_lower_m_total + pipeFromPHX_PFL_m_total + PHX_tube_m_total +
-      pipeToPHX_PFL_m_total + reflR_m_total;
+//  SI.Mass m_total=plenum_upper_m_total + plenum_lower_m_total + tee_inlet_m_total +
+ //     pumpBowl_PFL_m_total + drainTank_liquid_m_total + fuelCell_m_total +
+//      reflA_upper_m_total + reflA_lower_m_total + pipeFromPHX_PFL_m_total + PHX_tube_m_total +
+//      pipeToPHX_PFL_m_total + reflR_m_total;
 
   // volume nodal
   SI.Volume plenum_upper_V=plenum_upper.V;
@@ -913,7 +885,7 @@ public
   SI.Volume reflA_upper_V[reflA_upper.nV]=reflA_upper.Vs;
   SI.Volume reflA_lower_V[reflA_lower.nV]=reflA_lower.Vs;
   SI.Volume pipeFromPHX_PFL_V[pipeFromPHX_PFL.nV]=pipeFromPHX_PFL.Vs;
-  SI.Volume PHX_tube_V[PHX.tube.nV]=PHX.tube.Vs;
+//  SI.Volume PHX_tube_V[PHX.tube.nV]=PHX.tube.Vs;
   SI.Volume pipeToPHX_PFL_V[pipeToPHX_PFL.nV]=pipeToPHX_PFL.Vs;
   SI.Volume reflR_V[reflR.nV]=reflR.Vs;
 
@@ -928,22 +900,22 @@ public
   SI.Volume reflA_upper_V_total=sum(reflA_upper.Vs)*reflA_upper.nParallel;
   SI.Volume reflA_lower_V_total=sum(reflA_lower.Vs)*reflA_lower.nParallel;
   SI.Volume pipeFromPHX_PFL_V_total=sum(pipeFromPHX_PFL.Vs)*pipeFromPHX_PFL.nParallel;
-  SI.Volume PHX_tube_V_total=sum(PHX.tube.Vs)*PHX.tube.nParallel;
+//  SI.Volume PHX_tube_V_total=sum(PHX.tube.Vs)*PHX.tube.nParallel;
   SI.Volume pipeToPHX_PFL_V_total=sum(pipeToPHX_PFL.Vs)*pipeToPHX_PFL.nParallel;
   SI.Volume reflR_V_total=sum(reflR.Vs)*reflR.nParallel;
 
   // volume total
-  SI.Volume V_total=plenum_upper_V_total + plenum_lower_V_total + tee_inlet_V_total +
-      pumpBowl_PFL_V_total + drainTank_liquid_V_total + fuelCell_V_total +
-      reflA_upper_V_total + reflA_lower_V_total + pipeFromPHX_PFL_V_total + PHX_tube_V_total +
-      pipeToPHX_PFL_V_total + reflR_V_total;
+//  SI.Volume V_total=plenum_upper_V_total + plenum_lower_V_total + tee_inlet_V_total +
+//      pumpBowl_PFL_V_total + drainTank_liquid_V_total + fuelCell_V_total +
+//      reflA_upper_V_total + reflA_lower_V_total + pipeFromPHX_PFL_V_total + PHX_tube_V_total +
+//      pipeToPHX_PFL_V_total + reflR_V_total;
 
   // nV
   Integer fuelCell_nV=fuelCell.nV;
   Integer reflA_upper_nV=reflA_upper.nV;
   Integer reflA_lower_nV=reflA_lower.nV;
   Integer pipeFromPHX_PFL_nV=pipeFromPHX_PFL.nV;
-  Integer PHX_tube_nV=PHX.tube.nV;
+//  Integer PHX_tube_nV=PHX.tube.nV;
   Integer pipeToPHX_PFL_nV=pipeToPHX_PFL.nV;
   Integer reflR_nV=reflR.nV;
 
@@ -952,7 +924,7 @@ public
   SI.Length reflA_upper_dlength[reflA_upper.nV]=reflA_upper.geometry.dlengths;
   SI.Length reflA_lower_dlength[reflA_lower.nV]=reflA_lower.geometry.dlengths;
   SI.Length pipeFromPHX_PFL_dlength[pipeFromPHX_PFL.nV]=pipeFromPHX_PFL.geometry.dlengths;
-  SI.Length PHX_tube_dlength[PHX.tube.nV]=PHX.tube.geometry.dlengths;
+//  SI.Length PHX_tube_dlength[PHX.tube.nV]=PHX.tube.geometry.dlengths;
   SI.Length pipeToPHX_PFL_dlength[pipeToPHX_PFL.nV]=pipeToPHX_PFL.geometry.dlengths;
   SI.Length reflR_dlength[reflR.nV]=reflR.geometry.dlengths;
 
@@ -961,16 +933,16 @@ public
   SI.Length reflA_upper_dimension[reflA_upper.nV]=reflA_upper.geometry.dimensions;
   SI.Length reflA_lower_dimension[reflA_lower.nV]=reflA_lower.geometry.dimensions;
   SI.Length pipeFromPHX_PFL_dimension[pipeFromPHX_PFL.nV]=pipeFromPHX_PFL.geometry.dimensions;
-  SI.Length PHX_tube_dimension[PHX.tube.nV]=PHX.tube.geometry.dimensions;
+//  SI.Length PHX_tube_dimension[PHX.tube.nV]=PHX.tube.geometry.dimensions;
   SI.Length pipeToPHX_PFL_dimension[pipeToPHX_PFL.nV]=pipeToPHX_PFL.geometry.dimensions;
   SI.Length reflR_dimension[reflR.nV]=reflR.geometry.dimensions;
 
   Modelica.Fluid.Interfaces.FluidPort_a port_a(redeclare package Medium =
-        Medium_PCL)
-    annotation (Placement(transformation(extent={{246,-90},{266,-70}})));
+        Medium_PFL)
+    annotation (Placement(transformation(extent={{270,16},{290,36}})));
   Modelica.Fluid.Interfaces.FluidPort_b port_b(redeclare package Medium =
-        Medium_PCL)
-    annotation (Placement(transformation(extent={{248,24},{268,44}})));
+        Medium_PFL)
+    annotation (Placement(transformation(extent={{276,-44},{296,-24}})));
 protected
   TRANSFORM.Controls.LimPID PID(
     controllerType=Modelica.Blocks.Types.SimpleController.PI,
@@ -1159,14 +1131,10 @@ equation
     annotation (Line(points={{0,-96},{0,-103}}, color={0,127,255}));
   connect(resistance_teeTOplenum.port_a, tee_inlet.port_b[1])
     annotation (Line(points={{0,-117},{0,-124}}, color={0,127,255}));
-  connect(pipeToPHX_PFL.port_b, PHX.port_a_tube)
-    annotation (Line(points={{160,60},{160,10}}, color={0,127,255}));
   connect(pump_PFL.port_a, pumpBowl_PFL.port_b)
     annotation (Line(points={{40,128},{34,128},{34,128},{27,128}}, color={0,127,255}));
   connect(pumpBowl_PFL.port_a, resistance_toPump_PFL.port_b)
     annotation (Line(points={{13,128},{0,128},{0,119}}, color={0,127,255}));
-  connect(pipeFromPHX_PFL.port_a, PHX.port_b_tube)
-    annotation (Line(points={{160,-60},{160,-10}}, color={0,127,255}));
   connect(pipeFromPHX_PFL.port_b, tee_inlet.port_a[1]) annotation (Line(points={{160,-80},{160,-140},
           {-4.44089e-16,-140},{-4.44089e-16,-136}}, color={0,127,255}));
   connect(resistance_reflR_outlet.port_b, reflA_upper.port_a)
@@ -1250,10 +1218,12 @@ equation
     annotation (Line(points={{60,128},{100,128}}, color={0,127,255}));
   connect(simpleSeparator.port_b, pipeToPHX_PFL.port_a)
     annotation (Line(points={{120,128},{160,128},{160,80}}, color={0,127,255}));
-  connect(port_a, PHX.port_a_shell) annotation (Line(points={{256,-80},{256,
-          -20},{164.6,-20},{164.6,-10}}, color={0,127,255}));
-  connect(PHX.port_b_shell, port_b) annotation (Line(points={{164.6,10},{
-          164.6,34},{258,34}}, color={0,127,255}));
+  connect(port_a, pipeToPHX_PFL.port_b) annotation (Line(points={{280,26},{280,
+          56},{180,56},{180,60},{160,60}},
+                                       color={0,127,255}));
+  connect(port_b, pipeFromPHX_PFL.port_a) annotation (Line(points={{286,-34},{
+          160,-34},{160,-60}},
+                           color={0,127,255}));
   annotation (
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}})),
     Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-420,-220},{340,180}})),

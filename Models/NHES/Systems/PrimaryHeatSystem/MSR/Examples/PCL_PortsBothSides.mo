@@ -37,11 +37,11 @@ model PCL_PortsBothSides
     annotation (Placement(transformation(extent={{154,36},{174,56}})));
   TRANSFORM.Fluid.Sensors.Pressure sensor_p
     annotation (Placement(transformation(extent={{88,48},{108,68}})));
-  TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_a1(redeclare package
-      Medium = Medium_PFL)
+  TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_a1(redeclare package Medium =
+               Medium_PFL)
     annotation (Placement(transformation(extent={{-178,38},{-158,58}})));
-  TRANSFORM.Fluid.Interfaces.FluidPort_State port_b1(redeclare package
-      Medium = Medium_PFL)
+  TRANSFORM.Fluid.Interfaces.FluidPort_State port_b1(redeclare package Medium
+      =        Medium_PFL)
     annotation (Placement(transformation(extent={{-158,-16},{-138,4}})));
 protected
   TRANSFORM.HeatExchangers.GenericDistributed_HX_withMass

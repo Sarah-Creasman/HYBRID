@@ -8,6 +8,7 @@ model SteamTurbine_L3_HPOFWH_Works
     redeclare replaceable
       NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.ED_Dummy ED,
     redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
+      HPT_p_in=12000000,
       Tin=813.15,
       Tfeed=473.15,
       d_HPT_in=34696.07167,

@@ -1,11 +1,9 @@
 within NHES.Systems.PrimaryHeatSystem.MSR.Examples;
 model MCA_Base_withBOP_PFL_Only
 
-  extends TRANSFORM.Icons.Example;
-
   import TRANSFORM;
+//  extends BaseClasses.Partial_SubSystem_A;
 
-protected
   package Medium_OffGas = Modelica.Media.IdealGases.SingleGases.He (extraPropertiesNames=kinetics.extraPropertiesNames,
         C_nominal=fill(1e25, kinetics.data.nC + kinetics.reactivity.nC));
   package Medium_DRACS = TRANSFORM.Media.Fluids.NaK.LinearNaK_22_78_pT;
@@ -64,7 +62,7 @@ protected
 public
   Modelica.Units.SI.Power Qt_total=sum(kinetics.Qs)
     "Total thermal power output (from primary fission)";
-protected
+
   Modelica.Units.SI.Temperature Ts[fuelCell.geometry.nV]=fuelCell.mediums.T;
 
   Modelica.Units.SI.Temperature Tst[PHX.geometry.nV]=PHX.tube.mediums.T;
@@ -93,7 +91,7 @@ public
       pipeFromPHX_PFL.mediums.T,
       {tee_inlet.medium.T});
 
-protected
+
   MSR.MoltenSaltReactor.Data.data_PHX data_PHX
     annotation (Placement(transformation(extent={{290,100},{310,120}})));
   MSR.MoltenSaltReactor.Data.data_RCTR data_RCTR
@@ -773,7 +771,7 @@ protected
 
 parameter Real Cs_start[kinetics.data.nC + kinetics.reactivity.data.nC] = mCs_start/m_salt_total;
 
-protected
+
   Modelica.Blocks.Sources.RealExpression boundary_OffGas_T1(y=drainTank_liquid.port_a.m_flow)
     annotation (Placement(transformation(extent={{-270,-44},{-250,-24}})));
   //   SIadd.InverseTime lambdas[kinetics.reactivity.nC]=kinetics.reactivity.data.lambdas;
@@ -967,11 +965,13 @@ public
 
   Modelica.Fluid.Interfaces.FluidPort_a port_a(redeclare package Medium =
         Medium_PCL)
-    annotation (Placement(transformation(extent={{246,-90},{266,-70}})));
+    annotation (Placement(transformation(extent={{90,-40},{110,-20}}),
+        iconTransformation(extent={{90,-40},{110,-20}})));
   Modelica.Fluid.Interfaces.FluidPort_b port_b(redeclare package Medium =
         Medium_PCL)
-    annotation (Placement(transformation(extent={{248,24},{268,44}})));
-protected
+    annotation (Placement(transformation(extent={{90,34},{110,54}}),
+        iconTransformation(extent={{90,34},{110,54}})));
+
   TRANSFORM.Controls.LimPID PID(
     controllerType=Modelica.Blocks.Types.SimpleController.PI,
     k=0.001,
@@ -1250,12 +1250,16 @@ equation
     annotation (Line(points={{60,128},{100,128}}, color={0,127,255}));
   connect(simpleSeparator.port_b, pipeToPHX_PFL.port_a)
     annotation (Line(points={{120,128},{160,128},{160,80}}, color={0,127,255}));
-  connect(port_a, PHX.port_a_shell) annotation (Line(points={{256,-80},{256,
-          -20},{164.6,-20},{164.6,-10}}, color={0,127,255}));
-  connect(PHX.port_b_shell, port_b) annotation (Line(points={{164.6,10},{
-          164.6,34},{258,34}}, color={0,127,255}));
+  connect(PHX.port_b_shell, port_b) annotation (Line(points={{164.6,10},{164.6,44},
+          {100,44}},           color={0,127,255}));
+  connect(port_a, PHX.port_a_shell) annotation (Line(points={{100,-30},{100,-20},
+          {164.6,-20},{164.6,-10}}, color={0,127,255}));
   annotation (
-    Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}})),
+    Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
+        graphics={Text(
+          extent={{-82,22},{90,-24}},
+          textColor={28,108,200},
+          textString="MSR-PFL")}),
     Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-420,-220},{340,180}})),
     experiment(
       StopTime=157680000,

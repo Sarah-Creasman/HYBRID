@@ -33,8 +33,6 @@ model CS_L3_3
     yMax=1,
     yMin=0)
     annotation (Placement(transformation(extent={{-10,40},{10,60}})));
-  Modelica.Blocks.Sources.RealExpression extractValve(y=0)
-    annotation (Placement(transformation(extent={{-10,-50},{10,-30}})));
   Modelica.Blocks.Math.Add add
     annotation (Placement(transformation(extent={{40,74},{60,94}})));
   Modelica.Blocks.Sources.RealExpression T_in_set1(y=200)
@@ -56,6 +54,20 @@ model CS_L3_3
   Modelica.Blocks.Math.Product
                            product1
     annotation (Placement(transformation(extent={{68,-178},{88,-158}})));
+  replaceable Modelica.Blocks.Sources.RealExpression Steam_Extraction
+    annotation (choices(
+      choice(redeclare Modelica.Blocks.Sources.Ramp Steam_Extraction),
+      choice(redeclare Modelica.Blocks.Sources.Step Steam_Extraction),
+      choice(redeclare Modelica.Blocks.Sources.Sine Steam_Extraction),
+      choice(redeclare Modelica.Blocks.Sources.Trapezoid Steam_Extraction)), Placement(
+        transformation(extent={{-132,-48},{-112,-28}})));
+  TRANSFORM.Controls.LimPID LPT1_BV_PID(
+    controllerType=Modelica.Blocks.Types.SimpleController.PI,
+    k=1e-3,
+    Ti=300,
+    yMax=1,
+    yMin=0)
+    annotation (Placement(transformation(extent={{-64,-46},{-44,-26}})));
 equation
 
   connect(T_feed_set.y, LPT2_BV_PID.u_s)
@@ -80,15 +92,6 @@ equation
       horizontalAlignment=TextAlignment.Right));
   connect(T_in_set.y, FeedPump_PID.u_s)
     annotation (Line(points={{-79,90},{-12,90}}, color={0,0,127}));
-  connect(actuatorBus.LPT1_BV, extractValve.y) annotation (Line(
-      points={{30,-100},{30,-40},{11,-40}},
-      color={111,216,99},
-      pattern=LinePattern.Dash,
-      thickness=0.5), Text(
-      string="%first",
-      index=-1,
-      extent={{-3,-6},{-3,-6}},
-      horizontalAlignment=TextAlignment.Right));
   connect(actuatorBus.opening_TCV, P_in_set.y) annotation (Line(
       points={{30.1,-99.9},{30.1,-74},{-74,-74},{-74,10},{-79,10}},
       color={111,216,99},
@@ -151,6 +154,27 @@ equation
       horizontalAlignment=TextAlignment.Right));
   connect(switch1.y,product1. u1) annotation (Line(points={{13,-156},{56,-156},
           {56,-162},{66,-162}}, color={0,0,127}));
+  connect(Steam_Extraction.y, LPT1_BV_PID.u_s) annotation (Line(points={{-111,
+          -38},{-76,-38},{-76,-36},{-66,-36}}, color={0,0,127}));
+  connect(actuatorBus.LPT1_BV, LPT1_BV_PID.y) annotation (Line(
+      points={{30,-100},{30,-56},{20,-56},{20,-40},{-38,-40},{-38,-36},{-43,-36}},
+      color={111,216,99},
+      pattern=LinePattern.Dash,
+      thickness=0.5), Text(
+      string="%first",
+      index=-1,
+      extent={{6,3},{6,3}},
+      horizontalAlignment=TextAlignment.Left));
+
+  connect(sensorBus.Extract_flow, LPT1_BV_PID.u_m) annotation (Line(
+      points={{-30,-100},{-30,-58},{-54,-58},{-54,-48}},
+      color={239,82,82},
+      pattern=LinePattern.Dash,
+      thickness=0.5), Text(
+      string="%first",
+      index=-1,
+      extent={{6,3},{6,3}},
+      horizontalAlignment=TextAlignment.Left));
 annotation(defaultComponentName="changeMe_CS", Icon(graphics),
     experiment(
       StopTime=1000,

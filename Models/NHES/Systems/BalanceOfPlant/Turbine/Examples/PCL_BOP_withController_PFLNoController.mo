@@ -68,7 +68,7 @@ model PCL_BOP_withController_PFLNoController
     use_p_in=false,
     p=14000000,
     nPorts=1)
-    annotation (Placement(transformation(extent={{-42,-18},{-22,2}})));
+    annotation (Placement(transformation(extent={{-44,-72},{-18,-46}})));
   Data.Data_L3 data(
     HPT_p_in=12000000,
     p_dump=20000000,
@@ -112,20 +112,21 @@ equation
                              color={255,0,0}));
   connect(sensorW.W, integrator.u) annotation (Line(points={{150,41.4},{150,76},
           {168,76}},                   color={0,0,127}));
-  connect(bypassdump2.ports[1], BOP.port_b_bypass) annotation (Line(points={{-22,-8},
-          {44,-8},{44,10},{56,10}},     color={0,127,255}));
+  connect(bypassdump2.ports[1], BOP.port_b_bypass) annotation (Line(points={{-18,-59},
+          {-18,-60},{-6,-60},{-6,10},{56,10}},
+                                        color={0,127,255}));
   connect(BOP.prt_b_steamdump, steamdump.ports[1]) annotation (Line(points={{56,
           40},{22,40},{22,66},{16,66}}, color={0,127,255}));
   connect(pCL_PortsBothSides_NoPHX.port_b, BOP.port_a_steam) annotation (Line(
-        points={{-21.6,34.4},{46,34.4},{46,28},{56,28}}, color={0,127,255}));
+        points={{-24.2,34.8},{46,34.8},{46,28},{56,28}}, color={0,127,255}));
   connect(pCL_PortsBothSides_NoPHX.port_a, BOP.port_b_feed) annotation (Line(
-        points={{-21.8,27.2},{-10,27.2},{-10,-10},{48,-10},{48,-8},{56,-8}},
+        points={{-24.2,27.6},{-10,27.6},{-10,-10},{48,-10},{48,-8},{56,-8}},
         color={0,127,255}));
   connect(pCL_PortsBothSides_NoPHX.port_b1, mCA_Base_withBOP_PFL_Only.port_a)
-    annotation (Line(points={{-40.2,27.8},{-86.4,27.8},{-86.4,26}}, color={0,
+    annotation (Line(points={{-43.8,27.4},{-102,27.4},{-102,29.2}}, color={0,
           127,255}));
   connect(pCL_PortsBothSides_NoPHX.port_a1, mCA_Base_withBOP_PFL_Only.port_b)
-    annotation (Line(points={{-42.8,34.6},{-86.2,34.6},{-86.2,37.4}}, color={0,
+    annotation (Line(points={{-43.8,34.6},{-102,34.6},{-102,39.2}},   color={0,
           127,255}));
   annotation (experiment(
       StopTime=100000,

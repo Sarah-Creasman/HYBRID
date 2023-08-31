@@ -1,5 +1,5 @@
-within NHES.Systems.BalanceOfPlant.Turbine.Examples;
-model BOP_test_MSR
+within NHES.Systems.BalanceOfPlant.Turbine.Examples.DoesNotWork;
+model PCL_BOP_withController_Test
   extends Modelica.Icons.Example;
   parameter Real P_ext=138;
   parameter Real P_demand=1;
@@ -8,9 +8,7 @@ model BOP_test_MSR
 
   NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_L3_HPOFWH BOP(
     redeclare replaceable
-      NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_L3_HTGR_extraction
-      CS(
-      data(
+      NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_L3_3 CS(data(
         HPT_p_in=data.HPT_p_in,
         p_dump=data.p_dump,
         p_i1=data.p_i1,
@@ -29,8 +27,7 @@ model BOP_test_MSR
         m_ext=data.m_ext,
         eta_t=data.eta_t,
         eta_mech=data.eta_mech,
-        eta_p=data.eta_p),
-      LPT1_BV_PID(k=5e-11, Ti=300)),
+        eta_p=data.eta_p)),
     redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
       HPT_p_in=data.HPT_p_in,
       p_dump=data.p_dump,
@@ -53,7 +50,9 @@ model BOP_test_MSR
       eta_p=data.eta_p),
     OFWH_1(T_start=333.15),
     OFWH_2(T_start=353.15),
-    LPT1_bypass_valve(dp_nominal(displayUnit="Pa") = 1, m_flow_nominal=10*m_ext))
+    LPT1_bypass_valve(dp_nominal(displayUnit="Pa") = 1, m_flow_nominal=10*m_ext),
+    moistureSeperator(T_start=373.15),
+    pump1(p_nominal=10500000))
     annotation (Placement(transformation(extent={{56,-20},{116,40}})));
      // booleanStep2(startTime=100000),
       //Steam_Extraction(y=data.m_ext),
@@ -70,9 +69,6 @@ model BOP_test_MSR
     p=14000000,
     nPorts=1)
     annotation (Placement(transformation(extent={{-42,-18},{-22,2}})));
-  PrimaryHeatSystem.MSR.Examples.Old_NotInUseRightNow.MCA_Base_withBOP_sec_2
-    mCA_Base_withBOP_sec_2_1
-    annotation (Placement(transformation(extent={{-40,32},{-20,52}})));
   Data.Data_L3 data(
     HPT_p_in=12000000,
     p_dump=20000000,
@@ -99,6 +95,9 @@ model BOP_test_MSR
     p=3400000,
     nPorts=1)
     annotation (Placement(transformation(extent={{-4,56},{16,76}})));
+  PrimaryHeatSystem.MSR.Examples.PCL_WithHeatSource_withController_BOP_Ports
+    pCL_WithHeatSource_withController_BOP_Ports
+    annotation (Placement(transformation(extent={{-48,20},{-28,40}})));
 initial equation
 
 equation
@@ -114,13 +113,16 @@ equation
           {44,-8},{44,10},{56,10}},     color={0,127,255}));
   connect(BOP.prt_b_steamdump, steamdump.ports[1]) annotation (Line(points={{56,
           40},{22,40},{22,66},{16,66}}, color={0,127,255}));
-  connect(BOP.port_a_steam, mCA_Base_withBOP_sec_2_1.port_b) annotation (Line(
-        points={{56,28},{10,28},{10,45.4},{5.2,45.4}}, color={0,127,255}));
-  connect(mCA_Base_withBOP_sec_2_1.port_a, BOP.port_b_feed) annotation (Line(
-        points={{5.8,38.8},{5.8,-10},{48,-10},{48,-8},{56,-8}}, color={0,127,
+  connect(pCL_WithHeatSource_withController_BOP_Ports.port_b, BOP.port_a_steam)
+    annotation (Line(points={{-22.6,34},{46,34},{46,28},{56,28}}, color={0,127,
           255}));
-  annotation (experiment(StopTime=10000000, __Dymola_Algorithm="Esdirk45a"),
-                                       Documentation(info="<html>
+  connect(pCL_WithHeatSource_withController_BOP_Ports.port_a, BOP.port_b_feed)
+    annotation (Line(points={{-22.6,27.8},{-22.6,6},{46,6},{46,-8},{56,-8}},
+        color={0,127,255}));
+  annotation (experiment(
+      StopTime=1000000,
+      Interval=10,
+      __Dymola_Algorithm="Esdirk45a"), Documentation(info="<html>
 <p>Test of Pebble_Bed_Three-Stage_Rankine. The simulation should experience transient where external electricity demand is oscilating and control valves are opening and closing corresponding to the required power demand. </p>
 <p>The ThreeStaged Turbine BOP model contains four control elements: </p>
 <p>1. maintaining steam (steam generator outlet) pressure by using TCV</p>
@@ -152,4 +154,4 @@ equation
             tolerance=0.0001,
             fixedStepSize=0)))),
     __Dymola_experimentSetupOutput(events=false));
-end BOP_test_MSR;
+end PCL_BOP_withController_Test;

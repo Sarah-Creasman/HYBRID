@@ -1,4 +1,4 @@
-within NHES.Systems.BalanceOfPlant.Turbine.Examples;
+within NHES.Systems.BalanceOfPlant.Turbine.Examples.DoesNotWork;
 model PCL_BOP_withController2
   extends Modelica.Icons.Example;
   parameter Real P_ext=138;

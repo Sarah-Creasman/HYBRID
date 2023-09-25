@@ -1,33 +1,14 @@
 within NHES.Systems.BalanceOfPlant.Turbine.Examples;
-model PFL_BOP_withController
+model PFL_PCL_BOP_ControlSystemsForAll
   extends Modelica.Icons.Example;
   parameter Real P_ext=138;
   parameter Real P_demand=1;
   parameter Modelica.Units.SI.Density d_ext= 42.55456924 "kg/m3";
   parameter Modelica.Units.SI.MassFlowRate m_ext=0;
 
-  NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_L3_HPOFWH BOP(
+  NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_L3_HPOFWH_MSR BOP(
     redeclare replaceable
-      NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_L3_3 CS(data(
-        HPT_p_in=data.HPT_p_in,
-        p_dump=data.p_dump,
-        p_i1=data.p_i1,
-        p_i2=data.p_i2,
-        cond_p=data.cond_p,
-        Tin=data.Tin,
-        Tfeed=data.Tfeed,
-        d_HPT_in(displayUnit="kg/m3") = data.d_HPT_in,
-        d_LPT1_in(displayUnit="g/cm3") = data.d_LPT1_in,
-        d_LPT2_in(displayUnit="kg/m3") = data.d_LPT2_in,
-        mdot_total=data.mdot_total,
-        mdot_fh=data.mdot_fh,
-        mdot_hpt=data.mdot_hpt,
-        mdot_lpt1=data.mdot_lpt1,
-        mdot_lpt2=data.mdot_lpt2,
-        m_ext=data.m_ext,
-        eta_t=data.eta_t,
-        eta_mech=data.eta_mech,
-        eta_p=data.eta_p)),
+      NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_L3_7 CS,
     redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
       HPT_p_in=data.HPT_p_in,
       p_dump=data.p_dump,
@@ -53,7 +34,7 @@ model PFL_BOP_withController
     LPT1_bypass_valve(dp_nominal(displayUnit="Pa") = 1, m_flow_nominal=10*m_ext),
     moistureSeperator(T_start=373.15),
     pump1(p_nominal=10500000))
-    annotation (Placement(transformation(extent={{58,-20},{118,40}})));
+    annotation (Placement(transformation(extent={{56,-20},{116,40}})));
      // booleanStep2(startTime=100000),
       //Steam_Extraction(y=data.m_ext),
   TRANSFORM.Electrical.Sources.FrequencySource boundary
@@ -68,7 +49,7 @@ model PFL_BOP_withController
     use_p_in=false,
     p=14000000,
     nPorts=1)
-    annotation (Placement(transformation(extent={{-42,-18},{-22,2}})));
+    annotation (Placement(transformation(extent={{-44,-72},{-18,-46}})));
   Data.Data_L3 data(
     HPT_p_in=12000000,
     p_dump=20000000,
@@ -95,34 +76,46 @@ model PFL_BOP_withController
     p=3400000,
     nPorts=1)
     annotation (Placement(transformation(extent={{-4,56},{16,76}})));
-  PrimaryHeatSystem.MSR.Examples.MCA_Base_withBOP_PFL_Only
-    mCA_Base_withBOP_PFL_Only
-    annotation (Placement(transformation(extent={{-50,22},{-30,42}})));
+  PrimaryHeatSystem.MSR.Examples.PCL_PortsBothSides_NoPHXPressureFIx
+    pCL_PortsBothSides_NoPHX(CS(realExpression(y=120e5)))
+    annotation (Placement(transformation(extent={{-44,20},{-24,40}})));
+  PrimaryHeatSystem.MSR.Examples.PFL_AddControlSystem_Portsfix
+    pFL_AddControlSystem_Portsfix(redeclare
+      NHES.Systems.PrimaryHeatSystem.MSR.CS.CS_MSR_PFL CS, Feed_Temp_input=
+        pCL_PortsBothSides_NoPHX.pipeToSHX_PCL.mediums[1].T)
+    annotation (Placement(transformation(extent={{-134,18},{-106,44}})));
 initial equation
 
 equation
 
-  connect(BOP.port_a_elec, sensorW.port_a) annotation (Line(points={{118,10},{
+  connect(BOP.port_a_elec, sensorW.port_a) annotation (Line(points={{116,10},{
           134,10},{134,32},{140,32}},               color={255,0,0}));
   connect(boundary.port, sensorW.port_b) annotation (Line(points={{174,32},{167,
           32},{167,32.2},{160,32.2}},
                              color={255,0,0}));
   connect(sensorW.W, integrator.u) annotation (Line(points={{150,41.4},{150,76},
           {168,76}},                   color={0,0,127}));
-  connect(bypassdump2.ports[1], BOP.port_b_bypass) annotation (Line(points={{-22,-8},
-          {44,-8},{44,10},{58,10}},     color={0,127,255}));
-  connect(BOP.prt_b_steamdump, steamdump.ports[1]) annotation (Line(points={{58,40},
-          {22,40},{22,66},{16,66}},     color={0,127,255}));
-  connect(mCA_Base_withBOP_PFL_Only.port_b, BOP.port_a_steam) annotation (Line(
-        points={{-30,36.4},{46,36.4},{46,28},{58,28}},   color={0,127,255}));
-  connect(mCA_Base_withBOP_PFL_Only.port_a, BOP.port_b_feed) annotation (Line(
-        points={{-30,29},{-30,-10},{48,-10},{48,-8},{58,-8}},     color={0,127,
-          255}));
+  connect(bypassdump2.ports[1], BOP.port_b_bypass) annotation (Line(points={{-18,-59},
+          {-18,-60},{-6,-60},{-6,10},{56,10}},
+                                        color={0,127,255}));
+  connect(BOP.prt_b_steamdump, steamdump.ports[1]) annotation (Line(points={{56,
+          40},{22,40},{22,66},{16,66}}, color={0,127,255}));
+  connect(pCL_PortsBothSides_NoPHX.port_b, BOP.port_a_steam) annotation (Line(
+        points={{-24.2,34.8},{46,34.8},{46,28},{56,28}}, color={0,127,255}));
+  connect(pCL_PortsBothSides_NoPHX.port_a, BOP.port_b_feed) annotation (Line(
+        points={{-24.2,27.6},{-10,27.6},{-10,-10},{48,-10},{48,-8},{56,-8}},
+        color={0,127,255}));
+  connect(pFL_AddControlSystem_Portsfix.port_b, pCL_PortsBothSides_NoPHX.port_a1)
+    annotation (Line(points={{-77.72,32.3},{-77.72,38},{-50,38},{-50,34.6},{-43.8,
+          34.6}}, color={0,127,255}));
+  connect(pFL_AddControlSystem_Portsfix.port_a, pCL_PortsBothSides_NoPHX.port_b1)
+    annotation (Line(points={{-77.16,24.24},{-58.42,24.24},{-58.42,27.4},{-43.8,
+          27.4}}, color={0,127,255}));
   annotation (experiment(
-      StopTime=1000000,
-      Interval=10,
+      StopTime=1000,
+      Interval=5,
       __Dymola_Algorithm="Esdirk45a"), Documentation(info="<html>
-<p>Integration terminated successfully at T = 1e+06</p>
+<p>Integration terminated unsuccesfully at T = 35329.4s</p>
 <p><br>The simulation should experience transient where external electricity demand is oscilating and control valves are opening and closing corresponding to the required power demand. </p>
 <p>The ThreeStaged Turbine BOP model contains four control elements: </p>
 <p>1. maintaining steam (steam generator outlet) pressure by using TCV</p>
@@ -154,4 +147,4 @@ equation
             tolerance=0.0001,
             fixedStepSize=0)))),
     __Dymola_experimentSetupOutput(events=false));
-end PFL_BOP_withController;
+end PFL_PCL_BOP_ControlSystemsForAll;

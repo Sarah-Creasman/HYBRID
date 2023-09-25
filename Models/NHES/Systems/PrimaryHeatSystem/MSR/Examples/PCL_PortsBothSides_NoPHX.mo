@@ -41,8 +41,8 @@ model PCL_PortsBothSides_NoPHX
   TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_a1(redeclare package Medium =
         Medium_PCL)
     annotation (Placement(transformation(extent={{-98,36},{-78,56}})));
-  TRANSFORM.Fluid.Interfaces.FluidPort_State port_b1(redeclare package Medium
-      = Medium_PCL)
+  TRANSFORM.Fluid.Interfaces.FluidPort_State port_b1(redeclare package Medium =
+        Medium_PCL)
     annotation (Placement(transformation(extent={{-72,-32},{-52,-12}})));
 
   //  C_a_start_tube=Cs_start,

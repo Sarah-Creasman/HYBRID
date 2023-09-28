@@ -44,8 +44,8 @@ model PCL_PortsBothSides_NoPHXPressureFIx
         Medium_PCL)
     annotation (Placement(transformation(extent={{-108,36},{-88,56}}),
         iconTransformation(extent={{-108,36},{-88,56}})));
-  TRANSFORM.Fluid.Interfaces.FluidPort_State port_b1(redeclare package Medium
-      = Medium_PCL)
+  TRANSFORM.Fluid.Interfaces.FluidPort_State port_b1(redeclare package Medium =
+        Medium_PCL)
     annotation (Placement(transformation(extent={{-108,-36},{-88,-16}}),
         iconTransformation(extent={{-108,-36},{-88,-16}})));
 

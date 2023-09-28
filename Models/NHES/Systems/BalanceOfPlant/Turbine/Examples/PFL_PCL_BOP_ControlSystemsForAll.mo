@@ -77,13 +77,13 @@ model PFL_PCL_BOP_ControlSystemsForAll
     nPorts=1)
     annotation (Placement(transformation(extent={{-4,56},{16,76}})));
   PrimaryHeatSystem.MSR.Examples.PCL_PortsBothSides_NoPHXPressureFIx
-    pCL_PortsBothSides_NoPHX(CS(realExpression(y=120e5)))
+    pCL_PortsBothSides_NoPHX
     annotation (Placement(transformation(extent={{-44,20},{-24,40}})));
   PrimaryHeatSystem.MSR.Examples.PFL_AddControlSystem_Portsfix
     pFL_AddControlSystem_Portsfix(redeclare
       NHES.Systems.PrimaryHeatSystem.MSR.CS.CS_MSR_PFL CS, Feed_Temp_input=
-        pCL_PortsBothSides_NoPHX.pipeToSHX_PCL.mediums[1].T)
-    annotation (Placement(transformation(extent={{-134,18},{-106,44}})));
+        pCL_PortsBothSides_NoPHX.pipeFromPHX_PCL.mediums[1].T)
+    annotation (Placement(transformation(extent={{-134,20},{-106,46}})));
 initial equation
 
 equation
@@ -106,14 +106,15 @@ equation
         points={{-24.2,27.6},{-10,27.6},{-10,-10},{48,-10},{48,-8},{56,-8}},
         color={0,127,255}));
   connect(pFL_AddControlSystem_Portsfix.port_b, pCL_PortsBothSides_NoPHX.port_a1)
-    annotation (Line(points={{-77.72,32.3},{-77.72,38},{-50,38},{-50,34.6},{-43.8,
-          34.6}}, color={0,127,255}));
+    annotation (Line(points={{-77.72,34.3},{-77.72,38},{-50,38},{-50,34.6},{
+          -43.8,34.6}},
+                  color={0,127,255}));
   connect(pFL_AddControlSystem_Portsfix.port_a, pCL_PortsBothSides_NoPHX.port_b1)
-    annotation (Line(points={{-77.16,24.24},{-58.42,24.24},{-58.42,27.4},{-43.8,
+    annotation (Line(points={{-77.16,26.24},{-58.42,26.24},{-58.42,27.4},{-43.8,
           27.4}}, color={0,127,255}));
   annotation (experiment(
-      StopTime=1000,
-      Interval=5,
+      StopTime=1000000,
+      Interval=50,
       __Dymola_Algorithm="Esdirk45a"), Documentation(info="<html>
 <p>Integration terminated unsuccesfully at T = 35329.4s</p>
 <p><br>The simulation should experience transient where external electricity demand is oscilating and control valves are opening and closing corresponding to the required power demand. </p>

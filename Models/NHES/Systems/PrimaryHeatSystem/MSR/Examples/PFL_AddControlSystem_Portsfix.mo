@@ -402,7 +402,7 @@ public
     p_a_start_tube=data_MSR.p_inlet_tube,
     T_a_start_tube=data_MSR.T_inlet_tube,
     T_b_start_tube=data_MSR.T_outlet_tube,
-    nParallel=2*3,
+    nParallel=24,
     m_flow_a_start_shell=2*3*data_MSR.m_flow_shell,
     C_a_start_tube=Cs_start,
     m_flow_a_start_tube=2*3*data_MSR.m_flow_tube,
@@ -565,7 +565,7 @@ public
     specifyPower=false,
     redeclare record Data = Data_PG,
     Q_fission_input=data_MSR.Q_nominal*(1 - 0.12),
-    rho_input=0.003370 - 0.00133511,
+    rho_input=realExpression4.u,
     mCs_all=fuelCell.mCs*fuelCell.nParallel,
     nFeedback=2,
     alphas_feedback={-3.22e-5,2.35e-5},
@@ -580,7 +580,7 @@ public
         use_noGen=true,
         i_noGen=i_mCs_start_salt))
     "- 0.000540251 < power nominal | -0.00133511 < temperature outlet nominal"
-    annotation (Placement(transformation(extent={{-90,-10},{-70,10}})));
+    annotation (Placement(transformation(extent={{-90,-12},{-70,8}})));
 
   //////////
   //    //Comment/Uncomment as a block - BIG DATA - 2b
@@ -864,6 +864,8 @@ public
     annotation (Placement(transformation(extent={{26,-106},{46,-86}})));
   Modelica.Blocks.Sources.RealExpression Feed_Temp(y=Feed_Temp_input)
     annotation (Placement(transformation(extent={{-104,132},{-84,152}})));
+  TRANSFORM.Blocks.RealExpression realExpression4
+    annotation (Placement(transformation(extent={{248,44},{268,64}})));
 protected
   TRANSFORM.Controls.LimPID PID(
     controllerType=Modelica.Blocks.Types.SimpleController.PI,
@@ -1177,6 +1179,15 @@ equation
       index=-1,
       extent={{6,3},{6,3}},
       horizontalAlignment=TextAlignment.Left));
+  connect(actuatorBus.CR_reactivity, realExpression4.u) annotation (Line(
+      points={{30,100},{88,100},{88,54},{246,54}},
+      color={111,216,99},
+      pattern=LinePattern.Dash,
+      thickness=0.5), Text(
+      string="%first",
+      index=-1,
+      extent={{-6,3},{-6,3}},
+      horizontalAlignment=TextAlignment.Right));
         annotation (Placement(transformation(extent={{260,120},{280,140}})),
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}})),
     Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-420,-220},{340,180}})),

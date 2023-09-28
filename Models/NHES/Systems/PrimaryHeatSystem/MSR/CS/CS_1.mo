@@ -6,7 +6,7 @@ model CS_1
   TRANSFORM.Controls.LimPID PID(controllerType=Modelica.Blocks.Types.SimpleController.PI,
     k=1e-7,
     yMax=20000,
-    yMin=-990)
+    yMin=-1990)
     annotation (Placement(transformation(extent={{-44,-16},{-8,20}})));
   Modelica.Blocks.Sources.RealExpression realExpression(y=120e5)
     annotation (Placement(transformation(extent={{-172,-2},{-152,18}})));

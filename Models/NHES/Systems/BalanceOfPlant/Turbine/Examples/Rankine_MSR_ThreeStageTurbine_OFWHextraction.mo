@@ -1,5 +1,5 @@
 within NHES.Systems.BalanceOfPlant.Turbine.Examples;
-model Rankine_HTGR_ThreeStageTurbine_OFWHextraction
+model Rankine_MSR_ThreeStageTurbine_OFWHextraction
   extends Modelica.Icons.Example;
   parameter Real P_ext=110;
   parameter Real P_demand=1;
@@ -197,4 +197,4 @@ equation
             tolerance=0.0001,
             fixedStepSize=0)))),
     __Dymola_experimentSetupOutput(events=false));
-end Rankine_HTGR_ThreeStageTurbine_OFWHextraction;
+end Rankine_MSR_ThreeStageTurbine_OFWHextraction;

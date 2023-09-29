@@ -49,8 +49,9 @@ model BOP_test_NTU_3
     annotation (Placement(transformation(extent={{-42,-18},{-22,2}})));
   PrimaryHeatSystem.MSR.Examples.MSR_NTU mSR_NTU
     annotation (Placement(transformation(extent={{-54,24},{-28,48}})));
-  SteamTurbine_L3_HPOFWH_MSR_NTU steamTurbine_L3_HPOFWH_MSR_NTU(redeclare replaceable
-                  NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
+  NotUsedCurrently.SteamTurbine_L3_HPOFWH_MSR_NTU
+    steamTurbine_L3_HPOFWH_MSR_NTU(redeclare replaceable
+      NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
       Tin=813.15,
       Tfeed=473.15,
       d_HPT_in=34696.07167,

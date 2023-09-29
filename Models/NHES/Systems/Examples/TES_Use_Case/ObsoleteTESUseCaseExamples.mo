@@ -149,7 +149,7 @@ package ObsoleteTESUseCaseExamples
       offset=47e6,
       startTime=2000)
       annotation (Placement(transformation(extent={{68,80},{88,100}})));
-    BalanceOfPlant.Turbine.SteamTurbine_Basic_NoFeedHeat
+    BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_Basic_NoFeedHeat
       intermediate_Rankine_Cycle_TESUC_1_Independent_SmallCycle(
       port_a_nominal(
         p=EM.port_b2_nominal.p,
@@ -318,7 +318,7 @@ package ObsoleteTESUseCaseExamples
       port_b3_nominal_m_flow={-0.67},
       nPorts_b3=1)
       annotation (Placement(transformation(extent={{-12,-18},{28,22}})));
-    BalanceOfPlant.Turbine.SteamTurbine_OpenFeedHeat_DivertPowerControl_PowerBoostLoop
+    BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_OpenFeedHeat_DivertPowerControl_PowerBoostLoop
       intermediate_Rankine_Cycle_TESUC(
       port_a_nominal(
         p=EM.port_b2_nominal.p,
@@ -699,7 +699,7 @@ package ObsoleteTESUseCaseExamples
       offset=47e6,
       startTime=2000)
       annotation (Placement(transformation(extent={{66,112},{86,132}})));
-    BalanceOfPlant.Turbine.SteamTurbine_Basic_NoFeedHeat
+    BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_Basic_NoFeedHeat
       intermediate_Rankine_Cycle_TESUC_1_Independent_SmallCycle(
       port_a_nominal(
         p=EM.port_b2_nominal.p,
@@ -980,7 +980,7 @@ package ObsoleteTESUseCaseExamples
       offset=47e6,
       startTime=2000)
       annotation (Placement(transformation(extent={{66,112},{86,132}})));
-    BalanceOfPlant.Turbine.SteamTurbine_Basic_NoFeedHeat
+    BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_Basic_NoFeedHeat
       intermediate_Rankine_Cycle_TESUC_1_Independent_SmallCycle(
       port_a_nominal(
         p=EM.port_b2_nominal.p,
@@ -1152,7 +1152,7 @@ package ObsoleteTESUseCaseExamples
       port_b3_nominal_m_flow={-0.67},
       nPorts_b3=1)
       annotation (Placement(transformation(extent={{-12,-18},{28,22}})));
-    BalanceOfPlant.Turbine.SteamTurbine_OpenFeedHeat_DivertPowerControl_PowerBoostLoop
+    BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_OpenFeedHeat_DivertPowerControl_PowerBoostLoop
       intermediate_Rankine_Cycle_TESUC(
       port_a_nominal(
         p=EM.port_b2_nominal.p,
@@ -1745,7 +1745,7 @@ package ObsoleteTESUseCaseExamples
       offset=26e6,
       startTime=2000)
       annotation (Placement(transformation(extent={{20,72},{40,92}})));
-    BalanceOfPlant.Turbine.SteamTurbine_Basic_NoFeedHeat
+    BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_Basic_NoFeedHeat
       intermediate_Rankine_Cycle_TESUC_1_Independent_SmallCycle(
       port_a_nominal(
         p=EM.port_b2_nominal.p,
@@ -4821,7 +4821,7 @@ package ObsoleteTESUseCaseExamples
       offset=47e6,
       startTime=2000)
       annotation (Placement(transformation(extent={{66,112},{86,132}})));
-    BalanceOfPlant.Turbine.SteamTurbine_Basic_NoFeedHeat
+    BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_Basic_NoFeedHeat
       intermediate_Rankine_Cycle_TESUC_1_Independent_SmallCycle(
       port_a_nominal(
         p=EM.port_b2_nominal.p,
@@ -5145,7 +5145,7 @@ package ObsoleteTESUseCaseExamples
       offset=47e6,
       startTime=2000)
       annotation (Placement(transformation(extent={{66,112},{86,132}})));
-    BalanceOfPlant.Turbine.SteamTurbine_Basic_NoFeedHeat
+    BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_Basic_NoFeedHeat
       intermediate_Rankine_Cycle_TESUC_1_Independent_SmallCycle(
       port_a_nominal(
         p=EM.port_b2_nominal.p,

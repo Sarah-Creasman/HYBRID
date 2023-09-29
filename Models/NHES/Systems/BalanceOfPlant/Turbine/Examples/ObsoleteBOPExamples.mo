@@ -86,7 +86,7 @@ package ObsoleteBOPExamples
   model SteamTurbine_L3
     import NHES;
     extends Modelica.Icons.Example;
-    NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_Basic_NoFeedHeat
+    NHES.Systems.BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_Basic_NoFeedHeat
       intermediate_Rankine_Cycle_TESUC_1_Independent_SmallCycle(
       redeclare
         NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_SmallCycle_NoFeedHeat
@@ -657,7 +657,7 @@ package ObsoleteBOPExamples
       annotation (Placement(transformation(extent={{-38,72},{-18,92}})));
     TRANSFORM.Electrical.Sensors.PowerSensor sensorW
       annotation (Placement(transformation(extent={{72,-6},{86,6}})));
-    NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_Basic_NoFeedHeat
+    NHES.Systems.BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_Basic_NoFeedHeat
       intermediate_Rankine_Cycle_TESUC(
       port_a_nominal(
         p=3400000,
@@ -742,7 +742,7 @@ package ObsoleteBOPExamples
       annotation (Placement(transformation(extent={{-38,72},{-18,92}})));
     TRANSFORM.Electrical.Sensors.PowerSensor sensorW
       annotation (Placement(transformation(extent={{72,-6},{86,6}})));
-    NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_Basic_NoFeedHeat
+    NHES.Systems.BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_Basic_NoFeedHeat
       intermediate_Rankine_Cycle_TESUC(
       port_a_nominal(
         p=1200000,
@@ -854,7 +854,7 @@ package ObsoleteBOPExamples
       annotation (Placement(transformation(extent={{-38,72},{-18,92}})));
     TRANSFORM.Electrical.Sensors.PowerSensor sensorW
       annotation (Placement(transformation(extent={{72,-6},{86,6}})));
-    NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_Basic_NoFeedHeat
+    NHES.Systems.BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_Basic_NoFeedHeat
       intermediate_Rankine_Cycle_TESUC(
       port_a_nominal(
         p=1200000,
@@ -929,7 +929,7 @@ package ObsoleteBOPExamples
       annotation (Placement(transformation(extent={{-38,72},{-18,92}})));
     TRANSFORM.Electrical.Sensors.PowerSensor sensorW
       annotation (Placement(transformation(extent={{72,-6},{86,6}})));
-    NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_OpenFeedHeat_DivertPowerControl_PowerBoostLoop
+    NHES.Systems.BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_OpenFeedHeat_DivertPowerControl_PowerBoostLoop
       intermediate_Rankine_Cycle_TESUC(
       port_a_nominal(
         p=3400000,
@@ -1042,7 +1042,7 @@ package ObsoleteBOPExamples
       annotation (Placement(transformation(extent={{-38,72},{-18,92}})));
     TRANSFORM.Electrical.Sensors.PowerSensor sensorW
       annotation (Placement(transformation(extent={{72,-6},{86,6}})));
-    NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_OpenFeedHeat_DivertPowerControl_PowerBoostLoop
+    NHES.Systems.BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_OpenFeedHeat_DivertPowerControl_PowerBoostLoop
       intermediate_Rankine_Cycle_TESUC(
       port_a_nominal(
         p=3400000,

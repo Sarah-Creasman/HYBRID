@@ -191,8 +191,8 @@ model SteamTurbine_L3_HPOFWH
   TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_a_cond(redeclare package
       Medium = Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{90,-50},{110,-30}})));
-  TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium
-      = Modelica.Media.Water.StandardWater)
+  TRANSFORM.Fluid.Sensors.MassFlowRate sensor_m_flow(redeclare package Medium =
+        Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{-70,10},{-90,-10}})));
 equation
   connect(TBV.port_a, SteamHeader.port_b)

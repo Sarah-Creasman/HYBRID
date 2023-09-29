@@ -27,11 +27,17 @@ package SHS_Two_Tank
           NHES.Systems.EnergyStorage.SHS_Two_Tank.ControlSystems.CS_Boiler_03
           CS,
         redeclare replaceable
-          NHES.Systems.EnergyStorage.SHS_Two_Tank.Data.Data_SHS data(DHX_K_tube(
-              unit="1/m4"), DHX_K_shell(unit="1/m4"),
+          NHES.Systems.EnergyStorage.SHS_Two_Tank.Data.Data_SHS data(
+          ht_init_level=5.5,
+          cold_tank_init_level=5.5,
+          DHX_K_tube(unit="1/m4"),
+          DHX_K_shell(unit="1/m4"),
           discharge_pump_rho_nominal(displayUnit="kg/m3")),
         redeclare package Storage_Medium =
             TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66,
+        tank_height=6.96 + 6,
+        tank_diameter=3.7,
+        multiplier=10,
         Produced_steam_flow=valveLinear.port_a.m_flow,
         flowMultiplier1(capacityScaler=0.1111),
         flowMultiplier(capacityScaler=9),
@@ -159,7 +165,7 @@ package SHS_Two_Tank
       connect(PID.y, boundary3.m_flow_in) annotation (Line(points={{187,86},{214,86},
               {214,48.2},{142,48.2}}, color={0,0,127}));
       annotation (experiment(
-          StopTime=432000,
+          StopTime=259200,
           Interval=37,
           __Dymola_Algorithm="Esdirk45a"));
     end Build_Test;
@@ -495,7 +501,8 @@ package SHS_Two_Tank
     model Two_Tank_SHS_HT_Power_Test "TES use case demonstration of a NuScale-style LWR operating within an energy 
   arbitrage IES, storing and dispensing energy on demand from a two tank molten 
   salt energy storage system nominally using HITEC salt to store heat."
-      NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_Basic_NoFeedHeat_mFlow_Control Dch_BOP(
+      NHES.Systems.BalanceOfPlant.Turbine.NotUsedCurrently.SteamTurbine_Basic_NoFeedHeat_mFlow_Control
+        Dch_BOP(
         port_a_nominal(
           p=3388000,
           h=2.99767e+6,
@@ -2415,7 +2422,15 @@ package SHS_Two_Tank
       extends BaseClasses.Partial_SubSystem_A(
         redeclare replaceable ControlSystems.CS_Boiler_02 CS,
         redeclare replaceable ED_Dummy ED,
-        redeclare replaceable Data.Data_SHS data);
+        redeclare replaceable Data.Data_SHS data(
+          ht_level_max=tank_height,
+          ht_area=Modelica.Constants.pi*tank_diameter*tank_diameter,
+          ht_zero_level_volume=0,
+          ht_init_level=tank_height/2,
+          cold_tank_level_max=tank_height,
+          cold_tank_area=hot_tank.A,
+          ct_zero_level_volume=0,
+          cold_tank_init_level=tank_height/2));
         replaceable package Storage_Medium =
           TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66 constrainedby
         Modelica.Media.Interfaces.PartialMedium                                                                           annotation(Dialog(tab="General", group="Mediums"), choicesAllMatching=true);
@@ -2432,6 +2447,8 @@ package SHS_Two_Tank
         parameter Modelica.Units.SI.MassFlowRate m_flow_min = 2.0;
         parameter Integer CHXnV = 5;
         parameter Modelica.Units.SI.Length tank_height = 15;
+        parameter Modelica.Units.SI.Length tank_diameter = 7.97885;
+        parameter Real multiplier=1.0;
 
         input Modelica.Units.SI.MassFlowRate Produced_steam_flow annotation(Dialog(tab = "General"));
         output Boolean Charging_Trigger = hysteresis.y;
@@ -2584,9 +2601,10 @@ package SHS_Two_Tank
       BalanceOfPlant.StagebyStageTurbineSecondary.Control_and_Distribution.Delay
         delay1(Ti=0.5)
         annotation (Placement(transformation(extent={{-62,-92},{-54,-88}})));
-      Modelica.Blocks.Logical.Hysteresis hysteresis(uLow=3, uHigh=12)
+      Modelica.Blocks.Logical.Hysteresis hysteresis(uLow=3, uHigh=tank_height - 3)
         annotation (Placement(transformation(extent={{-66,68},{-46,88}})));
-      Modelica.Blocks.Sources.RealExpression Level_Hot_Tank2(y=15 - hot_tank.level)
+      Modelica.Blocks.Sources.RealExpression Level_Hot_Tank2(y=tank_height -
+            hot_tank.level)
         annotation (Placement(transformation(extent={{-100,64},{-80,84}})));
       Modelica.Blocks.Sources.RealExpression Charging_Temperature(y=
             hot_tank_dump_pipe.state.T)
@@ -2634,18 +2652,15 @@ package SHS_Two_Tank
             rotation=270,
             origin={-8,-60})));
 
-      TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_ch_a(redeclare package
-          Medium =
+      TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_ch_a(redeclare package Medium =
             Charging_Medium)                                                                           annotation (Placement(
             transformation(extent={{-108,-72},{-88,-52}}), iconTransformation(
               extent={{-108,-72},{-88,-52}})));
-      TRANSFORM.Fluid.Interfaces.FluidPort_State port_ch_b(redeclare package
-          Medium =
+      TRANSFORM.Fluid.Interfaces.FluidPort_State port_ch_b(redeclare package Medium =
             Charging_Medium)                                                                            annotation (Placement(
             transformation(extent={{-108,44},{-88,64}}), iconTransformation(extent={
                 {-108,44},{-88,64}})));
-      TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_dch_a(redeclare package
-          Medium =
+      TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_dch_a(redeclare package Medium =
             Discharging_Medium)                                                                            annotation (Placement(
             transformation(extent={{88,48},{108,68}}), iconTransformation(extent={{88,
                 48},{108,68}})));
@@ -2656,26 +2671,26 @@ package SHS_Two_Tank
                 {90,-72},{110,-52}})));
       FlowMultiplier flowMultiplier1(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=0.1111,
+        capacityScaler=1/multiplier,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{38,-60},{58,-40}})));
       FlowMultiplier flowMultiplier(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=9,
+        capacityScaler=multiplier,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{68,-102},{88,-82}})));
       FlowMultiplier flowMultiplier2(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=0.1111,
+        capacityScaler=1/multiplier,
         port_b(m_flow(start=-1)))
         annotation (Placement(transformation(extent={{-26,44},{-46,64}})));
       FlowMultiplier flowMultiplier3(
         redeclare package Medium = Storage_Medium,
-        capacityScaler=9,
+        capacityScaler=multiplier,
         port_b(m_flow(start=-1)))
-        annotation (Placement(transformation(extent={{10,-10},{-10,10}},
+        annotation (Placement(transformation(extent={{-10,-10},{10,10}},
             rotation=-90,
-            origin={-48,18})));
+            origin={-48,16})));
     equation
       connect(volume.port_a, Discharging_Valve.port_b)
         annotation (Line(points={{56,-10},{82,-10},{82,-18}},
@@ -2777,10 +2792,10 @@ package SHS_Two_Tank
             color={0,127,255}));
       connect(flowMultiplier2.port_b, cold_tank.port_a) annotation (Line(points={{-46,54},
               {-50,54},{-50,50.4},{-52,50.4}},                 color={0,127,255}));
-      connect(charge_pump.port_a, flowMultiplier3.port_a)
-        annotation (Line(points={{-48,2},{-48,8}}, color={0,127,255}));
-      connect(flowMultiplier3.port_b, cold_tank.port_b) annotation (Line(points
-            ={{-48,28},{-52,28},{-52,33.6}}, color={0,127,255}));
+      connect(flowMultiplier3.port_a, cold_tank.port_b) annotation (Line(points={{-48,
+              26},{-48,30},{-52,30},{-52,33.6}}, color={0,127,255}));
+      connect(flowMultiplier3.port_b, charge_pump.port_a)
+        annotation (Line(points={{-48,6},{-48,2}}, color={0,127,255}));
       annotation (experiment(
           StopTime=432000,
           Interval=37,
@@ -9624,15 +9639,6 @@ package SHS_Two_Tank
         yMin=0.0,
         y_start=0.0)
         annotation (Placement(transformation(extent={{-36,54},{-28,62}})));
-      Modelica.Blocks.Sources.Trapezoid trapezoid(
-        amplitude=2.0,
-        rising=500,
-        width=8500,
-        falling=500,
-        period=18000,
-        offset=0.0,
-        startTime=0)
-        annotation (Placement(transformation(extent={{-58,48},{-46,60}})));
       BalanceOfPlant.StagebyStageTurbineSecondary.Control_and_Distribution.MinMaxFilter
         Discharging_Valve_Position(min=1e-4) annotation (Placement(transformation(
             extent={{10,-10},{-10,10}},
@@ -9667,6 +9673,8 @@ package SHS_Two_Tank
         initType=Modelica.Blocks.Types.Init.InitialOutput,
         y_start=0.0)
         annotation (Placement(transformation(extent={{-40,38},{-34,32}})));
+      Modelica.Blocks.Sources.Constant const2(k=2)
+        annotation (Placement(transformation(extent={{-58,48},{-48,58}})));
     equation
 
       connect(PID1.u_s, const1.y)
@@ -9716,9 +9724,6 @@ package SHS_Two_Tank
           color={239,82,82},
           pattern=LinePattern.Dash,
           thickness=0.5));
-      connect(trapezoid.y,PID3. u_s)
-        annotation (Line(points={{-45.4,54},{-40,54},{-40,58},{-36.8,58}},
-                                                         color={0,0,127}));
       connect(product1.y, Discharging_Valve_Position.u)
         annotation (Line(points={{-11.6,64},{0,64}}, color={0,0,127}));
       connect(PID3.y,product1. u2) annotation (Line(points={{-27.6,58},{-26,58},{
@@ -9778,6 +9783,8 @@ package SHS_Two_Tank
           color={239,82,82},
           pattern=LinePattern.Dash,
           thickness=0.5));
+      connect(const2.y, PID3.u_s) annotation (Line(points={{-47.5,53},{-42,53},
+              {-42,58},{-36.8,58}}, color={0,0,127}));
     annotation(defaultComponentName="changeMe_CS", Icon(graphics={
             Text(
               extent={{-94,82},{94,74}},
@@ -9823,15 +9830,6 @@ package SHS_Two_Tank
         yMin=0.0,
         y_start=0.0)
         annotation (Placement(transformation(extent={{-36,54},{-28,62}})));
-      Modelica.Blocks.Sources.Trapezoid trapezoid(
-        amplitude=2.0,
-        rising=500,
-        width=8500,
-        falling=500,
-        period=18000,
-        offset=0.0,
-        startTime=0)
-        annotation (Placement(transformation(extent={{-58,48},{-46,60}})));
       BalanceOfPlant.StagebyStageTurbineSecondary.Control_and_Distribution.MinMaxFilter
         Discharging_Valve_Position(min=1e-4) annotation (Placement(transformation(
             extent={{10,-10},{-10,10}},
@@ -9866,6 +9864,8 @@ package SHS_Two_Tank
         initType=Modelica.Blocks.Types.Init.InitialOutput,
         y_start=0.0)
         annotation (Placement(transformation(extent={{-40,0},{-34,-6}})));
+      Modelica.Blocks.Sources.Constant one22(k=2)
+        annotation (Placement(transformation(extent={{-54,48},{-48,54}})));
     equation
 
       connect(product2.y, Charging_Valve_Position_MinMax.u) annotation (Line(points={{-11.7,
@@ -9890,9 +9890,6 @@ package SHS_Two_Tank
           color={239,82,82},
           pattern=LinePattern.Dash,
           thickness=0.5));
-      connect(trapezoid.y,PID3. u_s)
-        annotation (Line(points={{-45.4,54},{-40,54},{-40,58},{-36.8,58}},
-                                                         color={0,0,127}));
       connect(product1.y, Discharging_Valve_Position.u)
         annotation (Line(points={{-11.6,64},{0,64}}, color={0,0,127}));
       connect(PID3.y,product1. u2) annotation (Line(points={{-27.6,58},{-26,58},{
@@ -9955,6 +9952,8 @@ package SHS_Two_Tank
           color={239,82,82},
           pattern=LinePattern.Dash,
           thickness=0.5));
+      connect(one22.y, PID3.u_s) annotation (Line(points={{-47.7,51},{-42,51},{
+              -42,58},{-36.8,58}}, color={0,0,127}));
     annotation(defaultComponentName="changeMe_CS", Icon(graphics={
             Text(
               extent={{-94,82},{94,74}},

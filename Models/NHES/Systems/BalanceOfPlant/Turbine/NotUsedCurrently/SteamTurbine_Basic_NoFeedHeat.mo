@@ -1,5 +1,5 @@
-within NHES.Systems.BalanceOfPlant.Turbine;
-model SteamTurbine_Basic_DirectCoupling "Two stage BOP model"
+within NHES.Systems.BalanceOfPlant.Turbine.NotUsedCurrently;
+model SteamTurbine_Basic_NoFeedHeat "Two stage BOP model"
   extends BaseClasses.Partial_SubSystem_C(
     redeclare replaceable
       ControlSystems.CS_SteamTurbine_L2_PressurePowerFeedtemp CS,
@@ -90,7 +90,7 @@ model SteamTurbine_Basic_DirectCoupling "Two stage BOP model"
     redeclare package Medium = Modelica.Media.Water.StandardWater,
     m_flow_start=400,
     dp_nominal=100000,
-    m_flow_nominal=30) annotation (Placement(transformation(
+    m_flow_nominal=26) annotation (Placement(transformation(
         extent={{8,8},{-8,-8}},
         rotation=180,
         origin={126,-146})));
@@ -381,4 +381,4 @@ annotation (Icon(coordinateSystem(preserveAspectRatio=false), graphics={
     Documentation(info="<html>
 <p>A two stage turbine rankine cycle with feedwater heating internal to the system - can be externally bypassed or LPT can be bypassed both will feedwater heat post bypass</p>
 </html>"));
-end SteamTurbine_Basic_DirectCoupling;
+end SteamTurbine_Basic_NoFeedHeat;

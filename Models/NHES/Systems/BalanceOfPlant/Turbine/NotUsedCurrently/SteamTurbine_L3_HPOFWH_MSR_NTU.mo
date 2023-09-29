@@ -1,5 +1,5 @@
-within NHES.Systems.BalanceOfPlant.Turbine;
-model SteamTurbine_L3_HPOFWH_Works
+within NHES.Systems.BalanceOfPlant.Turbine.NotUsedCurrently;
+model SteamTurbine_L3_HPOFWH_MSR_NTU
   "Three Stage Turbine with open feed water heating using high pressure steam"
   extends NHES.Systems.BalanceOfPlant.Turbine.BaseClasses.Partial_SubSystem(
     redeclare replaceable
@@ -8,7 +8,6 @@ model SteamTurbine_L3_HPOFWH_Works
     redeclare replaceable
       NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.ED_Dummy ED,
     redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
-      HPT_p_in=12000000,
       Tin=813.15,
       Tfeed=473.15,
       d_HPT_in=34696.07167,
@@ -506,4 +505,4 @@ equation
           fillPattern=FillPattern.HorizontalCylinder,
           fillColor={255,255,255})}),                            Diagram(
         coordinateSystem(preserveAspectRatio=false)));
-end SteamTurbine_L3_HPOFWH_Works;
+end SteamTurbine_L3_HPOFWH_MSR_NTU;

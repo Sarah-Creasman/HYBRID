@@ -1,4 +1,4 @@
-within NHES.Systems.BalanceOfPlant.Turbine;
+within NHES.Systems.BalanceOfPlant.Turbine.NotUsedCurrently;
 model SteamTurbine_OpenFeedHeat_DivertPowerControl_PowerBoostLoop
   "Two stage BOP model"
   extends BaseClasses.Partial_SubSystem_C(

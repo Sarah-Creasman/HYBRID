@@ -202,5 +202,8 @@ annotation(defaultComponentName="changeMe_CS", Icon(graphics),
     experiment(
       StopTime=1000,
       Interval=5,
-      __Dymola_Algorithm="Esdirk45a"));
+      __Dymola_Algorithm="Esdirk45a"),
+    Documentation(info="<html>
+<p><br>This is the control system that was augmented from CS_L3_6 to allow for the MSR BOP parameters to run in the Rankine_MSR_ThreeStageTurbine_OFWHextraction model.</p>
+</html>"));
 end CS_L3_6;

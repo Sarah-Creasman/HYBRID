@@ -1,4 +1,4 @@
-within NHES.Systems.BalanceOfPlant.Turbine;
+within NHES.Systems.BalanceOfPlant.Turbine.NotUsedCurrently;
 model SteamTurbine_L3_HTGR
   extends BaseClasses.Partial_SubSystem(
     redeclare replaceable

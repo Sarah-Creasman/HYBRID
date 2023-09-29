@@ -6,8 +6,8 @@ model CS_1
   TRANSFORM.Controls.LimPID PID(controllerType=Modelica.Blocks.Types.SimpleController.PI,
     k=1e-7,
     yMax=20000,
-    yMin=-1990)
-    annotation (Placement(transformation(extent={{-44,-16},{-8,20}})));
+    yMin=-4000)
+    annotation (Placement(transformation(extent={{-42,-16},{-6,20}})));
   Modelica.Blocks.Sources.RealExpression realExpression(y=120e5)
     annotation (Placement(transformation(extent={{-172,-2},{-152,18}})));
   Modelica.Blocks.Math.Add add
@@ -16,10 +16,10 @@ model CS_1
     annotation (Placement(transformation(extent={{-94,32},{-74,52}})));
 equation
 
-  connect(realExpression.y, PID.u_s) annotation (Line(points={{-151,8},{-58,
-          8},{-58,2},{-47.6,2}}, color={0,0,127}));
+  connect(realExpression.y, PID.u_s) annotation (Line(points={{-151,8},{-58,8},
+          {-58,2},{-45.6,2}},    color={0,0,127}));
   connect(sensorBus.SG_pressure, PID.u_m) annotation (Line(
-      points={{-30,-100},{-30,-28},{-26,-28},{-26,-19.6}},
+      points={{-30,-100},{-30,-28},{-24,-28},{-24,-19.6}},
       color={239,82,82},
       pattern=LinePattern.Dash,
       thickness=0.5), Text(
@@ -27,8 +27,8 @@ equation
       index=-1,
       extent={{-6,3},{-6,3}},
       horizontalAlignment=TextAlignment.Right));
-  connect(PID.y, add.u2) annotation (Line(points={{-6.2,2},{28,2},{28,12},{
-          36,12}}, color={0,0,127}));
+  connect(PID.y, add.u2) annotation (Line(points={{-4.2,2},{28,2},{28,12},{36,
+          12}},    color={0,0,127}));
   connect(actuatorBus.pump_speed, add.y) annotation (Line(
       points={{30,-100},{30,4},{59,4},{59,18}},
       color={111,216,99},

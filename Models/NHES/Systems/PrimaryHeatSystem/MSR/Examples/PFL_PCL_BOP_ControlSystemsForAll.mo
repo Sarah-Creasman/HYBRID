@@ -50,7 +50,7 @@ model PFL_PCL_BOP_ControlSystemsForAll
     p=14000000,
     nPorts=1)
     annotation (Placement(transformation(extent={{-44,-72},{-18,-46}})));
-  Turbinemsr.Data.Data_L3 data(
+  NHES.Systems.BalanceOfPlant.RankineCycle.Data.Data_L3 data(
     HPT_p_in=12000000,
     p_dump=20000000,
     p_i1=2000000,
@@ -81,10 +81,8 @@ model PFL_PCL_BOP_ControlSystemsForAll
     annotation (Placement(transformation(extent={{-44,20},{-24,40}})));
   NHES.Systems.PrimaryHeatSystem.MSR.Models.PFL_AddControlSystem_Portsfix
     pFL_AddControlSystem_Portsfix(
-    redeclare NHES.Systems.PrimaryHeatSystem.MSR.CS.CS_MSR_PFL CS,
+    redeclare NHES.Systems.PrimaryHeatSystem.MSR.ControlSystems.CS_MSR_PFL CS,
     Feed_Temp_input=pCL_PortsBothSides_NoPHX.pipeFromPHX_PCL.mediums[1].T,
-    iSep={kinetics.data.nC + Functions.FindIndexOfMatch(i, kinetics.reactivity.data.SIZZZAAA)
-        for i in iSep_ID},
     mCs_start_ISO=
         NHES.Systems.PrimaryHeatSystem.MSR.SupportComponents.InitializeArray(
             pFL_AddControlSystem_Portsfix.kinetics.reactivity.nC,

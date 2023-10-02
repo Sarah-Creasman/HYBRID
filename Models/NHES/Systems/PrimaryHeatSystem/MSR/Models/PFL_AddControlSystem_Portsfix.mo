@@ -1,6 +1,5 @@
 within NHES.Systems.PrimaryHeatSystem.MSR.Models;
 model PFL_AddControlSystem_Portsfix
-  import MSR;
 
 //  extends TRANSFORM.Icons.Example;
 
@@ -71,20 +70,20 @@ protected
 public
   Modelica.Units.SI.Power Qt_total=sum(kinetics.Qs)
     "Total thermal power output (from primary fission)";
-protected
+
   Modelica.Units.SI.Temperature Ts[fuelCell.geometry.nV]=fuelCell.mediums.T;
 
   Modelica.Units.SI.Temperature Tst[PHX.geometry.nV]=PHX.tube.mediums.T;
 
   Modelica.Units.SI.Temperature Tss[PHX.geometry.nV]=PHX.shell.mediums.T;
 
-  parameter Integer iPu=kinetics.data.nC + MSR.Functions.FindIndexOfMatch(       20094239, kinetics.reactivity.data.SIZZZAAA);
+  parameter Integer iPu=kinetics.data.nC + MSR.SupportComponents.FindIndexOfMatch(       20094239, kinetics.reactivity.data.SIZZZAAA);
 
   parameter Integer iSep_ID[:]={10001001,10001002,10001003,10002003,10002004,30036082,30036083,30036084,
       30036085,30036086,30054128,30054130,30054131,30054132,30054133,30054134,30054135,31054135,30054136,
       30054137};
 public
-  parameter Integer iSep[:]={kinetics.data.nC + MSR.Functions.FindIndexOfMatch(       i, kinetics.reactivity.data.SIZZZAAA)
+  parameter Integer iSep[:]={kinetics.data.nC + MSR.SupportComponents.FindIndexOfMatch(       i, kinetics.reactivity.data.SIZZZAAA)
       for i in iSep_ID} "Index array of substances from Medium separated by Medium_carrier";
 
   Modelica.Units.SI.Temperature Ts_loop[1 + reflA_lower.nV + fuelCell.nV + reflA_upper.nV + 1 +
@@ -154,9 +153,8 @@ public
         angle=toggleStaticHead*90,
         surfaceArea={reflA_upperG.nParallel/reflA_upper.nParallel*sum(
             reflA_upperG.geometry.crossAreas_1[1, :]),reflA_upperG.nParallel/
-            reflA_upper.nParallel*sum(reflA_upperG.geometry.crossAreas_1[end, :])}),
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO) annotation (Placement(transformation(
+            reflA_upper.nParallel*sum(reflA_upperG.geometry.crossAreas_1[end, :])}))
+                                          annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=90,
         origin={0,60})));
@@ -165,8 +163,6 @@ public
     p_start=data_MSR.p_inlet_tube,
     T_start=data_MSR.T_inlet_tube,
     C_start=Cs_start,
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO,
     nPorts_b=2,
     nPorts_a=1,
     redeclare package Medium = Medium_PFL,
@@ -203,9 +199,8 @@ public
         angle=toggleStaticHead*90,
         surfaceArea={reflA_lowerG.nParallel/reflA_lower.nParallel*sum(
             reflA_lowerG.geometry.crossAreas_1[1, :]),reflA_lowerG.nParallel/
-            reflA_lower.nParallel*sum(reflA_lowerG.geometry.crossAreas_1[end, :])}),
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO) annotation (Placement(transformation(
+            reflA_lower.nParallel*sum(reflA_lowerG.geometry.crossAreas_1[end, :])}))
+                                          annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=90,
         origin={0,-60})));
@@ -219,8 +214,6 @@ public
         origin={0,30})));
   MSR.SupportComponents.MixingVolume_forMSRs plenum_lower(
     C_start=Cs_start,
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO,
     nPorts_b=1,
     redeclare package Medium = Medium_PFL,
     nPorts_a=1,
@@ -357,8 +350,6 @@ public
         origin={0,-110})));
   MSR.SupportComponents.MixingVolume_forMSRs tee_inlet(
     C_start=Cs_start,
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO,
     nPorts_b=2,
     T_start=data_MSR.T_outlet_tube,
     redeclare package Medium = Medium_PFL,
@@ -388,9 +379,7 @@ public
         length=data_MSR.length_PHXToRCTR,
         dimension=data_MSR.D_PFL,
         dheight=toggleStaticHead*data_MSR.height_PHXToRCTR,
-        nV=nV_pipeFromPHX_PFL),
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO) annotation (Placement(transformation(
+        nV=nV_pipeFromPHX_PFL))           annotation (Placement(transformation(
         extent={{10,-10},{-10,10}},
         rotation=90,
         origin={160,-70})));
@@ -431,9 +420,7 @@ public
         th_wall=data_MSR.th_tube,
         dimension_tube=data_MSR.D_tube_inner,
         length_tube=data_MSR.length_tube,
-        nV=nV_PHX),
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO) annotation (Placement(transformation(
+        nV=nV_PHX))                       annotation (Placement(transformation(
         extent={{10,10},{-10,-10}},
         rotation=90,
         origin={160,0})));
@@ -452,9 +439,7 @@ public
         dimension=data_MSR.D_PFL,
         length=data_MSR.length_pumpToPHX,
         dheight=toggleStaticHead*data_MSR.height_pumpToPHX,
-        nV=nV_pipeToPHX_PFL),
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO) annotation (Placement(transformation(
+        nV=nV_pipeToPHX_PFL))             annotation (Placement(transformation(
         extent={{10,-10},{-10,10}},
         rotation=90,
         origin={160,70})));
@@ -470,9 +455,7 @@ public
     showName=systemTF.showName,
     h_start=pumpBowl_PFL.Medium.specificEnthalpy_pT(pumpBowl_PFL.p_start,
         data_MSR.T_inlet_tube),
-    A=3*data_MSR.crossArea_pumpbowl,
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO)
+    A=3*data_MSR.crossArea_pumpbowl)
     annotation (Placement(transformation(extent={{10,124},{30,144}})));
   inner TRANSFORM.Fluid.SystemTF systemTF(
     showName=false,
@@ -504,9 +487,7 @@ public
         length=data_MSR.length_reflR,
         surfaceArea={reflRG.nParallel/reflR.nParallel*sum(reflRG.geometry.crossAreas_1
             [1, :])},
-        nV=fuelCell.nV),
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO) annotation (Placement(transformation(
+        nV=fuelCell.nV))                  annotation (Placement(transformation(
         extent={{-10,10},{10,-10}},
         rotation=90,
         origin={20,0})));
@@ -601,27 +582,27 @@ public
   //     constant Integer i_mCs_start_salt[:]={1009,1013};
 
   //Comment/Uncomment as a block - MEDIUM DATA - 2a
-  record Data_ISO = MSR.Data.fissionProducts_1a;
-  constant Integer i_mCs_start_salt[:]={89,92};
+//  record Data_ISO = MSR.Data.fissionProducts_1a;
+//  constant Integer i_mCs_start_salt[:]={89,92};
 
   // for cases 2a and 2b
-  constant String actinide[:]={"u-235","u-238"};
-  constant Integer nA=size(i_mCs_start_salt, 1);
-  constant SI.MassFraction x_actinide[nA]={0.05,0.95};
+//  constant String actinide[:]={"u-235","u-238"};
+//  constant Integer nA=size(i_mCs_start_salt, 1);
+//  constant SI.MassFraction x_actinide[nA]={0.05,0.95};
 
   // initial uranium mass estimate
   constant Real Ufrac = 0.01;
   constant SI.Mass m_salt_total = 143255 "approximate total salt mass";
-  constant TRANSFORM.Units.Mole mol_salt_total=m_salt_total/Medium_PFL.MM_const;
-  constant TRANSFORM.Units.Mole mol_actinide_total=mol_salt_total*Ufrac/(1 -
-      Ufrac);
+//  constant TRANSFORM.Units.Mole mol_salt_total=m_salt_total/Medium_PFL.MM_const;
+//  constant TRANSFORM.Units.Mole mol_actinide_total=mol_salt_total*Ufrac/(1 -
+//      Ufrac);
 
-  constant SI.MolarMass MW[nA]={kinetics.reactivity.data.molarMass[i_mCs_start_salt[i]] for i in 1:
-      nA};
+//  constant SI.MolarMass MW[nA]={kinetics.reactivity.data.molarMass[i_mCs_start_salt[i]] for i in 1:
+//      nA};
 
-    constant SI.Mass m_actinide=mol_actinide_total*sum({MW[i]*x_actinide[i] for i in 1:size(i_mCs_start_salt,1)});
-    constant Real mCs_start_salt[size(i_mCs_start_salt, 1)]={m_actinide*x_actinide[i]/MW[i]*Modelica.Constants.N_A
-        for i in 1:nA};
+//    constant SI.Mass m_actinide=mol_actinide_total*sum({MW[i]*x_actinide[i] for i in 1:size(i_mCs_start_salt,1)});
+//    constant Real mCs_start_salt[size(i_mCs_start_salt, 1)]={m_actinide*x_actinide[i]/MW[i]*Modelica.Constants.N_A
+//        for i in 1:nA};
 
 //    constant SI.Mass m_actinide=m_salt_total*Ufrac;
 //    constant Real mCs_start_salt[size(i_mCs_start_salt, 1)]={m_actinide*(if i ==2 then x_actinide[i]/x_actinide[1] else 1.0)/MW[i]*Modelica.Constants.N_A
@@ -631,14 +612,15 @@ public
   //         *nV_total;
 
   //   //Comment/Uncomment as a block - SMALL DATA - test
-  //       record Data_ISO =
-  //         TRANSFORM.Nuclear.ReactorKinetics.SparseMatrix.Data.Isotopes.Isotopes_TeIXeU;
-  //
-  //       constant Integer i_mCs_start_salt[:]={4};
-  //       constant Real mCs_start_salt[size(i_mCs_start_salt, 1)]={1.43e24};
+         record Data_ISO =
+
+      TRANSFORM.Nuclear.ReactorKinetics.SparseMatrix.Data.Isotopes.Isotopes_TeIXeU;
+
+         constant Integer i_mCs_start_salt[:]={4};
+         constant Real mCs_start_salt[size(i_mCs_start_salt, 1)]={1.43e24};
 
   ////
-  parameter Real mCs_start_ISO[kinetics.reactivity.nC]=MSR.Functions.InitializeArray(
+  parameter Real mCs_start_ISO[kinetics.reactivity.nC]=MSR.SupportComponents.InitializeArray(
       kinetics.reactivity.nC,
       0.0,
       i_mCs_start_salt,
@@ -865,7 +847,7 @@ public
   SI.Length pipeToPHX_PFL_dimension[pipeToPHX_PFL.nV]=pipeToPHX_PFL.geometry.dimensions;
   SI.Length reflR_dimension[reflR.nV]=reflR.geometry.dimensions;
 
-  MSR.MoltenSaltReactor.Data.data_MSR data_MSR(
+  MSR.Data.data_MSR data_MSR(
     nHX_total=6,
     nParallel=3,
     nHX_total_SHX=6,
@@ -959,8 +941,6 @@ protected
     T_start=data_OFFGAS.T_drainTank,
     p_start=data_OFFGAS.p_drainTank,
     Q_gen=100,
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO,
     nPorts_b=2,
     nPorts_a=1,
     showName=systemTF.showName,
@@ -978,9 +958,7 @@ protected
     A=data_OFFGAS.crossArea_drainTank_inner,
     level_start=0.20,
     showName=systemTF.showName,
-    Q_gen=100,
-    redeclare record Data_PG = Data_PG,
-    redeclare record Data_ISO = Data_ISO)
+    Q_gen=100)
     annotation (Placement(transformation(extent={{-308,-56},{-288,-36}})));
   TRANSFORM.Fluid.FittingsAndResistances.SpecifiedResistance resistance_fromDrainTank(
     redeclare package Medium = Medium_PFL,

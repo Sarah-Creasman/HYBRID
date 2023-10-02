@@ -8,7 +8,7 @@ model MixingVolume_forMSRs
         mC_gen_PG,
         mC_gen_ISO));
 
-  extends MSR.Components.Datasets;
+  extends NHES.Systems.PrimaryHeatSystem.MSR.Data.Datasets;
 
   TRANSFORM.Units.ExtraPropertyFlowRate mC_gen_PG[data_PG.nC];
   TRANSFORM.Units.ExtraPropertyFlowRate mC_gen_ISO[data_ISO.nC];

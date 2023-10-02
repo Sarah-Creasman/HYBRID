@@ -1,6 +1,5 @@
 within NHES.Systems.PrimaryHeatSystem.MSR.Models;
 model PCL_PortsBothSides_NoPHXPressureFIx
-  import MSR;
   extends MSR.BaseClasses.Partial_SubSystem_A(
     redeclare replaceable MSR.Data.data_new data,
     redeclare replaceable MSR.ControlSystems.CS_1 CS,

@@ -9,7 +9,7 @@ model GenericPipe_forMSRs
         TRANSFORM.Fluid.ClosureRelations.InternalTraceGeneration.Models.DistributedVolume_Trace_1D.GenericTraceGeneration
         (mC_gens=mC_gens));
 
-  extends MSR.Components.Datasets;
+  extends NHES.Systems.PrimaryHeatSystem.MSR.Data.Datasets;
 
   TRANSFORM.Units.ExtraPropertyFlowRate mC_gens[nV,data_PG.nC + data_ISO.nC]=cat(
       2,

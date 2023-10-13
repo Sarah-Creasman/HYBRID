@@ -28,21 +28,17 @@ package SHS_Two_Tank
           CS,
         redeclare replaceable
           NHES.Systems.EnergyStorage.SHS_Two_Tank.Data.Data_SHS data(
-          ht_init_level=5.5,
-          cold_tank_init_level=5.5,
+          ht_init_level=11.91/2,
+          cold_tank_init_level=11.91/2,
           DHX_K_tube(unit="1/m4"),
           DHX_K_shell(unit="1/m4"),
           discharge_pump_rho_nominal(displayUnit="kg/m3")),
         redeclare package Storage_Medium =
             TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66,
-        tank_height=6.96 + 6,
+        tank_height=6.96,
         tank_diameter=3.7,
         multiplier=10,
-        Produced_steam_flow=valveLinear.port_a.m_flow,
-        flowMultiplier1(capacityScaler=0.1111),
-        flowMultiplier(capacityScaler=9),
-        flowMultiplier2(capacityScaler=0.1111),
-        flowMultiplier3(capacityScaler=9))
+        Produced_steam_flow=valveLinear.port_a.m_flow)
         annotation (Placement(transformation(extent={{-50,-50},{46,52}})));
       TRANSFORM.Fluid.Sensors.TemperatureTwoPort CHX_Inlet_T(redeclare package
           Medium = Modelica.Media.Water.StandardWater)
@@ -165,7 +161,7 @@ package SHS_Two_Tank
       connect(PID.y, boundary3.m_flow_in) annotation (Line(points={{187,86},{214,86},
               {214,48.2},{142,48.2}}, color={0,0,127}));
       annotation (experiment(
-          StopTime=259200,
+          StopTime=432000,
           Interval=37,
           __Dymola_Algorithm="Esdirk45a"));
     end Build_Test;
@@ -2576,10 +2572,10 @@ package SHS_Two_Tank
             rotation=90,
             origin={-26,-34})));
       Modelica.Blocks.Sources.RealExpression Charging_Mass_Flow(y=Charging_Valve.m_flow)
-        annotation (Placement(transformation(extent={{-102,76},{-82,96}})));
+        annotation (Placement(transformation(extent={{-122,78},{-102,98}})));
 
       Modelica.Blocks.Sources.RealExpression Level_Cold_Tank(y=cold_tank.level)
-        annotation (Placement(transformation(extent={{-102,90},{-82,110}})));
+        annotation (Placement(transformation(extent={{-112,90},{-92,110}})));
       Modelica.Blocks.Sources.RealExpression Level_Hot_Tank(y=hot_tank.level)
         annotation (Placement(transformation(extent={{-104,118},{-84,138}})));
       Modelica.Fluid.Sources.MassFlowSource_h boundary2(
@@ -2605,7 +2601,7 @@ package SHS_Two_Tank
         annotation (Placement(transformation(extent={{-66,68},{-46,88}})));
       Modelica.Blocks.Sources.RealExpression Level_Hot_Tank2(y=tank_height -
             hot_tank.level)
-        annotation (Placement(transformation(extent={{-100,64},{-80,84}})));
+        annotation (Placement(transformation(extent={{-116,64},{-96,84}})));
       Modelica.Blocks.Sources.RealExpression Charging_Temperature(y=
             hot_tank_dump_pipe.state.T)
         annotation (Placement(transformation(extent={{-104,132},{-84,152}})));
@@ -2652,15 +2648,18 @@ package SHS_Two_Tank
             rotation=270,
             origin={-8,-60})));
 
-      TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_ch_a(redeclare package Medium =
+      TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_ch_a(redeclare package
+          Medium =
             Charging_Medium)                                                                           annotation (Placement(
             transformation(extent={{-108,-72},{-88,-52}}), iconTransformation(
               extent={{-108,-72},{-88,-52}})));
-      TRANSFORM.Fluid.Interfaces.FluidPort_State port_ch_b(redeclare package Medium =
+      TRANSFORM.Fluid.Interfaces.FluidPort_State port_ch_b(redeclare package
+          Medium =
             Charging_Medium)                                                                            annotation (Placement(
             transformation(extent={{-108,44},{-88,64}}), iconTransformation(extent={
                 {-108,44},{-88,64}})));
-      TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_dch_a(redeclare package Medium =
+      TRANSFORM.Fluid.Interfaces.FluidPort_Flow port_dch_a(redeclare package
+          Medium =
             Discharging_Medium)                                                                            annotation (Placement(
             transformation(extent={{88,48},{108,68}}), iconTransformation(extent={{88,
                 48},{108,68}})));
@@ -2728,19 +2727,19 @@ package SHS_Two_Tank
           pattern=LinePattern.Dash,
           thickness=0.5));
       connect(sensorBus.cold_tank_level,Level_Cold_Tank. y) annotation (Line(
-          points={{-30,100},{-81,100}},
+          points={{-30,100},{-91,100}},
           color={239,82,82},
           pattern=LinePattern.Dash,
           thickness=0.5));
       connect(sensorBus.charge_m_flow, Charging_Mass_Flow.y) annotation (Line(
-          points={{-30,100},{-76,100},{-76,86},{-81,86}},
+          points={{-30,100},{-86,100},{-86,88},{-101,88}},
           color={239,82,82},
           pattern=LinePattern.Dash,
           thickness=0.5));
       connect(Level_Hot_Tank1.y, delay1.u)
         annotation (Line(points={{-67,-90},{-62.8,-90}}, color={0,0,127}));
       connect(hysteresis.u, Level_Hot_Tank2.y)
-        annotation (Line(points={{-68,78},{-74,78},{-74,74},{-79,74}},
+        annotation (Line(points={{-68,78},{-90,78},{-90,74},{-95,74}},
                                                          color={0,0,127}));
       connect(sensorBus.Charge_Temp, Charging_Temperature.y) annotation (Line(
           points={{-30,100},{-76,100},{-76,142},{-83,142}},

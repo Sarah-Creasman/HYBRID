@@ -28,16 +28,17 @@ package SHS_Two_Tank
           CS,
         redeclare replaceable
           NHES.Systems.EnergyStorage.SHS_Two_Tank.Data.Data_SHS data(
-          ht_init_level=11.91/2,
-          cold_tank_init_level=11.91/2,
+          ht_init_level=12.53/2,
+          cold_tank_init_level=12.53/2,
           DHX_K_tube(unit="1/m4"),
           DHX_K_shell(unit="1/m4"),
           discharge_pump_rho_nominal(displayUnit="kg/m3")),
         redeclare package Storage_Medium =
             TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66,
-        tank_height=6.96,
-        tank_diameter=3.7,
-        multiplier=10,
+        tank_height=12.53,
+        tank_diameter=6.33,
+        top_margin=2.38,
+        multiplier=2,
         Produced_steam_flow=valveLinear.port_a.m_flow)
         annotation (Placement(transformation(extent={{-50,-50},{46,52}})));
       TRANSFORM.Fluid.Sensors.TemperatureTwoPort CHX_Inlet_T(redeclare package
@@ -2444,6 +2445,7 @@ package SHS_Two_Tank
         parameter Integer CHXnV = 5;
         parameter Modelica.Units.SI.Length tank_height = 15;
         parameter Modelica.Units.SI.Length tank_diameter = 7.97885;
+        parameter Modelica.Units.SI.Length top_margin = 3;
         parameter Real multiplier=1.0;
 
         input Modelica.Units.SI.MassFlowRate Produced_steam_flow annotation(Dialog(tab = "General"));
@@ -2597,7 +2599,8 @@ package SHS_Two_Tank
       BalanceOfPlant.StagebyStageTurbineSecondary.Control_and_Distribution.Delay
         delay1(Ti=0.5)
         annotation (Placement(transformation(extent={{-62,-92},{-54,-88}})));
-      Modelica.Blocks.Logical.Hysteresis hysteresis(uLow=3, uHigh=tank_height - 3)
+      Modelica.Blocks.Logical.Hysteresis hysteresis(uLow=3, uHigh=tank_height
+             - top_margin)
         annotation (Placement(transformation(extent={{-66,68},{-46,88}})));
       Modelica.Blocks.Sources.RealExpression Level_Hot_Tank2(y=tank_height -
             hot_tank.level)

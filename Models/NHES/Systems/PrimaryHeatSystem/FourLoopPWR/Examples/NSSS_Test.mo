@@ -3,7 +3,8 @@ model NSSS_Test
   import TRANSFORM;
   extends TRANSFORM.Icons.Example;
 
-  Components.NSSS PHS(redeclare CS_SteadyNominalPower CS)
+  Components.NSSS PHS(redeclare CS_SteadyNominalPower CS, data(Q_total_th=
+          3100e6))
     annotation (Placement(transformation(extent={{-40,-42},{40,38}})));
 
   Modelica.Fluid.Sources.Boundary_ph sink1(

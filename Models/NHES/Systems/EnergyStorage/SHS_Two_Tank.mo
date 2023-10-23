@@ -28,17 +28,17 @@ package SHS_Two_Tank
           CS,
         redeclare replaceable
           NHES.Systems.EnergyStorage.SHS_Two_Tank.Data.Data_SHS data(
-          ht_init_level=10.55/2,
-          cold_tank_init_level=10.55/2,
+          ht_init_level=10.01/2,
+          cold_tank_init_level=10.01/2,
           DHX_K_tube(unit="1/m4"),
           DHX_K_shell(unit="1/m4"),
           discharge_pump_rho_nominal(displayUnit="kg/m3")),
         redeclare package Storage_Medium =
             TRANSFORM.Media.Fluids.Therminol_66.TableBasedTherminol66,
-        tank_height=10.55,
-        tank_diameter=5.03,
-        top_margin=1.89,
-        multiplier=4,
+        tank_height=10.01,
+        tank_diameter=4.67,
+        top_margin=1.75,
+        multiplier=5,
         Produced_steam_flow=valveLinear.port_a.m_flow)
         annotation (Placement(transformation(extent={{-50,-50},{46,52}})));
       TRANSFORM.Fluid.Sensors.TemperatureTwoPort CHX_Inlet_T(redeclare package

@@ -21,7 +21,7 @@ model CS_Default
   Modelica.Blocks.Sources.RealExpression
                                    FWpump(y=u_fwpump)
   annotation (Placement(transformation(extent={{-10,-20},{10,0}})));
-Data.Data_Basic data
+Data.Data_Basic data(Q_total_th=3100e6)
   annotation (Placement(transformation(extent={{-10,-88},{10,-68}})));
   Modelica.Blocks.Sources.RealExpression PHSpump(y=u_PHSm_flow)
     annotation (Placement(transformation(extent={{-10,-62},{10,-42}})));

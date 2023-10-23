@@ -46,7 +46,7 @@ model CS_SteadyNominalPower "Core: Tavg | Boiler Level: dT_avg"
     annotation (Placement(transformation(extent={{80,-40},{100,-20}})));
   Modelica.Blocks.Logical.Switch switch_Q_total1
     annotation (Placement(transformation(extent={{120,-20},{140,0}})));
-  Data.Data_Basic data
+  Data.Data_Basic data(Q_total_th=3100e6)
     annotation (Placement(transformation(extent={{-10,-88},{10,-68}})));
   TRANSFORM.Controls.LimPID PID_SGpump(
     controllerType=Modelica.Blocks.Types.SimpleController.PI,

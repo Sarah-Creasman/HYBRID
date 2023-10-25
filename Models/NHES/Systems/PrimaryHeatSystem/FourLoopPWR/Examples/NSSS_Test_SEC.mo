@@ -3,7 +3,7 @@ model NSSS_Test_SEC
   import TRANSFORM;
   extends TRANSFORM.Icons.Example;
 
-  Components.NSSS_SEC PHS(redeclare CS_SteadyNominalPower CS)
+  Components.NSSS_SEC_LoadFollow PHS(redeclare CS_LoadFollow_SEC CS)
     annotation (Placement(transformation(extent={{-40,-42},{40,38}})));
 
   Modelica.Fluid.Sources.Boundary_ph sink1(

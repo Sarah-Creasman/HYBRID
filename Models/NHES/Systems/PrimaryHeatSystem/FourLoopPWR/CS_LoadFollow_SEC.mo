@@ -1,12 +1,12 @@
 within NHES.Systems.PrimaryHeatSystem.FourLoopPWR;
-model CS_LoadFollow "Core: Tavg | Boiler Level: dT_avg"
+model CS_LoadFollow_SEC "Core: Tavg | Boiler Level: dT_avg"
 
   extends BaseClasses.Partial_ControlSystem;
 
   parameter SI.Time delayStart_SGpump=0 "Delay SG recirc pump control";
   parameter SI.Time delayStart_CR=0 "Delay control rod reactivity control";
   parameter SI.Time delayStart_PZRheater=0 "Delay pressurizer heater control";
-  input Real demandChange=0.75 "Demand change from nominal. 1.0 = nominal power" annotation(Dialog(group="Inputs"));
+  input Real demandChange=1.0 "Demand change from nominal. 1.0 = nominal power" annotation(Dialog(group="Inputs"));
 
   Modelica.Blocks.Sources.ContinuousClock clock(offset=0, startTime=0)
     annotation (Placement(transformation(extent={{-170,60},{-150,80}})));
@@ -40,7 +40,7 @@ model CS_LoadFollow "Core: Tavg | Boiler Level: dT_avg"
     annotation (Placement(transformation(extent={{80,-40},{100,-20}})));
   Modelica.Blocks.Logical.Switch switch_Q_total1
     annotation (Placement(transformation(extent={{120,-20},{140,0}})));
-  Data.Data_Basic data
+  Data.Data_Basic data(Q_total_th=3100e6)
     annotation (Placement(transformation(extent={{-10,-88},{10,-68}})));
   Modelica.Blocks.Sources.Constant
                             const(k=1625)
@@ -140,4 +140,4 @@ annotation(defaultComponentName="PHS_CS", Icon(coordinateSystem(extent={{-100,-1
           fillPattern=FillPattern.Solid,
           textString="CS: Tavg/CR/Pressure with start lag")}),
     Diagram(coordinateSystem(extent={{-180,-100},{280,200}})));
-end CS_LoadFollow;
+end CS_LoadFollow_SEC;

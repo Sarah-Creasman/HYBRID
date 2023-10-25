@@ -11,7 +11,9 @@ model NSSS_SEC
       h=Medium.specificEnthalpy_pT(port_a_nominal.p,data.T_inlet_shell),
       m_flow=data.m_flow_shellSide_total),
     port_b_nominal(p=data.p_shellSide, h=data.h_vsat),
-    redeclare Data.Data_Basic data(Q_total_th=3100e6),
+    redeclare Data.Data_Basic data(Q_total_th=3100e6,
+      T_core_inlet_nominal=565.094,
+      T_core_outlet_nominal=598.983),
     FuelConsumption(y=(1 + 0.169)*Q_total.y/(200*1.6e-13*6.022e23/0.235)));
 
   package Medium_PHTS = Modelica.Media.Water.StandardWater

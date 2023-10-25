@@ -1,17 +1,17 @@
 within NHES.Systems.PrimaryHeatSystem.FourLoopPWR.Components;
-model NSSS
+model NSSS_SEC_LoadFollow
   import TRANSFORM;
   extends BaseClasses.Partial_SubSystem_A(
     replaceable package Medium = Modelica.Media.Water.StandardWater,
     allowFlowReversal=system.allowFlowReversal,
-    redeclare replaceable CS_Default CS,
+    redeclare replaceable CS_LoadFollow_SEC CS,
     redeclare replaceable ED_Default ED,
     port_a_nominal(
       p=data.p_shellSide,
       h=Medium.specificEnthalpy_pT(port_a_nominal.p,data.T_inlet_shell),
       m_flow=data.m_flow_shellSide_total),
     port_b_nominal(p=data.p_shellSide, h=data.h_vsat),
-    redeclare Data.Data_Basic data,
+    redeclare Data.Data_Basic data(Q_total_th=3100e6),
     FuelConsumption(y=(1 + 0.169)*Q_total.y/(200*1.6e-13*6.022e23/0.235)));
 
   package Medium_PHTS = Modelica.Media.Water.StandardWater
@@ -803,4 +803,4 @@ equation
       StopTime=10000,
       __Dymola_NumberOfIntervals=10000,
       __Dymola_Algorithm="Esdirk45a"));
-end NSSS;
+end NSSS_SEC_LoadFollow;

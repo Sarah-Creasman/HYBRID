@@ -1,5 +1,5 @@
 within NHES.Systems.BalanceOfPlant.Turbine.Examples;
-model BOP_test_4Turbines_StandAlone
+model BOP_test_4Turbines_StandAlone2
   extends Modelica.Icons.Example;
   parameter Real P_ext=138;
   parameter Real P_demand=1;
@@ -8,29 +8,25 @@ model BOP_test_4Turbines_StandAlone
 
   NHES.Systems.BalanceOfPlant.Turbine.SteamTurbine_4Turbines BOP(
     redeclare replaceable
-      NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_L3_3_4Turbines
-      CS(
-      data(
-        HPT_p_in=data.HPT_p_in,
-        p_dump=data.p_dump,
-        p_i1=data.p_i1,
-        p_i2=data.p_i2,
-        cond_p=data.cond_p,
-        Tin=data.Tin,
-        Tfeed=data.Tfeed,
-        d_HPT_in(displayUnit="kg/m3") = data.d_HPT_in,
-        d_LPT1_in(displayUnit="g/cm3") = data.d_LPT1_in,
-        d_LPT2_in(displayUnit="kg/m3") = data.d_LPT2_in,
-        mdot_total=data.mdot_total,
-        mdot_fh=data.mdot_fh,
-        mdot_hpt=data.mdot_hpt,
-        mdot_lpt1=data.mdot_lpt1,
-        mdot_lpt2=data.mdot_lpt2,
-        m_ext=data.m_ext,
-        eta_t=data.eta_t,
-        eta_mech=data.eta_mech,
-        eta_p=data.eta_p),
-      LPT1_BV_PID(k=5e-11, Ti=300)),
+      NHES.Systems.BalanceOfPlant.Turbine.ControlSystems.CS_L3_HTGR_extraction
+      CS(redeclare NHES.Systems.BalanceOfPlant.Turbine.Data.Data_L3 data(
+        HPT_p_in=7340000,
+        p_dump=20000000,
+        p_i1=1155000,
+        p_i2=390000,
+        Tin=565.15,
+        Tfeed=429.85,
+        d_HPT_in=37845.1727,
+        d_LPT1_in=6969.164714,
+        d_LPT2_in=2111.864686,
+        mdot_total=1607.044208,
+        mdot_fh=368.7799897,
+        mdot_hpt=1238.264218,
+        mdot_lpt1=1238.264218,
+        mdot_lpt2=995.6221656,
+        eta_t=0.93,
+        eta_mech=1,
+        eta_p=0.9)),
     redeclare replaceable NHES.Systems.BalanceOfPlant.Turbine.Data.Data_4Turbines data(
       HPT_p_in=7340000,
       p_dump=20000000,
@@ -51,14 +47,15 @@ model BOP_test_4Turbines_StandAlone
       eta_p=0.9),
     OFWH_1(T_start=333.15),
     OFWH_2(T_start=353.15),
-    LPT1_bypass_valve(dp_nominal(displayUnit="Pa") = 1, m_flow_nominal=10*m_ext))
+    LPT1_bypass_valve(dp_nominal(displayUnit="Pa") = 1, m_flow_nominal=10*m_ext),
+    moistureSeperator(T_start=413.15))
     annotation (Placement(transformation(extent={{58,-20},{118,40}})));
      // booleanStep2(startTime=100000),
       //Steam_Extraction(y=data.m_ext),
   TRANSFORM.Fluid.BoundaryConditions.Boundary_pT bypassdump(
     redeclare package Medium = Modelica.Media.Water.StandardWater,
     use_p_in=false,
-    p=2000000,
+    p=7537000,
     nPorts=1)
     annotation (Placement(transformation(extent={{-24,-72},{-4,-52}})));
   TRANSFORM.Fluid.BoundaryConditions.Boundary_pT steamdump(
@@ -68,15 +65,6 @@ model BOP_test_4Turbines_StandAlone
     annotation (Placement(transformation(extent={{0,74},{20,94}})));
   TRANSFORM.Electrical.Sources.FrequencySource boundary
     annotation (Placement(transformation(extent={{194,22},{174,42}})));
-  TRANSFORM.Fluid.BoundaryConditions.MassFlowSource_h
-                                                 bypassdump1(
-    redeclare package Medium = Modelica.Media.Water.StandardWater,
-    use_m_flow_in=false,
-    use_h_in=false,
-    m_flow=1650,
-    h=3043e3,
-    nPorts=1)
-    annotation (Placement(transformation(extent={{-44,14},{-24,34}})));
 
   Modelica.Blocks.Continuous.Integrator integrator
     annotation (Placement(transformation(extent={{170,66},{190,86}})));
@@ -85,12 +73,20 @@ model BOP_test_4Turbines_StandAlone
   TRANSFORM.Fluid.BoundaryConditions.Boundary_pT bypassdump2(
     redeclare package Medium = Modelica.Media.Water.StandardWater,
     use_p_in=false,
-    p=7537000,
-    T=544.85,
+    p=2000000,
     nPorts=1)
     annotation (Placement(transformation(extent={{-42,-18},{-22,2}})));
   Data.Data_4Turbines data
     annotation (Placement(transformation(extent={{-98,82},{-78,102}})));
+  TRANSFORM.Fluid.BoundaryConditions.MassFlowSource_h
+                                                 bypassdump1(
+    redeclare package Medium = Modelica.Media.Water.StandardWater,
+    use_m_flow_in=false,
+    use_h_in=false,
+    m_flow=1650,
+    h=3043e3,
+    nPorts=1)
+    annotation (Placement(transformation(extent={{-54,28},{-34,48}})));
 initial equation
 
 equation
@@ -105,12 +101,12 @@ equation
                              color={255,0,0}));
   connect(sensorW.W, integrator.u) annotation (Line(points={{150,41.4},{150,76},
           {168,76}},                   color={0,0,127}));
-  connect(bypassdump1.ports[1], BOP.port_a_steam) annotation (Line(points={{-24,
-          24},{48,24},{48,28},{58,28}}, color={0,127,255}));
   connect(bypassdump.ports[1], BOP.port_b_feed) annotation (Line(points={{-4,-62},
           {48,-62},{48,-8},{58,-8}}, color={0,127,255}));
   connect(bypassdump2.ports[1], BOP.port_b_bypass) annotation (Line(points={{-22,
           -8},{44,-8},{44,10},{58,10}}, color={0,127,255}));
+  connect(bypassdump1.ports[1], BOP.port_a_steam) annotation (Line(points={{-34,
+          38},{48,38},{48,28},{58,28}}, color={0,127,255}));
   annotation (experiment(
       StopTime=10000000,
       Interval=500,
@@ -146,4 +142,4 @@ equation
             tolerance=0.0001,
             fixedStepSize=0)))),
     __Dymola_experimentSetupOutput(events=false));
-end BOP_test_4Turbines_StandAlone;
+end BOP_test_4Turbines_StandAlone2;

@@ -153,8 +153,7 @@ model SteamTurbine_L1_boundaries
     h=port_a3_nominal_h) if nPorts_a3 > 0
     annotation (Placement(transformation(extent={{50,-150},{30,-130}})));
    TRANSFORM.Fluid.Valves.CheckValve checkValve[nPorts_a3](redeclare package
-              Medium =
-                Medium, m_flow_start=port_a3_start_m_flow) if nPorts_a3 > 0
+      Medium =  Medium, m_flow_start=port_a3_start_m_flow) if nPorts_a3 > 0
      annotation (Placement(transformation(extent={{0,-150},{20,-130}})));
    TRANSFORM.Fluid.BoundaryConditions.MassFlowSource_h boundary_m_flow_a3[
      nPorts_a3](

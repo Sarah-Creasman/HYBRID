@@ -231,8 +231,8 @@ equation
   connect(volume.port_b, stateSensor1.port_a) annotation (Line(points={{-82,30},
           {-82,44},{-54,44},{-54,26},{-40,26}}, color={0,127,255}));
   annotation (experiment(
-      StopTime=1000,
-      __Dymola_NumberOfIntervals=1000,
+      StopTime=100000,
+      Interval=20,
       __Dymola_Algorithm="Esdirk45a"), Documentation(info="<html>
 <p>Test of Pebble_Bed_Three-Stage_Rankine. The simulation should experience transient where external electricity demand is oscilating and control valves are opening and closing corresponding to the required power demand. </p>
 <p>The ThreeStaged Turbine BOP model contains four control elements: </p>

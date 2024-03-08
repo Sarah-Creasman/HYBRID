@@ -1,0 +1,6 @@
+model dsmodelIterationSelect
+  extends NHES.Systems.BalanceOfPlant.RankineCycle.Examples.PlayingWithPressures;
+  annotation(__Dymola_SimulationIterationVariables={"der(BOP.OFWH_2.medium.h)", 
+  "flowCV.PID.limiter.u", "BOP.pump.dh", "der(BOP.OFWH_1.medium.h)", 
+  "BOP.port_b_bypass.m_flow", "BOP.HPT.portHP.p"});
+end dsmodelIterationSelect;

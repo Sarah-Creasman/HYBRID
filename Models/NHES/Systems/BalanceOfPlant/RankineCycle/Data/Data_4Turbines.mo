@@ -9,16 +9,15 @@ model Data_4Turbines
     parameter Modelica.Units.SI.Power Power_nom=3100e6 "Electrical Power Nominal";
 
   parameter Modelica.Units.SI.Pressure p_i1=9.9e5 "Set Pressure Between High Pressure Turbine and Low Pressure Turbine 1" annotation(Dialog(group="Pressure Sets"));
-  parameter Modelica.Units.SI.Pressure p_i2=3.9e5 "Set Pressure Between Low Pressure Turbine 1 and Low Pressure Turbine 2" annotation(Dialog(group="Pressure Sets"));
-  parameter Modelica.Units.SI.Pressure cond_p=0.1e5 "Condenser Pressure"
-                                                   annotation(Dialog(group="Pressure Sets"));
+  parameter Modelica.Units.SI.Pressure p_i2=9.9e5 "Set Pressure Between Low Pressure Turbine 1 and Low Pressure Turbine 2" annotation(Dialog(group="Pressure Sets")); //3.9e5
+  parameter Modelica.Units.SI.Pressure cond_p=0.1e5 "Condenser Pressure"                                                   annotation(Dialog(group="Pressure Sets"));
 
-  parameter Modelica.Units.SI.Temperature Tin=565.15 "Inlet Steam Temperature" annotation(Dialog(group="Temperature Sets"));
-  parameter Modelica.Units.SI.Temperature Tfeed=429.85 "Target Feed Water Temperature" annotation(Dialog(group="Temperature Sets"));
+  parameter Modelica.Units.SI.Temperature Tin=565.15  "Inlet Steam Temperature" annotation(Dialog(group="Temperature Sets")); //562.15
+  parameter Modelica.Units.SI.Temperature Tfeed=429.85 "Target Feed Water Temperature" annotation(Dialog(group="Temperature Sets")); //509.35
 
-  parameter Modelica.Units.SI.Density d_HPT_in = 37845.1727  "HPT inlet density"  annotation(Dialog(group="Density Sets"));
-  parameter Modelica.Units.SI.Density d_LPT1_in = 6064.249238   "LPT1 inlet density"  annotation(Dialog(group="Density Sets"));
-  parameter Modelica.Units.SI.Density d_LPT2_in = 2111.864686   "LPT2 inlet density"  annotation(Dialog(group="Density Sets"));
+  parameter Modelica.Units.SI.Density d_HPT_in = 37845.1727  "HPT inlet density"  annotation(Dialog(group="Density Sets")); //37.8451727
+  parameter Modelica.Units.SI.Density d_LPT1_in = 37845.1727  "LPT1 inlet density"  annotation(Dialog(group="Density Sets")); //6.064249238
+  parameter Modelica.Units.SI.Density d_LPT2_in = 5096.357584  "LPT2 inlet density"  annotation(Dialog(group="Density Sets")); //2.111864686
 
   parameter Modelica.Units.SI.Pressure HPT_p_out=p_i1 annotation(Dialog(tab="Initialization"));
   parameter Modelica.Units.SI.Pressure LPT1_p_in=p_i1 annotation(Dialog(tab="Initialization"));
@@ -27,18 +26,18 @@ model Data_4Turbines
   parameter Modelica.Units.SI.Pressure LPT2_p_out=cond_p annotation(Dialog(tab="Initialization"));
 
   parameter Modelica.Units.SI.MassFlowRate mdot_total=1463.311565 "Nominal Total Mass Flow Rate" annotation(Dialog(group="Flow Rate Sets"));
-  parameter Modelica.Units.SI.MassFlowRate mdot_fh= 225.0848996 "Nominal Controlled Feed Heating Mass Flow Rate" annotation(Dialog(group="Flow Rate Sets"));
-  parameter Modelica.Units.SI.MassFlowRate mdpt_HPFH= 0.002 "Set High pressure feedwater heating flow (used in models with both LP and HP feed heating" annotation(Dialog(group="Flow Rate Sets"));
-  parameter Modelica.Units.SI.MassFlowRate mdot_hpt= 1238.226665 "Nominal Mass Flow Rate" annotation(Dialog(group="Flow Rate Sets"));
-  parameter Modelica.Units.SI.MassFlowRate mdot_lpt1= 1238.226665 "Nominal Mass Flow Rate" annotation(Dialog(group="Flow Rate Sets"));
-  parameter Modelica.Units.SI.MassFlowRate mdot_lpt2= 995.6849312 "Nominal Mass Flow Rate" annotation(Dialog(group="Flow Rate Sets"));
+  parameter Modelica.Units.SI.MassFlowRate mdot_fh= 220.5503427  "Nominal Controlled Feed Heating Mass Flow Rate" annotation(Dialog(group="Flow Rate Sets")); //225.0848996
+  parameter Modelica.Units.SI.MassFlowRate mdpt_HPFH= 0.002 "Set High pressure feedwater heating flow (used in models with both LP and HP feed heating" annotation(Dialog(group="Flow Rate Sets")); //280
+  parameter Modelica.Units.SI.MassFlowRate mdot_hpt= 1242.761222  "Nominal Mass Flow Rate" annotation(Dialog(group="Flow Rate Sets")); //1238.226665
+  parameter Modelica.Units.SI.MassFlowRate mdot_lpt1= 1242.761222  "Nominal Mass Flow Rate" annotation(Dialog(group="Flow Rate Sets")); //1238.226665
+  parameter Modelica.Units.SI.MassFlowRate mdot_lpt2= 1049.8559  "Nominal Mass Flow Rate" annotation(Dialog(group="Flow Rate Sets")); //995.6849312
  // parameter Modelica.Units.SI.Power p_use=P_demand*100000;
   parameter Modelica.Units.SI.MassFlowRate m_ext= 1 annotation(Dialog(group="Flow Rate Sets"));
   parameter Modelica.Units.SI.AbsolutePressure p_use= 1e5 annotation(Dialog(group="Extraction"));
 
-  parameter Real eta_t=0.93 "Isentropic Efficiency of the Turbines" annotation(Dialog(group="Efficiency Sets"));
+  parameter Real eta_t=0.9  "Isentropic Efficiency of the Turbines" annotation(Dialog(group="Efficiency Sets")); //0.93
   parameter Real eta_mech=1 "Mechincal Effieiency of the Turbines"  annotation(Dialog(group="Efficiency Sets"));
-  parameter Real eta_p=0.9 "Isentropic Efficiency of the Pumps" annotation(Dialog(group="Efficiency Sets"));
+  parameter Real eta_p=0.8  "Isentropic Efficiency of the Pumps" annotation(Dialog(group="Efficiency Sets")); //0.9
 
     //Heat Exchangers
     //Bypass Feedwater Heater

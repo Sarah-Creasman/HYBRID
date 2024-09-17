@@ -1,6 +1,28 @@
 model dsmodelIterationSelect
-  extends NHES.Systems.BalanceOfPlant.RankineCycle.Examples.PlayingWithPressures;
-  annotation(__Dymola_SimulationIterationVariables={"der(BOP.OFWH_2.medium.h)", 
-  "flowCV.PID.limiter.u", "BOP.pump.dh", "der(BOP.OFWH_1.medium.h)", 
-  "BOP.port_b_bypass.m_flow", "BOP.HPT.portHP.p"});
+  extends NHES.Desalination.MEE.Examples.MEE_FC_test;
+  annotation(__Dymola_SimulationIterationVariables={"mEE_FCwPH.Effect[1].Evaporator.Xo[2]",
+   "mEE_FCwPH.Effect[1].Evaporator.alphag", "mEE_FCwPH.Effect[1].Evaporator.Vm",
+   "mEE_FCwPH.Effect[1].Evaporator.T", "mEE_FCwPH.Effect[1].Brine_Inlet_Port.p",
+   "mEE_FCwPH.Effect[2].Tube_Outlet.p", "mEE_FCwPH.Effect[2].Evaporator.Xo[2]", 
+  "mEE_FCwPH.Effect[2].Evaporator.alphag", "mEE_FCwPH.Effect[2].Evaporator.Vm", 
+  "mEE_FCwPH.Effect[2].Evaporator.T", "mEE_FCwPH.Effect[2].Brine_Inlet_Port.p", 
+  "mEE_FCwPH.Effect[3].Tube_Outlet.p", "mEE_FCwPH.Effect[3].Evaporator.Xo[2]", 
+  "mEE_FCwPH.Effect[3].Evaporator.alphag", "mEE_FCwPH.Effect[3].Evaporator.Vm", 
+  "mEE_FCwPH.Effect[3].Evaporator.T", "mEE_FCwPH.Effect[3].Brine_Inlet_Port.p", 
+  "mEE_FCwPH.Effect[4].Tube_Outlet.p", "mEE_FCwPH.Effect[4].Evaporator.Xo[2]", 
+  "mEE_FCwPH.Effect[4].Evaporator.alphag", "mEE_FCwPH.Effect[4].Evaporator.Vm", 
+  "mEE_FCwPH.Effect[4].Evaporator.T", "mEE_FCwPH.Effect[4].Brine_Inlet_Port.p", 
+  "mEE_FCwPH.Effect[5].Tube_Outlet.p", "mEE_FCwPH.Effect[5].Evaporator.Xo[2]", 
+  "mEE_FCwPH.Effect[5].Evaporator.alphag", "mEE_FCwPH.Effect[5].Evaporator.Vm", 
+  "mEE_FCwPH.Effect[5].Evaporator.T", "mEE_FCwPH.Effect[5].Brine_Inlet_Port.p", 
+  "mEE_FCwPH.Effect[6].Tube_Outlet.p", "mEE_FCwPH.Effect[6].Evaporator.Xo[2]", 
+  "mEE_FCwPH.Effect[6].Evaporator.alphag", "mEE_FCwPH.Effect[6].Evaporator.Vm", 
+  "mEE_FCwPH.Effect[6].Evaporator.T", "mEE_FCwPH.Effect[6].Brine_Inlet_Port.p", 
+  "mEE_FCwPH.Effect[7].Tube_Outlet.p", "mEE_FCwPH.Effect[7].Evaporator.Xo[2]", 
+  "mEE_FCwPH.Effect[7].Evaporator.alphag", "mEE_FCwPH.Effect[7].Evaporator.Vm", 
+  "mEE_FCwPH.Effect[7].Evaporator.T", "mEE_FCwPH.Effect[7].Brine_Inlet_Port.p", 
+  "mEE_FCwPH.Effect[8].Tube_Outlet.p", "mEE_FCwPH.Effect[8].Evaporator.Xo[2]", 
+  "mEE_FCwPH.Effect[8].Evaporator.alphag", "mEE_FCwPH.Effect[8].Evaporator.Vm", 
+  "mEE_FCwPH.Effect[8].Evaporator.T", "mEE_FCwPH.Effect[8].Brine_Inlet_Port.p", 
+  "mEE_FCwPH.Effect[8].Steam_Outlet_Port.p"});
 end dsmodelIterationSelect;
